@@ -1,0 +1,67 @@
+focus_tree = {
+	id = soviet_tree
+	
+	country = {
+		factor = 11
+		modifier = {
+			add = 20
+			tag = SOV
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 0 y = 2500 }
+
+	initial_show_position = {
+		x = 15
+		y = 0
+	}
+
+    focus = {
+        id = SOV_consolidate_the_union
+        x = 15
+        y = 0
+
+        icon = GFX_focus_SOV_socialism_in_one_country
+
+        mutually_exclusive = {
+            focus = SOV_revive_the_struggle
+        }
+		
+        completion_reward = { 
+        
+
+        }  
+
+		cost = 4
+        search_filters = { FOCUS_FILTER_HISTORICAL }
+
+    }
+
+    focus = {
+        id = SOV_revive_the_struggle
+        x = 40
+        y = 0
+
+        icon = GFX_goal_anti_comintern_pact
+
+        available = {
+            communism < 0.4
+        }
+
+        mutually_exclusive = {
+            focus = SOV_consolidate_the_union
+        }
+		
+        completion_reward = { 
+        
+
+        }  
+
+		cost = 4
+        search_filters = { FOCUS_FILTER_HISTORICAL }
+
+    }
+
+}

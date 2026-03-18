@@ -1,0 +1,18 @@
+characters= {
+
+	SOV_josif_stalin1 = {
+	
+		name = "Josif Stalin"
+
+		country_leader = {
+			ideology = stalinism
+		}
+
+		portraits = {
+			civilian = {
+				large = "GFX/leaders/SOV/stalin.dds"
+			}
+		}
+	}
+
+}
