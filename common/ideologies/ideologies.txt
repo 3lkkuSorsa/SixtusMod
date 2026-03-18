@@ -1,0 +1,62 @@
+ideologies = {
+	ultra_nationalism = {
+		types = {
+			fascism = {
+				color = { 255 0 0 }
+				can_be_randomly_selected = yes
+			}
+			national_socialism = {
+				color = { 200 0 0 }
+				can_be_randomly_selected = yes
+			}
+		}
+		color = { 255 50 50 }
+	}
+	conservatism = { 
+		types = {
+			conservatism_sub = {}
+			national_conservatism = {
+				color = { 0 75 120 }
+				can_be_randomly_selected = yes
+			}
+			liberal_conservatism = {
+				color = { 75 125 240 }
+				can_be_randomly_selected = yes
+			}
+		}
+		color = { 65 65 255 }
+	}
+	market_liberalism = {
+		types = {
+			market_liberalism_sub = {}
+			classical_liberalism = {}
+		}
+		color = { 255 200 0 }
+	}
+	social_liberalism = {
+		types = {
+			social_liberalism_sub = {}
+			christian_democracy = {}
+			progressivism = {
+				color = { 255 140 0 }
+			}
+		}
+		color = { 250 170 20 }
+	}
+	social_democracy = {
+		types = {
+			social_democracy_sub = {
+				color = { 255 100 100 }
+			}
+		}
+		color = { 250 70 60 }
+	}
+	communism = {
+		types = {
+			communism_sub = {
+				
+			}
+		}
+		color = { 100 0 0 }
+	}
+}
