@@ -1,0 +1,28 @@
+oob = "SOV_1936"
+capital = 219
+set_research_slots = 3
+set_stability = 0.72
+set_war_support = 0.81
+set_convoys = 43
+
+add_ideas = {
+	civilian_economy
+	volunteer_only
+	closed_economy
+}
+
+recruit_character = SOV_josif_stalin
+
+set_politics = {
+	ruling_party = communism
+	elections_allowed = no
+}
+
+set_popularities = {
+	ultra_nationalism = 9
+    conservatism = 4
+    social_liberalism = 9
+    market_liberalism = 5
+    social_democracy = 21
+	communism = 52
+}
