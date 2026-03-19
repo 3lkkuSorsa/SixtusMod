@@ -12,7 +12,7 @@ GER_cabinet = {
 		days_mission_timeout = 15
 
 		timeout_effect = {
-			
+			country_event = GER_luther_cabinet_1.1
 		}
 	}
 }

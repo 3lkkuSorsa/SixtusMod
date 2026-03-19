@@ -2,15 +2,25 @@ ideologies = {
 	ultra_nationalism = {
 		types = {
 			fascism = {
-				color = { 255 0 0 }
 				can_be_randomly_selected = yes
 			}
 			national_socialism = {
-				color = { 200 0 0 }
 				can_be_randomly_selected = yes
 			}
 		}
-		color = { 255 50 50 }
+		color = { 70 40 0 }
+	}
+	authoritarianism = {
+		types = {
+			authoritarianism_sub = {}
+			monarchism = {
+				can_be_randomly_selected = yes
+			}
+			militarism = {
+				can_be_randomly_selected = yes
+			}
+		}
+		color = { 80 80 80 }
 	}
 	conservatism = { 
 		types = {
