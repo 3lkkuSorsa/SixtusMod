@@ -2,7 +2,7 @@ focus_tree = {
 	id = soviet_tree
 	
 	country = {
-		factor = 11
+		factor = 0
 		modifier = {
 			add = 20
 			tag = SOV
