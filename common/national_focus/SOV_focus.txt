@@ -29,12 +29,18 @@ focus_tree = {
             focus = SOV_revive_the_struggle
         }
 		
-        completion_reward = { 
-        
-
+        completion_reward = {
+            add_popularity = {
+                ideology = communism
+                popularity = 0.1
+            }
+            swap_ideas = {
+                remove_idea = SOV_civil_war_scars
+                add_idea = SOV_party_power_struggle
+            }
         }  
 
-		cost = 4
+		cost = 5
         search_filters = { FOCUS_FILTER_HISTORICAL }
 
     }
@@ -59,7 +65,7 @@ focus_tree = {
 
         }  
 
-		cost = 4
+		cost = 5
         search_filters = { FOCUS_FILTER_HISTORICAL }
 
     }
@@ -84,7 +90,7 @@ focus_tree = {
 
         }  
 
-		cost = 4
+		cost = 5
         search_filters = { FOCUS_FILTER_HISTORICAL }
 
     }
@@ -130,8 +136,11 @@ focus_tree = {
         }
 		
         completion_reward = { 
-        
-
+            add_war_support = -0.1
+            add_timed_idea = {
+                idea = SOV_one_country_socialism
+                days = 1460
+            }
         }  
 
 		cost = 5
@@ -159,7 +168,7 @@ focus_tree = {
 
         }  
 
-		cost = 4
+		cost = 5
         search_filters = {  }
 
     }
