@@ -20,7 +20,7 @@ focus_tree = {
 
     focus = {
         id = SOV_consolidate_the_union
-        x = 15
+        x = 25
         y = 0
 
         icon = GFX_focus_SOV_socialism_in_one_country
@@ -40,8 +40,108 @@ focus_tree = {
     }
 
     focus = {
+        id = SOV_premier_stalin
+        x = 25
+        y = 1
+
+        icon = GFX_focus_fra_loyalty_stalin
+
+        mutually_exclusive = {
+            
+        }
+
+        prerequisite = {
+            focus = SOV_consolidate_the_union
+        }
+		
+        completion_reward = { 
+        
+
+        }  
+
+		cost = 4
+        search_filters = { FOCUS_FILTER_HISTORICAL }
+
+    }
+
+    focus = {
+        id = SOV_secure_the_party
+        x = 25
+        y = 2
+
+        icon = GFX_focus_generic_soviet_politics
+
+        mutually_exclusive = {
+            
+        }
+
+        prerequisite = {
+            focus = SOV_premier_stalin
+        }
+		
+        completion_reward = { 
+        
+
+        }  
+
+		cost = 4
+        search_filters = { FOCUS_FILTER_HISTORICAL }
+
+    }
+
+    focus = {
+        id = SOV_begin_the_five_year_plan
+        x = 14
+        y = 2
+
+        icon = GFX_focus_generic_communist_industry
+
+        mutually_exclusive = {
+            
+        }
+
+        prerequisite = {
+            focus = SOV_premier_stalin
+        }
+		
+        completion_reward = { 
+        
+
+        }  
+
+		cost = 5
+        search_filters = { FOCUS_FILTER_HISTORICAL }
+
+    }
+
+    focus = {
+        id = SOV_socialism_in_one_place
+        x = 36
+        y = 2
+
+        icon = GFX_goal_support_communism
+
+        mutually_exclusive = {
+            
+        }
+
+        prerequisite = {
+            focus = SOV_premier_stalin
+        }
+		
+        completion_reward = { 
+        
+
+        }  
+
+		cost = 5
+        search_filters = { FOCUS_FILTER_HISTORICAL }
+
+    }
+
+    focus = {
         id = SOV_revive_the_struggle
-        x = 40
+        x = 50
         y = 0
 
         icon = GFX_goal_anti_comintern_pact
@@ -60,7 +160,7 @@ focus_tree = {
         }  
 
 		cost = 4
-        search_filters = { FOCUS_FILTER_HISTORICAL }
+        search_filters = {  }
 
     }
 
