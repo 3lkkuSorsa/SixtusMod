@@ -1,0 +1,18 @@
+GER_cabinet = {
+	GER_ongoing_coalition_negotiations_luther_I = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = "Stable coalition government"
+				trigger = {
+					always = no
+				}
+			}
+		}
+
+		days_mission_timeout = 15
+
+		timeout_effect = {
+			
+		}
+	}
+}
