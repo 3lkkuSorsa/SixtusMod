@@ -1,0 +1,11 @@
+add_namespace = GER_luther_cabinet_1
+
+country_event = {
+	id = GER_luther_cabinet_1.1
+	title = "Ascension of the Luther Cabinet"
+	desc = GER_luther_cabinet_1.1.d
+
+	option = {
+		name = "Maybe a non-partisan government will bring stability?"
+	}
+}
