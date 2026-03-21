@@ -33,6 +33,7 @@ ideologies = {
 				color = { 75 125 240 }
 				can_be_randomly_selected = yes
 			}
+			christian_democracy = {}
 		}
 		color = { 65 65 255 }
 	}
@@ -46,7 +47,6 @@ ideologies = {
 	social_liberalism = {
 		types = {
 			social_liberalism_sub = {}
-			christian_democracy = {}
 			progressivism = {
 				color = { 255 140 0 }
 			}

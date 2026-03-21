@@ -13,4 +13,22 @@ characters = {
 			}
 		}
 	}
+
+	GER_wilhelm_marx = {
+	
+		name = "Wilhelm Marx"
+
+		country_leader = {
+			ideology = christian_democracy
+			traits = {
+				GER_fallen_coalition
+			}
+		}
+
+		portraits = {
+			civilian = {
+				large = "GFX/leaders/GER/GER_marx.dds"
+			}
+		}
+	}
 }

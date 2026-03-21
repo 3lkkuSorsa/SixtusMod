@@ -1,0 +1,7 @@
+leader_traits = {
+	GER_fallen_coalition = {
+		random = no
+		political_power_factor = -0.5
+		stability_factor = -0.15
+	}
+}
