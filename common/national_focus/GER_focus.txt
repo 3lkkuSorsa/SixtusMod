@@ -1,3 +1,32 @@
 focus_tree = {
     id = weimar_focus_1
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = GER
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 0 y = 2500 }
+
+    focus = {
+        id = GER_biding_our_time
+
+        x = 0
+        y = 0
+
+        available = {
+            always = no
+        }
+
+        cost = 0
+
+        completion_reward = {
+            
+        }
+    }
 }

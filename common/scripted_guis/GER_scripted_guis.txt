@@ -41,4 +41,24 @@ scripted_gui = {
 			}
 		}
 	}
+
+	GER_presidential_election_1925 = {
+		window_name = "GER_presidential_elections_container"
+		context_type = decision_category
+
+		dynamic_lists = {
+			candidates_grid = {
+				array = candidates_array
+				index = candidates_index
+				change_scope = no
+				entry_container = candidate_entry
+			}
+		}
+
+		effects = {
+		}
+
+		properties = {
+		}
+	}
 }

@@ -17,8 +17,8 @@ country_event = {
 		}
 		clr_country_flag = GER_no_government
 		custom_effect_tooltip = GER_modify_weimar_house_of_cards
-		add_to_variable = { GER.weimar_stability_factor = 0.025 tooltip = stability_factor_tt }
-		add_to_variable = { GER.weimar_political_power_factor = 0.035 tooltip = political_power_factor_tt }
+		add_to_variable = { weimar_stability_factor = 0.025 tooltip = stability_factor_tt }
+		add_to_variable = { weimar_political_power_factor = 0.035 tooltip = political_power_factor_tt }
 	}
 }
 
@@ -44,3 +44,4 @@ country_event = {
 		name = "Maybe we can negotiate a new government?"
 	}
 }
+

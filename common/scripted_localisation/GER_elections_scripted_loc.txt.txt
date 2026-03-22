@@ -1,0 +1,130 @@
+defined_text = {
+	name = GetCandidateName
+	text = {
+		trigger = {
+			check_variable = { v = 1 }
+		}
+		localization_key = jarres_loc
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 2 }
+		}
+		localization_key = braun_loc
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 3 }
+		}
+		localization_key = marx_loc
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 4 }
+		}
+		localization_key = thalmann_loc
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 5 }
+		}
+		localization_key = hindenburg_loc
+	}
+	text = {
+		localization_key = "Error"
+	}
+}
+
+defined_text = {
+	name = GetCandidateSupport
+	text = {
+		trigger = {
+			check_variable = { v = 1 }
+		}
+		localization_key = "[?jarres_support]"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 2 }
+		}
+		localization_key = "[?braun_support]"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 3 }
+		}
+		localization_key = "[?marx_support]"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 4 }
+		}
+		localization_key = "[?thalmann_support]"
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 5 }
+		}
+		localization_key = "[?hindenburg_support]"
+	}
+}
+
+defined_text = {
+	name = GetCandidateParties
+	text = {
+		trigger = {
+			check_variable = { v = 1 }
+		}
+		localization_key = jarres_parties
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 2 }
+		}
+		localization_key = braun_parties
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 3 }
+			has_country_flag = GER_1925_presidential_election_round_2
+		}
+		localization_key = marxb_parties
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 3 }
+			NOT = {
+				has_country_flag = GER_1925_presidential_election_round_2
+			}
+		}
+		localization_key = marx_parties
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 4 }
+		}
+		localization_key = thalmann_parties
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 5 }
+		}
+		localization_key = hindenburg_parties
+	}
+}
+
+defined_text = {
+	name = GetElectionRound
+	text = {
+		trigger = {
+			has_country_flag = GER_1925_presidential_election_round_1
+		}
+		localization_key = "First"
+	}
+	text = {
+		trigger = {
+			has_country_flag = GER_1925_presidential_election_round_2
+		}
+		localization_key = "Second"
+	}
+}
