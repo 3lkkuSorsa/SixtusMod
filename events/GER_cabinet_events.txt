@@ -11,6 +11,8 @@ country_event = {
 
 	option = {
 		name = "Maybe a non-partisan government will bring stability?"
+		unlock_national_focus = GER_biding_our_time
+		custom_effect_tooltip = SPD_toleration
 		promote_character = GER_luther
 		set_politics = {
 			ruling_party = market_liberalism
@@ -19,6 +21,102 @@ country_event = {
 		custom_effect_tooltip = GER_modify_weimar_house_of_cards
 		add_to_variable = { weimar_stability_factor = 0.025 tooltip = stability_factor_tt }
 		add_to_variable = { weimar_political_power_factor = 0.035 tooltip = political_power_factor_tt }
+	}
+}
+
+country_event = {
+	id = GER_luther_cabinet_1.2
+	title = "Right-wing resigns from the Luther Cabinet"
+	desc = GER_luther_cabinet_1.2.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "We will finish the treaty and resign."
+		set_variable = { stance_array^6 = 0 }
+		custom_effect_tooltip = DNVP_leave_coalition
+	}
+}
+
+country_event = {
+	id = GER_luther_cabinet_1.3
+	title = "Coalition and the Locarno Treaties"
+
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = GER_luther_cabinet_1.4
+	title = "Luther Cabinet resigns"
+	desc = GER_luther_cabinet_1.4.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "We must start negotiations for a new government immediately."
+	}
+}
+
+country_event = {
+	id = GER_luther_cabinet_1.5
+	title = "Negotiations for a new government"
+	desc = GER_luther_cabinet_1.5.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Abide by Hindenburg's wishes and appoint Luther."
+		hidden_effect = {
+			country_event = {
+				id = GER_luther_cabinet_1.6
+				days = 2
+			}
+		}
+	}
+
+	option = {
+		name = "We should form a SPD-led Grand Coalition"
+		hidden_effect = {
+			country_event = {
+				id = GER_luther_cabinet_1.7
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_luther_cabinet_1.6
+	title = "Luther appointed as Chancellor"
+	desc = GER_luther_cabinet_1.6.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Well, nothing changed."
+	}
+}
+
+country_event = {
+	id = GER_luther_cabinet_1.7
+	title = "Hindenburg refuses to appoint SPD-led government"
+	desc = GER_luther_cabinet_1.7.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Well, then Luther is our only option."
+		hidden_effect = {
+			country_event = {
+				id = GER_luther_cabinet_1.6
+				days = 2
+			}
+		}
 	}
 }
 

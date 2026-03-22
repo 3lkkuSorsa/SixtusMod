@@ -1,4 +1,14 @@
 on_actions = {
+	on_startup = {
+		effect = {
+			51 = {
+				add_dynamic_modifier = { modifier = GER_entente_occupation }
+			}
+			42 = {
+				add_dynamic_modifier = { modifier = GER_entente_occupation }
+			}
+		}
+	}
     on_daily_GER = {
 		effect = {
 			reload_parliament_majority = yes

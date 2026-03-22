@@ -3,3 +3,18 @@ GER_weimar_house_of_cards_modifier = {
 	stability_factor = weimar_stability_factor
 	political_power_factor = weimar_political_power_factor
 }
+
+GER_economic_hardship = {
+	icon = GFX_idea_unknown
+	consumer_goods_factor = GER_eh_cgf
+	industrial_capacity_factory = GER_eh_icf
+	production_speed_buildings_factor = GER_eh_psbf
+	production_factory_max_efficiency_factor = GER_eh_pfmef
+	production_factory_efficiency_gain_factor = GER_eh_pfegf
+}
+
+GER_entente_occupation = {
+	icon = GFX_idea_unknown
+	local_factories = -0.35
+	recruitable_population_factor = -0.7
+}

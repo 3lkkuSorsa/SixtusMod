@@ -8,7 +8,7 @@ parliament_gui_initial = {
 	add_to_array = { GER.parliament_seat_array = 14 } # Nazis
 
 	add_to_array = { GER.stance_array = 0 } # Comm
-	add_to_array = { GER.stance_array = 0 } # SPD
+	add_to_array = { GER.stance_array = 1 } # SPD
 	add_to_array = { GER.stance_array = 3 } # DDP
 	add_to_array = { GER.stance_array = 3 } # ZENTRUM
 	add_to_array = { GER.stance_array = 3 } # DVP

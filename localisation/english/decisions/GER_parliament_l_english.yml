@@ -26,3 +26,6 @@
   party_6_desc: "Economical Stance: Right-wing\nSocial Stance: Nationalist-conservative"
   party_7_text: "§8National Socialists§!"
   party_7_desc: "Economical Stance: Far-right\nSocial Stance: Nationalist-authoritarian"
+
+  DNVP_leave_coalition: "The §2DNVP§! will resign from the coalition."
+  SPD_toleration: "The §tSPD§! will enter into toleration with the government."

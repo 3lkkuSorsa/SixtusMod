@@ -71,7 +71,9 @@ GER_presidential_election_1925_category = {
 		days_mission_timeout = 50
 
 		timeout_effect = {
-			country_event = GER_death_of_ebert.6
+			hidden_effect = {
+				country_event = GER_death_of_ebert.6
+			}
 			clr_country_flag = GER_1925_presidential_election_round_2
 			clr_country_flag = GER_1925_presidential_election
 		}

@@ -67,11 +67,16 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
+	immediate = {
+		hidden_effect = {
+			clear_array = candidates_array
+			add_to_array = { candidates_array = 4 }
+			add_to_array = { candidates_array = 5 }
+		}
+	}
+
 	option = {
 		name = "But he isn't even a politician!"
-		clear_array = candidates_array
-		add_to_array = { candidates_array = 4 }
-		add_to_array = { candidates_array = 5 }
 	}
 }
 
@@ -83,12 +88,17 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
+	immediate = {
+		hidden_effect = {
+			clear_array = candidates_array
+			add_to_array = { candidates_array = 3 }
+			add_to_array = { candidates_array = 4 }
+			add_to_array = { candidates_array = 5 }
+		}
+	}
+
 	option = {
-		name = "Will Marx be able to win the election?" 
-		clear_array = candidates_array
-		add_to_array = { candidates_array = 3 }
-		add_to_array = { candidates_array = 5 }
-		add_to_array = { candidates_array = 4 }
+		name = "Will Marx be able to win the election?"
 	}
 }
 
@@ -102,6 +112,5 @@ country_event = {
 
 	option = {
 		name = "Atleast he will uphold the constitution."
-		
 	}
 }
