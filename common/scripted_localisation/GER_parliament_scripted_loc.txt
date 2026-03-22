@@ -1,0 +1,128 @@
+defined_text = {
+	name = GetParliamentPartyName
+	text = {
+		trigger = {
+			check_variable = { v = 1 }
+		}
+		localization_key = party_1_text
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 2 }
+		}
+		localization_key = party_2_text
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 3 }
+		}
+		localization_key = party_3_text
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 4 }
+		}
+		localization_key = party_4_text
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 5 }
+		}
+		localization_key = party_5_text
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 6 }
+		}
+		localization_key = party_6_text
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 7 }
+		}
+		localization_key = party_7_text
+	}
+	text = {
+		localization_key = "Error"
+	}
+}
+
+defined_text = {
+	name = GetParliamentPartyDesc
+	text = {
+		trigger = {
+			check_variable = { v = 1 }
+		}
+		localization_key = party_1_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 2 }
+		}
+		localization_key = party_2_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 3 }
+		}
+		localization_key = party_3_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 4 }
+		}
+		localization_key = party_4_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 5 }
+		}
+		localization_key = party_5_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 6 }
+		}
+		localization_key = party_6_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 7 }
+		}
+		localization_key = party_7_desc
+	}
+	text = {
+		localization_key = "Error"
+	}
+}
+
+defined_text = {
+	name = GetPartyStance
+	text = {
+		trigger = {
+			check_variable = { stance_array^parliament_member_index = 0 }
+		}
+		localization_key = STANCE_OPPOSITION
+	}
+	text = {
+		trigger = {
+			check_variable = { stance_array^parliament_member_index = 1 }
+		}
+		localization_key = STANCE_TOLERATION
+	}
+	text = {
+		trigger = {
+			check_variable = { stance_array^parliament_member_index = 2 }
+		}
+		localization_key = STANCE_SUPPORT
+	}
+	text = {
+		trigger = {
+			check_variable = { stance_array^parliament_member_index = 3 }
+		}
+		localization_key = STANCE_GOVERNMENT
+	}
+	text = {
+		localization_key = "Error"
+	}
+}

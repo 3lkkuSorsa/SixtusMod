@@ -1,12 +1,13 @@
-GER_cabinet = {
+GER_weimar_house_of_cards = {
 	allowed = {
 		original_tag = GER
 	}
 	visible = {
 		NOT = {
-			has_country_flag = GER_disable_cabinet
+			has_country_flag = GER_disable_hoc
 		}
 	}
 	priority = 10
 	visible_when_empty = yes
+	scripted_gui = GER_parliament
 }

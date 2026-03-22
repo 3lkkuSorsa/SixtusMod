@@ -1,11 +1,9 @@
-GER_cabinet = {
+GER_weimar_house_of_cards = {
 	GER_ongoing_coalition_negotiations_luther_I = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = "Stable coalition government"
-				trigger = {
-					always = no
-				}
+				always = no
 			}
 		}
 
@@ -13,6 +11,29 @@ GER_cabinet = {
 
 		timeout_effect = {
 			country_event = GER_luther_cabinet_1.1
+		}
+	}
+
+	GER_vote_of_no_confidence = {
+		available = {
+			GER_government_in_majority = yes
+		}
+
+		activation = {
+			NOT = {
+				GER_government_in_majority = yes
+			}
+			has_country_flag = GER_no_government
+		}
+
+		days_mission_timeout = 30
+
+		is_good = no
+
+		timeout_effect = {
+			country_event = GER_vote_of_no_confidence.1
+			add_to_variable = { GER.weimar_stability_factor = -0.025 tooltip = stability_factor_tt }
+			add_to_variable = { GER.weimar_political_power_factor = -0.025 tooltip = political_power_factor_tt }
 		}
 	}
 }

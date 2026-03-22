@@ -1,0 +1,6 @@
+GER_government_in_majority = {
+	check_variable = {
+		var = GER_government_in_majority_var
+		value = 1
+	}
+}

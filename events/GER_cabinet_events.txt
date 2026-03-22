@@ -1,11 +1,46 @@
 add_namespace = GER_luther_cabinet_1
+add_namespace = GER_vote_of_no_confidence
 
 country_event = {
 	id = GER_luther_cabinet_1.1
 	title = "Ascension of the Luther Cabinet"
 	desc = GER_luther_cabinet_1.1.d
 
+	is_triggered_only = yes
+	fire_only_once = yes
+
 	option = {
 		name = "Maybe a non-partisan government will bring stability?"
+		promote_character = GER_luther
+		set_politics = {
+			ruling_party = market_liberalism
+		}
+		clr_country_flag = GER_no_government
+		custom_effect_tooltip = GER_modify_weimar_house_of_cards
+		add_to_variable = { GER.weimar_stability_factor = 0.025 tooltip = stability_factor_tt }
+		add_to_variable = { GER.weimar_political_power_factor = 0.035 tooltip = political_power_factor_tt }
+	}
+}
+
+country_event = {
+	id = GER_vote_of_no_confidence.1
+	title = GER_vote_of_no_confidence.1.t
+	desc = GER_vote_of_no_confidence.1.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = GER_no_government
+		}
+	}
+
+	option = {
+		name = "We must hold new elections."
+	}
+
+	option = {
+		name = "Maybe we can negotiate a new government?"
 	}
 }
