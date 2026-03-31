@@ -1,0 +1,55 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			51 = {
+				add_dynamic_modifier = { modifier = GER_entente_occupation }
+			}
+			42 = {
+				add_dynamic_modifier = { modifier = GER_entente_occupation }
+			}
+		}
+	}
+    on_daily_GER = {
+		effect = {
+			reload_parliament_majority = yes
+			if = {
+				limit = {
+					has_country_flag = GER_1925_presidential_election_round_1
+				}
+				set_variable = { jarres_support = 0 }
+				set_variable = { braun_support = 0 }
+				set_variable = { marx_support = 0 }
+				set_variable = { thalmann_support = 0 }
+				add_to_variable = { jarres_support = party_popularity@market_liberalism }
+				add_to_variable = { jarres_support = party_popularity@authoritarianism }
+				add_to_variable = { braun_support = party_popularity@conservatism }
+				add_to_variable = { marx_support = party_popularity@social_democracy }
+				add_to_variable = { thalmann_support = party_popularity@communism }
+				multiply_variable = { jarres_support = 100 }
+				multiply_variable = { braun_support = 100 } 
+				multiply_variable = { marx_support = 100 }
+				multiply_variable = { thalmann_support = 100 }
+			}
+			if = {
+				limit = {
+					has_country_flag = GER_1925_presidential_election_round_2
+				}
+				set_variable = { marx_support = 0 }
+				set_variable = { hindenburg_support = 0 }
+				set_variable = { thalmann_support = 0 }
+				add_to_variable = { marx_support = party_popularity@social_democracy }
+				add_to_variable = { marx_support = party_popularity@conservatism }
+				add_to_variable = { marx_support = party_popularity@social_liberalism }
+				add_to_variable = { hindenburg_support = party_popularity@authoritarianism }
+				add_to_variable = { hindenburg_support = party_popularity@market_liberalism }
+				add_to_variable = { hindenburg_support = party_popularity@ultra_nationalism }
+				add_to_variable = { thalmann_support = party_popularity@communism }
+				multiply_variable = { marx_support = 100 }
+				multiply_variable = { hindenburg_support = 100 }
+				multiply_variable = { thalmann_support = 100 }
+				add_to_variable = { hindenburg_support = 10 }
+				subtract_from_variable = { marx_support = 10 }
+			}
+		}
+	}
+}

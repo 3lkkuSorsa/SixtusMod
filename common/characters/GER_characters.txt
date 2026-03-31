@@ -31,4 +31,19 @@ characters = {
 			}
 		}
 	}
+
+	GER_luther = {
+	
+		name = "Hans Luther"
+
+		country_leader = {
+			ideology = market_liberalism_sub
+		}
+
+		portraits = {
+			civilian = {
+				large = "GFX/leaders/GER/GER_luther.dds"
+			}
+		}
+	}
 }

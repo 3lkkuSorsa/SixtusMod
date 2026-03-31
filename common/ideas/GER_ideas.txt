@@ -1,0 +1,10 @@
+ideas = {
+	country = {
+		GER_lost_trade_sovereignty = {
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_factor = -0.05
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+﻿l_english:
+ candidate_text: "[GetCandidateName]"
+ candidate_parties: "Polling: §Y[GetCandidateSupport]%§!\nSupported by:\n[GetCandidateParties]"
+
+ GER_round_text: "§Y[GetElectionRound]§! Round"
+
+ jarres_loc: "§YJarres§!"
+ braun_loc: "§tBraun§!"
+ marx_loc: "Marx"
+ thalmann_loc: "§RThälmann§!"
+ hindenburg_loc: "§2Hindenburg§!"
+
+ jarres_parties: "  - §YDVP§!\n  - §2DNVP§!"
+ braun_parties: "  - §tSPD§!"
+ marx_parties: "  - Zentrum"
+ marxb_parties: "§YVolksblock:§!\n  - Zentrum\n  - §tSPD§!\n  - §9DDP§!"
+ thalmann_parties: "  - §RKPD§!"
+ hindenburg_parties: "§2Reichsblock:§!\n  - §YDVP§!\n  - §2DNVP§!\n  - §8NSDAP§!"

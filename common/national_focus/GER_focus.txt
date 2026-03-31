@@ -1,3 +1,228 @@
 focus_tree = {
-    id = weimar_focus_1
+	id = weimar_focus_1
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = GER
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 0 y = 2500 }
+
+	focus = {
+		id = GER_biding_our_time
+
+		x = 0
+		y = 0
+
+		available = {
+			always = no
+		}
+
+		cost = 0
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_adressing_the_rhineland_issue
+
+		x = -1
+		y = 1
+		relative_position_id = GER_biding_our_time
+
+		prerequisite = { focus = GER_biding_our_time }
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = "Entente refused to withdraw from Cologne"
+				has_country_flag = GER_entente_occupation_continued
+			}
+		}
+
+		cost = 5
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_seek_an_agreement_with_entente
+
+		x = 0
+		y = 2
+		relative_position_id = GER_biding_our_time
+
+		prerequisite = { focus = GER_adressing_the_rhineland_issue }
+
+		available = {
+		}
+
+		cost = 6
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = FRA
+						tag = ENG
+					}
+				}
+				country_event = {
+					id = GER_locarno_treaty.1
+					days = 5
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_ensure_coalition_support
+
+		x = -2
+		y = 2
+		relative_position_id = GER_biding_our_time
+
+		prerequisite = { focus = GER_adressing_the_rhineland_issue }
+
+		available = {
+		}
+
+		cost = 5
+
+		completion_reward = {
+			effect_tooltip = {
+				country_event = GER_luther_cabinet_1.3
+			}
+			hidden_effect = {
+				country_event = {
+					id = GER_luther_cabinet_1.2
+					days = 7
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_sign_the_locarno_treaties
+
+		x = -1
+		y = 3
+		relative_position_id = GER_biding_our_time
+
+		prerequisite = { focus = GER_ensure_coalition_support }
+		prerequisite = { focus = GER_seek_an_agreement_with_entente }
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = "Entente accepted the agreement"
+				FRA = {
+					has_country_flag = accepted_locarno_treaties
+				}
+				ENG = {
+					has_country_flag = accepted_locarno_treaties
+				}
+				BEL = {
+					has_country_flag = accepted_locarno_treaties
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "Coalition supports the treaties"
+				has_completed_focus = GER_ensure_coalition_support
+			}
+		}
+
+		cost = 5
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = GER_ensure_coalition_support
+				}
+				country_event = GER_luther_cabinet_1.4
+			}
+			every_country = {
+				limit = {
+					has_country_flag = accepted_locarno_treaties
+				}
+				diplomatic_relation = {
+					country = GER
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			remove_state_claim = 28
+		}
+	}
+
+	focus = {
+		id = GER_stabilizing_the_economy
+
+		x = 3
+		y = 1
+		relative_position_id = GER_biding_our_time
+
+		prerequisite = { focus = GER_biding_our_time }
+
+		available = {
+		}
+
+		cost = 6
+
+		completion_reward = {
+			custom_effect_tooltip = GER_modify_economic_hardship
+			add_to_variable = { GER_eh_cgf = -0.075 tooltip = consumer_goods_factor_tt }
+			add_to_variable = { GER_eh_icf = 0.1 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { GER_eh_psbf = 0.025 tooltip = production_speed_buildings_factor_tt }
+		}
+	}
+
+	focus = {
+		id = GER_restore_the_trade_sovereignty
+
+		x = 2
+		y = 2
+		relative_position_id = GER_biding_our_time
+
+		prerequisite = { focus = GER_stabilizing_the_economy }
+
+		available = {
+		}
+
+		cost = 5
+
+		completion_reward = {
+			remove_ideas = GER_lost_trade_sovereignty
+		}
+	}
+
+	focus = {
+		id = GER_revaluation_act
+
+		x = 4
+		y = 2
+		relative_position_id = GER_biding_our_time
+
+		prerequisite = { focus = GER_stabilizing_the_economy }
+
+		available = {
+		}
+
+		cost = 6
+
+		completion_reward = {
+			custom_effect_tooltip = GER_modify_economic_hardship
+			add_to_variable = { GER_eh_cgf = 0.1 tooltip = consumer_goods_factor_tt }
+			add_to_variable = { GER_eh_psbf = 0.05 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { GER_eh_pfmef = 0.025 tooltip = production_factory_max_efficiency_factor_tt }
+			add_to_variable = { GER_eh_pfegf = 0.05 tooltip = production_factory_efficiency_gain_factor_tt }
+		}
+	}
 }

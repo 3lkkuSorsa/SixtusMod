@@ -1,0 +1,31 @@
+﻿l_english:
+  #Parliament
+  parliament_main_text: "Reichstag"
+  parliament_description_text: "Consisting of §Y493§! seats, atleast §Y247§! are required for majority."
+
+  parliament_member_text: "[GetParliamentPartyName] - [?parliament_seat_array^parliament_member_index] Seats"
+  parliament_member_stance: "Stance: [GetPartyStance]"
+  parliament_member_short_desc: "[parliament_member_text]\n[parliament_member_stance]"
+  parliament_mamber_long_desc: "[GetParliamentPartyDesc]"
+  STANCE_OPPOSITION: "§tOpposition"
+  STANCE_SUPPORT: "§7Support"
+  STANCE_TOLERATION: "§YToleration"
+  STANCE_GOVERNMENT: "§GGovernment"
+
+  party_1_text: "§RCommunist Party§!"
+  party_1_desc: "Economical Stance: Far-Left\nSocial Stance: Authoritarian"
+  party_2_text: "§tSocial Democratic Party§!"
+  party_2_desc: "Economical Stance: Center-Left\nSocial Stance: Social-liberal"
+  party_3_text: "§9Democratic Party§!"
+  party_3_desc: "Economical Stance: Center/center-left\nSocial Stance: Social-liberal"
+  party_4_text: "Centre Party§!"
+  party_4_desc: "Economical Stance: Center\nSocial Stance: Conservative"
+  party_5_text: "§YPeople's Party§!"
+  party_5_desc: "Economical Stance: Center-right\nSocial Stance: Conservative-liberal"
+  party_6_text: "§2National People's Party§!"
+  party_6_desc: "Economical Stance: Right-wing\nSocial Stance: Nationalist-conservative"
+  party_7_text: "§8National Socialists§!"
+  party_7_desc: "Economical Stance: Far-right\nSocial Stance: Nationalist-authoritarian"
+
+  DNVP_leave_coalition: "The §2DNVP§! will resign from the coalition."
+  SPD_toleration: "The §tSPD§! will enter into toleration with the government."

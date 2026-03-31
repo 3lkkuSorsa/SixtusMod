@@ -20,8 +20,40 @@ set_popularities = {
 	communism = 9.78
 }
 
+add_ideas = {
+	GER_lost_trade_sovereignty
+}
+
 recruit_character = GER_friedrich_ebert
 recruit_character = GER_wilhelm_marx
+recruit_character = GER_luther
+
+country_event = {
+	id = GER_death_of_ebert.1
+	days = 40
+}
+country_event = {
+	id = GER_locarno_treaty.0
+	days = 23
+}
+
+parliament_gui_initial = yes
+
+set_country_flag = GER_no_government
+
+set_variable = { weimar_stability_factor = -0.25 }
+set_variable = { weimar_political_power_factor = -0.35 }
+
+set_variable = { GER_eh_cgf = 0.8 }
+set_variable = { GER_eh_icf = -0.3 }
+set_variable = { GER_eh_psbf = -0.4 }
+set_variable = { GER_eh_pfmef = -0.2 }
+set_variable = { GER_eh_pfegf = -0.3 }
+
+add_dynamic_modifier = { modifier = GER_weimar_house_of_cards_modifier }
+add_dynamic_modifier = { modifier = GER_economic_hardship }
+
+reload_parliament_majority = yes
 
 if = {
 	limit = {
