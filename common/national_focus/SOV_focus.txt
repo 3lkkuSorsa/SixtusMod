@@ -121,6 +121,287 @@ focus_tree = {
     }
 
     focus = {
+        id = SOV_start_heavy_industry_buildup
+        x = 13
+        y = 3
+
+        icon = GFX_focus_generic_industry_2
+
+        mutually_exclusive = {
+            
+        }
+
+        prerequisite = {
+            focus = SOV_begin_the_five_year_plan
+        }
+		
+        completion_reward = { 
+        
+
+        }  
+
+		cost = 5
+        search_filters = { FOCUS_FILTER_HISTORICAL }
+
+    }
+
+    focus = {
+        id = SOV_establish_production_quotas
+        x = 13
+        y = 4
+
+        icon = GFX_goal_new_treaty
+
+        mutually_exclusive = {
+            
+        }
+
+        prerequisite = {
+            focus = SOV_start_heavy_industry_buildup
+        }
+		
+        completion_reward = { 
+        
+
+        }  
+
+		cost = 5
+        search_filters = { FOCUS_FILTER_HISTORICAL }
+
+    }
+
+    focus = {
+        id = SOV_rapid_industrialization
+        x = 10
+        y = 4
+
+        icon = GFX_goal_generic_improve_industry
+
+        mutually_exclusive = {
+            
+        }
+
+        prerequisite = {
+            focus = SOV_start_heavy_industry_buildup
+        }
+		
+        completion_reward = { 
+        
+
+        }  
+
+		cost = 5
+        search_filters = { FOCUS_FILTER_HISTORICAL }
+
+    }
+
+    focus = {
+        id = SOV_industrial_centers
+        x = 12
+        y = 5
+
+        icon = GFX_goal_generic_industry_reallocation
+
+        mutually_exclusive = {
+            
+        }
+
+        prerequisite = {
+            focus = SOV_start_heavy_industry_buildup
+        }
+		
+        completion_reward = { 
+        
+
+        }  
+
+		cost = 5
+        search_filters = { FOCUS_FILTER_HISTORICAL }
+
+    }
+
+    focus = {
+        id = SOV_military_industrial_buildup
+        x = 10
+        y = 5
+
+        icon = GFX_goal_generic_construct_mil_factory
+
+        mutually_exclusive = {
+            
+        }
+
+        prerequisite = {
+            focus = SOV_rapid_industrialization
+        }
+		
+        completion_reward = { 
+        
+
+        }  
+
+		cost = 5
+        search_filters = { FOCUS_FILTER_HISTORICAL }
+
+    }
+
+    focus = {
+        id = SOV_steel_production
+        x = 11
+        y = 6
+
+        icon = GFX_focus_generic_steel
+
+        mutually_exclusive = {
+            
+        }
+
+        prerequisite = {
+            focus = SOV_military_industrial_buildup
+            focus = SOV_industrial_centers
+        }
+		
+        completion_reward = { 
+        
+
+        }  
+
+		cost = 5
+        search_filters = { FOCUS_FILTER_HISTORICAL }
+
+    }
+
+    focus = {
+        id = SOV_organize_collectivizations
+        x = 16
+        y = 3
+
+        icon = GFX_goal_RUS_collective_farms
+
+        mutually_exclusive = {
+            
+        }
+
+        prerequisite = {
+            focus = SOV_begin_the_five_year_plan
+        }
+		
+        completion_reward = { 
+        
+
+        }  
+
+		cost = 5
+        search_filters = { FOCUS_FILTER_HISTORICAL }
+
+    }
+
+    focus = {
+        id = SOV_public_tractor_stations
+        x = 15
+        y = 4
+
+        icon = GFX_goal_generic_agriculture2
+
+        mutually_exclusive = {
+            
+        }
+
+        prerequisite = {
+            focus = SOV_organize_collectivizations
+        }
+		
+        completion_reward = { 
+        
+
+        }  
+
+		cost = 5
+        search_filters = { FOCUS_FILTER_HISTORICAL }
+
+    }
+
+    focus = {
+        id = SOV_production_of_agricultural_equipment
+        x = 14
+        y = 5
+
+        icon = GFX_focus_generic_farmland
+
+        mutually_exclusive = {
+            
+        }
+
+        prerequisite = {
+            focus = SOV_establish_production_quotas
+            focus = SOV_public_tractor_stations
+        }
+		
+        completion_reward = { 
+        
+
+        }  
+
+		cost = 5
+        search_filters = { FOCUS_FILTER_HISTORICAL }
+
+    }
+
+    focus = {
+        id = SOV_dekulakization
+        x = 17
+        y = 4
+
+        icon = GFX_goal_skull_treaty
+
+        mutually_exclusive = {
+            
+        }
+
+        prerequisite = {
+            focus = SOV_organize_collectivizations
+        }
+		
+        completion_reward = { 
+        
+
+        }  
+
+		cost = 5
+        search_filters = { FOCUS_FILTER_HISTORICAL }
+
+    }
+
+    focus = {
+        id = SOV_centralize_farming
+        x = 16
+        y = 5
+
+        icon = GFX_focus_prc_agrarian_socialism
+
+        mutually_exclusive = {
+            
+        }
+
+        prerequisite = {
+            focus = SOV_dekulakization
+        }
+
+        prerequisite = {
+            focus = SOV_public_tractor_stations
+        }
+		
+        completion_reward = { 
+        
+
+        }  
+
+		cost = 5
+        search_filters = { FOCUS_FILTER_HISTORICAL }
+
+    }
+
+    focus = {
         id = SOV_socialism_in_one_place
         x = 36
         y = 2
