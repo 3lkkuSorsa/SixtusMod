@@ -21,6 +21,7 @@ set_popularities = {
 }
 
 add_ideas = {
+	GER_president_ebert
 	GER_lost_trade_sovereignty
 }
 

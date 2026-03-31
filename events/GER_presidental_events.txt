@@ -70,8 +70,8 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			clear_array = candidates_array
-			add_to_array = { candidates_array = 4 }
 			add_to_array = { candidates_array = 5 }
+			add_to_array = { candidates_array = 4 }
 		}
 	}
 
@@ -92,8 +92,8 @@ country_event = {
 		hidden_effect = {
 			clear_array = candidates_array
 			add_to_array = { candidates_array = 3 }
-			add_to_array = { candidates_array = 4 }
 			add_to_array = { candidates_array = 5 }
+			add_to_array = { candidates_array = 4 }
 		}
 	}
 

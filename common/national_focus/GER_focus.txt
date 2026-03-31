@@ -11,7 +11,7 @@ focus_tree = {
 	
 	default = no
 
-	continuous_focus_position = { x = 0 y = 2500 }
+	continuous_focus_position = { x = 0 y = 3500 }
 
 	focus = {
 		id = GER_biding_our_time
@@ -133,9 +133,15 @@ focus_tree = {
 					has_country_flag = accepted_locarno_treaties
 				}
 			}
-			custom_trigger_tooltip = {
-				tooltip = "Coalition supports the treaties"
-				has_completed_focus = GER_ensure_coalition_support
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = "DNVP resigned from the coalition"
+					has_completed_focus = GER_ensure_coalition_support
+				}
+				custom_trigger_tooltip = {
+					tooltip = "Coalition accepted the agreement"
+					always = no
+				}
 			}
 		}
 
@@ -223,6 +229,194 @@ focus_tree = {
 			add_to_variable = { GER_eh_psbf = 0.05 tooltip = production_speed_buildings_factor_tt }
 			add_to_variable = { GER_eh_pfmef = 0.025 tooltip = production_factory_max_efficiency_factor_tt }
 			add_to_variable = { GER_eh_pfegf = 0.05 tooltip = production_factory_efficiency_gain_factor_tt }
+		}
+	}
+
+	focus = {
+		id = GER_fall_of_the_luther_cabinet
+
+		x = 0
+		y = 5
+
+
+		available = {
+			always = no
+		}
+
+		cost = 0
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_coalition_affairs
+
+		x = 5
+		y = 1
+		relative_position_id = GER_fall_of_the_luther_cabinet
+
+
+		available = {
+		}
+
+		prerequisite = { focus = GER_fall_of_the_luther_cabinet }
+
+		cost = 3
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_join_the_league_of_nations
+
+		x = -5
+		y = 1
+		relative_position_id = GER_fall_of_the_luther_cabinet
+
+
+		available = {
+		}
+
+		prerequisite = { focus = GER_fall_of_the_luther_cabinet }
+
+		cost = 3
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_building_a_new_coalition
+
+		x = 0
+		y = 6
+		relative_position_id = GER_fall_of_the_luther_cabinet
+
+
+		available = {
+		}
+
+		prerequisite = { focus = GER_fall_of_the_luther_cabinet }
+
+		cost = 3
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_kpd_c
+
+		x = -12
+		y = 1
+		relative_position_id = GER_building_a_new_coalition
+
+
+		available = {
+		}
+
+		prerequisite = { focus = GER_building_a_new_coalition }
+
+		cost = 3
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_spd_c
+
+		x = -7
+		y = 1
+		relative_position_id = GER_building_a_new_coalition
+
+
+		available = {
+		}
+
+		prerequisite = { focus = GER_building_a_new_coalition }
+
+		cost = 3
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_ddp_c
+
+		x = -2
+		y = 1
+		relative_position_id = GER_building_a_new_coalition
+
+
+		available = {
+		}
+
+		prerequisite = { focus = GER_building_a_new_coalition }
+
+		cost = 3
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_dvp_c
+
+		x = 2
+		y = 1
+		relative_position_id = GER_building_a_new_coalition
+
+
+		available = {
+		}
+
+		prerequisite = { focus = GER_building_a_new_coalition }
+
+		cost = 3
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_z_c
+
+		x = 7
+		y = 1
+		relative_position_id = GER_building_a_new_coalition
+
+
+		available = {
+		}
+
+		prerequisite = { focus = GER_building_a_new_coalition }
+
+		cost = 3
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_dnvp_c
+
+		x = 12
+		y = 1
+		relative_position_id = GER_building_a_new_coalition
+
+
+		available = {
+		}
+
+		prerequisite = { focus = GER_building_a_new_coalition }
+
+		cost = 3
+
+		completion_reward = {
 		}
 	}
 }
