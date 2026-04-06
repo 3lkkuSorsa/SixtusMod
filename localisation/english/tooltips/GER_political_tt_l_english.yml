@@ -1,0 +1,20 @@
+﻿l_english:
+ GER_electoral_support_change_intro_tt: "Following parties' §Yelectoral support§! will change:"
+ GER_kpd_votes_change_tt: "§RKPD§! electoral support: $RIGHT|+=0..0$"
+ GER_spd_votes_change_tt: "§tSPD§! electoral support: $RIGHT|+=0..0$"
+ GER_fvp_votes_change_tt: "§9FVP§! electoral support: $RIGHT|+=0..0$"
+ GER_dlp_votes_change_tt: "§YDLP§! electoral support: $RIGHT|+=0..0$"
+ GER_z_votes_change_tt: "§3Z§! electoral support: $RIGHT|+=0..0$"
+ GER_dkp_votes_change_tt: "§2DkP§! electoral support: $RIGHT|+=0..0$"
+ GER_duvp_votes_change_tt: "§gDUVP§! electoral support: $RIGHT|+=0..0$"
+
+ GER_freeze_spd_tt: "The §tSPD§! campaign will be §Yfrozen§! for one turn.\n\n"
+
+ GER_spring_coalition_biding_our_time_tt: "The §YSpring§! §3coalition§! will campaign together and thus, gain more §Ysupport§!.\n\n"
+ GER_extend_the_communist_laws_tt: "The communist §RKPD§! will be banned from publically campaigning, and thus, lose §Ysupport§!.\n\n"
+ GER_political_manoeuvres_success_tt: "If the negotiations §Gsucceed§!:\n §YSpring§! §3coalition§!, by virtue of their political maneuvering, §7will survive§!, for now.\n\n"
+ GER_political_manoeuvres_failure_tt: "If the negotiations §Rfail§!:\n §YSpring§! §3coalition§! §twill collapse§!, and stop campaigning.\n\n"
+ GER_reconcile_volksblock_tt: "§tSPD§!, §9FVP§! and §3Z§! will §Yreform§! the once collapsed §9Volksblock§! with §3Adam Stegerwald§! as chancellor candidate.\n\n"
+
+ GER_spring_coalition: "The §YSpring§! §3coalition§! active"
+ GER_spring_is_over: "The §YSpring§! §3coalition§! collapsed"

@@ -1,0 +1,340 @@
+focus_tree = {
+	id = GER_focus_tree
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = GER
+		}
+	}
+
+	continuous_focus_position = { x = 300 y = 2000 }
+
+	default = no
+
+	focus = {
+		id = GER_ascension_of_spring_coalition
+		icon = GFX_focus_generic_authoritarian_government
+
+		x = 0
+		y = 0
+
+		cost = 0
+
+		available = {
+			always = no
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_biding_our_time
+		icon = GFX_goal_government_icon
+
+		x = 2
+		y = 1
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 3
+
+		prerequisite = {
+			focus = GER_ascension_of_spring_coalition
+		}
+
+		available = {
+			has_country_flag = GER_spring_coalition
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GER_spring_coalition_biding_our_time_tt
+			custom_effect_tooltip = GER_electoral_support_change_intro_tt
+			add_to_variable = {
+				var = GER.dlp_votes
+				value = 1
+				tooltip = GER_dlp_votes_change_tt
+			}
+			add_to_variable = {
+				var = GER.z_votes
+				value = 1
+				tooltip = GER_z_votes_change_tt
+			}
+			add_to_variable = {
+				var = GER_dkp_votes
+				value = 1
+				tooltip = GER_dkp_votes_change_tt
+			}
+			add_to_variable = {
+				var = GER_duvp_votes
+				value = 1
+				tooltip = GER_duvp_votes_change_tt
+			}
+		}
+	}
+
+	focus = {
+		id = GER_political_manoeuvres
+		icon = GFX_goal_new_treaty
+
+		x = 1
+		y = 2
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 6
+
+		prerequisite = {
+			focus = GER_biding_our_time
+		}
+
+		available = {
+			has_country_flag = GER_spring_coalition
+		}
+
+		select_effect = {
+			country_event = {
+				id = GER_political_manoeuvres.1
+				days = 5
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = select_effect
+			effect_tooltip = {
+				country_event = {
+					id = GER_political_manoeuvres.1
+					days = 5
+				}
+			}
+			custom_effect_tooltip = "     "
+			custom_effect_tooltip = after_completing
+			custom_effect_tooltip = GER_political_manoeuvres_success_tt
+			effect_tooltip = {
+				custom_effect_tooltip = GER_electoral_support_change_intro_tt
+				add_to_variable = {
+					var = GER.dlp_votes
+					value = 1
+					tooltip = GER_dlp_votes_change_tt
+				}
+				add_to_variable = {
+					var = GER.z_votes
+					value = 2
+					tooltip = GER_z_votes_change_tt
+				}
+				add_to_variable = {
+					var = GER.dkp_votes
+					value = -1
+					tooltip = GER_dkp_votes_change_tt
+				}
+			}
+			custom_effect_tooltip = "     "
+			custom_effect_tooltip = GER_political_manoeuvres_failure_tt
+			effect_tooltip = {
+				custom_effect_tooltip = GER_electoral_support_change_intro_tt
+				add_to_variable = {
+					var = GER.dlp_votes
+					value = -1
+					tooltip = GER_dlp_votes_change_tt
+				}
+				add_to_variable = {
+					var = GER.z_votes
+					value = -1
+					tooltip = GER_z_votes_change_tt
+				}
+				add_to_variable = {
+					var = GER.dkp_votes
+					value = -1
+					tooltip = GER_dkp_votes_change_tt
+				}
+				add_to_variable = {
+					var = GER.duvp_votes
+					value = -1
+					tooltip = GER_duvp_votes_change_tt
+				}
+			}
+			hidden_effect = {
+				add_to_variable = {
+					var = GER.dlp_votes
+					value = 1
+					tooltip = GER_dlp_votes_change_tt
+				}
+				add_to_variable = {
+					var = GER.z_votes
+					value = 2
+					tooltip = GER_z_votes_change_tt
+				}
+				add_to_variable = {
+					var = GER.dkp_votes
+					value = -1
+					tooltip = GER_dkp_votes_change_tt
+				}
+			}
+		}
+
+		bypass_effect = {
+			hidden_effect = {
+				add_to_variable = {
+					var = GER.dlp_votes
+					value = -1
+					tooltip = GER_dlp_votes_change_tt
+				}
+				add_to_variable = {
+					var = GER.z_votes
+					value = -1
+					tooltip = GER_z_votes_change_tt
+				}
+				add_to_variable = {
+					var = GER.dkp_votes
+					value = -1
+					tooltip = GER_dkp_votes_change_tt
+				}
+				add_to_variable = {
+					var = GER.duvp_votes
+					value = -1
+					tooltip = GER_duvp_votes_change_tt
+				}				
+			}
+		}
+	}
+
+	focus = {
+		id = GER_reconcile_volksblock
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = 2
+		y = 3
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 3
+
+		prerequisite = {
+			focus = GER_political_manoeuvres
+		}
+
+		available = {
+			has_country_flag = GER_spring_is_over
+		}
+
+		mutually_exclusive = {
+			focus = GER_rally_the_catholic_right
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GER_reconcile_volksblock_tt
+			custom_effect_tooltip = GER_electoral_support_change_intro_tt
+			add_to_variable = {
+				var = GER.dlp_votes
+				value = 1
+				tooltip = GER_dlp_votes_change_tt
+			}
+			add_to_variable = {
+				var = GER.z_votes
+				value = 1
+				tooltip = GER_z_votes_change_tt
+			}
+		}
+	}
+
+	focus = {
+		id = GER_rally_the_catholic_right
+		icon = GFX_goal_GER_Zentrum
+
+		x = 0
+		y = 3
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 3
+
+		prerequisite = {
+			focus = GER_political_manoeuvres
+		}
+
+		mutually_exclusive = {
+			focus = GER_reconcile_volksblock
+		}
+
+		available = {
+			has_country_flag = GER_spring_coalition
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GER_electoral_support_change_intro_tt
+			add_to_variable = {
+				var = GER.z_votes
+				value = 2
+				tooltip = GER_z_votes_change_tt
+			}
+			add_to_variable = {
+				var = GER.dkp_votes
+				value = -1
+				tooltip = GER_dkp_votes_change_tt
+			}
+			add_to_variable = {
+				var = GER.spd_votes
+				value = -1
+				tooltip = GER_spd_votes_change_tt
+			}
+		}
+	}
+
+	focus = {
+		id = GER_extend_the_communist_laws
+		icon = GFX_focus_GER_end_european_communism
+
+		x = 3
+		y = 2
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 3
+
+		prerequisite = {
+			focus = GER_biding_our_time
+		}
+
+		available = {
+			has_country_flag = GER_spring_coalition
+			has_active_mission = GER_communist_laws_expire
+		}
+
+		completion_reward = {
+			remove_mission = GER_communist_laws_expire
+			custom_effect_tooltip = GER_extend_the_communist_laws_tt
+			custom_effect_tooltip = GER_electoral_support_change_intro_tt
+			add_to_variable = {
+				var = GER_kpd_votes
+				value = -2
+				tooltip = GER_kpd_votes_change_tt
+			}
+		}
+	}
+
+	focus = {
+		id = GER_utilize_government_media
+		icon = GFX_focus_generic_radio_communication
+
+		x = 4
+		y = 3
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 4
+
+		prerequisite = {
+			focus = GER_biding_our_time
+		}
+
+		available = {
+			has_country_flag = GER_spring_coalition
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GER_freeze_spd_tt
+		}
+	}
+}

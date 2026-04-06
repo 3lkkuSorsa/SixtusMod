@@ -1,0 +1,43 @@
+add_namespace = GER_political_manoeuvres
+
+country_event = {
+	id = GER_political_manoeuvres.1
+	title = "Zentrum demands chancellorship"
+	desc = GER_political_manoeuvres.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to Stegerwald's chancellorship"
+		complete_national_focus = GER_political_manoeuvres
+		add_political_power = 150
+		add_stability = 0.05
+		set_country_flag = GER_agreed_to_stegerwald
+	}
+
+	option = {
+		name = "Compromise on Brüning"
+		complete_national_focus = GER_political_manoeuvres
+		set_country_flag = GER_agreed_to_brüning
+	}
+
+	option = {
+		name = "Leave the negotiations"
+		add_political_power = -50
+		add_stability = -0.05
+	}
+}
+
+country_event = {
+	id = GER_political_manoeuvres.2
+	title = "Zentrum withdraws from coalition"
+	desc = GER_political_manoeuvres.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Spring turns into winter"
+		set_country_flag = GER_spring_is_over
+		unlock_national_focus = GER_political_manoeuvres
+	}
+}

@@ -1,0 +1,10 @@
+ideas = {
+	country = {
+		GER_may_betrayal = {
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = 0.05
+			}
+		}
+	}
+}
