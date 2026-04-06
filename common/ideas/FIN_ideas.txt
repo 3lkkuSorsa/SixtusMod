@@ -1,0 +1,14 @@
+ideas = {
+	country = {
+		
+        FIN_agrarian_policies = {
+			picture = LIT_invested_in_farms
+			modifier = {
+                monthly_population = 0.1
+				consumer_goods_factor = -0.05
+                social_liberalism_drift = 0.01
+			}
+		}
+
+	}
+}

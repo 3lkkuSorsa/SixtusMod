@@ -1,0 +1,137 @@
+focus_tree = {
+    id = FIN_focus_tree
+    country = {
+        factor = 0
+
+        modifier = {
+            add = 10
+            tag = FIN
+        }
+    }
+
+    continuous_focus_position = { x = 100 y = 2000 }
+
+    default = no
+
+    # ECONOMY TREE
+
+    focus = {
+        id = FIN_adress_economic_affairs
+        icon = GFX_goal_SCA_economy_finland
+        x = 8
+        y = 0
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+
+        }  
+
+		cost = 10
+
+        search_filters = { 
+        
+        }
+    }
+
+    # POLITICAL TREE 
+
+    focus = {
+        id = FIN_agrarian_government
+        icon = GFX_goal_FIN_maalaisliitto
+        x = 21
+        y = 0
+
+        allow_branch = {
+            
+        }
+
+        available = {
+            has_government = social_liberalism
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            add_popularity = {
+                ideology = social_liberalism
+                popularity = 0.1
+            }
+        }  
+
+		cost = 4
+
+        search_filters = { 
+
+        }
+    }
+
+    focus = {
+        id = FIN_further_land_reforms
+        icon = GFX_goal_OTT_Land_Reform
+        x = 19
+        y = 1
+
+        allow_branch = {
+            
+        }
+
+        available = {
+            has_government = social_liberalism
+        }
+
+        mutually_exclusive = {
+
+        }
+
+        prerequisite = {
+            focus = FIN_agrarian_government
+        }
+		
+        completion_reward = {
+            add_stability = 0.05
+            add_ideas = {
+                FIN_agrarian_policies
+            }
+        }  
+
+		cost = 5
+
+        search_filters = { 
+
+        }
+    }
+
+    focus = {
+        id = FIN_kokoomus_government
+        icon = GFX_goal_FIN_kokoomus
+        x = 21
+        y = 0
+
+        allow_branch = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            add_political_power = 25
+            add_popularity = {
+                ideology = conservatism
+                popularity = 0.05
+            }
+        }  
+
+		cost = 4
+
+        search_filters = { 
+
+        }
+    }
+}
