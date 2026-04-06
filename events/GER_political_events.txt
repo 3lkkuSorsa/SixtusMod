@@ -23,6 +23,10 @@ country_event = {
 
 	option = {
 		name = "Leave the negotiations"
+		country_event = {
+			id = GER_political_manoeuvres.2
+			days = 2
+		}
 		add_political_power = -50
 		add_stability = -0.05
 	}
