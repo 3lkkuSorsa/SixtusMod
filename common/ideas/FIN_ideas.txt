@@ -10,5 +10,13 @@ ideas = {
 			}
 		}
 
+        FIN_moderatism_idea = {
+			picture = generic_neutrality_drift_bonus
+			modifier = {
+                political_power_factor = 0.1
+                social_liberalism_drift = 0.02
+			}
+		}
+
 	}
 }
