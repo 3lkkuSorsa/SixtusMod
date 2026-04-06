@@ -14,7 +14,7 @@ ideas = {
 		}
 		GER_spring_turns_into_winter = {
 			modifier = {
-				weekly_stability = -0.025
+				stability_weekly = -0.025
 				political_power_factor = -0.5
 			}
 		}
