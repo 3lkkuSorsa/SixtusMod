@@ -40,7 +40,8 @@ add_to_faction = GER
 
 # Setup of National Spirits
 add_ideas = {
-	sour_loser
+	GER_may_betrayal
+	GER_spirit_of_weimar
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation

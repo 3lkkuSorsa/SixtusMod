@@ -3,7 +3,7 @@
  GER_kpd_votes_change_tt: "§RKPD§! electoral support: $RIGHT|+=0..0$"
  GER_spd_votes_change_tt: "§tSPD§! electoral support: $RIGHT|+=0..0$"
  GER_fvp_votes_change_tt: "§9FVP§! electoral support: $RIGHT|+=0..0$"
- GER_dlp_votes_change_tt: "§YDLP§! electoral support: $RIGHT|+=0..0$"
+ GER_nlp_votes_change_tt: "§7NLP§! electoral support: $RIGHT|+=0..0$"
  GER_z_votes_change_tt: "§3Z§! electoral support: $RIGHT|+=0..0$"
  GER_dkp_votes_change_tt: "§2DkP§! electoral support: $RIGHT|+=0..0$"
  GER_duvp_votes_change_tt: "§gDUVP§! electoral support: $RIGHT|+=0..0$"

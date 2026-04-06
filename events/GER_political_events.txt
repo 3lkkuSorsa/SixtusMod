@@ -39,5 +39,6 @@ country_event = {
 		name = "Spring turns into winter"
 		set_country_flag = GER_spring_is_over
 		unlock_national_focus = GER_political_manoeuvres
+		add_ideas = GER_spring_turns_into_winter
 	}
 }
