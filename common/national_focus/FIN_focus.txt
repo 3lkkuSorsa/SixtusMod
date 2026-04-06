@@ -41,7 +41,7 @@ focus_tree = {
     focus = {
         id = FIN_agrarian_government
         icon = GFX_goal_FIN_maalaisliitto
-        x = 21
+        x = 22
         y = 0
 
         allow_branch = {
