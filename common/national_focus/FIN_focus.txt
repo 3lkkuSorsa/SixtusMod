@@ -126,7 +126,7 @@ focus_tree = {
         }
 		
         completion_reward = {
-            
+            custom_effect_tooltip = FIN_agrarian_only_tt
         }  
 
 		cost = 5
