@@ -1,0 +1,8 @@
+﻿l_english:
+ GER_red_scare: "Red Scare"
+ GER_red_scare_desc: "The growing influence and popularity of the §RKPD§! and other §tsocialist§! parties has resulted in a mass campaign of fear and propaganda against them, mainly from the conservatives and right-wing groups. This campaign has resulted in a collection of legislation known as the §Ycommunist laws§! which limit and restrict the activites and campaigning of parties and groups deemed communist."
+
+ GER_spring_coalition_category: "Spring Coalition"
+ GER_spring_coalition_category_desc: "[Get_GER_spring_coalition_desc]"
+
+ GER_spring_coalition_category_desc_kampf_aus_der_mitte: "The §YSpring§! §3coalition§! is currently fighting for its survival against the Zentrum's §tleft-wing§! faction and other §tleftist§! political groups. \n\nCoalition stability: [?GER.coalition_stability|+=0..0$]\n\n§YZentrum's factions§!\n§3Right-wing§!: 77 seats\n§YCenter§!: 70 seats\n§tLeft-wing§!: 53 seats\n\nCurrently §Y[?GER.centrists_for_left]§! of the centrists are siding against the §YSpring§! §3coalition§! and siding with the left-wing faction. Every month, amount of centrists relative to the §Ycoalition stability§! will start supporting or opposing the §tleft-wing§!.\n\n §tIf atleast §!§Y25 Centrists§!§t side with the left, our coalition will fall apart.§!"

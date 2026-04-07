@@ -1,0 +1,9 @@
+defined_text = {
+	name = Get_GER_spring_coalition_desc
+	text = {
+		trigger = {
+			has_country_flag = GER_kampf_aus_der_mitte
+		}
+		localization_key = GER_spring_coalition_category_desc_kampf_aus_der_mitte
+	}
+}

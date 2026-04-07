@@ -1,4 +1,9 @@
-﻿
+﻿country_event = {
+	id = GER_spring_coalition.0
+	days = 27
+}
+activate_mission = GER_communist_laws_expire
+
 capital = 64 # Berlin/Brandeburg
 
 
@@ -18,7 +23,7 @@ set_war_support = 0.3
 
 # Setup German Politics
 set_politics = {
-	ruling_party = authoritarianism
+	ruling_party = conservatism
 	last_election = "1933.3.5"
 	election_frequency = 48
 	elections_allowed = yes
@@ -42,6 +47,7 @@ add_to_faction = GER
 add_ideas = {
 	GER_may_betrayal
 	GER_spirit_of_weimar
+	GER_red_scare
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation

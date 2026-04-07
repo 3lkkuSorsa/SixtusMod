@@ -1,0 +1,21 @@
+GER_red_scare = {
+	allowed = {
+		original_tag = GER
+	}
+
+	visible = {
+		has_idea = GER_red_scare
+	}
+}
+
+GER_spring_coalition_category = {
+	allowed = {
+		original_tag = GER
+	}
+
+	visible = {
+		has_country_flag = GER_spring_coalition
+	}
+
+	visible_when_empty = yes
+}

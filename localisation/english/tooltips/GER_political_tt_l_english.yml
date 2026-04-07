@@ -8,6 +8,8 @@
  GER_dkp_votes_change_tt: "§2DkP§! electoral support: $RIGHT|+=0..0$"
  GER_duvp_votes_change_tt: "§gDUVP§! electoral support: $RIGHT|+=0..0$"
 
+ GER_coalition_stability_change_tt: "§YCoalition stability§!: $RIGHT|+=0..0$"
+
  GER_freeze_spd_tt: "The §tSPD§! campaign will be §Yfrozen§! for one turn.\n\n"
 
  GER_spring_coalition_biding_our_time_tt: "The §YSpring§! §3coalition§! will campaign together and thus, gain more §Ysupport§!.\n\n"
@@ -15,6 +17,15 @@
  GER_political_manoeuvres_success_tt: "If the negotiations §Gsucceed§!:\n §YSpring§! §3coalition§!, by virtue of their political maneuvering, §7will survive§!, for now.\n\n"
  GER_political_manoeuvres_failure_tt: "If the negotiations §Rfail§!:\n §YSpring§! §3coalition§! §twill collapse§!, and stop campaigning.\n\n"
  GER_reconcile_volksblock_tt: "§tSPD§!, §9FVP§! and §3Z§! will §Yreform§! the once collapsed §9Volksblock§! with §3Adam Stegerwald§! as chancellor candidate.\n\n"
+ GER_divert_funds_to_zentrum_right_tt: "We will try to §tdivert funds§! from leftists to §Ycoalition-friendly§! centrists, but they could find out about our plotting.\n\n"
 
- GER_spring_coalition: "The §YSpring§! §3coalition§! active"
- GER_spring_is_over: "The §YSpring§! §3coalition§! collapsed"
+ GER_spring_coalition: "The §YSpring§! §3coalition§! is active"
+ GER_spring_is_over: "The §YSpring§! §3coalition§! has collapsed"
+
+ GER_kampf_aus_der_mitte: "§YKampf aus der Mitte§! is active"
+
+ GER_zentrums_ambitions_tt: "The §3Zentrum§! has agreed to oust their own chancellor very reluctantly for the sake of the §YSpring§! §3coalition§! and they are not happy about it. They will demand the chancellorship over the government even if they aren't the largest party in the §Y1937 elections§!.\n\nEven without major reconcialiation efforts, the block will be available as a coalition, but our efforts may help them win larger majority.\n\n"
+ GER_papen_appointed_tt: "The kaiser has asked the §3Zentrum§!-leaning authoritarian §gFranz von Papen§! to form a technocratic government as independent. Even his own party doesn't trust him and the so-called §YSpring§! §3coalition§! is actively trying to oust him and appoint their own chancellor."
+ GER_spring_turns_into_winter_tt: "The §YSpring§! §3coalition§! has collapsed after §3Zentrum§! resigned from the government. They will now seek to rebuild the '§9Volksblock§!' with the §tSPD§!, §9FVP§! and §3Z§! as main parties.\n\n"
+
+ GER_communist_laws_extended: "The §Ycommunist laws§! have been extended by completing any of the following focuses:\n - §YExtend the Communist Laws§!\n - §YCrackdown on the KPD§!\n\n"

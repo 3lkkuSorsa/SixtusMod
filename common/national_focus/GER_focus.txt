@@ -31,6 +31,183 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_adressing_zentrum_demands
+		icon = GFX_goal_government_icon
+
+		x = 0
+		y = 1
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 2
+
+		prerequisite = {
+			focus = GER_ascension_of_spring_coalition
+		}
+
+		available = {
+			has_country_flag = GER_spring_coalition
+			has_country_flag = GER_kampf_aus_der_mitte
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GER_zentrums_ambitions_tt
+		}
+	}
+
+	focus = {
+		id = GER_take_action_to_bring_stability_to_coalition
+		icon = GFX_goal_government_icon
+
+		x = -2
+		y = 3
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 2
+
+		prerequisite = {
+			focus = GER_adressing_zentrum_demands
+		}
+
+		available = {
+			has_country_flag = GER_spring_coalition
+			has_country_flag = GER_kampf_aus_der_mitte
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_repeal_anti_trade_union_legislation
+		icon = GFX_goal_government_icon
+
+		x = -3
+		y = 4
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 3
+
+		prerequisite = {
+			focus = GER_take_action_to_bring_stability_to_coalition
+		}
+
+		available = {
+			has_country_flag = GER_spring_coalition
+			has_country_flag = GER_kampf_aus_der_mitte
+		}
+
+		completion_reward = {
+			add_to_variable = {
+				var = GER.coalition_stability
+				value = 1
+				tooltip = GER_coalition_stability_change_tt
+			}
+		}
+	}
+
+	focus = {
+		id = GER_expand_worker_protections
+		icon = GFX_goal_government_icon
+
+		x = -1
+		y = 4
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 3
+
+		prerequisite = {
+			focus = GER_take_action_to_bring_stability_to_coalition
+		}
+
+		available = {
+			has_country_flag = GER_spring_coalition
+			has_country_flag = GER_kampf_aus_der_mitte
+		}
+
+		completion_reward = {
+			add_to_variable = {
+				var = GER.coalition_stability
+				value = 1
+				tooltip = GER_coalition_stability_change_tt
+			}
+		}
+	}
+
+	focus = {
+		id = GER_divert_funds_to_zentrum_right
+		icon = GFX_goal_government_icon
+
+		x = -2
+		y = 5
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 3
+
+		prerequisite = {
+			focus = GER_take_action_to_bring_stability_to_coalition
+		}
+
+		available = {
+			has_country_flag = GER_spring_coalition
+			has_country_flag = GER_kampf_aus_der_mitte
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GER_divert_funds_to_zentrum_right_tt
+			random_list = {
+				30 = {
+					add_to_variable = {
+						var = GER.coalition_stability
+						value = -3
+						tooltip = GER_coalition_stability_change_tt
+					}
+				}
+				70 = {
+					add_to_variable = {
+						var = GER.coalition_stability
+						value = 2
+						tooltip = GER_coalition_stability_change_tt
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_imperial_mediation
+		icon = GFX_goal_government_icon
+
+		x = 1
+		y = 4
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 3
+
+		prerequisite = {
+			focus = GER_take_action_to_bring_stability_to_coalition
+		}
+
+		available = {
+			has_country_flag = GER_spring_coalition
+			has_country_flag = GER_kampf_aus_der_mitte
+		}
+
+		completion_reward = {
+			add_to_variable = {
+				var = GER.coalition_stability
+				value = 1
+				tooltip = GER_coalition_stability_change_tt
+			}
+		}
+	}
+
+	focus = {
 		id = GER_biding_our_time
 		icon = GFX_goal_government_icon
 
@@ -88,6 +265,9 @@ focus_tree = {
 
 		prerequisite = {
 			focus = GER_biding_our_time
+		}
+		prerequisite = {
+			focus = GER_adressing_zentrum_demands
 		}
 
 		available = {
@@ -308,7 +488,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			remove_mission = GER_communist_laws_expire
 			custom_effect_tooltip = GER_extend_the_communist_laws_tt
 			custom_effect_tooltip = GER_electoral_support_change_intro_tt
 			add_to_variable = {
@@ -316,6 +495,7 @@ focus_tree = {
 				value = -2
 				tooltip = GER_kpd_votes_change_tt
 			}
+			set_country_flag = GER_communist_laws_extended
 		}
 	}
 
@@ -340,6 +520,29 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = GER_freeze_spd_tt
+		}
+	}
+
+	focus = {
+		id = GER_investments_in_public_works
+		icon = GFX_goal_government_icon
+
+		x = 11
+		y = 1
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 3
+
+		prerequisite = {
+			focus = GER_ascension_of_spring_coalition
+		}
+
+		available = {
+			has_country_flag = GER_spring_coalition
+		}
+
+		completion_reward = {
 		}
 	}
 }

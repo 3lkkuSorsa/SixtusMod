@@ -18,5 +18,11 @@ ideas = {
 				political_power_factor = -0.5
 			}
 		}
+		GER_red_scare = {
+			modifier = {
+				stability_factor = -0.05
+				communism_drift = 0.01
+			}
+		}
 	}
 }
