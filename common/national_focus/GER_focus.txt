@@ -535,7 +535,6 @@ focus_tree = {
 		cost = 3
 
 		prerequisite = {
-			focus = GER_ascension_of_spring_coalition
 		}
 
 		available = {
