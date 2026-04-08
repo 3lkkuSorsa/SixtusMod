@@ -56,6 +56,106 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_take_on_stresemanns_legacy
+		icon = GFX_goal_government_icon
+
+		x = -4
+		y = 1
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 2
+
+		prerequisite = {
+			focus = GER_ascension_of_spring_coalition
+		}
+
+		available = {
+			has_country_flag = GER_spring_coalition
+		}
+
+		bypass = {
+			has_country_flag = GER_spring_is_over
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_propose_economic_cooperation_with_britain
+		icon = GFX_goal_government_icon
+
+		x = -5
+		y = 2
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 2
+
+		prerequisite = {
+			focus = GER_take_on_stresemanns_legacy
+		}
+
+		available = {
+			has_country_flag = GER_spring_coalition
+		}
+
+		bypass = {
+			has_country_flag = GER_spring_is_over
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_negotiate_for_common_defense_pact_with_britain
+		icon = GFX_goal_government_icon
+
+		x = -3
+		y = 2
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 2
+
+		prerequisite = {
+			focus = GER_take_on_stresemanns_legacy
+		}
+
+		available = {
+			has_completed_focus = GER_propose_economic_cooperation_with_britain
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_sign_the_frankfurt_treaties
+		icon = GFX_goal_government_icon
+
+		x = -4
+		y = 3
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 2
+
+		prerequisite = {
+			focus = GER_propose_economic_cooperation_with_britain
+		}
+
+		prerequisite = {
+			focus = GER_negotiate_for_common_defense_pact_with_britain
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id = GER_take_action_to_bring_stability_to_coalition
 		icon = GFX_goal_government_icon
 

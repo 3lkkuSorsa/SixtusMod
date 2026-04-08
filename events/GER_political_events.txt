@@ -1,5 +1,6 @@
 add_namespace = GER_spring_coalition
 add_namespace = GER_political_manoeuvres
+add_namespace = GER_red_scare
 
 country_event = {
 	id = GER_spring_coalition.0
@@ -114,5 +115,26 @@ country_event = {
 		}
 		unlock_national_focus = GER_adressing_zentrum_demands
 		set_country_flag = GER_kampf_aus_der_mitte
+	}
+}
+
+country_event = {
+	id = GER_red_scare.1
+	title = "On the matter of communism"
+	desc = GER_red_scare.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We need to stop them!"
+		add_popularity = {
+			ideology = communism
+			popularity = -0.05
+		}
+	}
+
+	option = {
+		name = "They will phase out with time"
+		set_country_flag = GER_communists_unstopped
 	}
 }

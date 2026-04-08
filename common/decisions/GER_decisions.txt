@@ -40,6 +40,10 @@ GER_red_scare = {
 		days_mission_timeout = 90
 
 		timeout_effect = {
+			country_event = {
+				id = GER_red_scare.1
+				days = 5
+			}
 		}
 	}
 }
