@@ -45,7 +45,7 @@ focus_tree = {
         y = 0
 
         allow_branch = {
-            
+            has_government = social_liberalism
         }
 
         available = {
@@ -1022,6 +1022,154 @@ focus_tree = {
         }  
 
 		cost = 4
+
+        search_filters = { 
+
+        }
+    }
+
+    focus = {
+        id = FIN_alliance_with_national_liberals
+        icon = GFX_goal_FIN_kokoomus
+        x = 20
+        y = 1
+
+        allow_branch = {
+            
+        }
+
+        mutually_exclusive = {
+            focus = FIN_alliance_with_swedish_party
+        }
+
+        prerequisite = {
+            focus = FIN_kokoomus_government
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 4
+
+        search_filters = { 
+
+        }
+    }
+
+    focus = {
+        id = FIN_alliance_with_swedish_party
+        icon = GFX_goal_FIN_kokoomus
+        x = 22
+        y = 1
+
+        allow_branch = {
+            
+        }
+
+        mutually_exclusive = {
+            focus = FIN_alliance_with_national_liberals
+        }
+
+        prerequisite = {
+            focus = FIN_kokoomus_government
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 4
+
+        search_filters = { 
+
+        }
+    }
+
+    focus = {
+        id = FIN_return_to_tradition
+        icon = GFX_goal_FIN_kokoomus
+        x = 21
+        y = 2
+
+        allow_branch = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+
+        prerequisite = {
+            focus = FIN_alliance_with_national_liberals
+            focus = FIN_alliance_with_swedish_party
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 5
+
+        search_filters = { 
+
+        }
+    }
+
+    focus = {
+        id = FIN_economic_restoration
+        icon = GFX_goal_FIN_kokoomus
+        x = 15
+        y = 2
+
+        allow_branch = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+
+        prerequisite = {
+            focus = FIN_alliance_with_national_liberals
+            focus = FIN_alliance_with_swedish_party
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 5
+
+        search_filters = { 
+
+        }
+    }
+
+    focus = {
+        id = FIN_refine_the_party
+        icon = GFX_goal_FIN_kokoomus
+        x = 27
+        y = 2
+
+        allow_branch = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+
+        prerequisite = {
+            focus = FIN_alliance_with_national_liberals
+            focus = FIN_alliance_with_swedish_party
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 5
 
         search_filters = { 
 
