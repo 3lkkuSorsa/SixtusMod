@@ -119,6 +119,28 @@ country_event = {
 }
 
 country_event = {
+	id = GER_political_manoeuvres.4
+	title = "A Price to Pay"
+	desc = GER_political_manoeuvres.4.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to appoint Schleicher as Reichswehr Minister"
+		
+	}
+
+	option = {
+		name = "No deal with the Hohenzollerns"
+		add_to_variable = {
+			var = GER.coalition_stability
+			value = -2
+			tooltip = GER_coalition_stability_change_tt
+		}
+	}
+}
+
+country_event = {
 	id = GER_red_scare.1
 	title = "On the matter of communism"
 	desc = GER_red_scare.1.d
