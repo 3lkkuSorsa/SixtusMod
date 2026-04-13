@@ -21,6 +21,14 @@ IF = {
 }
 set_war_support = 0.3
 
+recruit_character = GER_franz_von_papen
+recruit_character = GER_kuno_von_westarp
+recruit_character = GER_wilhelm_groener
+recruit_character = GER_julius_curtius
+recruit_character = GER_hjalmar_schacht
+recruit_character = GER_konstantin_von_neurath
+recruit_character = GER_otto_von_below
+
 # Setup German Politics
 set_politics = {
 	ruling_party = conservatism
@@ -45,9 +53,11 @@ add_to_faction = GER
 
 # Setup of National Spirits
 add_ideas = {
+	GER_franz_von_papen_idea
 	GER_may_betrayal
 	GER_spirit_of_weimar
 	GER_red_scare
+	GER_era_of_imperial_cabinets
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation

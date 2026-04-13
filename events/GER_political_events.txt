@@ -4,7 +4,7 @@ add_namespace = GER_red_scare
 
 country_event = {
 	id = GER_spring_coalition.0
-	title = "Kaiser appoint Franz von Papen as Chancellor"
+	title = "Kaiser reappoints Franz von Papen as Chancellor"
 	desc = GER_spring_coalition.0.d
 
 	is_triggered_only = yes
@@ -23,7 +23,7 @@ country_event = {
 
 country_event = {
 	id = GER_spring_coalition.1
-	title = "Spring coalition votes for no-confidence"
+	title = "Spring parties unified against Papen"
 	desc = GER_spring_coalition.1.d
 
 	is_triggered_only = yes
@@ -33,6 +33,7 @@ country_event = {
 		custom_effect_tooltip = GER_zentrums_ambitions_tt
 		activate_mission = GER_zentrum_ambitions
 		add_stability = 0.05
+		remove_ideas = GER_era_of_imperial_cabinets
 		set_country_flag = GER_spring_coalition
 		unlock_national_focus = GER_ascension_of_spring_coalition
 		set_politics = {
@@ -43,6 +44,24 @@ country_event = {
 			id = GER_political_manoeuvres.3
 			days = 23
 		}
+
+		country_event = {
+			id = GER_spring_coalition.2
+			days = 4
+		}
+	}
+}
+
+country_event = {
+	id = GER_spring_coalition.2
+	title = "Inauguration of Kabinett von Westarp"
+	desc = GER_spring_coalition.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Can it be? A real political coalition in Germany?!"
+		GER_appoint_spring_coalition
 	}
 }
 

@@ -1,0 +1,16 @@
+GER_appoint_spring_coalition = {
+	custom_effect_tooltip = GER_appoint_spring_coalition_tt
+	hidden_effect = {
+		remove_ideas = {
+			GER_franz_von_papen_idea
+		}
+		add_ideas = {
+			GER_kuno_von_westarp_idea
+			GER_wilhelm_groener_idea
+			GER_julius_curtius_idea
+			GER_hjalmar_schacht_idea
+			GER_konstantin_von_neurath_idea
+			GER_otto_von_below_idea
+		}
+	}
+}

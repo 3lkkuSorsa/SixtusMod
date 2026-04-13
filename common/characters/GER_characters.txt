@@ -1,0 +1,167 @@
+characters = {
+	GER_franz_von_papen = {
+		name = "Franz von Papen"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/GER_papen.dds"
+				small = "gfx/advisors/GER/GER_papen.dds"
+			}
+		}
+
+		country_leader = {
+			ideology = national_conservatism
+		}
+
+		advisor = {
+			slot = head_of_government
+			idea_token = GER_franz_von_papen_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
+	GER_kuno_von_westarp = {
+		name = "Kuno von Westarp"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/GER_westarp.dds"
+				small = "gfx/advisors/GER/GER_westarp.dds"
+			}
+		}
+
+		country_leader = {
+			ideology = authoritarianism_sub
+		}
+
+		advisor = {
+			slot = head_of_government
+			idea_token = GER_kuno_von_westarp_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
+	# Other Ministers
+
+	GER_wilhelm_groener = {
+		name = "Wilhelm Groener"
+		portraits = {
+			civilian = {
+				small = "gfx/advisors/GER/GER_groener.dds"
+			}
+		}
+
+		advisor = {
+			slot = minister
+			idea_token = GER_wilhelm_groener_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
+	GER_julius_curtius = {
+		name = "Julius Curtius"
+		portraits = {
+			civilian = {
+				small = "gfx/advisors/GER/GER_curtius.dds"
+			}
+		}
+
+		advisor = {
+			slot = minister
+			idea_token = GER_julius_curtius_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
+	GER_hjalmar_schacht = {
+		name = "Hjalmar Schacht"
+		portraits = {
+			civilian = {
+				small = "gfx/advisors/GER/GER_schacht.dds"
+			}
+		}
+
+		advisor = {
+			slot = minister
+			idea_token = GER_hjalmar_schacht_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
+	GER_konstantin_von_neurath = {
+		name = "Konstantin von Neurath"
+		portraits = {
+			civilian = {
+				small = "gfx/advisors/GER/GER_neurath.dds"
+			}
+		}
+
+		advisor = {
+			slot = minister
+			idea_token = GER_konstantin_von_neurath_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
+	GER_otto_von_below = {
+		name = "Otto von Below"
+		portraits = {
+			civilian = {
+				small = "gfx/advisors/GER/GER_below.dds"
+			}
+		}
+
+		advisor = {
+			slot = minister
+			idea_token = GER_otto_von_below_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+}

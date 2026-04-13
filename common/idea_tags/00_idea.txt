@@ -36,11 +36,11 @@ idea_categories = {
 
 	cabinet = {
 		character_slot = head_of_government
-		character_slot = interior_minister
-		character_slot = foreign_minister
-		character_slot = defense_minister
-		character_slot = economic_minister
-		character_slot = finance_minister
+		character_slot = minister
+		character_slot = minister
+		character_slot = minister
+		character_slot = minister
+		character_slot = minister
 
 		ledger = civilian
 

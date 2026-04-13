@@ -1,0 +1,53 @@
+defined_text = {
+	name = GetHogTitle
+	text = {
+		trigger = {
+			original_tag = GER	
+		}
+		localization_key = reichskanzler
+	}
+	text = {
+		localization_key = hog_default_title
+	}
+}
+
+defined_text = {
+	name = GetInteriorMinisterTitle
+	text = {
+		localization_key = interior_minister_default_title
+	}
+}
+
+defined_text = {
+	name = GetForeignMinisterTitle
+	text = {
+		localization_key = foreign_minister_default_title
+	}
+}
+
+defined_text = {
+	name = GetFinanceMinisterTitle
+	text = {
+		localization_key = finance_minister_default_title
+	}
+}
+
+defined_text = {
+	name = GetDefenseMinisterTitle
+	text = {
+		trigger = {
+			original_tag = GER	
+		}
+		localization_key = reichswehrminister
+	}
+	text = {
+		localization_key = defense_minister_default_title
+	}
+}
+
+defined_text = {
+	name = GetEconomicMinisterTitle
+	text = {
+		localization_key = economic_minister_default_title
+	}
+}

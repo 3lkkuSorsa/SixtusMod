@@ -24,5 +24,11 @@ ideas = {
 				communism_drift = 0.01
 			}
 		}
+		GER_era_of_imperial_cabinets = {
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.25
+			}
+		}
 	}
 }
