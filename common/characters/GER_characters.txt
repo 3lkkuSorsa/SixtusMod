@@ -53,6 +53,46 @@ characters = {
 		}
 	}
 
+	GER_kurt_von_schleicher = {
+		name = "Kurt von Schleicher"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/GER_schleicher.dds"
+				small = "gfx/advisors/GER/GER_schleicher.dds"
+			}
+		}
+
+		country_leader = {
+			ideology = stratocracy
+		}
+
+		advisor = {
+			slot = head_of_government
+			idea_token = GER_kurt_von_schleicher_hog_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+
+		advisor = {
+			slot = minister
+			idea_token = GER_kurt_von_schleicher_min_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
 	# Other Ministers
 
 	GER_wilhelm_groener = {

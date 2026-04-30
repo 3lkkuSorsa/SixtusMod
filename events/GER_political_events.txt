@@ -1,6 +1,7 @@
 add_namespace = GER_spring_coalition
 add_namespace = GER_political_manoeuvres
 add_namespace = GER_red_scare
+add_namespace = GER_zentrum_fails
 
 country_event = {
 	id = GER_spring_coalition.0
@@ -61,7 +62,7 @@ country_event = {
 
 	option = {
 		name = "Can it be? A real political coalition in Germany?!"
-		GER_appoint_spring_coalition
+		GER_appoint_spring_coalition = yes
 	}
 }
 
@@ -112,6 +113,7 @@ country_event = {
 		custom_effect_tooltip = GER_spring_turns_into_winter_tt
 		clr_country_flag = GER_spring_coalition
 		clr_country_flag = GER_kampf_aus_der_mitte
+		remove_mission = GER_kampf_aus_der_mitte_mission
 		set_country_flag = GER_spring_is_over
 		unlock_national_focus = GER_political_manoeuvres
 		complete_national_focus = GER_reconcile_volksblock
@@ -134,6 +136,7 @@ country_event = {
 		}
 		unlock_national_focus = GER_adressing_zentrum_demands
 		set_country_flag = GER_kampf_aus_der_mitte
+		activate_mission = GER_kampf_aus_der_mitte_mission
 	}
 }
 
@@ -168,6 +171,7 @@ country_event = {
 
 	option = {
 		name = "We need to stop them!"
+		set_country_flag = GER_communist_laws_extended
 		add_popularity = {
 			ideology = communism
 			popularity = -0.05
@@ -177,5 +181,59 @@ country_event = {
 	option = {
 		name = "They will phase out with time"
 		set_country_flag = GER_communists_unstopped
+	}
+}
+
+country_event = {
+	id = GER_zentrum_fails.1
+	title = "Reichstag censors the government"
+	desc = GER_zentrum_fails.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Period of instability for the government"
+		custom_effect_tooltip = GER_fire_all_ministers_tt
+		hidden_effect = {
+			activate_mission = GER_address_the_ongoing_crisis
+			remove_ideas = {
+				GER_kuno_von_westarp_idea
+				GER_wilhelm_groener_idea
+				GER_julius_curtius_idea
+				GER_hjalmar_schacht_idea
+				GER_konstantin_von_neurath_idea
+				GER_otto_von_below_idea
+			}
+			uncomplete_national_focus = {
+				focus = GER_rally_the_catholic_right
+			}
+		}
+		add_ideas = GER_government_in_crisis
+	}
+}
+
+country_event = {
+	id = GER_zentrum_fails.2
+	title = "Reichswehr occupies Berlin"
+	desc = GER_zentrum_fails.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The government is safe... for now"
+		custom_effect_tooltip = GER_zentrum_collapse_tt
+		promote_character = {
+			character = GER_kurt_von_schleicher
+		}
+		set_politics = {
+			ruling_party = ultra_nationalism
+		}
+		hidden_effect = {
+			remove_ideas = GER_government_in_crisis
+			add_ideas = GER_kurt_von_schleicher_hog_idea
+			clr_country_flag = GER_show_moderate_tree
+			set_country_flag = GER_show_authoritarian_tree
+			mark_focus_tree_layout_dirty = yes
+		}
 	}
 }

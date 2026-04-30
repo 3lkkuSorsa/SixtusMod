@@ -23,11 +23,14 @@ set_war_support = 0.3
 
 recruit_character = GER_franz_von_papen
 recruit_character = GER_kuno_von_westarp
+recruit_character = GER_kurt_von_schleicher
 recruit_character = GER_wilhelm_groener
 recruit_character = GER_julius_curtius
 recruit_character = GER_hjalmar_schacht
 recruit_character = GER_konstantin_von_neurath
 recruit_character = GER_otto_von_below
+
+set_country_flag = GER_show_moderate_tree
 
 # Setup German Politics
 set_politics = {

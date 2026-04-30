@@ -26,6 +26,10 @@ focus_tree = {
 			always = no
 		}
 
+		allow_branch = {
+			has_country_flag = GER_show_moderate_tree
+		}
+
 		completion_reward = {
 		}
 	}
@@ -497,6 +501,8 @@ focus_tree = {
 
 		available = {
 			has_country_flag = GER_spring_is_over
+			has_idea = GER_government_in_crisis
+			has_country_flag = GER_communist_laws_extended
 		}
 
 		mutually_exclusive = {
@@ -521,6 +527,9 @@ focus_tree = {
 				value = 1
 				tooltip = GER_z_votes_change_tt
 			}
+			clr_country_flag = GER_show_moderate_tree
+			set_country_flag = GER_show_leftist_tree
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 

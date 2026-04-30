@@ -9,6 +9,7 @@
  GER_duvp_votes_change_tt: "§gDUVP§! electoral support: $RIGHT|+=0..0$"
 
  GER_coalition_stability_change_tt: "§YCoalition stability§!: $RIGHT|+=0..0$"
+ GER_coalition_centrists_for_left_tt: "Centrists siding with the left: $RIGHT|-=0..0$"
 
  GER_freeze_spd_tt: "The §tSPD§! campaign will be §Yfrozen§! for one turn.\n\n"
 
@@ -23,6 +24,8 @@
  GER_spring_is_over: "The §YSpring§! §3coalition§! has collapsed"
 
  GER_kampf_aus_der_mitte: "§YKampf aus der Mitte§! is active"
+ GER_kampf_aus_der_mitte_NOT: "§YKampf aus der Mitte§! is over"
+ GER_kampf_aus_der_mitte_crisis_tt: "\n\n§RWe will lose on the next turn, if we don't do something about the crisis.§!"
 
  GER_zentrums_ambitions_tt: "The §3Zentrum§! has agreed to oust their own chancellor very reluctantly for the sake of the §YSpring§! §3coalition§! and they are not happy about it. They will demand the chancellorship over the government even if they aren't the largest party in the §Y1937 elections§!.\n\nEven without major reconcialiation efforts, the block will be available as a coalition, but our efforts may help them win larger majority.\n\n"
  GER_papen_appointed_tt: "The kaiser has asked the §3Zentrum§!-leaning authoritarian §gFranz von Papen§! to form a technocratic government as independent. Even his own party doesn't trust him and the so-called §YSpring§! §3coalition§! is actively trying to oust him and appoint their own chancellor."
@@ -31,3 +34,5 @@
  GER_communist_laws_extended: "The §Ycommunist laws§! have been extended by completing any of the following focuses:\n - §YExtend the Communist Laws§!\n - §YCrackdown on the KPD§!"
 
  GER_appoint_spring_coalition_tt: "Ministries will be:\n  - Reichskanzler: Kuno von Westarp, §2DkP§!\n  - Interior Minister: Wilhelm Groener, §2DkP§!\n  - Economic Minister: Julius Curtius, §7NLP§!\n  - Finance Minister: Hjalmar Schacht, §7NLP§!\n  - Foreign Minister: Konstantin von Neurath, §3Z§!\n  - Reichswehrminister: Otto von Below, §gDUVP§!"
+
+ GER_fire_all_ministers_tt: "§tAll ministers will be fired.§!"

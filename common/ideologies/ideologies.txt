@@ -7,6 +7,9 @@ ideologies = {
 			national_socialism = {
 				can_be_randomly_selected = yes
 			}
+			stratocracy = {
+				can_be_randomly_selected = yes
+			}
 		}
 		color = { 70 40 0 }
 	}
