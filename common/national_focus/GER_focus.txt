@@ -510,6 +510,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			country_event = {
+				id = GER_zentrum_fails.3
+				days = 2
+			}
 			custom_effect_tooltip = GER_reconcile_volksblock_tt
 			custom_effect_tooltip = GER_electoral_support_change_intro_tt
 			add_to_variable = {
@@ -527,9 +531,6 @@ focus_tree = {
 				value = 1
 				tooltip = GER_z_votes_change_tt
 			}
-			clr_country_flag = GER_show_moderate_tree
-			set_country_flag = GER_show_leftist_tree
-			mark_focus_tree_layout_dirty = yes
 		}
 	}
 

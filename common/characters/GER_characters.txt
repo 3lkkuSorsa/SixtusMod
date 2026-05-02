@@ -1,4 +1,17 @@
 characters = {
+	GER_reichstag = {
+		name = "Reichstag"
+		portraits = {
+			civilian = {
+				small = "gfx/advisors/GER/GER_reichstag.dds"
+			}
+		}
+
+		country_leader = {
+			ideology = authoritarianism_sub
+		}
+	}
+
 	GER_franz_von_papen = {
 		name = "Franz von Papen"
 		portraits = {

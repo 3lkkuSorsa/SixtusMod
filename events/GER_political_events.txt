@@ -195,6 +195,9 @@ country_event = {
 		name = "Period of instability for the government"
 		custom_effect_tooltip = GER_fire_all_ministers_tt
 		hidden_effect = {
+			promote_character = {
+				character = GER_reichstag
+			}
 			activate_mission = GER_address_the_ongoing_crisis
 			remove_ideas = {
 				GER_kuno_von_westarp_idea
@@ -203,6 +206,7 @@ country_event = {
 				GER_hjalmar_schacht_idea
 				GER_konstantin_von_neurath_idea
 				GER_otto_von_below_idea
+				GER_kurt_von_schleicher_min_idea
 			}
 			uncomplete_national_focus = {
 				focus = GER_rally_the_catholic_right
@@ -235,5 +239,18 @@ country_event = {
 			set_country_flag = GER_show_authoritarian_tree
 			mark_focus_tree_layout_dirty = yes
 		}
+	}
+}
+
+country_event = {
+	id = GER_zentrum_fails.3
+	title = "Volksblock calls for early elections"
+	desc = GER_zentrum_fails.3.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Kaiser really doesn't have other choices"
+		activate_mission = GER_elections_timer
 	}
 }

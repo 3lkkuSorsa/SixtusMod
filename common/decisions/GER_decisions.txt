@@ -150,3 +150,27 @@ GER_red_scare = {
 		}
 	}
 }
+
+GER_elections_37 = {
+	GER_elections_timer = {
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			always = no
+		}
+
+		activation = {
+			always = no
+		}
+
+		days_mission_timeout = 60
+
+		timeout_effect = {
+			country_event = {
+				id = GER_elections_37.1
+			}
+		}
+	}
+}

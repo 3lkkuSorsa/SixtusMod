@@ -19,3 +19,13 @@ GER_spring_coalition_category = {
 
 	visible_when_empty = yes
 }
+
+GER_elections_37_category = {
+	allowed = {
+		original_tag = GER
+	}
+
+	visible = {
+		has_country_flag = GER_elections_37
+	}
+}

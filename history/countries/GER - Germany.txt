@@ -29,6 +29,7 @@ recruit_character = GER_julius_curtius
 recruit_character = GER_hjalmar_schacht
 recruit_character = GER_konstantin_von_neurath
 recruit_character = GER_otto_von_below
+recruit_character = GER_reichstag
 
 set_country_flag = GER_show_moderate_tree
 
