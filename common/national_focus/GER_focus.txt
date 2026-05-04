@@ -61,7 +61,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_take_on_stresemanns_legacy
-		icon = GFX_goal_government_icon
+		icon = GFX_focus_eng_the_sun_never_sets
 
 		x = -4
 		y = 1
@@ -88,7 +88,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_propose_economic_cooperation_with_britain
-		icon = GFX_goal_government_icon
+		icon = GFX_goal_bag_of_money
 
 		x = -5
 		y = 2
@@ -161,7 +161,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_take_action_to_bring_stability_to_coalition
-		icon = GFX_goal_government_icon
+		icon = GFX_goal_generic_stable_government
 
 		x = -2
 		y = 3
@@ -185,7 +185,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_repeal_anti_trade_union_legislation
-		icon = GFX_goal_government_icon
+		icon = GFX_goal_syndicalist_workers
 
 		x = -3
 		y = 4
@@ -214,7 +214,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_expand_worker_protections
-		icon = GFX_goal_government_icon
+		icon = GFX_goal_workers_rights
 
 		x = -1
 		y = 4
@@ -243,7 +243,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_divert_funds_to_zentrum_right
-		icon = GFX_goal_government_icon
+		icon = GFX_goal_GER_Fundamental_Rights
 
 		x = -2
 		y = 5
@@ -284,7 +284,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_imperial_mediation
-		icon = GFX_goal_government_icon
+		icon = GFX_goal_GER_RK_Schleicher
 
 		x = 1
 		y = 4
