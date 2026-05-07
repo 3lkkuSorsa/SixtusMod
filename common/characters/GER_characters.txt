@@ -3,12 +3,15 @@ characters = {
 		name = "Reichstag"
 		portraits = {
 			civilian = {
-				small = "gfx/advisors/GER/GER_reichstag.dds"
+				large = "gfx/leaders/GER/GER_reichstag.dds"
 			}
 		}
 
 		country_leader = {
 			ideology = authoritarianism_sub
+		}
+		country_leader = {
+			ideology = conservatism_sub
 		}
 	}
 
@@ -106,6 +109,126 @@ characters = {
 		}
 	}
 
+	GER_otto_gessler = {
+		name = "Otto Gessler"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/GER_gessler.dds"
+				small = "gfx/advisors/GER/GER_gessler.dds"
+			}
+		}
+
+		country_leader = {
+			ideology = progressivism
+		}
+
+		advisor = {
+			slot = head_of_government
+			idea_token = GER_otto_gessler_hog_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+
+		advisor = {
+			slot = minister
+			idea_token = GER_otto_gessler_min_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
+	GER_adam_stegerwald = {
+		name = "Adam Stegerwald"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/GER_stegerwald.dds"
+				small = "gfx/advisors/GER/GER_stegerwald.dds"
+			}
+		}
+
+		country_leader = {
+			ideology = christian_democracy
+		}
+
+		advisor = {
+			slot = head_of_government
+			idea_token = GER_adam_stegerwald_hog_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+
+		advisor = {
+			slot = minister
+			idea_token = GER_adam_stegerwald_min_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
+	GER_heinrich_bruning = {
+		name = "Heinrich Brüning"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/GER_bruning.dds"
+				small = "gfx/advisors/GER/GER_bruning.dds"
+			}
+		}
+
+		country_leader = {
+			ideology = conservatism_sub
+		}
+
+		advisor = {
+			slot = head_of_government
+			idea_token = GER_heinrich_bruning_hog_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+
+		advisor = {
+			slot = minister
+			idea_token = GER_heinrich_bruning_min_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
 	# Other Ministers
 
 	GER_wilhelm_groener = {
@@ -152,7 +275,7 @@ characters = {
 		}
 	}
 
-	GER_hjalmar_schacht = {
+	GER_hjalmar_schacht_1 = {
 		name = "Hjalmar Schacht"
 		portraits = {
 			civilian = {
@@ -174,7 +297,7 @@ characters = {
 		}
 	}
 
-	GER_konstantin_von_neurath = {
+	GER_konstantin_von_neurath_1 = {
 		name = "Konstantin von Neurath"
 		portraits = {
 			civilian = {

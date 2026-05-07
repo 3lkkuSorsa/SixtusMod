@@ -2,6 +2,8 @@ add_namespace = GER_spring_coalition
 add_namespace = GER_political_manoeuvres
 add_namespace = GER_red_scare
 add_namespace = GER_zentrum_fails
+add_namespace = GER_volksblock
+add_namespace = GER_zentrum_leadership
 
 country_event = {
 	id = GER_spring_coalition.0
@@ -18,6 +20,10 @@ country_event = {
 				id = GER_spring_coalition.1
 				days = 5
 			}
+			promote_character = {
+				character = GER_franz_von_papen
+			}
+			add_ideas = GER_franz_von_papen_idea
 		}
 	}
 }
@@ -73,6 +79,15 @@ country_event = {
 
 	is_triggered_only = yes
 
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = GER_zentrum_leadership.1
+				days = 40
+			}
+		}
+	}
+
 	option = {
 		name = "Agree to Stegerwald's chancellorship"
 		add_to_variable = {
@@ -87,7 +102,10 @@ country_event = {
 	option = {
 		name = "Compromise on Brüning"
 		complete_national_focus = GER_political_manoeuvres
-		set_country_flag = GER_agreed_to_brüning
+		set_country_flag = GER_agreed_to_bruning
+		hidden_effect = {
+			
+		}
 	}
 
 	option = {
@@ -98,6 +116,34 @@ country_event = {
 		}
 		add_political_power = -50
 		add_stability = -0.05
+	}
+}
+
+country_event = {
+	id = GER_zentrum_leadership.1
+	title = "Zentrum's leadership crisis"
+	desc = GER_zentrum_leadership.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Stegerwald is appointed a party chair!"
+		trigger = {
+			has_country_flag = GER_agreed_to_stegerwald
+		}
+		promote_character = {
+			character = GER_adam_stegerwald
+		}
+	}
+
+	option = {
+		name = "Brüning is appointed a party chair!"
+		trigger = {
+			NOT = { has_country_flag = GER_agreed_to_stegerwald }
+		}
+		promote_character = {
+			character = GER_heinrich_bruning
+		}
 	}
 }
 
@@ -149,7 +195,11 @@ country_event = {
 
 	option = {
 		name = "Agree to appoint Schleicher as Reichswehr Minister"
-		
+		custom_effect_tooltip = GER_scleicher_replaces_below_tt
+		hidden_effect = {
+			remove_ideas = GER_otto_von_below_idea
+			add_ideas = GER_kurt_von_schleicher_min_idea
+		}
 	}
 
 	option = {
@@ -252,5 +302,55 @@ country_event = {
 	option = {
 		name = "Kaiser really doesn't have other choices"
 		activate_mission = GER_elections_timer
+	}
+}
+
+country_event = {
+	id = GER_zentrum_fails.4
+	title = "Communist counter-revolutionaries take up arms"
+	desc = GER_zentrum_fails.4.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "...but they are quickly suppressed"
+		custom_effect_tooltip = GER_6_month_enabling_act_tt
+	}
+}
+
+country_event = {
+	id = GER_volksblock.1
+	title = "Question of the chancellorship"
+	desc = GER_zentrum_fails.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The winner shall get the chancellorship, of course!"
+		custom_effect_tooltip = GER_canidate_choice_tt_volksblock
+		if = {
+			limit = {
+				has_country_flag = GER_winner_SPD_volksblock
+			}
+			set_politics = {
+				ruling_party = social_democracy
+			}
+			else = {
+				set_politics = {
+					ruling_party = conservatism
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "Maybe we should appoint a liberal compromise candidate?"
+		custom_effect_tooltip = GER_canidate_choice_tt_volksblock
+		set_politics = {
+			ruling_party = social_liberalism
+		}
+		promote_character = {
+			character = GER_otto_gessler
+		}
 	}
 }

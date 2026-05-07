@@ -4,6 +4,9 @@ GER_appoint_spring_coalition = {
 		remove_ideas = {
 			GER_franz_von_papen_idea
 		}
+		promote_character = {
+			character = GER_kuno_von_westarp
+		}
 		add_ideas = {
 			GER_kuno_von_westarp_idea
 			GER_wilhelm_groener_idea
@@ -17,6 +20,5 @@ GER_appoint_spring_coalition = {
 
 GER_zentrum_collapse = {
 	hidden_effect = {
-		
 	}
 }

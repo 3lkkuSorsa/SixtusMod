@@ -27,7 +27,8 @@
  GER_kampf_aus_der_mitte_NOT: "§YKampf aus der Mitte§! is over"
  GER_kampf_aus_der_mitte_crisis_tt: "\n\n§RWe will lose on the next turn, if we don't do something about the crisis.§!"
 
- GER_zentrums_ambitions_tt: "The §3Zentrum§! has agreed to oust their own chancellor very reluctantly for the sake of the §YSpring§! §3coalition§! and they are not happy about it. They will demand the chancellorship over the government even if they aren't the largest party in the §Y1937 elections§!.\n\nEven without major reconcialiation efforts, the block will be available as a coalition, but our efforts may help them win larger majority.\n\n"
+ GER_zentrums_ambitions_tt: "The §3Zentrum§! has agreed to oust their own chancellor very reluctantly for the sake of the §YSpring§! §3coalition§! and they are not happy about it. They will demand the chancellorship over the government even if they aren't the largest party in the §Y1937 elections§!.\n\nWithout major reconcialiation efforts, the block will be torn apart and Zentrum might reconcile with the §9Volksblock§!.\n\n"
+ GER_scleicher_replaces_below_tt: "§gKurt Schleicher§! will replace §gOtto von Below§! as Reichswehrminister.\n\n"
  GER_papen_appointed_tt: "The kaiser has asked the §3Zentrum§!-leaning authoritarian §gFranz von Papen§! to form a technocratic government as independent. Even his own party doesn't trust him and the so-called §YSpring§! §3coalition§! is actively trying to oust him and appoint their own chancellor."
  GER_spring_turns_into_winter_tt: "The §YSpring§! §3coalition§! has collapsed after §3Zentrum§! resigned from the government. They will now seek to rebuild the '§9Volksblock§!' with the §tSPD§!, §9FVP§! and §3Z§! as main parties.\n\n"
 
@@ -36,3 +37,8 @@
  GER_appoint_spring_coalition_tt: "Ministries will be:\n  - Reichskanzler: Kuno von Westarp, §2DkP§!\n  - Interior Minister: Wilhelm Groener, §2DkP§!\n  - Economic Minister: Julius Curtius, §7NLP§!\n  - Finance Minister: Hjalmar Schacht, §7NLP§!\n  - Foreign Minister: Konstantin von Neurath, §3Z§!\n  - Reichswehrminister: Otto von Below, §gDUVP§!"
 
  GER_fire_all_ministers_tt: "§tAll ministers will be fired.§!"
+
+ GER_6_month_enabling_act_tt: "The new §gKabinett Schleicher§! will enact a 6-month long §YEnabling Act§! that will allow it to bypass the Reichstag and rule by decree."
+
+ GER_canidate_choice_tt_volksblock: "§YChancellor will have a impact on available focuses.§!"
+ GER_question_of_the_chancellorship_tt: "We need to decide on a chancellor our new §9democratic§! government. The largest party in our coalition will demand the position, but we also can choose a §Yliberal§! §9FVP§!-leaning candidate as chancellor.\n\nIf §3Zentrum§! won the elections, the party chair, will be their candidate. Having elected §gBrüning§!, it will make our job much more difficult.\n\n"

@@ -26,10 +26,6 @@ focus_tree = {
 			always = no
 		}
 
-		allow_branch = {
-			has_country_flag = GER_show_moderate_tree
-		}
-
 		completion_reward = {
 		}
 	}
@@ -115,7 +111,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_negotiate_for_common_defense_pact_with_britain
-		icon = GFX_goal_government_icon
+		icon = GFX_goal_generic_allies_build_infantry
 
 		x = -3
 		y = 2
@@ -138,7 +134,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_sign_the_frankfurt_treaties
-		icon = GFX_goal_government_icon
+		icon = GFX_focus_RAJ_seek_allies_with_the_muslim_league
 
 		x = -4
 		y = 3
@@ -303,6 +299,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			country_event = {
+				id = GER_political_manoeuvres.4
+				days = 5
+			}
 			add_to_variable = {
 				var = GER.coalition_stability
 				value = 1
@@ -313,7 +313,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_biding_our_time
-		icon = GFX_goal_government_icon
+		icon = GFX_focus_generic_bastion_of_democracy
 
 		x = 2
 		y = 1
@@ -630,6 +630,74 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = GER_freeze_spd_tt
+		}
+	}
+
+	focus = {
+		id = GER_volksblock_triumphs
+		icon = GFX_goal_liberty
+
+		x = 3
+		y = 4
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_volksblock
+		}
+
+		allow_branch = {
+		#	has_country_flag = GER_show_democratic_tree
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_question_of_the_chancellorship
+		icon = GFX_goal_generic_political_pressure
+
+		x = -1
+		y = 1
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		prerequisite = {
+			focus = GER_volksblock_triumphs
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GER_question_of_the_chancellorship_tt
+			country_event = {
+				id = GER_volksblock.1
+				days = 5
+			}
+		}
+	}
+
+	focus = {
+		id = GER_distribute_cabinet_positions
+		icon = GFX_goal_generic_political_pressure
+
+		x = 1
+		y = 1
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+			has_completed_focus = GER_question_of_the_chancellorship
+		}
+
+		prerequisite = {
+			focus = GER_volksblock_triumphs
+		}
+
+		completion_reward = {
 		}
 	}
 
