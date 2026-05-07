@@ -7,3 +7,164 @@ defined_text = {
 		localization_key = GER_spring_coalition_category_desc_kampf_aus_der_mitte
 	}
 }
+
+defined_text = {
+	name = GER_VBChancellorT
+	text = {
+		trigger = {
+			has_country_leader = { character = GER_heinrich_bruning }
+		}
+		localization_key = GER_heinrich_bruning_t
+	}
+
+	text = {
+		trigger = {
+			has_country_leader = { character = GER_adam_stegerwald }
+		}
+		localization_key = GER_adam_stegerwald_t
+	}
+
+	text = {
+		trigger = {
+			has_country_leader = { character = GER_otto_gessler }
+		}
+		localization_key = GER_otto_gessler_t
+	}
+
+	text = {
+		localization_key = "Empty"
+	}
+}
+
+defined_text = {
+	name = GER_VBInteriorT
+	text = {
+		trigger = {
+			has_country_flag = GER_stegerwald_interior_ministry
+		}
+		localization_key = GER_otto_gessler_t
+	}
+
+	text = {
+		trigger = {
+			has_country_flag = GER_bruning_interior_ministry
+		}
+		localization_key = GER_heinrich_bruning_t
+	}
+
+	text = {
+		trigger = {
+			has_country_flag = GER_severing_interior_ministry
+		}
+		localization_key = GER_carl_severing_t
+	}
+
+	text = {
+		trigger = {
+			has_country_flag = GER_kulz_interior_ministry
+		}
+		localization_key = GER_wilhelm_kulz_t
+	}
+
+	text = {
+		localization_key = "Empty"
+	}
+}
+
+defined_text = {
+	name = GER_VBForeignT
+	text = {
+		trigger = {
+			has_country_flag = GER_wirth_foreign_ministry
+		}
+		localization_key = GER_joseph_wirth_t
+	}
+
+	text = {
+		trigger = {
+			has_country_flag = GER_breitscheid_foreign_ministry
+		}
+		localization_key = GER_rudolf_breitscheid_t
+	}
+
+	text = {
+		trigger = {
+			has_country_flag = GER_rathenau_foreign_ministry
+		}
+		localization_key = GER_walther_rathenau_t
+	}
+
+	text = {
+		localization_key = "Empty"
+	}
+}
+
+defined_text = {
+	name = GER_VBFinanceT
+	text = {
+		trigger = {
+			has_country_flag = GER_erzberger_finance_ministry
+		}
+		localization_key = GER_matthias_erzberger_t
+	}
+
+	text = {
+		trigger = {
+			has_country_flag = GER_hilferding_finance_ministry
+		}
+		localization_key = GER_rudolf_hilferding_t
+	}
+
+	text = {
+		trigger = {
+			has_country_flag = GER_luther_finance_ministry
+		}
+		localization_key = GER_hans_luther_t
+	}
+
+	text = {
+		localization_key = "Empty"
+	}
+}
+
+defined_text = {
+	name = GER_VBJusticeT
+	text = {
+		trigger = {
+			has_country_flag = GER_joos_justice_ministry
+		}
+		localization_key = GER_joseph_joos_t
+	}
+
+	text = {
+		trigger = {
+			has_country_flag = GER_landsberg_justice_ministry
+		}
+		localization_key = GER_otto_landsberg_t
+	}
+
+	text = {
+		trigger = {
+			has_country_flag = GER_radbruch_justice_ministry
+		}
+		localization_key = GER_gustav_radbruch_t
+	}
+
+	text = {
+		localization_key = "Empty"
+	}
+}
+
+defined_text = {
+	name = GER_VBArmyT
+	text = {
+		trigger = {
+			has_country_flag = GER_hammerstein_reichswehr_ministry
+		}
+		localization_key = GER_kurt_von_hammerstein_equord_t
+	}
+
+	text = {
+		localization_key = "Empty"
+	}
+}

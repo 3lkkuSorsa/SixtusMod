@@ -174,3 +174,157 @@ GER_elections_37 = {
 		}
 	}
 }
+
+GER_forming_a_cabinet_category = {
+	GER_vb_interior_ministry = {
+		allowed = {
+			original_tag = GER
+		}
+
+		visible = {
+			has_country_flag = GER_forming_a_cabinet
+		}
+
+		available = {
+			NOT = { has_country_flag = GER_another_cabinet_event }
+		}
+
+		complete_effect = {
+			country_event = {
+				id = GER_volksblock_cabinet.1
+			}
+			set_country_flag = GER_another_cabinet_event
+		}
+	}
+
+	GER_vb_foreign_ministry = {
+		allowed = {
+			original_tag = GER
+		}
+
+		visible = {
+			has_country_flag = GER_forming_a_cabinet
+		}
+
+		available = {
+			NOT = { has_country_flag = GER_another_cabinet_event }
+		}
+
+		complete_effect = {
+			country_event = {
+				id = GER_volksblock_cabinet.2
+			}
+			set_country_flag = GER_another_cabinet_event
+		}
+	}
+
+	GER_vb_finance_ministry = {
+		allowed = {
+			original_tag = GER
+		}
+
+		visible = {
+			has_country_flag = GER_forming_a_cabinet
+		}
+
+		available = {
+			NOT = { has_country_flag = GER_another_cabinet_event }
+		}
+
+		complete_effect = {
+			country_event = {
+				id = GER_volksblock_cabinet.3
+			}
+			set_country_flag = GER_another_cabinet_event
+		}
+	}
+
+	GER_vb_economic_ministry = {
+		allowed = {
+			original_tag = GER
+		}
+
+		visible = {
+			has_country_flag = GER_forming_a_cabinet
+		}
+
+		available = {
+			NOT = { has_country_flag = GER_another_cabinet_event }
+		}
+
+		complete_effect = {
+			country_event = {
+				id = GER_volksblock_cabinet.4
+			}
+			set_country_flag = GER_another_cabinet_event
+		}
+	}
+
+	GER_vb_justice_ministry = {
+		allowed = {
+			original_tag = GER
+		}
+
+		visible = {
+			has_country_flag = GER_forming_a_cabinet
+		}
+
+		available = {
+			NOT = { has_country_flag = GER_another_cabinet_event }
+		}
+
+		complete_effect = {
+			country_event = {
+				id = GER_volksblock_cabinet.5
+			}
+			set_country_flag = GER_another_cabinet_event
+		}
+	}
+
+	GER_vb_reichswehr_ministry = {
+		allowed = {
+			original_tag = GER
+		}
+
+		visible = {
+			has_country_flag = GER_forming_a_cabinet
+		}
+
+		available = {
+			NOT = { has_country_flag = GER_another_cabinet_event }
+		}
+
+		complete_effect = {
+			country_event = {
+				id = GER_volksblock_cabinet.6
+			}
+			set_country_flag = GER_another_cabinet_event
+		}
+	}
+
+	GER_finalize_cabinet = {
+		allowed = {
+			original_tag = GER
+		}
+
+		visible = {
+			has_country_flag = GER_forming_a_cabinet
+		}
+
+		available = {
+			NOT = { has_country_flag = GER_another_cabinet_event }
+			has_country_flag = GER_interior_ministry_filled
+			has_country_flag = GER_foreign_ministry_filled
+			has_country_flag = GER_finance_ministry_filled
+			has_country_flag = GER_economic_ministry_filled
+			has_country_flag = GER_justice_ministry_filled
+			has_country_flag = GER_reichswehr_ministry_filled
+		}
+
+		complete_effect = {
+			country_event = {
+				id = GER_volksblock_cabinet.7
+			}
+		}
+	}
+}

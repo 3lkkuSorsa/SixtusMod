@@ -1,0 +1,344 @@
+add_namespace = GER_volksblock_cabinet
+
+country_event = {
+	id = GER_volksblock_cabinet.0
+	title = "Question of the chancellorship"
+	desc = GER_zentrum_fails.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The winner shall get the chancellorship, of course!"
+		custom_effect_tooltip = GER_canidate_choice_tt_volksblock
+		if = {
+			limit = {
+				has_country_flag = GER_winner_SPD_volksblock
+			}
+			set_politics = {
+				ruling_party = social_democracy
+			}
+			else = {
+				set_politics = {
+					ruling_party = conservatism
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "Maybe we should appoint a liberal compromise candidate?"
+		custom_effect_tooltip = GER_canidate_choice_tt_volksblock
+		set_politics = {
+			ruling_party = social_liberalism
+		}
+		promote_character = {
+			character = GER_otto_gessler
+		}
+		add_to_variable = {
+			var = GER.fvp_cab_seats
+			value = -1
+			tooltip = GER_cabinet_seat_change_fvp_tt
+		}
+		if = {
+			limit = {
+				has_country_flag = GER_winner_SPD_volksblock
+			}
+			add_to_variable = {
+				var = GER.spd_cab_seats
+				value = 1
+				tooltip = GER_cabinet_seat_change_spd_tt
+			}
+			else = {
+				set_politics = {
+					ruling_party = conservatism
+				}
+				add_to_variable = {
+					var = GER.zentrum_cab_seats
+					value = 1
+					tooltip = GER_cabinet_seat_change_zentrum_tt
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_volksblock_cabinet.1
+	title = "Interior Ministry"
+	desc = GER_volksblock_cabinet.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Adam Stegerwald, from Zentrum"
+		clr_country_flag = GER_another_cabinet_event
+		set_country_flag = GER_stegerwald_interior_ministry
+		set_country_flag = GER_interior_ministry_filled
+		trigger = {
+			NOT = { has_country_flag = GER_agreed_to_stegerwald }
+			check_variable = {
+				var = GER.zentrum_current_cab_seats
+				value = GER.zentrum_cab_seats
+				compare = less_than
+			}
+		}
+	}
+
+	option = {
+		name = "Heinrich Brüning, from Zentrum"
+		clr_country_flag = GER_another_cabinet_event
+		set_country_flag = GER_bruning_interior_ministry
+		set_country_flag = GER_interior_ministry_filled
+		trigger = {
+			NOT = { has_country_flag = GER_agreed_to_bruning }
+			check_variable = {
+				var = GER.zentrum_current_cab_seats
+				value = GER.zentrum_cab_seats
+				compare = less_than
+			}
+		}
+	}
+
+	option = {
+		name = "Carl Severing, from SPD"
+		clr_country_flag = GER_another_cabinet_event
+		set_country_flag = GER_severing_interior_ministry
+		set_country_flag = GER_interior_ministry_filled
+		trigger = {
+			check_variable = {
+				var = GER.spd_current_cab_seats
+				value = GER.spd_cab_seats
+				compare = less_than
+			}
+		}
+	}
+
+	option = {
+		name = "Wilhelm Külz, from FVP"
+		clr_country_flag = GER_another_cabinet_event
+		set_country_flag = GER_kulz_interior_ministry
+		set_country_flag = GER_interior_ministry_filled
+		trigger = {
+			check_variable = {
+				var = GER.fvp_current_cab_seats
+				value = GER.fvp_cab_seats
+				compare = less_than
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_volksblock_cabinet.2
+	title = "Foreign Ministry"
+	desc = GER_volksblock_cabinet.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Joseph Wirth, from Zentrum"
+		clr_country_flag = GER_another_cabinet_event
+		set_country_flag = GER_wirth_foreign_ministry
+		set_country_flag = GER_foreign_ministry_filled
+		trigger = {
+			check_variable = {
+				var = GER.zentrum_current_cab_seats
+				value = GER.zentrum_cab_seats
+				compare = less_than
+			}
+		}
+	}
+
+	option = {
+		name = "Rudolf Breitscheid, from SPD"
+		clr_country_flag = GER_another_cabinet_event
+		set_country_flag = GER_breitscheid_foreign_ministry
+		set_country_flag = GER_foreign_ministry_filled
+		trigger = {
+			check_variable = {
+				var = GER.spd_current_cab_seats
+				value = GER.spd_cab_seats
+				compare = less_than
+			}
+		}
+	}
+
+	option = {
+		name = "Walther Rathenau, from FVP"
+		clr_country_flag = GER_another_cabinet_event
+		set_country_flag = GER_rathenau_foreign_ministry
+		set_country_flag = GER_foreign_ministry_filled
+		trigger = {
+			check_variable = {
+				var = GER.fvp_current_cab_seats
+				value = GER.fvp_cab_seats
+				compare = less_than
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_volksblock_cabinet.3
+	title = "Finance Ministry"
+	desc = GER_volksblock_cabinet.3.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Matthias Erzberger, from Zentrum"
+		clr_country_flag = GER_another_cabinet_event
+		set_country_flag = GER_erzberger_finance_ministry
+		set_country_flag = GER_finance_ministry_filled
+		trigger = {
+			check_variable = {
+				var = GER.zentrum_current_cab_seats
+				value = GER.zentrum_cab_seats
+				compare = less_than
+			}
+		}
+	}
+
+	option = {
+		name = "Rudolf Hilferding, from SPD"
+		clr_country_flag = GER_another_cabinet_event
+		set_country_flag = GER_hilferding_finance_ministry
+		set_country_flag = GER_finance_ministry_filled
+		trigger = {
+			check_variable = {
+				var = GER.spd_current_cab_seats
+				value = GER.spd_cab_seats
+				compare = less_than
+			}
+		}
+	}
+
+	option = {
+		name = "Hans Luther, from FVP"
+		clr_country_flag = GER_another_cabinet_event
+		set_country_flag = GER_luther_finance_ministry
+		set_country_flag = GER_finance_ministry_filled
+		trigger = {
+			check_variable = {
+				var = GER.fvp_current_cab_seats
+				value = GER.fvp_cab_seats
+				compare = less_than
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_volksblock_cabinet.4
+	title = "Economic Ministry"
+	desc = GER_volksblock_cabinet.4.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Heinrich Brauns, from Zentrum"
+		clr_country_flag = GER_another_cabinet_event
+		set_country_flag = GER_brauns_economic_ministry
+		set_country_flag = GER_economic_ministry_filled
+		trigger = {
+			check_variable = {
+				var = GER.zentrum_current_cab_seats
+				value = GER.zentrum_cab_seats
+				compare = less_than
+			}
+		}
+	}
+
+	option = {
+		name = "Rudolf Wissell, from SPD"
+		clr_country_flag = GER_another_cabinet_event
+		set_country_flag = GER_wissell_economic_ministry
+		set_country_flag = GER_economic_ministry_filled
+		trigger = {
+			check_variable = {
+				var = GER.spd_current_cab_seats
+				value = GER.spd_cab_seats
+				compare = less_than
+			}
+		}
+	}
+
+	option = {
+		name = "Hjalmar Schacht, a FVP-leaning independent"
+		clr_country_flag = GER_another_cabinet_event
+		set_country_flag = GER_schacht_economic_ministry
+		set_country_flag = GER_economic_ministry_filled
+		trigger = {
+			check_variable = {
+				var = GER.fvp_current_cab_seats
+				value = GER.fvp_cab_seats
+				compare = less_than
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_volksblock_cabinet.5
+	title = "Justice Ministry"
+	desc = GER_volksblock_cabinet.5.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Joseph Joos, from Zentrum"
+		clr_country_flag = GER_another_cabinet_event
+		set_country_flag = GER_joos_justice_ministry
+		set_country_flag = GER_justice_ministry_filled
+		trigger = {
+			check_variable = {
+				var = GER.zentrum_current_cab_seats
+				value = GER.zentrum_cab_seats
+				compare = less_than
+			}
+		}
+	}
+
+	option = {
+		name = "Otto Landsberg, from SPD"
+		clr_country_flag = GER_another_cabinet_event
+		set_country_flag = GER_landsberg_justice_ministry
+		set_country_flag = GER_justice_ministry_filled
+		trigger = {
+			check_variable = {
+				var = GER.spd_current_cab_seats
+				value = GER.spd_cab_seats
+				compare = less_than
+			}
+		}
+	}
+
+	option = {
+		name = "Gustav Radbruch, from FVP"
+		clr_country_flag = GER_another_cabinet_event
+		set_country_flag = GER_radbruch_justice_ministry
+		set_country_flag = GER_justice_ministry_filled
+		trigger = {
+			check_variable = {
+				var = GER.fvp_current_cab_seats
+				value = GER.fvp_cab_seats
+				compare = less_than
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_volksblock_cabinet.6
+	title = "Reichswehr Ministry"
+	desc = GER_volksblock_cabinet.6.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "There really isn't a choice, appoint Kurt von Hammerstein-Equord"
+		clr_country_flag = GER_another_cabinet_event
+		set_country_flag = GER_hammerstein_reichswehr_ministry
+		set_country_flag = GER_reichswehr_ministry_filled
+	}
+}

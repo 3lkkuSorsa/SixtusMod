@@ -20,5 +20,6 @@ GER_appoint_spring_coalition = {
 
 GER_zentrum_collapse = {
 	hidden_effect = {
+		
 	}
 }

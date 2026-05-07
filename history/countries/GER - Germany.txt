@@ -53,6 +53,14 @@ set_popularities = {
 	communism = 6
 }
 
+# VOLKSBLOCK STUFF
+set_variable = { GER.zentrum_cab_seats = 2 }
+set_variable = { GER.spd_cab_seats = 2 }
+set_variable = { GER.fvp_cab_seats = 1 }
+
+set_variable = { GER.zentrum_current_cab_seats = 0 }
+set_variable = { GER.spd_current_cab_seats = 0 }
+set_variable = { GER.fvp_current_cab_seats = 0 }
 
 # Wowow nice faction
 create_faction_from_template = faction_template_axis

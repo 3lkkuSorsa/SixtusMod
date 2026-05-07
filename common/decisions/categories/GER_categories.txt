@@ -29,3 +29,15 @@ GER_elections_37_category = {
 		has_country_flag = GER_elections_37
 	}
 }
+
+GER_forming_a_cabinet_category = {
+	allowed = {
+		original_tag = GER
+	}
+
+	visible = {
+		has_country_flag = GER_forming_a_cabinet
+	}
+
+	visible_when_empty = yes
+}

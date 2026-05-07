@@ -11,6 +11,10 @@
  GER_coalition_stability_change_tt: "§YCoalition stability§!: $RIGHT|+=0..0$"
  GER_coalition_centrists_for_left_tt: "Centrists siding with the left: $RIGHT|-=0..0$"
 
+ GER_cabinet_seat_change_fvp_tt: "§9FVP§! possible cabinet seats: $RIGHT|+=0..0$"
+ GER_cabinet_seat_change_spd_tt: "§tSPD§! possible cabinet seats: $RIGHT|+=0..0$"
+ GER_cabinet_seat_change_zentrum_tt: "§3Z§! possible cabinet seats: $RIGHT|+=0..0$"
+
  GER_freeze_spd_tt: "The §tSPD§! campaign will be §Yfrozen§! for one turn.\n\n"
 
  GER_spring_coalition_biding_our_time_tt: "The §YSpring§! §3coalition§! will campaign together and thus, gain more §Ysupport§!.\n\n"
@@ -42,3 +46,14 @@
 
  GER_canidate_choice_tt_volksblock: "§YChancellor will have a impact on available focuses.§!"
  GER_question_of_the_chancellorship_tt: "We need to decide on a chancellor our new §9democratic§! government. The largest party in our coalition will demand the position, but we also can choose a §Yliberal§! §9FVP§!-leaning candidate as chancellor.\n\nIf §3Zentrum§! won the elections, the party chair, will be their candidate. Having elected §gBrüning§!, it will make our job much more difficult.\n\n"
+
+ GER_another_cabinet_event: "Currently selecting other ministry"
+
+ GER_forming_a_cabinet_tt: "In order to §Yfunction§! properly, we need to form a cabinet. Every party in our cabinet has a set amount of §Ypossible cabinet§! seats, which we can fill however we choose to. Some ministries, like the §greichswehr ministry§! cannot be filled by a politician,\n\n§Y£GFX_decision_icon_small We can start forming a cabinet?§!"
+
+ GER_interior_ministry_filled: "The §YInterior Minister§! has been appointed."
+ GER_economic_ministry_filled: "The §YEconomic Minister§! has been appointed."
+ GER_justice_ministry_filled: "The §YJustice Minister§! has been appointed."
+ GER_finance_ministry_filled: "The §YFinance Minister§! has been appointed."
+ GER_foreign_ministry_filled: "The §YForeign Minister§! has been appointed."
+ GER_reichswehr_ministry_filled: "The §YReichswehrminister§! has been appointed."
