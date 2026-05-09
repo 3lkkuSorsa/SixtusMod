@@ -1,0 +1,27 @@
+leader_traits = {
+	interior_minister = {
+		random = no
+	}
+	foreign_minister = {
+		random = no
+	}
+	finance_minister = {
+		random = no
+	}
+	economy_minister = {
+		random = no
+	}
+	justice_minister = {
+		random = no
+	}
+	army_minister = {
+		random = no
+	}
+
+	GER_imperial_spy = {
+		random = no
+
+		stability_factor = -0.05
+		political_power_factor = -0.1
+	}
+}

@@ -25,7 +25,12 @@
  GER_divert_funds_to_zentrum_right_tt: "We will try to §tdivert funds§! from leftists to §Ycoalition-friendly§! centrists, but they could find out about our plotting.\n\n"
 
  GER_spring_coalition: "The §YSpring§! §3coalition§! is active"
+ GER_democratic_government: "The §9Volksblock§! government is active"
+ GER_authoritarian_government: "The §gKabinett Schleicher§! is active"
  GER_spring_is_over: "The §YSpring§! §3coalition§! has collapsed"
+
+ GER_rhineland_referendum: "§YRhineland§! voted to rejoin Germany"
+ GER_slow_integration_of_rhineland_tt: "We will start §Yintegrating the Rhineland§! into Germany, which will take some time and resources, but we will also §Ygain cores§! on the region.\n\n"
 
  GER_kampf_aus_der_mitte: "§YKampf aus der Mitte§! is active"
  GER_kampf_aus_der_mitte_NOT: "§YKampf aus der Mitte§! is over"
@@ -39,17 +44,25 @@
  GER_communist_laws_extended: "The §Ycommunist laws§! have been extended by completing any of the following focuses:\n - §YExtend the Communist Laws§!\n - §YCrackdown on the KPD§!"
 
  GER_appoint_spring_coalition_tt: "Ministries will be:\n  - Reichskanzler: Kuno von Westarp, §2DkP§!\n  - Interior Minister: Wilhelm Groener, §2DkP§!\n  - Economic Minister: Julius Curtius, §7NLP§!\n  - Finance Minister: Hjalmar Schacht, §7NLP§!\n  - Foreign Minister: Konstantin von Neurath, §3Z§!\n  - Reichswehrminister: Otto von Below, §gDUVP§!"
+ GER_appoint_democratic_government_tt: "Ministries will be:\n  - Reichskanzler: [GER_VBChancellorT]\n  - Interior Minister: [GER_VBInteriorT]\n  - Economic Minister: [GER_VBEconomicT]\n  - Finance Minister: [GER_VBFinanceT]\n  - Foreign Minister: [GER_VBForeignT]\n  - Reichswehrminister: [GER_VBArmyT]"
 
  GER_fire_all_ministers_tt: "§tAll ministers will be fired.§!"
 
+ GER_continuous_campaigning_tt: "§YThis focus can be completed multiple times!§!\n\n"
+ GER_elections_in_30_days_tt: "Elections will be held in §Y30 days!§!\n\n"
+
  GER_6_month_enabling_act_tt: "The new §gKabinett Schleicher§! will enact a 6-month long §YEnabling Act§! that will allow it to bypass the Reichstag and rule by decree."
+ GER_continuous_campaigning_cooldown: "Atleast §Y30 days§! from last completion of this focus. (Currently [?GER_continuous_campaigning_cooldown:days|Y0])"
+
+ GER_Zentrum_wins_tt: "The §3Zentrum§! won the largest share of the vote."
+ GER_SPD_wins_tt: "The §tSPD§! won the largest share of the vote."
 
  GER_canidate_choice_tt_volksblock: "§YChancellor will have a impact on available focuses.§!"
  GER_question_of_the_chancellorship_tt: "We need to decide on a chancellor our new §9democratic§! government. The largest party in our coalition will demand the position, but we also can choose a §Yliberal§! §9FVP§!-leaning candidate as chancellor.\n\nIf §3Zentrum§! won the elections, the party chair, will be their candidate. Having elected §gBrüning§!, it will make our job much more difficult.\n\n"
 
  GER_another_cabinet_event: "Currently selecting other ministry"
 
- GER_forming_a_cabinet_tt: "In order to §Yfunction§! properly, we need to form a cabinet. Every party in our cabinet has a set amount of §Ypossible cabinet§! seats, which we can fill however we choose to. Some ministries, like the §greichswehr ministry§! cannot be filled by a politician,\n\n§Y£GFX_decision_icon_small We can start forming a cabinet?§!"
+ GER_forming_a_cabinet_tt: "In order to §Yfunction§! properly, we need to form a cabinet. Every party in our cabinet has a set amount of §Ypossible cabinet§! seats, which we can fill however we choose to. Some ministries, like the §greichswehr ministry§! cannot be filled by a politician,\n\n§Y£GFX_decision_icon_small We can start forming a cabinet§!"
 
  GER_interior_ministry_filled: "The §YInterior Minister§! has been appointed."
  GER_economic_ministry_filled: "The §YEconomic Minister§! has been appointed."

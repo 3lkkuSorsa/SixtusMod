@@ -1,0 +1,65 @@
+add_namespace = RHI_events
+
+news_event = {
+	id = RHI_events.1
+	title = "Rhineland reunites with Germany"
+	desc = RHI_unification.1.d
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "The Rhineland is German!"
+		trigger = {
+			NOT = {
+				has_global_flag = GER_rhineland_annex
+				original_tag = FRA
+			}
+		}
+	}
+
+	option = {
+		name = "How dare they!"
+		news_event = {
+			id = RHI_events.3
+			days = 3
+		}
+		trigger = {
+			original_tag = FRA
+			has_global_flag = GER_rhineland_annex
+		}
+	}
+}
+
+country_event = {
+	id = RHI_events.2
+	title = "Germany starts integrating us!"
+	desc = RHI_unification.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "So long for the protectorate, I guess"
+	}
+}
+
+news_event = {
+	id = RHI_events.3
+	title = "France protests Rhineland annexation"
+	desc = RHI_unification.3.d
+
+	is_triggered_only = yes
+	major = yes
+
+	immediate = {
+		hidden_effect = {
+			GER = {
+				add_threat = 5
+			}
+		}
+	}
+
+	option = {
+		name = "Oh well..."
+	}
+}

@@ -1,3 +1,6 @@
+
+
+
 focus_tree = {
 	id = GER_focus_tree
 	country = {
@@ -630,6 +633,73 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = GER_freeze_spd_tt
+			set_country_flag = GER_freeze_front_campaign
+		}
+	}
+
+	focus = {
+		id = GER_continuous_campaigning
+		icon = GFX_focus_generic_radio_communication
+
+		x = 3
+		y = 4
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 2
+
+		prerequisite = {
+			focus = GER_utilize_government_media
+		}
+
+		available = {
+			has_country_flag = GER_spring_coalition
+			has_country_flag = {
+				flag = GER_continuous_campaigning_cooldown
+				days > 29
+			}
+		}
+
+		completion_reward = {
+			set_country_flag = {
+				flag = GER_continuous_campaigning_cooldown
+			}
+			custom_effect_tooltip = GER_continuous_campaigning_tt
+			random_list = {
+				25 = {
+					add_to_variable = {
+						var = GER.z_votes
+						value = 1
+						tooltip = GER_z_votes_change_tt
+					}
+				}
+				25 = {
+					add_to_variable = {
+						var = GER.nlp_votes
+						value = 1
+						tooltip = GER_nlp_votes_change_tt
+					}
+				}
+				25 = {
+					add_to_variable = {
+						var = GER.dkp_votes
+						value = 1
+						tooltip = GER_dkp_votes_change_tt
+					}
+				}
+				25 = {
+					add_to_variable = {
+						var = GER.duvp_votes
+						value = 1
+						tooltip = GER_duvp_votes_change_tt
+					}
+				}
+			}
+			hidden_effect = {
+				uncomplete_national_focus = {
+					focus = GER_continuous_campaigning
+				}
+			}
 		}
 	}
 
@@ -637,8 +707,8 @@ focus_tree = {
 		id = GER_volksblock_triumphs
 		icon = GFX_goal_liberty
 
-		x = 3
-		y = 4
+		x = 1
+		y = 5
 
 		cost = 0
 
@@ -647,7 +717,7 @@ focus_tree = {
 		}
 
 		allow_branch = {
-		#	has_country_flag = GER_show_democratic_tree
+			has_country_flag = GER_show_democratic_tree
 		}
 
 		completion_reward = {
@@ -672,7 +742,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = GER_question_of_the_chancellorship_tt
 			country_event = {
-				id = GER_volksblock.1
+				id = GER_volksblock_cabinet.0
 				days = 5
 			}
 		}
@@ -722,6 +792,177 @@ focus_tree = {
 		}
 
 		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_rhineland_referendum
+		icon = GFX_goal_generic_elections
+
+		x = -6
+		y = 4
+
+		cost = 0
+
+		available = {
+			has_global_flag = GER_rhineland_referendum
+		}
+
+		completion_reward = {
+			RHI = {
+				add_ideas = RHI_protectorate_1
+			}
+		}
+	}
+
+	focus = {
+		id = GER_annex_rhineland
+		icon = GFX_focus_GER_remilitarize_the_rhineland
+
+		x = -1
+		y = 1
+
+		relative_position_id = GER_rhineland_referendum
+
+		prerequisite = {
+			focus = GER_rhineland_referendum
+		}
+
+		mutually_exclusive = {
+			focus = GER_rhenish_protectorate
+		}
+
+		cost = 10
+
+		available = {
+			has_country_flag = GER_authoritarian_government
+		}
+
+		completion_reward = {
+			set_global_flag = GER_rhineland_annex
+			news_event = {
+				id = RHI_events.1
+				days = 5
+			}
+			annex_country = {
+				target = RHI
+				transfer_troops = yes
+			}
+		}
+	}
+
+	focus = {
+		id = GER_rhenish_protectorate
+		icon = GFX_focus_CHI_registry_of_property
+
+		x = 2
+		y = 1
+
+		relative_position_id = GER_rhineland_referendum
+
+		prerequisite = {
+			focus = GER_rhineland_referendum
+		}
+
+		mutually_exclusive = {
+			focus = GER_annex_rhineland
+		}
+
+		cost = 10
+
+		available = {
+			OR = {
+				has_country_flag = GER_democratic_government
+				has_country_flag = GER_spring_coalition
+			}
+		}
+
+		completion_reward = {
+			RHI = {
+				swap_ideas = {
+					remove_idea = RHI_protectorate_1
+					add_idea = RHI_protectorate_2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_uphold_the_status_quo
+		icon = GFX_goal_generic_stable_government
+
+		x = 1
+		y = 2
+
+		relative_position_id = GER_rhineland_referendum
+
+		prerequisite = {
+			focus = GER_rhenish_protectorate
+		}
+
+		mutually_exclusive = {
+			focus = GER_slow_integration_of_rhineland
+		}
+
+		cost = 2
+
+		available = {
+		}
+
+		completion_reward = {
+			RHI = {
+				swap_ideas = {
+					remove_idea = RHI_protectorate_2
+					add_idea = RHI_protectorate_3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_slow_integration_of_rhineland
+		icon = GFX_focus_generic_treaty
+		x = 3
+		y = 2
+
+		relative_position_id = GER_rhineland_referendum
+
+		prerequisite = {
+			focus = GER_rhenish_protectorate
+		}
+
+		mutually_exclusive = {
+			focus = GER_uphold_the_status_quo
+		}
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GER_slow_integration_of_rhineland_tt
+			add_ideas = GER_integrating_rhineland
+			custom_effect_tooltip = "           "
+			RHI = {
+				country_event = {
+					id = RHI_events.2
+					days = 5
+				}
+				swap_ideas = {
+					remove_idea = RHI_protectorate_2
+					add_idea = RHI_protectorate_1
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						original_tag = GER
+						original_tag = RHI
+					}
+				}
+				activate_mission = GER_rhineland_slow_timer
+			}
 		}
 	}
 }

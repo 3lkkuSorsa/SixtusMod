@@ -6,6 +6,10 @@ activate_mission = GER_communist_laws_expire
 
 capital = 64 # Berlin/Brandeburg
 
+country_event = {
+	id = GER_elections_36.0
+	days = 50
+}
 
 # Starting Stats of various kinds
 set_research_slots = 4
@@ -25,6 +29,7 @@ recruit_character = GER_reichstag
 recruit_character = GER_franz_von_papen
 recruit_character = GER_kuno_von_westarp
 recruit_character = GER_kurt_von_schleicher
+recruit_character = GER_otto_braun
 recruit_character = GER_wilhelm_groener
 recruit_character = GER_julius_curtius
 recruit_character = GER_hjalmar_schacht_1
@@ -33,6 +38,18 @@ recruit_character = GER_otto_von_below
 recruit_character = GER_otto_gessler
 recruit_character = GER_adam_stegerwald
 recruit_character = GER_heinrich_bruning
+recruit_character = GER_carl_severing
+recruit_character = GER_wilhelm_kulz
+recruit_character = GER_joseph_wirth
+recruit_character = GER_rudolf_breitscheid
+recruit_character = GER_walther_rathenau
+recruit_character = GER_matthias_erzberger
+recruit_character = GER_rudolf_hilferding
+recruit_character = GER_hans_luther
+recruit_character = GER_heinrich_brauns
+recruit_character = GER_rudolf_wissell
+recruit_character = GER_kurt_von_hammerstein_equord
+recruit_character = GER_otto_wissell
 
 set_country_flag = GER_show_moderate_tree
 
@@ -53,14 +70,24 @@ set_popularities = {
 	communism = 6
 }
 
-# VOLKSBLOCK STUFF
-set_variable = { GER.zentrum_cab_seats = 2 }
-set_variable = { GER.spd_cab_seats = 2 }
-set_variable = { GER.fvp_cab_seats = 1 }
+set_country_flag = GER_continuous_campaigning_cooldown
 
-set_variable = { GER.zentrum_current_cab_seats = 0 }
-set_variable = { GER.spd_current_cab_seats = 0 }
-set_variable = { GER.fvp_current_cab_seats = 0 }
+set_variable = { kpd_votes = 3 }
+set_variable = { spd_votes = 5 }
+set_variable = { fvp_votes = 2 }
+set_variable = { nlp_votes = 2 }
+set_variable = { z_votes = 4 }
+set_variable = { dkp_votes = 5 }
+set_variable = { duvp_votes = 2 }
+
+# VOLKSBLOCK STUFF
+set_variable = { zentrum_cab_seats = 2 }
+set_variable = { spd_cab_seats = 2 }
+set_variable = { fvp_cab_seats = 1 }
+
+set_variable = { zentrum_current_cab_seats = 0 }
+set_variable = { spd_current_cab_seats = 0 }
+set_variable = { fvp_current_cab_seats = 0 }
 
 # Wowow nice faction
 create_faction_from_template = faction_template_axis
@@ -76,9 +103,6 @@ add_ideas = {
 	limited_conscription
 	partial_economic_mobilisation
 }
-
-# Activates the MEFO Bills Mission
-activate_mission = GER_mefo_bills_mission
 
 
 if = {

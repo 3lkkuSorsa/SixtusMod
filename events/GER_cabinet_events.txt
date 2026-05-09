@@ -17,9 +17,31 @@ country_event = {
 			set_politics = {
 				ruling_party = social_democracy
 			}
+			hidden_effect = {
+				add_ideas = {
+					GER_otto_braun_idea
+				}
+			}
 			else = {
 				set_politics = {
 					ruling_party = conservatism
+				}
+				if = {
+					limit = {
+						has_country_flag = GER_agreed_to_bruning
+					}
+					hidden_effect = {
+						add_ideas = {
+							GER_heinrich_bruning_hog_idea
+						}
+					}
+					else = {
+						hidden_effect = {
+							add_ideas = {
+								GER_adam_stegerwald_hog_idea
+							}
+						}
+					}
 				}
 			}
 		}
@@ -35,7 +57,7 @@ country_event = {
 			character = GER_otto_gessler
 		}
 		add_to_variable = {
-			var = GER.fvp_cab_seats
+			var = fvp_cab_seats
 			value = -1
 			tooltip = GER_cabinet_seat_change_fvp_tt
 		}
@@ -44,19 +66,21 @@ country_event = {
 				has_country_flag = GER_winner_SPD_volksblock
 			}
 			add_to_variable = {
-				var = GER.spd_cab_seats
+				var = spd_cab_seats
 				value = 1
 				tooltip = GER_cabinet_seat_change_spd_tt
 			}
 			else = {
-				set_politics = {
-					ruling_party = conservatism
-				}
 				add_to_variable = {
-					var = GER.zentrum_cab_seats
+					var = zentrum_cab_seats
 					value = 1
 					tooltip = GER_cabinet_seat_change_zentrum_tt
 				}
+			}
+		}
+		hidden_effect = {
+			add_ideas = {
+				GER_otto_gessler_hog_idea
 			}
 		}
 	}
@@ -69,16 +93,66 @@ country_event = {
 
 	is_triggered_only = yes
 
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = GER_interior_ministry_filled
+			if = {
+				limit = {
+					has_country_flag = GER_stegerwald_interior_ministry
+				}
+				clr_country_flag = GER_stegerwald_interior_ministry
+				add_to_variable = {
+					var = zentrum_current_cab_seats
+					value = -1
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = GER_bruning_interior_ministry
+				}
+				clr_country_flag = GER_bruning_interior_ministry
+				add_to_variable = {
+					var = zentrum_current_cab_seats
+					value = -1
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = GER_severing_interior_ministry
+				}
+				clr_country_flag = GER_severing_interior_ministry
+				add_to_variable = {
+					var = spd_current_cab_seats
+					value = -1
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = GER_kulz_interior_ministry
+				}
+				clr_country_flag = GER_kulz_interior_ministry
+				add_to_variable = {
+					var = fvp_current_cab_seats
+					value = -1
+				}
+			}
+		}
+	}
+
 	option = {
 		name = "Adam Stegerwald, from Zentrum"
 		clr_country_flag = GER_another_cabinet_event
 		set_country_flag = GER_stegerwald_interior_ministry
 		set_country_flag = GER_interior_ministry_filled
+		add_to_variable = {
+			var = zentrum_current_cab_seats
+			value = 1
+		}
 		trigger = {
 			NOT = { has_country_flag = GER_agreed_to_stegerwald }
 			check_variable = {
-				var = GER.zentrum_current_cab_seats
-				value = GER.zentrum_cab_seats
+				var = zentrum_current_cab_seats
+				value = zentrum_cab_seats
 				compare = less_than
 			}
 		}
@@ -89,11 +163,15 @@ country_event = {
 		clr_country_flag = GER_another_cabinet_event
 		set_country_flag = GER_bruning_interior_ministry
 		set_country_flag = GER_interior_ministry_filled
+		add_to_variable = {
+			var = zentrum_current_cab_seats
+			value = 1
+		}
 		trigger = {
 			NOT = { has_country_flag = GER_agreed_to_bruning }
 			check_variable = {
-				var = GER.zentrum_current_cab_seats
-				value = GER.zentrum_cab_seats
+				var = zentrum_current_cab_seats
+				value = zentrum_cab_seats
 				compare = less_than
 			}
 		}
@@ -104,10 +182,14 @@ country_event = {
 		clr_country_flag = GER_another_cabinet_event
 		set_country_flag = GER_severing_interior_ministry
 		set_country_flag = GER_interior_ministry_filled
+		add_to_variable = {
+			var = spd_current_cab_seats
+			value = 1
+		}
 		trigger = {
 			check_variable = {
-				var = GER.spd_current_cab_seats
-				value = GER.spd_cab_seats
+				var = spd_current_cab_seats
+				value = spd_cab_seats
 				compare = less_than
 			}
 		}
@@ -118,10 +200,14 @@ country_event = {
 		clr_country_flag = GER_another_cabinet_event
 		set_country_flag = GER_kulz_interior_ministry
 		set_country_flag = GER_interior_ministry_filled
+		add_to_variable = {
+			var = fvp_current_cab_seats
+			value = 1
+		}
 		trigger = {
 			check_variable = {
-				var = GER.fvp_current_cab_seats
-				value = GER.fvp_cab_seats
+				var = fvp_current_cab_seats
+				value = fvp_cab_seats
 				compare = less_than
 			}
 		}
@@ -135,15 +221,55 @@ country_event = {
 
 	is_triggered_only = yes
 
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = GER_foreign_ministry_filled
+			if = {
+				limit = {
+					has_country_flag = GER_wirth_foreign_ministry
+				}
+				clr_country_flag = GER_wirth_foreign_ministry
+				add_to_variable = {
+					var = zentrum_current_cab_seats
+					value = -1
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = GER_breitscheid_foreign_ministry
+				}
+				clr_country_flag = GER_breitscheid_foreign_ministry
+				add_to_variable = {
+					var = spd_current_cab_seats
+					value = -1
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = GER_rathenau_foreign_ministry
+				}
+				clr_country_flag = GER_rathenau_foreign_ministry
+				add_to_variable = {
+					var = fvp_current_cab_seats
+					value = -1
+				}
+			}
+		}
+	}
+
 	option = {
 		name = "Joseph Wirth, from Zentrum"
 		clr_country_flag = GER_another_cabinet_event
 		set_country_flag = GER_wirth_foreign_ministry
 		set_country_flag = GER_foreign_ministry_filled
+		add_to_variable = {
+			var = zentrum_current_cab_seats
+			value = 1
+		}
 		trigger = {
 			check_variable = {
-				var = GER.zentrum_current_cab_seats
-				value = GER.zentrum_cab_seats
+				var = zentrum_current_cab_seats
+				value = zentrum_cab_seats
 				compare = less_than
 			}
 		}
@@ -154,10 +280,14 @@ country_event = {
 		clr_country_flag = GER_another_cabinet_event
 		set_country_flag = GER_breitscheid_foreign_ministry
 		set_country_flag = GER_foreign_ministry_filled
+		add_to_variable = {
+			var = spd_current_cab_seats
+			value = 1
+		}
 		trigger = {
 			check_variable = {
-				var = GER.spd_current_cab_seats
-				value = GER.spd_cab_seats
+				var = spd_current_cab_seats
+				value = spd_cab_seats
 				compare = less_than
 			}
 		}
@@ -168,10 +298,14 @@ country_event = {
 		clr_country_flag = GER_another_cabinet_event
 		set_country_flag = GER_rathenau_foreign_ministry
 		set_country_flag = GER_foreign_ministry_filled
+		add_to_variable = {
+			var = fvp_current_cab_seats
+			value = 1
+		}
 		trigger = {
 			check_variable = {
-				var = GER.fvp_current_cab_seats
-				value = GER.fvp_cab_seats
+				var = fvp_current_cab_seats
+				value = fvp_cab_seats
 				compare = less_than
 			}
 		}
@@ -185,15 +319,53 @@ country_event = {
 
 	is_triggered_only = yes
 
+	immediate = {
+		clr_country_flag = GER_finance_ministry_filled
+		if = {
+			limit = {
+				has_country_flag = GER_erzberger_finance_ministry
+			}
+			clr_country_flag = GER_erzberger_finance_ministry
+			add_to_variable = {
+				var = zentrum_current_cab_seats
+				value = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = GER_hilferding_finance_ministry
+			}
+			clr_country_flag = GER_hilferding_finance_ministry
+			add_to_variable = {
+				var = spd_current_cab_seats
+				value = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = GER_luther_finance_ministry
+			}
+			clr_country_flag = GER_luther_finance_ministry
+			add_to_variable = {
+				var = fvp_current_cab_seats
+				value = -1
+			}
+		}
+	}
+
 	option = {
 		name = "Matthias Erzberger, from Zentrum"
 		clr_country_flag = GER_another_cabinet_event
 		set_country_flag = GER_erzberger_finance_ministry
 		set_country_flag = GER_finance_ministry_filled
+		add_to_variable = {
+			var = zentrum_current_cab_seats
+			value = 1
+		}
 		trigger = {
 			check_variable = {
-				var = GER.zentrum_current_cab_seats
-				value = GER.zentrum_cab_seats
+				var = zentrum_current_cab_seats
+				value = zentrum_cab_seats
 				compare = less_than
 			}
 		}
@@ -204,10 +376,14 @@ country_event = {
 		clr_country_flag = GER_another_cabinet_event
 		set_country_flag = GER_hilferding_finance_ministry
 		set_country_flag = GER_finance_ministry_filled
+		add_to_variable = {
+			var = spd_current_cab_seats
+			value = 1
+		}
 		trigger = {
 			check_variable = {
-				var = GER.spd_current_cab_seats
-				value = GER.spd_cab_seats
+				var = spd_current_cab_seats
+				value = spd_cab_seats
 				compare = less_than
 			}
 		}
@@ -218,10 +394,14 @@ country_event = {
 		clr_country_flag = GER_another_cabinet_event
 		set_country_flag = GER_luther_finance_ministry
 		set_country_flag = GER_finance_ministry_filled
+		add_to_variable = {
+			var = fvp_current_cab_seats
+			value = 1
+		}
 		trigger = {
 			check_variable = {
-				var = GER.fvp_current_cab_seats
-				value = GER.fvp_cab_seats
+				var = fvp_current_cab_seats
+				value = fvp_cab_seats
 				compare = less_than
 			}
 		}
@@ -235,15 +415,56 @@ country_event = {
 
 	is_triggered_only = yes
 
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = GER_economic_ministry_filled
+			if = {
+				limit = {
+					has_country_flag = GER_brauns_economic_ministry
+				}
+				clr_country_flag = GER_brauns_economic_ministry
+				add_to_variable = {
+					var = zentrum_current_cab_seats
+					value = -1
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = GER_wissell_economic_ministry
+				}
+				clr_country_flag = GER_wissell_economic_ministry
+				add_to_variable = {
+					var = spd_current_cab_seats
+					value = -1
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = GER_schacht_economic_ministry
+				}
+				clr_country_flag = GER_schacht_economic_ministry
+				add_to_variable = {
+					var = fvp_current_cab_seats
+					value = -1
+				}
+				custom_effect_tooltip = GER_schacht_economic_ministry_tt
+			}
+		}
+	}
+
 	option = {
 		name = "Heinrich Brauns, from Zentrum"
 		clr_country_flag = GER_another_cabinet_event
 		set_country_flag = GER_brauns_economic_ministry
 		set_country_flag = GER_economic_ministry_filled
+		add_to_variable = {
+			var = zentrum_current_cab_seats
+			value = 1
+		}
 		trigger = {
 			check_variable = {
-				var = GER.zentrum_current_cab_seats
-				value = GER.zentrum_cab_seats
+				var = zentrum_current_cab_seats
+				value = zentrum_cab_seats
 				compare = less_than
 			}
 		}
@@ -254,10 +475,14 @@ country_event = {
 		clr_country_flag = GER_another_cabinet_event
 		set_country_flag = GER_wissell_economic_ministry
 		set_country_flag = GER_economic_ministry_filled
+		add_to_variable = {
+			var = spd_current_cab_seats
+			value = 1
+		}
 		trigger = {
 			check_variable = {
-				var = GER.spd_current_cab_seats
-				value = GER.spd_cab_seats
+				var = spd_current_cab_seats
+				value = spd_cab_seats
 				compare = less_than
 			}
 		}
@@ -268,60 +493,14 @@ country_event = {
 		clr_country_flag = GER_another_cabinet_event
 		set_country_flag = GER_schacht_economic_ministry
 		set_country_flag = GER_economic_ministry_filled
-		trigger = {
-			check_variable = {
-				var = GER.fvp_current_cab_seats
-				value = GER.fvp_cab_seats
-				compare = less_than
-			}
+		add_to_variable = {
+			var = fvp_current_cab_seats
+			value = 1
 		}
-	}
-}
-
-country_event = {
-	id = GER_volksblock_cabinet.5
-	title = "Justice Ministry"
-	desc = GER_volksblock_cabinet.5.d
-
-	is_triggered_only = yes
-
-	option = {
-		name = "Joseph Joos, from Zentrum"
-		clr_country_flag = GER_another_cabinet_event
-		set_country_flag = GER_joos_justice_ministry
-		set_country_flag = GER_justice_ministry_filled
 		trigger = {
 			check_variable = {
-				var = GER.zentrum_current_cab_seats
-				value = GER.zentrum_cab_seats
-				compare = less_than
-			}
-		}
-	}
-
-	option = {
-		name = "Otto Landsberg, from SPD"
-		clr_country_flag = GER_another_cabinet_event
-		set_country_flag = GER_landsberg_justice_ministry
-		set_country_flag = GER_justice_ministry_filled
-		trigger = {
-			check_variable = {
-				var = GER.spd_current_cab_seats
-				value = GER.spd_cab_seats
-				compare = less_than
-			}
-		}
-	}
-
-	option = {
-		name = "Gustav Radbruch, from FVP"
-		clr_country_flag = GER_another_cabinet_event
-		set_country_flag = GER_radbruch_justice_ministry
-		set_country_flag = GER_justice_ministry_filled
-		trigger = {
-			check_variable = {
-				var = GER.fvp_current_cab_seats
-				value = GER.fvp_cab_seats
+				var = fvp_current_cab_seats
+				value = fvp_cab_seats
 				compare = less_than
 			}
 		}
@@ -335,10 +514,35 @@ country_event = {
 
 	is_triggered_only = yes
 
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = GER_reichswehr_ministry_filled
+			if = {
+				limit = {
+					has_country_flag = GER_hammerstein_reichswehr_ministry
+				}
+				clr_country_flag = GER_hammerstein_reichswehr_ministry
+			}
+		}
+	}
+
 	option = {
 		name = "There really isn't a choice, appoint Kurt von Hammerstein-Equord"
 		clr_country_flag = GER_another_cabinet_event
 		set_country_flag = GER_hammerstein_reichswehr_ministry
 		set_country_flag = GER_reichswehr_ministry_filled
+	}
+}
+
+country_event = {
+	id = GER_volksblock_cabinet.7
+	title = "Kabinett der Progressiven"
+	desc = GER_volksblock_cabinet.7.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Truly a new era!"
+		GER_appoint_volksblock_coalition = yes
 	}
 }

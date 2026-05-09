@@ -36,5 +36,173 @@ ideas = {
 				political_power_factor = -0.25
 			}
 		}
+
+		RHI_protectorate_1 = {
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.25
+				cic_to_overlord_factor = -0.5
+				mic_to_overlord_factor = -0.85
+			}
+		}
+
+		RHI_protectorate_2 = {
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.1
+			}
+		}
+
+		RHI_protectorate_3 = {
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.25
+				cic_to_overlord_factor = 0.25
+				mic_to_overlord_factor = 0.35
+			}
+		}
+
+		GER_integrating_rhineland = {
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.25
+			}
+		}
+
+		GER_franz_von_papen_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_kuno_von_westarp_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_kurt_von_schleicher_hog_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_kurt_von_schleicher_min_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_otto_braun_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_otto_gessler_hog_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_otto_gessler_min_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_adam_stegerwald_hog_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_adam_stegerwald_min_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_heinrich_bruning_hog_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_heinrich_bruning_min_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_wilhelm_groener_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_julius_curtius_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_hjalmar_schacht_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_konstantin_von_neurath_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_otto_von_below_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_carl_severing_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_wilhelm_kulz_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_joseph_wirth_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_rudolf_breitscheid_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_walther_rathenau_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_matthias_erzberger_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_rudolf_hilferding_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_hans_luther_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_heinrich_brauns_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_rudolf_wissell_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
+		GER_kurt_von_hammerstein_equord_idea = {
+			modifier = {
+				political_power_factor = 0
+			}
+		}
 	}
 }

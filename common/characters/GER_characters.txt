@@ -109,6 +109,33 @@ characters = {
 		}
 	}
 
+	GER_otto_braun = {
+		name = "Otto Braun"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/GER_braun.dds"
+				small = "gfx/advisors/GER/GER_braun.dds"
+			}
+		}
+
+		country_leader = {
+			ideology = social_democracy_sub
+		}
+
+		advisor = {
+			slot = head_of_government
+			idea_token = GER_otto_braun_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
 	GER_otto_gessler = {
 		name = "Otto Gessler"
 		portraits = {
@@ -330,6 +357,270 @@ characters = {
 		advisor = {
 			slot = minister
 			idea_token = GER_otto_von_below_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
+	GER_carl_severing = {
+		name = "Carl Severing"
+		portraits = {
+			civilian = {
+				small = "gfx/advisors/GER/GER_severing.dds"
+			}
+		}
+
+		advisor = {
+			slot = minister
+			idea_token = GER_carl_severing_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
+	GER_wilhelm_kulz = {
+		name = "Wilhelm Külz"
+		portraits = {
+			civilian = {
+				small = "gfx/advisors/GER/GER_kulz.dds"
+			}
+		}
+
+		advisor = {
+			slot = minister
+			idea_token = GER_wilhelm_kulz_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
+	GER_joseph_wirth = {
+		name = "Joseph Wirth"
+		portraits = {
+			civilian = {
+				small = "gfx/advisors/GER/GER_wirth.dds"
+			}
+		}
+
+		advisor = {
+			slot = minister
+			idea_token = GER_joseph_wirth_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
+	GER_rudolf_breitscheid = {
+		name = "Rudolf Breitscheid"
+		portraits = {
+			civilian = {
+				small = "gfx/advisors/GER/GER_breitscheid.dds"
+			}
+		}
+
+		advisor = {
+			slot = minister
+			idea_token = GER_rudolf_breitscheid_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
+	GER_walther_rathenau = {
+		name = "Walther Rathenau"
+		portraits = {
+			civilian = {
+				small = "gfx/advisors/GER/GER_rathenau.dds"
+			}
+		}
+
+		advisor = {
+			slot = minister
+			idea_token = GER_walther_rathenau_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
+	GER_matthias_erzberger = {
+		name = "Matthias Erzberger"
+		portraits = {
+			civilian = {
+				small = "gfx/advisors/GER/GER_erzberger.dds"
+			}
+		}
+
+		advisor = {
+			slot = minister
+			idea_token = GER_matthias_erzberger_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
+	GER_rudolf_hilferding = {
+		name = "Rudolf Hilferding"
+		portraits = {
+			civilian = {
+				small = "gfx/advisors/GER/GER_hilferding.dds"
+			}
+		}
+
+		advisor = {
+			slot = minister
+			idea_token = GER_rudolf_hilferding_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
+	GER_hans_luther = {
+		name = "Hans Luther"
+		portraits = {
+			civilian = {
+				small = "gfx/advisors/GER/GER_luther.dds"
+			}
+		}
+
+		advisor = {
+			slot = minister
+			idea_token = GER_hans_luther_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
+	GER_otto_wissell = {
+		name = "Otto Wissell"
+		portraits = {
+			civilian = {
+				small = "gfx/advisors/GER/GER_otto_wissell.dds"
+			}
+		}
+
+		advisor = {
+			slot = minister
+			idea_token = GER_otto_wissell_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
+	GER_heinrich_brauns = {
+		name = "Heinrich Brauns"
+		portraits = {
+			civilian = {
+				small = "gfx/advisors/GER/GER_brauns.dds"
+			}
+		}
+
+		advisor = {
+			slot = minister
+			idea_token = GER_heinrich_brauns_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
+	GER_rudolf_wissell = {
+		name = "Rudolf Wissell"
+		portraits = {
+			civilian = {
+				small = "gfx/advisors/GER/GER_wissell.dds"
+			}
+		}
+
+		advisor = {
+			slot = minister
+			idea_token = GER_rudolf_wissell_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
+	GER_kurt_von_hammerstein_equord = {
+		name = "Kurt von Hammerstein-Equord"
+		portraits = {
+			civilian = {
+				small = "gfx/advisors/GER/GER_hammerstein_equord.dds"
+			}
+		}
+
+		advisor = {
+			slot = minister
+			idea_token = GER_kurt_von_hammerstein_equord_idea
 			can_be_fired = no
 			available = {
 				is_hired_as_advisor = yes

@@ -14,12 +14,260 @@ GER_appoint_spring_coalition = {
 			GER_hjalmar_schacht_idea
 			GER_konstantin_von_neurath_idea
 			GER_otto_von_below_idea
+	#		GER_kurt_von_hammerstein_equord_idea
+		}
+		add_trait = {
+			character = GER_wilhelm_groener
+			slot = minister
+			trait = interior_minister
+		}
+		add_trait = {
+			character = GER_julius_curtius
+			slot = minister
+			trait = economy_minister
+		}
+		add_trait = {
+			character = GER_hjalmar_schacht_1
+			slot = minister
+			trait = finance_minister
+		}
+		add_trait = {
+			character = GER_konstantin_von_neurath_1
+			slot = minister
+			trait = foreign_minister
+		}
+		add_trait = {
+			character = GER_otto_von_below
+			slot = minister
+			trait = army_minister
 		}
 	}
 }
 
-GER_zentrum_collapse = {
+fire_ministers = {
+	custom_effect_tooltip = GER_fire_all_ministers_tt
 	hidden_effect = {
-		
+		THIS = {
+			every_character = {
+				limit = {
+					OR = {
+						is_character_slot = minister
+						is_character_slot = head_of_government
+					}
+				}
+				FROM = {
+					deactivate_advisor = FROM
+				}
+
+				remove_trait = {
+					character = THIS
+					slot = minister
+					trait = interior_minister
+				}
+				remove_trait = {
+					character = THIS
+					slot = minister
+					trait = foreign_minister
+				}
+				remove_trait = {
+					character = THIS
+					slot = minister
+					trait = finance_minister
+				}
+				remove_trait = {
+					character = THIS
+					slot = minister
+					trait = economy_minister
+				}
+				remove_trait = {
+					character = THIS
+					slot = minister
+					trait = army_minister
+				}
+			}
+		}
+	}
+}
+
+GER_appoint_volksblock_coalition = {
+	custom_effect_tooltip = GER_appoint_democratic_government_tt
+	hidden_effect = {
+		if = {
+			limit = {
+				has_country_flag = GER_stegerwald_interior_ministry
+			}
+			add_ideas = {
+				GER_adam_stegerwald_min_idea
+			}
+			add_trait = {
+				character = GER_adam_stegerwald
+				slot = minister
+				trait = interior_minister
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = GER_bruning_interior_ministry
+			}
+			add_ideas = {
+				GER_heinrich_bruning_min_idea
+			}
+			add_trait = {
+				character = GER_heinrich_bruning
+				slot = minister
+				trait = interior_minister
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = GER_severing_interior_ministry
+			}
+			add_ideas = {
+				GER_carl_severing_idea
+			}
+			add_trait = {
+				character = GER_carl_severing
+				slot = minister
+				trait = interior_minister
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = GER_kulz_interior_ministry
+			}
+			add_ideas = {
+				GER_wilhelm_kulz_idea
+			}
+			add_trait = {
+				character = GER_wilhelm_kulz
+				slot = minister
+				trait = interior_minister
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = GER_wirth_foreign_ministry
+			}
+			add_ideas = {
+				GER_joseph_wirth_idea
+			}
+			add_trait = {
+				character = GER_joseph_wirth
+				slot = minister
+				trait = foreign_minister
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = GER_breitscheid_foreign_ministry
+			}
+			add_ideas = {
+				GER_rudolf_breitscheid_idea
+			}
+			add_trait = {
+				character = GER_rudolf_breitscheid
+				slot = minister
+				trait = foreign_minister
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = GER_rathenau_foreign_ministry
+			}
+			add_ideas = {
+				GER_walther_rathenau_idea
+			}
+			add_trait = {
+				character = GER_walther_rathenau
+				slot = minister
+				trait = foreign_minister
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = GER_erzberger_finance_ministry
+			}
+			add_ideas = {
+				GER_matthias_erzberger_idea
+			}
+			add_trait = {
+				character = GER_matthias_erzberger
+				slot = minister
+				trait = finance_minister
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = GER_hilferding_finance_ministry
+			}
+			add_ideas = {
+				GER_rudolf_hilferding_idea
+			}
+			add_trait = {
+				character = GER_rudolf_hilferding
+				slot = minister
+				trait = finance_minister
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = GER_luther_finance_ministry
+			}
+			add_ideas = {
+				GER_hans_luther_idea
+			}
+			add_trait = {
+				character = GER_hans_luther
+				slot = minister
+				trait = finance_minister
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = GER_brauns_economic_ministry
+			}
+			add_ideas = {
+				GER_heinrich_brauns_idea
+			}
+			add_trait = {
+				character = GER_heinrich_brauns
+				slot = minister
+				trait = economy_minister
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = GER_wissell_economic_ministry
+			}
+			add_ideas = {
+				GER_otto_wissell_idea
+			}
+			add_trait = {
+				character = GER_otto_wissell
+				slot = minister
+				trait = economy_minister
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = GER_schacht_economic_ministry
+			}
+			add_ideas = {
+				GER_hjalmar_schacht_idea
+			}
+			add_trait = {
+				character = GER_hjalmar_schacht_1
+				slot = minister
+				trait = economy_minister
+			}
+		}
+		add_ideas = {
+			GER_kurt_von_hammerstein_equord_idea
+		}
+		add_trait = {
+			character = GER_kurt_von_hammerstein_equord
+			slot = minister
+			trait = army_minister
+		}
 	}
 }

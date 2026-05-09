@@ -18,6 +18,8 @@ GER_spring_coalition_category = {
 	}
 
 	visible_when_empty = yes
+
+	priority = 9
 }
 
 GER_elections_37_category = {
@@ -26,8 +28,9 @@ GER_elections_37_category = {
 	}
 
 	visible = {
-		has_country_flag = GER_elections_37
+		has_country_flag = GER_elections_36
 	}
+	priority = 10
 }
 
 GER_forming_a_cabinet_category = {
@@ -37,6 +40,21 @@ GER_forming_a_cabinet_category = {
 
 	visible = {
 		has_country_flag = GER_forming_a_cabinet
+	}
+
+	visible_when_empty = yes
+}
+
+GER_RHI_unification_category = {
+	allowed = {
+		OR = {
+			original_tag = GER
+			original_tag = RHI
+		}
+	}
+
+	visible = {
+		exists = RHI
 	}
 
 	visible_when_empty = yes

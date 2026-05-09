@@ -13,9 +13,8 @@ state = {
 	history = {
 
 		owner = RHI
-		add_core_of = GER
 		add_core_of = RHI
-		add_core_of = PRE
+		add_claim_by = GER
 
 		victory_points = { 
 			11435 1 # Bitburg

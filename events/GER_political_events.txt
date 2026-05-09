@@ -4,6 +4,7 @@ add_namespace = GER_red_scare
 add_namespace = GER_zentrum_fails
 add_namespace = GER_volksblock
 add_namespace = GER_zentrum_leadership
+add_namespace = GER_elections_36
 
 country_event = {
 	id = GER_spring_coalition.0
@@ -83,7 +84,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = GER_zentrum_leadership.1
-				days = 40
+				days = 30
 			}
 		}
 	}
@@ -156,6 +157,12 @@ country_event = {
 
 	option = {
 		name = "Spring turns into winter"
+		fire_ministers = yes
+		hidden_effect = {
+			promote_character = {
+				character = GER_reichstag
+			}
+		}
 		custom_effect_tooltip = GER_spring_turns_into_winter_tt
 		clr_country_flag = GER_spring_coalition
 		clr_country_flag = GER_kampf_aus_der_mitte
@@ -196,6 +203,11 @@ country_event = {
 	option = {
 		name = "Agree to appoint Schleicher as Reichswehr Minister"
 		custom_effect_tooltip = GER_scleicher_replaces_below_tt
+		add_trait = {
+			character = GER_kurt_von_schleicher
+			slot = minister
+			trait = GER_imperial_spy
+		}
 		hidden_effect = {
 			remove_ideas = GER_otto_von_below_idea
 			add_ideas = GER_kurt_von_schleicher_min_idea
@@ -243,21 +255,12 @@ country_event = {
 
 	option = {
 		name = "Period of instability for the government"
-		custom_effect_tooltip = GER_fire_all_ministers_tt
+		fire_ministers = yes
 		hidden_effect = {
 			promote_character = {
 				character = GER_reichstag
 			}
 			activate_mission = GER_address_the_ongoing_crisis
-			remove_ideas = {
-				GER_kuno_von_westarp_idea
-				GER_wilhelm_groener_idea
-				GER_julius_curtius_idea
-				GER_hjalmar_schacht_idea
-				GER_konstantin_von_neurath_idea
-				GER_otto_von_below_idea
-				GER_kurt_von_schleicher_min_idea
-			}
 			uncomplete_national_focus = {
 				focus = GER_rally_the_catholic_right
 			}
@@ -287,6 +290,7 @@ country_event = {
 			add_ideas = GER_kurt_von_schleicher_hog_idea
 			clr_country_flag = GER_show_moderate_tree
 			set_country_flag = GER_show_authoritarian_tree
+			set_country_flag = GER_authoritarian_government
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
@@ -301,7 +305,16 @@ country_event = {
 
 	option = {
 		name = "Kaiser really doesn't have other choices"
-		activate_mission = GER_elections_timer
+		custom_effect_tooltip = GER_elections_in_30_days_tt
+		set_country_flag = GER_democratic_government
+		hidden_effect = {
+			country_event = {
+				id = GER_elections_36.1
+				days = 30
+			}
+			remove_mission = GER_elections_timer
+			remove_mission = GER_popular_front_campaigning
+		}
 	}
 }
 
@@ -318,3 +331,144 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = GER_elections_36.0
+	title = "Elections in November!"
+	desc = GER_spring_coalition.3.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Oh, I see..."
+		activate_mission = GER_elections_timer
+		activate_mission = GER_popular_front_campaigning
+		set_country_flag = GER_elections_36
+	}
+}
+
+country_event = {
+	id = GER_elections_36.1
+	title = "Election results are in!"
+	desc = GER_elections_36.1.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			remove_mission = GER_elections_timer
+			remove_mission = GER_popular_front_campaigning
+		}
+	}
+
+	option = {
+		name = "Victory for the Spring Coalition!"
+		trigger = {
+			has_country_flag = GER_spring_coalition
+			add_to_temp_variable = {
+				var = spring_votes
+				value = nlp_votes
+			}
+			add_to_temp_variable = {
+				var = spring_votes
+				value = z_votes
+			}
+			add_to_temp_variable = {
+				var = spring_votes
+				value = dkp_votes
+			}
+			add_to_temp_variable = {
+				var = spring_votes
+				value = duvp_votes
+			}
+
+			add_to_temp_variable = {
+				var = democratic_votes
+				value = spd_votes
+			}
+			add_to_temp_variable = {
+				var = democratic_votes
+				value = kpd_votes
+			}
+			add_to_temp_variable = {
+				var = democratic_votes
+				value = fvp_votes
+			}
+
+			check_variable = {
+				var = spring_votes
+				value = democratic_votes
+				compare = greater_than_or_equals
+			}
+		}
+	}
+
+	option = {
+		name = "Popular Front victorius!"
+		trigger = {
+			has_country_flag = GER_spring_coalition
+			add_to_temp_variable = {
+				var = spring_votes
+				value = nlp_votes
+			}
+			add_to_temp_variable = {
+				var = spring_votes
+				value = z_votes
+			}
+			add_to_temp_variable = {
+				var = spring_votes
+				value = dkp_votes
+			}
+			add_to_temp_variable = {
+				var = spring_votes
+				value = duvp_votes
+			}
+
+			add_to_temp_variable = {
+				var = democratic_votes
+				value = spd_votes
+			}
+			add_to_temp_variable = {
+				var = democratic_votes
+				value = kpd_votes
+			}
+			add_to_temp_variable = {
+				var = democratic_votes
+				value = fvp_votes
+			}
+
+			check_variable = {
+				var = spring_votes
+				value = democratic_votes
+				compare = less_than
+			}
+		}
+	}
+
+	option = {
+		name = "Volksblock triumphant!"
+		trigger = {
+			NOT = {
+				has_country_flag = GER_spring_coalition
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = z_votes
+					value = spd_votes
+					compare = greater_than_or_equals
+				}
+			}
+			custom_effect_tooltip = GER_Zentrum_wins_tt
+			set_country_flag = GER_winner_Z_volksblock
+			else = {
+				custom_effect_tooltip = GER_SPD_wins_tt
+				set_country_flag = GER_winner_SPD_volksblock
+			}
+		}
+		set_country_flag = GER_show_democratic_tree
+		mark_focus_tree_layout_dirty = yes
+		unlock_national_focus = GER_volksblock_triumphs
+		remove_ideas = GER_spring_turns_into_winter
+	}
+}

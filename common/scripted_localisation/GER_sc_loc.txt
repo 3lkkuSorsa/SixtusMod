@@ -9,6 +9,20 @@ defined_text = {
 }
 
 defined_text = {
+	name = Get_GER_elections_37_category_desc
+	text = {
+		trigger = {
+			has_country_flag = GER_spring_coalition
+		}
+		localization_key = GER_elections_37_category_sc_d
+	}
+
+	text = {
+		localization_key = GER_elections_37_category_vb_d
+	}
+}
+
+defined_text = {
 	name = GER_VBChancellorT
 	text = {
 		trigger = {
@@ -22,6 +36,13 @@ defined_text = {
 			has_country_leader = { character = GER_adam_stegerwald }
 		}
 		localization_key = GER_adam_stegerwald_t
+	}
+
+	text = {
+		trigger = {
+			has_country_leader = { character = GER_otto_braun }
+		}
+		localization_key = GER_otto_braun_t
 	}
 
 	text = {
@@ -42,7 +63,7 @@ defined_text = {
 		trigger = {
 			has_country_flag = GER_stegerwald_interior_ministry
 		}
-		localization_key = GER_otto_gessler_t
+		localization_key = GER_adam_stegerwald_t
 	}
 
 	text = {

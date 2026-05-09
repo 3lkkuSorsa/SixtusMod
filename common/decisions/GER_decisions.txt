@@ -140,7 +140,7 @@ GER_red_scare = {
 		}
 
 		is_good = yes
-		days_mission_timeout = 90
+		days_mission_timeout = 105
 
 		timeout_effect = {
 			country_event = {
@@ -151,7 +151,7 @@ GER_red_scare = {
 	}
 }
 
-GER_elections_37 = {
+GER_elections_37_category = {
 	GER_elections_timer = {
 		allowed = {
 			original_tag = GER
@@ -165,12 +165,67 @@ GER_elections_37 = {
 			always = no
 		}
 
-		days_mission_timeout = 60
+		days_mission_timeout = 265
 
 		timeout_effect = {
 			country_event = {
-				id = GER_elections_37.1
+				id = GER_elections_36.1
 			}
+		}
+	}
+
+	GER_popular_front_campaigning = {
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			always = no
+		}
+
+		activation = {
+			always = no
+		}
+
+		is_good = yes
+
+		days_mission_timeout = 60
+
+		timeout_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = GER_freeze_front_campaign
+					}
+				}
+				random_list = {
+					50 = {
+						add_to_variable = {
+							var = GER.spd_votes
+							value = 1
+							tooltip = GER_spd_votes_change_tt
+						}
+					}
+					30 = {
+						add_to_variable = {
+							var = GER.kpd_votes
+							value = 1
+							tooltip = GER_kpd_votes_change_tt
+						}
+					}
+					20 = {
+						add_to_variable = {
+							var = GER.fvp_votes
+							value = 1
+							tooltip = GER_fvp_votes_change_tt
+						}
+					}
+				}
+				else = {
+					clr_country_flag = GER_freeze_front_campaign
+				}
+			}
+			activate_mission = GER_popular_front_campaigning
 		}
 	}
 }
@@ -260,27 +315,6 @@ GER_forming_a_cabinet_category = {
 		}
 	}
 
-	GER_vb_justice_ministry = {
-		allowed = {
-			original_tag = GER
-		}
-
-		visible = {
-			has_country_flag = GER_forming_a_cabinet
-		}
-
-		available = {
-			NOT = { has_country_flag = GER_another_cabinet_event }
-		}
-
-		complete_effect = {
-			country_event = {
-				id = GER_volksblock_cabinet.5
-			}
-			set_country_flag = GER_another_cabinet_event
-		}
-	}
-
 	GER_vb_reichswehr_ministry = {
 		allowed = {
 			original_tag = GER
@@ -317,13 +351,50 @@ GER_forming_a_cabinet_category = {
 			has_country_flag = GER_foreign_ministry_filled
 			has_country_flag = GER_finance_ministry_filled
 			has_country_flag = GER_economic_ministry_filled
-			has_country_flag = GER_justice_ministry_filled
 			has_country_flag = GER_reichswehr_ministry_filled
 		}
 
 		complete_effect = {
 			country_event = {
 				id = GER_volksblock_cabinet.7
+			}
+		}
+	}
+}
+
+GER_RHI_unification_category = {
+	GER_rhineland_slow_timer = {
+		available = {
+			NOT = {
+				exists = RHI
+			}
+		}
+
+		activation = {
+			always = no
+		}
+
+		days_mission_timeout = 500
+
+		timeout_effect = {
+			IF = {
+				limit = {
+					original_tag = GER
+				}
+				annex_country = {
+					target = RHI
+					transfer_troops = yes
+				}
+				news_event = {
+					id = RHI_events.1
+				}
+				remove_ideas = GER_integrating_rhineland
+			}
+			every_state = {
+				limit = {
+					is_core_of = RHI
+				}
+				add_core_of = GER
 			}
 		}
 	}
