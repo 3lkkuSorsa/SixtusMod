@@ -208,6 +208,10 @@ focus_tree = {
 				value = 1
 				tooltip = GER_coalition_stability_change_tt
 			}
+			add_timed_idea = {
+				idea = GER_surging_trade_unions
+				days = 180
+			}
 		}
 	}
 
@@ -234,8 +238,12 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = {
 				var = GER.coalition_stability
-				value = 1
+				value = 2
 				tooltip = GER_coalition_stability_change_tt
+			}
+			add_timed_idea = {
+				idea = GER_expanded_workers_protections
+				days = 360
 			}
 		}
 	}
@@ -335,27 +343,6 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = GER_spring_coalition_biding_our_time_tt
-			custom_effect_tooltip = GER_electoral_support_change_intro_tt
-			add_to_variable = {
-				var = GER.nlp_votes
-				value = 1
-				tooltip = GER_nlp_votes_change_tt
-			}
-			add_to_variable = {
-				var = GER.z_votes
-				value = 1
-				tooltip = GER_z_votes_change_tt
-			}
-			add_to_variable = {
-				var = GER_dkp_votes
-				value = 1
-				tooltip = GER_dkp_votes_change_tt
-			}
-			add_to_variable = {
-				var = GER_duvp_votes
-				value = 1
-				tooltip = GER_duvp_votes_change_tt
-			}
 		}
 	}
 
@@ -399,91 +386,11 @@ focus_tree = {
 			custom_effect_tooltip = "     "
 			custom_effect_tooltip = after_completing
 			custom_effect_tooltip = GER_political_manoeuvres_success_tt
-			effect_tooltip = {
-				custom_effect_tooltip = GER_electoral_support_change_intro_tt
-				add_to_variable = {
-					var = GER.nlp_votes
-					value = 1
-					tooltip = GER_nlp_votes_change_tt
-				}
-				add_to_variable = {
-					var = GER.z_votes
-					value = 2
-					tooltip = GER_z_votes_change_tt
-				}
-				add_to_variable = {
-					var = GER.dkp_votes
-					value = -1
-					tooltip = GER_dkp_votes_change_tt
-				}
-			}
 			custom_effect_tooltip = "     "
 			custom_effect_tooltip = GER_political_manoeuvres_failure_tt
-			effect_tooltip = {
-				custom_effect_tooltip = GER_electoral_support_change_intro_tt
-				add_to_variable = {
-					var = GER.nlp_votes
-					value = -1
-					tooltip = GER_nlp_votes_change_tt
-				}
-				add_to_variable = {
-					var = GER.z_votes
-					value = -1
-					tooltip = GER_z_votes_change_tt
-				}
-				add_to_variable = {
-					var = GER.dkp_votes
-					value = -1
-					tooltip = GER_dkp_votes_change_tt
-				}
-				add_to_variable = {
-					var = GER.duvp_votes
-					value = -1
-					tooltip = GER_duvp_votes_change_tt
-				}
-			}
-			hidden_effect = {
-				add_to_variable = {
-					var = GER.nlp_votes
-					value = 1
-					tooltip = GER_nlp_votes_change_tt
-				}
-				add_to_variable = {
-					var = GER.z_votes
-					value = 2
-					tooltip = GER_z_votes_change_tt
-				}
-				add_to_variable = {
-					var = GER.dkp_votes
-					value = -1
-					tooltip = GER_dkp_votes_change_tt
-				}
-			}
 		}
 
 		bypass_effect = {
-			hidden_effect = {
-				add_to_variable = {
-					var = GER.nlp_votes
-					value = -1
-					tooltip = GER_nlp_votes_change_tt
-				}
-				add_to_variable = {
-					var = GER.z_votes
-					value = -1
-					tooltip = GER_z_votes_change_tt
-				}
-				add_to_variable = {
-					var = GER.dkp_votes
-					value = -1
-					tooltip = GER_dkp_votes_change_tt
-				}
-				add_to_variable = {
-					var = GER.duvp_votes
-					value = -1
-					tooltip = GER_duvp_votes_change_tt
-				}				
-			}
 		}
 	}
 
@@ -496,7 +403,7 @@ focus_tree = {
 
 		relative_position_id = GER_ascension_of_spring_coalition
 
-		cost = 3
+		cost = 7
 
 		prerequisite = {
 			focus = GER_political_manoeuvres
@@ -518,22 +425,6 @@ focus_tree = {
 				days = 2
 			}
 			custom_effect_tooltip = GER_reconcile_volksblock_tt
-			custom_effect_tooltip = GER_electoral_support_change_intro_tt
-			add_to_variable = {
-				var = GER.spd_votes
-				value = 2
-				tooltip = GER_spd_votes_change_tt
-			}
-			add_to_variable = {
-				var = GER.fvp_votes
-				value = 1
-				tooltip = GER_fvp_votes_change_tt
-			}
-			add_to_variable = {
-				var = GER.z_votes
-				value = 1
-				tooltip = GER_z_votes_change_tt
-			}
 		}
 	}
 
@@ -561,22 +452,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = GER_electoral_support_change_intro_tt
-			add_to_variable = {
-				var = GER.z_votes
-				value = 2
-				tooltip = GER_z_votes_change_tt
-			}
-			add_to_variable = {
-				var = GER.dkp_votes
-				value = -1
-				tooltip = GER_dkp_votes_change_tt
-			}
-			add_to_variable = {
-				var = GER.spd_votes
-				value = -1
-				tooltip = GER_spd_votes_change_tt
-			}
 		}
 	}
 
@@ -602,12 +477,6 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = GER_extend_the_communist_laws_tt
-			custom_effect_tooltip = GER_electoral_support_change_intro_tt
-			add_to_variable = {
-				var = GER_kpd_votes
-				value = -2
-				tooltip = GER_kpd_votes_change_tt
-			}
 			set_country_flag = GER_communist_laws_extended
 		}
 	}
@@ -632,14 +501,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = GER_freeze_spd_tt
-			set_country_flag = GER_freeze_front_campaign
 		}
 	}
 
 	focus = {
 		id = GER_continuous_campaigning
-		icon = GFX_focus_generic_radio_communication
+		icon = GFX_goal_generic_propaganda
 
 		x = 3
 		y = 4
@@ -654,6 +521,7 @@ focus_tree = {
 
 		available = {
 			has_country_flag = GER_spring_coalition
+			has_country_flag = GER_kampf_aus_der_mitte
 			has_country_flag = {
 				flag = GER_continuous_campaigning_cooldown
 				days > 29
@@ -665,41 +533,221 @@ focus_tree = {
 				flag = GER_continuous_campaigning_cooldown
 			}
 			custom_effect_tooltip = GER_continuous_campaigning_tt
-			random_list = {
-				25 = {
-					add_to_variable = {
-						var = GER.z_votes
-						value = 1
-						tooltip = GER_z_votes_change_tt
-					}
-				}
-				25 = {
-					add_to_variable = {
-						var = GER.nlp_votes
-						value = 1
-						tooltip = GER_nlp_votes_change_tt
-					}
-				}
-				25 = {
-					add_to_variable = {
-						var = GER.dkp_votes
-						value = 1
-						tooltip = GER_dkp_votes_change_tt
-					}
-				}
-				25 = {
-					add_to_variable = {
-						var = GER.duvp_votes
-						value = 1
-						tooltip = GER_duvp_votes_change_tt
-					}
-				}
+			add_to_variable = {
+				var = GER.coalition_stability
+				value = 1
+				tooltip = GER_coalition_stability_change_tt
 			}
 			hidden_effect = {
 				uncomplete_national_focus = {
 					focus = GER_continuous_campaigning
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = GER_attack_the_imperial_block
+		icon = GFX_goal_renewed_militarism
+
+		x = 5
+		y = 4
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 4
+
+		prerequisite = {
+			focus = GER_utilize_government_media
+		}
+
+		available = {
+			has_country_flag = GER_spring_coalition
+			has_country_flag = GER_schleicher_coup_planned
+		}
+
+		completion_reward = {
+			add_political_power = -80
+			add_popularity = {
+				ideology = ultra_nationalism
+				popularity = -0.05
+			}
+		}
+	}
+
+	focus = {
+		id = GER_bring_von_below_back
+		icon = GFX_goal_COS_Ferrer_Coup
+
+		x = 7
+		y = 5
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 4
+
+		prerequisite = {
+			focus = GER_attack_the_imperial_block
+		}
+
+		mutually_exclusive = {
+			focus = GER_peace_with_the_block
+		}
+
+		available = {
+			has_country_flag = GER_spring_coalition
+			has_completed_focus = GER_imperial_mediation
+			has_country_flag = GER_schleicher_coup_planned
+			GER_kurt_von_schleicher = {
+				is_character_slot = minister
+			}
+		}
+
+		completion_reward = {
+			add_stability = 0.15
+			custom_effect_tooltip = GER_bring_von_below_back_tt
+			hidden_effect = {
+				remove_ideas = GER_kurt_von_schleicher_min_idea
+				add_ideas = GER_otto_von_below_idea
+				remove_trait = {
+					character = GER_kurt_von_schleicher
+					trait = army_minister
+					slot = minister
+				}
+				add_trait = {
+					character = GER_otto_von_below
+					trait = army_minister
+					slot = minister
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_prussian_grand_coalition
+		icon = GFX_goal_GER_Pursue_Equal_Suffrage_in_Prussia
+
+		x = 6
+		y = 6
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 3
+
+		prerequisite = {
+			focus = GER_bring_von_below_back
+		}
+
+		available = {
+			has_country_flag = GER_spring_coalition
+			has_country_flag = GER_schleicher_coup_planned
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GER_prussian_grand_coalition_tt
+			swap_ideas = {
+				remove_idea = GER_minority_prussian_government
+				add_idea = GER_prussian_grand_coalition
+			}
+			custom_effect_tooltip = GER_electoral_support_change_intro_tt
+		}
+	}
+
+	focus = {
+		id = GER_foment_a_split_between_kaiser_and_schleicher
+		icon = GFX_goal_split_helmet
+
+		x = 7
+		y = 7
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 6
+
+		prerequisite = {
+			focus = GER_bring_von_below_back
+		}
+
+		available = {
+			has_country_flag = GER_spring_coalition
+			has_completed_focus = GER_prussian_grand_coalition
+			has_country_flag = GER_schleicher_coup_planned
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GER_foment_a_split_between_kaiser_and_schleicher_tt
+			hidden_effect = {
+				country_event = {
+					id = GER_scleicher.3
+					days = 20
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_peace_with_the_block
+		icon = GFX_focus_generic_treaty
+
+		x = 4
+		y = 5
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 4
+
+		prerequisite = {
+			focus = GER_attack_the_imperial_block
+		}
+
+		mutually_exclusive = {
+			focus = GER_bring_von_below_back
+		}
+
+		available = {
+			has_country_flag = GER_spring_coalition
+			has_completed_focus = GER_imperial_mediation
+			has_country_flag = GER_schleicher_coup_planned
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GER_peace_with_the_block_tt
+			add_stability = 0.15
+			swap_ideas = {
+				remove_idea = GER_imperial_block_1
+				add_idea = GER_imperial_block_2
+			}
+		}
+	}
+
+	focus = {
+		id = GER_sack_braun_from_prussia
+		icon = GFX_goal_GER_Prussian_Zentrum
+
+		x = 4
+		y = 6
+
+		relative_position_id = GER_ascension_of_spring_coalition
+
+		cost = 8
+
+		prerequisite = {
+			focus = GER_peace_with_the_block
+		}
+
+		available = {
+			has_country_flag = GER_spring_coalition
+			has_country_flag = GER_schleicher_coup_planned
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GER_papen_in_prussia_tt
+			remove_ideas = GER_imperial_block_2
+			swap_ideas = {
+				remove_idea = GER_minority_prussian_government
+				add_idea = GER_papen_in_prussia
+			}
+			clr_country_flag = GER_schleicher_coup_planned
 		}
 	}
 

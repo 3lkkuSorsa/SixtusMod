@@ -10,6 +10,7 @@
 
  GER_coalition_stability_change_tt: "§YCoalition stability§!: $RIGHT|+=0..0$"
  GER_coalition_centrists_for_left_tt: "Centrists siding with the left: $RIGHT|-=0..0$"
+ GER_kampf_aus_der_mitte_available_tt: "§YCoalition stability§! is atleast §Y10§!."
 
  GER_cabinet_seat_change_fvp_tt: "§9FVP§! possible cabinet seats: $RIGHT|+=0..0$"
  GER_cabinet_seat_change_spd_tt: "§tSPD§! possible cabinet seats: $RIGHT|+=0..0$"
@@ -36,6 +37,8 @@
  GER_kampf_aus_der_mitte_NOT: "§YKampf aus der Mitte§! is over"
  GER_kampf_aus_der_mitte_crisis_tt: "\n\n§RWe will lose on the next turn, if we don't do something about the crisis.§!"
 
+ GER_zentrum_collapse_tt: "After a §Rperiod of instability§!, the §gReichswehr§! led by §gKurt Scleicher§! has couped the government and §Roccupied§! the capital to establish a §Ynew regime§!.\n\n"
+
  GER_zentrums_ambitions_tt: "The §3Zentrum§! has agreed to oust their own chancellor very reluctantly for the sake of the §YSpring§! §3coalition§! and they are not happy about it. They will demand the chancellorship over the government even if they aren't the largest party in the §Y1937 elections§!.\n\nWithout major reconcialiation efforts, the block will be torn apart and Zentrum might reconcile with the §9Volksblock§!.\n\n"
  GER_scleicher_replaces_below_tt: "§gKurt Schleicher§! will replace §gOtto von Below§! as Reichswehrminister.\n\n"
  GER_papen_appointed_tt: "The kaiser has asked the §3Zentrum§!-leaning authoritarian §gFranz von Papen§! to form a technocratic government as independent. Even his own party doesn't trust him and the so-called §YSpring§! §3coalition§! is actively trying to oust him and appoint their own chancellor."
@@ -56,6 +59,15 @@
 
  GER_Zentrum_wins_tt: "The §3Zentrum§! won the largest share of the vote."
  GER_SPD_wins_tt: "The §tSPD§! won the largest share of the vote."
+
+ GER_schleicher_coup_planned: "§gImperialer Block§! is planning a §Ycoup§!"
+ GER_imperial_block_tt: "If stability §Rdrops below§! §Y20%§!, Scleicher will try to coup the government.\n\n"
+ GER_peace_with_the_block_tt: "We will make peace with §gSchleicher§!, but we will also have to promise him a §Rministry§! after the elections, but nevertheless this alliance will be beneficial for us.\n\n"
+ GER_papen_in_prussia_tt: "While §gFranz von Papen§! may not be the most loyal minister-president, he is still better than §tOtto Braun§!\n\n"
+ GER_bring_von_below_back_tt: "§tSchleicher will be sacked from the reichswehr ministry§! and replaced with §gOtto von Below§!.\n\nThis will be a major blow to §gKurt Schleicher§!'s prestige and power.\n\n"
+ GER_prussian_grand_coalition_tt: "The §3Zentrum§! will join the §tSPD§! in a grand coalition in Prussia, which will be a major win to the current §tSPD§!-§9FVP§! minority coalition.\n\n"
+ GER_schleicher_coup_fails_tt: "Any attempts to §Ycoup the government§! by §gKurt Schleicher§! have failed.\n\n"
+ GER_foment_a_split_between_kaiser_and_schleicher_tt: "After solving successfully the §tPrussian crisis§!, we have earned some §Ygoodwill§! with the kaiser, which we can use to try to §Yfoment a split§! between him and §gKurt Schleicher§!."
 
  GER_canidate_choice_tt_volksblock: "§YChancellor will have a impact on available focuses.§!"
  GER_question_of_the_chancellorship_tt: "We need to decide on a chancellor our new §9democratic§! government. The largest party in our coalition will demand the position, but we also can choose a §Yliberal§! §9FVP§!-leaning candidate as chancellor.\n\nIf §3Zentrum§! won the elections, the party chair, will be their candidate. Having elected §gBrüning§!, it will make our job much more difficult.\n\n"

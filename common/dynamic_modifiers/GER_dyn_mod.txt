@@ -1,0 +1,5 @@
+GER_strike_movement = {
+	icon = GFX_idea_MEX_revolutionary_army
+	stability_factor = -0.08
+	
+}

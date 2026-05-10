@@ -11,6 +11,11 @@ country_event = {
 	days = 50
 }
 
+country_event = {
+	id = GER_scleicher.1
+	days = 70
+}
+
 # Starting Stats of various kinds
 set_research_slots = 4
 set_convoys = 200
@@ -18,9 +23,9 @@ IF = {
 	limit = {
 		has_dlc = "Gotterdammerung"
 	}
-	set_stability = 0.5 # Was 0.75, but get 5% from the Reichstag
+	set_stability = 0.6 # Was 0.75, but get 5% from the Reichstag
 	ELSE = {
-		set_stability = 0.55
+		set_stability = 0.65
 	}
 }
 set_war_support = 0.3
@@ -97,6 +102,7 @@ add_ideas = {
 	GER_may_betrayal
 	GER_spirit_of_weimar
 	GER_red_scare
+	GER_minority_prussian_government
 	GER_era_of_imperial_cabinets
 	limited_exports
 	limited_conscription

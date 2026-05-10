@@ -5,6 +5,7 @@ add_namespace = GER_zentrum_fails
 add_namespace = GER_volksblock
 add_namespace = GER_zentrum_leadership
 add_namespace = GER_elections_36
+add_namespace = GER_scleicher
 
 country_event = {
 	id = GER_spring_coalition.0
@@ -190,6 +191,7 @@ country_event = {
 		unlock_national_focus = GER_adressing_zentrum_demands
 		set_country_flag = GER_kampf_aus_der_mitte
 		activate_mission = GER_kampf_aus_der_mitte_mission
+		add_ideas = GER_kampf_aus_der_mitte_idea
 	}
 }
 
@@ -221,6 +223,18 @@ country_event = {
 			value = -2
 			tooltip = GER_coalition_stability_change_tt
 		}
+	}
+}
+
+country_event = {
+	id = GER_political_manoeuvres.5
+	title = "Extending an olive branch"
+	desc = GER_political_manoeuvres.5.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Art of the deal!"
 	}
 }
 
@@ -277,7 +291,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = "The government is safe... for now"
+		name = "We can only hope for stability."
 		custom_effect_tooltip = GER_zentrum_collapse_tt
 		promote_character = {
 			character = GER_kurt_von_schleicher
@@ -288,10 +302,14 @@ country_event = {
 		hidden_effect = {
 			remove_ideas = GER_government_in_crisis
 			add_ideas = GER_kurt_von_schleicher_hog_idea
-			clr_country_flag = GER_show_moderate_tree
 			set_country_flag = GER_show_authoritarian_tree
 			set_country_flag = GER_authoritarian_government
 			mark_focus_tree_layout_dirty = yes
+			clr_country_flag = GER_spring_coalition
+			clr_country_flag = GER_kampf_aus_der_mitte
+			clr_country_flag = GER_elections_36
+			remove_mission = GER_kampf_aus_der_mitte_mission
+			remove_mission = GER_elections_timer
 		}
 	}
 }
@@ -313,7 +331,6 @@ country_event = {
 				days = 30
 			}
 			remove_mission = GER_elections_timer
-			remove_mission = GER_popular_front_campaigning
 		}
 	}
 }
@@ -341,7 +358,6 @@ country_event = {
 	option = {
 		name = "Oh, I see..."
 		activate_mission = GER_elections_timer
-		activate_mission = GER_popular_front_campaigning
 		set_country_flag = GER_elections_36
 	}
 }
@@ -356,7 +372,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			remove_mission = GER_elections_timer
-			remove_mission = GER_popular_front_campaigning
+			clr_country_flag = GER_elections_36
 		}
 	}
 
@@ -364,83 +380,39 @@ country_event = {
 		name = "Victory for the Spring Coalition!"
 		trigger = {
 			has_country_flag = GER_spring_coalition
-			add_to_temp_variable = {
-				var = spring_votes
-				value = nlp_votes
+		}
+		set_country_flag = GER_spring_coalition_2
+		unlock_national_focus = GER_promised_and_delivered
+		if = {
+			limit = {
+				has_country_flag = GER_agreed_to_stegerwald
 			}
-			add_to_temp_variable = {
-				var = spring_votes
-				value = z_votes
+			promote_character = {
+				character = GER_adam_stegerwald
 			}
-			add_to_temp_variable = {
-				var = spring_votes
-				value = dkp_votes
+			set_politics = {
+				ruling_party = conservatism
 			}
-			add_to_temp_variable = {
-				var = spring_votes
-				value = duvp_votes
-			}
-
-			add_to_temp_variable = {
-				var = democratic_votes
-				value = spd_votes
-			}
-			add_to_temp_variable = {
-				var = democratic_votes
-				value = kpd_votes
-			}
-			add_to_temp_variable = {
-				var = democratic_votes
-				value = fvp_votes
-			}
-
-			check_variable = {
-				var = spring_votes
-				value = democratic_votes
-				compare = greater_than_or_equals
+			hidden_effect = {
+				add_ideas = GER_adam_stegerwald_hog_idea
 			}
 		}
-	}
-
-	option = {
-		name = "Popular Front victorius!"
-		trigger = {
-			has_country_flag = GER_spring_coalition
-			add_to_temp_variable = {
-				var = spring_votes
-				value = nlp_votes
+		if = {
+			limit = {
+				has_country_flag = GER_agreed_to_bruning
 			}
-			add_to_temp_variable = {
-				var = spring_votes
-				value = z_votes
+			promote_character = {
+				character = GER_heinrich_bruning
 			}
-			add_to_temp_variable = {
-				var = spring_votes
-				value = dkp_votes
+			set_politics = {
+				ruling_party = conservatism
 			}
-			add_to_temp_variable = {
-				var = spring_votes
-				value = duvp_votes
+			hidden_effect = {
+				add_ideas = GER_heinrich_bruning_hog_idea
 			}
-
-			add_to_temp_variable = {
-				var = democratic_votes
-				value = spd_votes
-			}
-			add_to_temp_variable = {
-				var = democratic_votes
-				value = kpd_votes
-			}
-			add_to_temp_variable = {
-				var = democratic_votes
-				value = fvp_votes
-			}
-
-			check_variable = {
-				var = spring_votes
-				value = democratic_votes
-				compare = less_than
-			}
+		}
+		hidden_effect = {
+			remove_ideas = GER_kuno_von_westarp_hog_idea
 		}
 	}
 
@@ -470,5 +442,123 @@ country_event = {
 		mark_focus_tree_layout_dirty = yes
 		unlock_national_focus = GER_volksblock_triumphs
 		remove_ideas = GER_spring_turns_into_winter
+	}
+}
+
+country_event = {
+	id = GER_scleicher.1
+	title = "Imperialer Block"
+	desc = GER_scleicher.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "I bet they are planning a coup right now"
+		trigger = {
+			has_country_flag = GER_spring_coalition
+		}
+		custom_effect_tooltip = GER_imperial_block_tt
+		add_stability = -0.08
+		set_country_flag = GER_schleicher_coup_planned
+		set_party_name = {
+			ideology = ultra_nationalism
+			name = GER_imperial_block
+			long_name = GER_imperial_block_long
+		}
+		add_ideas = GER_imperial_block_1
+		promote_character = GER_kurt_von_schleicher
+		hidden_effect = {
+			country_event = {
+				id = GER_scleicher.2
+				days = 7
+			}
+		}
+	}
+
+	option = {
+		name = "Like they can do anything!"
+		trigger = {
+			NOT = {
+				has_country_flag = GER_spring_coalition
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_scleicher.2
+	title = "Franz von Papen aligns with the Imperialer Block"
+	desc = GER_scleicher.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The imperial favorites in one camp..."
+	}
+}
+
+country_event = {
+	id = GER_scleicher.3
+	title = "Schleicher's movement loses momentum"
+	desc = GER_scleicher.3.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The Hohenzollerns are really taking over the government, aren't they?"
+		swap_ideas = {
+			remove_idea = GER_imperial_block_1
+			add_idea = GER_imperial_block_2
+		}
+		hidden_effect = {
+			country_event = {
+				id = GER_scleicher.4
+				days = 35
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_scleicher.4
+	title = "Schleicher's movement collapses"
+	desc = GER_scleicher.4.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Schleicher is arrested and sent to Spandau prison"
+		custom_effect_tooltip = GER_schleicher_coup_fails_tt
+		add_stability = 0.1
+		set_country_flag = GER_schleicher_coup_failed
+		remove_ideas = GER_imperial_block_2
+		clr_country_flag = GER_schleicher_coup_planned
+	}
+}
+
+country_event = {
+	id = GER_scleicher.5
+	title = "Schleicher coups the government"
+	desc = GER_scleicher.5.d
+
+	fire_only_once = yes
+
+	trigger = {
+		has_stability < 0.2
+		has_country_flag = GER_schleicher_coup_planned
+	}
+
+	option = {
+		name = "So long for the Weimar compromise..."
+		fire_ministers = yes
+		country_event = {
+			id = GER_zentrum_fails.2
+			days = 7
+		}
+		hidden_effect = {
+			remove_ideas = GER_imperial_block_1
+			remove_ideas = GER_imperial_block_2
+			clr_country_flag = GER_schleicher_coup_planned
+		}
 	}
 }

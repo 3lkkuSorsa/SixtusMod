@@ -22,17 +22,6 @@ GER_spring_coalition_category = {
 	priority = 9
 }
 
-GER_elections_37_category = {
-	allowed = {
-		original_tag = GER
-	}
-
-	visible = {
-		has_country_flag = GER_elections_36
-	}
-	priority = 10
-}
-
 GER_forming_a_cabinet_category = {
 	allowed = {
 		original_tag = GER

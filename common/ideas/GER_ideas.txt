@@ -18,6 +18,12 @@ ideas = {
 				political_power_factor = -0.5
 			}
 		}
+		GER_kampf_aus_der_mitte_idea = {
+			modifier = {
+				stability_factor = -0.08
+				political_power_factor = -0.35
+			}
+		}
 		GER_red_scare = {
 			modifier = {
 				stability_factor = -0.05
@@ -68,141 +74,64 @@ ideas = {
 				political_power_factor = -0.25
 			}
 		}
+		GER_imperial_block_1 = {
+			modifier = {
+				stability_weekly = -0.015
+				ultra_nationalism_drift = 0.025
+			}
+		}
 
-		GER_franz_von_papen_idea = {
+		GER_imperial_block_2 = {
 			modifier = {
-				political_power_factor = 0
+				stability_weekly = -0.0075
 			}
 		}
-		GER_kuno_von_westarp_idea = {
+
+		GER_papen_in_prussia = {
 			modifier = {
-				political_power_factor = 0
+				stability_factor = -0.05
+				political_power_factor = -0.1
 			}
 		}
-		GER_kurt_von_schleicher_hog_idea = {
+
+		GER_minority_prussian_government = {
 			modifier = {
-				political_power_factor = 0
+				stability_factor = -0.02
+				political_power_factor = -0.05
 			}
 		}
-		GER_kurt_von_schleicher_min_idea = {
+
+		GER_prussian_grand_coalition = {
 			modifier = {
-				political_power_factor = 0
+				stability_factor = 0.05
+				political_power_factor = 0.1
 			}
 		}
-		GER_otto_braun_idea = {
+
+		GER_expanded_workers_protections = {
+			cancel = {
+				NOT = {
+					has_country_flag = GER_spring_coalition
+				}
+			}
 			modifier = {
-				political_power_factor = 0
+				stability_factor = 0.05
+				line_change_production_efficiency_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.1
 			}
 		}
-		GER_otto_gessler_hog_idea = {
-			modifier = {
-				political_power_factor = 0
+
+		GER_surging_trade_unions = {
+			cancel = {
+				NOT = {
+					has_country_flag = GER_spring_coalition
+				}
 			}
-		}
-		GER_otto_gessler_min_idea = {
 			modifier = {
-				political_power_factor = 0
+				political_power_factor = -0.1
+				social_liberalism_drift = 0.01
+				social_democracy_drift = 0.01
+				communism_drift = -0.01
 			}
-		}
-		GER_adam_stegerwald_hog_idea = {
-			modifier = {
-				political_power_factor = 0
-			}
-		}
-		GER_adam_stegerwald_min_idea = {
-			modifier = {
-				political_power_factor = 0
-			}
-		}
-		GER_heinrich_bruning_hog_idea = {
-			modifier = {
-				political_power_factor = 0
-			}
-		}
-		GER_heinrich_bruning_min_idea = {
-			modifier = {
-				political_power_factor = 0
-			}
-		}
-		GER_wilhelm_groener_idea = {
-			modifier = {
-				political_power_factor = 0
-			}
-		}
-		GER_julius_curtius_idea = {
-			modifier = {
-				political_power_factor = 0
-			}
-		}
-		GER_hjalmar_schacht_idea = {
-			modifier = {
-				political_power_factor = 0
-			}
-		}
-		GER_konstantin_von_neurath_idea = {
-			modifier = {
-				political_power_factor = 0
-			}
-		}
-		GER_otto_von_below_idea = {
-			modifier = {
-				political_power_factor = 0
-			}
-		}
-		GER_carl_severing_idea = {
-			modifier = {
-				political_power_factor = 0
-			}
-		}
-		GER_wilhelm_kulz_idea = {
-			modifier = {
-				political_power_factor = 0
-			}
-		}
-		GER_joseph_wirth_idea = {
-			modifier = {
-				political_power_factor = 0
-			}
-		}
-		GER_rudolf_breitscheid_idea = {
-			modifier = {
-				political_power_factor = 0
-			}
-		}
-		GER_walther_rathenau_idea = {
-			modifier = {
-				political_power_factor = 0
-			}
-		}
-		GER_matthias_erzberger_idea = {
-			modifier = {
-				political_power_factor = 0
-			}
-		}
-		GER_rudolf_hilferding_idea = {
-			modifier = {
-				political_power_factor = 0
-			}
-		}
-		GER_hans_luther_idea = {
-			modifier = {
-				political_power_factor = 0
-			}
-		}
-		GER_heinrich_brauns_idea = {
-			modifier = {
-				political_power_factor = 0
-			}
-		}
-		GER_rudolf_wissell_idea = {
-			modifier = {
-				political_power_factor = 0
-			}
-		}
-		GER_kurt_von_hammerstein_equord_idea = {
-			modifier = {
-				political_power_factor = 0
-			}
-		}
 	}
 }

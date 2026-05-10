@@ -1,4 +1,28 @@
 GER_spring_coalition_category = {
+	GER_elections_timer = {
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			always = no
+		}
+
+		activation = {
+			always = no
+		}
+
+		days_mission_timeout = 265
+
+		priority = 10
+
+		timeout_effect = {
+			country_event = {
+				id = GER_elections_36.1
+			}
+		}
+	}
+
 	GER_zentrum_ambitions = {
 		allowed = {
 			original_tag = GER
@@ -28,16 +52,27 @@ GER_spring_coalition_category = {
 		}
 
 		available = {
-			NOT = { has_country_flag = GER_kampf_aus_der_mitte }
+			custom_trigger_tooltip = {
+				tooltip = GER_kampf_aus_der_mitte_available_tt
+				check_variable = {
+					var = GER.coalition_stability
+					value = 9
+					compare = greater_than
+				}				
+			}
 		}
 
 		activation = {
 			always = no
 		}
 
-		days_mission_timeout = 50
+		days_mission_timeout = 55
+
+		selectable_mission = yes
 
 		is_good = no
+
+		priority = 9
 
 		timeout_effect = {
 			if = {
@@ -95,6 +130,39 @@ GER_spring_coalition_category = {
 					custom_effect_tooltip = GER_kampf_aus_der_mitte_crisis_tt
 				}
 			}
+			if = {
+				limit = {
+					OR = {
+						NOT = { has_completed_focus = GER_repeal_anti_trade_union_legislation }
+						NOT = { has_completed_focus = GER_expand_worker_protections }
+						NOT = { has_completed_focus = GER_imperial_mediation }
+						NOT = { has_country_flag = GER_schleicher_coup_planned }
+					}
+				}
+				random_list = {
+					60 = {
+						add_to_variable = {
+							var = GER.coalition_stability
+							value = -1
+							tooltip = GER_coalition_stability_change_tt
+						}
+					}
+					40 = {
+						add_to_variable = {
+							var = GER.coalition_stability
+							value = -2
+							tooltip = GER_coalition_stability_change_tt
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			country_event = {
+				id = GER_political_manoeuvres.5
+				days = 2
+			}
+			remove_ideas = GER_kampf_aus_der_mitte_idea
 		}
 	}
 
@@ -140,92 +208,13 @@ GER_red_scare = {
 		}
 
 		is_good = yes
-		days_mission_timeout = 105
+		days_mission_timeout = 145
 
 		timeout_effect = {
 			country_event = {
 				id = GER_red_scare.1
 				days = 5
 			}
-		}
-	}
-}
-
-GER_elections_37_category = {
-	GER_elections_timer = {
-		allowed = {
-			original_tag = GER
-		}
-
-		available = {
-			always = no
-		}
-
-		activation = {
-			always = no
-		}
-
-		days_mission_timeout = 265
-
-		timeout_effect = {
-			country_event = {
-				id = GER_elections_36.1
-			}
-		}
-	}
-
-	GER_popular_front_campaigning = {
-		allowed = {
-			original_tag = GER
-		}
-
-		available = {
-			always = no
-		}
-
-		activation = {
-			always = no
-		}
-
-		is_good = yes
-
-		days_mission_timeout = 60
-
-		timeout_effect = {
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = GER_freeze_front_campaign
-					}
-				}
-				random_list = {
-					50 = {
-						add_to_variable = {
-							var = GER.spd_votes
-							value = 1
-							tooltip = GER_spd_votes_change_tt
-						}
-					}
-					30 = {
-						add_to_variable = {
-							var = GER.kpd_votes
-							value = 1
-							tooltip = GER_kpd_votes_change_tt
-						}
-					}
-					20 = {
-						add_to_variable = {
-							var = GER.fvp_votes
-							value = 1
-							tooltip = GER_fvp_votes_change_tt
-						}
-					}
-				}
-				else = {
-					clr_country_flag = GER_freeze_front_campaign
-				}
-			}
-			activate_mission = GER_popular_front_campaigning
 		}
 	}
 }
