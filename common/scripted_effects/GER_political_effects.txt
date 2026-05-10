@@ -55,9 +55,8 @@ fire_ministers = {
 						is_character_slot = head_of_government
 					}
 				}
-				FROM = {
-					deactivate_advisor = FROM
-				}
+				retire = yes
+				set_nationality = PREV
 
 				remove_trait = {
 					character = THIS
@@ -240,10 +239,10 @@ GER_appoint_volksblock_coalition = {
 				has_country_flag = GER_wissell_economic_ministry
 			}
 			add_ideas = {
-				GER_otto_wissell_idea
+				GER_rudolf_wissell_idea
 			}
 			add_trait = {
-				character = GER_otto_wissell
+				character = GER_rudolf_wissell
 				slot = minister
 				trait = economy_minister
 			}

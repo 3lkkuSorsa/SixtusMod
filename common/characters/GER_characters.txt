@@ -16,7 +16,7 @@ characters = {
 	}
 
 	GER_franz_von_papen = {
-		name = "Franz von Papen"
+		name = GER_franz_von_papen
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/GER/GER_papen.dds"
@@ -43,7 +43,7 @@ characters = {
 	}
 
 	GER_kuno_von_westarp = {
-		name = "Kuno von Westarp"
+		name = GER_kuno_von_westarp
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/GER/GER_westarp.dds"
@@ -70,7 +70,7 @@ characters = {
 	}
 
 	GER_kurt_von_schleicher = {
-		name = "Kurt von Schleicher"
+		name = GER_kurt_von_schleicher
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/GER/GER_schleicher.dds"
@@ -110,7 +110,7 @@ characters = {
 	}
 
 	GER_otto_braun = {
-		name = "Otto Braun"
+		name = GER_otto_braun
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/GER/GER_braun.dds"
@@ -137,7 +137,7 @@ characters = {
 	}
 
 	GER_otto_gessler = {
-		name = "Otto Gessler"
+		name = GER_otto_gessler
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/GER/GER_gessler.dds"
@@ -177,7 +177,7 @@ characters = {
 	}
 
 	GER_adam_stegerwald = {
-		name = "Adam Stegerwald"
+		name = GER_adam_stegerwald
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/GER/GER_stegerwald.dds"
@@ -217,7 +217,7 @@ characters = {
 	}
 
 	GER_heinrich_bruning = {
-		name = "Heinrich Brüning"
+		name = GER_heinrich_bruning
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/GER/GER_bruning.dds"
@@ -259,7 +259,7 @@ characters = {
 	# Other Ministers
 
 	GER_wilhelm_groener = {
-		name = "Wilhelm Groener"
+		name = GER_wilhelm_groener
 		portraits = {
 			civilian = {
 				small = "gfx/advisors/GER/GER_groener.dds"
@@ -281,7 +281,7 @@ characters = {
 	}
 
 	GER_julius_curtius = {
-		name = "Julius Curtius"
+		name = GER_julius_curtius
 		portraits = {
 			civilian = {
 				small = "gfx/advisors/GER/GER_curtius.dds"
@@ -303,7 +303,7 @@ characters = {
 	}
 
 	GER_hjalmar_schacht_1 = {
-		name = "Hjalmar Schacht"
+		name = GER_hjalmar_schacht
 		portraits = {
 			civilian = {
 				small = "gfx/advisors/GER/GER_schacht.dds"
@@ -325,7 +325,7 @@ characters = {
 	}
 
 	GER_konstantin_von_neurath_1 = {
-		name = "Konstantin von Neurath"
+		name = GER_konstantin_von_neurath
 		portraits = {
 			civilian = {
 				small = "gfx/advisors/GER/GER_neurath.dds"
@@ -347,7 +347,7 @@ characters = {
 	}
 
 	GER_otto_von_below = {
-		name = "Otto von Below"
+		name = GER_otto_von_below
 		portraits = {
 			civilian = {
 				small = "gfx/advisors/GER/GER_below.dds"
@@ -369,7 +369,7 @@ characters = {
 	}
 
 	GER_carl_severing = {
-		name = "Carl Severing"
+		name = GER_carl_severing
 		portraits = {
 			civilian = {
 				small = "gfx/advisors/GER/GER_severing.dds"
@@ -391,7 +391,7 @@ characters = {
 	}
 
 	GER_wilhelm_kulz = {
-		name = "Wilhelm Külz"
+		name = GER_wilhelm_kulz
 		portraits = {
 			civilian = {
 				small = "gfx/advisors/GER/GER_kulz.dds"
@@ -413,7 +413,7 @@ characters = {
 	}
 
 	GER_joseph_wirth = {
-		name = "Joseph Wirth"
+		name = GER_joseph_wirth
 		portraits = {
 			civilian = {
 				small = "gfx/advisors/GER/GER_wirth.dds"
@@ -435,7 +435,7 @@ characters = {
 	}
 
 	GER_rudolf_breitscheid = {
-		name = "Rudolf Breitscheid"
+		name = GER_rudolf_breitscheid
 		portraits = {
 			civilian = {
 				small = "gfx/advisors/GER/GER_breitscheid.dds"
@@ -457,7 +457,7 @@ characters = {
 	}
 
 	GER_walther_rathenau = {
-		name = "Walther Rathenau"
+		name = GER_walther_rathenau
 		portraits = {
 			civilian = {
 				small = "gfx/advisors/GER/GER_rathenau.dds"
@@ -479,7 +479,7 @@ characters = {
 	}
 
 	GER_matthias_erzberger = {
-		name = "Matthias Erzberger"
+		name = GER_matthias_erzberger
 		portraits = {
 			civilian = {
 				small = "gfx/advisors/GER/GER_erzberger.dds"
@@ -501,7 +501,7 @@ characters = {
 	}
 
 	GER_rudolf_hilferding = {
-		name = "Rudolf Hilferding"
+		name = GER_rudolf_hilferding
 		portraits = {
 			civilian = {
 				small = "gfx/advisors/GER/GER_hilferding.dds"
@@ -523,7 +523,7 @@ characters = {
 	}
 
 	GER_hans_luther = {
-		name = "Hans Luther"
+		name = GER_hans_luther
 		portraits = {
 			civilian = {
 				small = "gfx/advisors/GER/GER_luther.dds"
@@ -544,30 +544,8 @@ characters = {
 		}
 	}
 
-	GER_otto_wissell = {
-		name = "Otto Wissell"
-		portraits = {
-			civilian = {
-				small = "gfx/advisors/GER/GER_otto_wissell.dds"
-			}
-		}
-
-		advisor = {
-			slot = minister
-			idea_token = GER_otto_wissell_idea
-			can_be_fired = no
-			available = {
-				is_hired_as_advisor = yes
-			}
-
-			allowed = {
-				is_hired_as_advisor = yes
-			}
-		}
-	}
-
 	GER_heinrich_brauns = {
-		name = "Heinrich Brauns"
+		name = GER_heinrich_brauns
 		portraits = {
 			civilian = {
 				small = "gfx/advisors/GER/GER_brauns.dds"
@@ -589,7 +567,7 @@ characters = {
 	}
 
 	GER_rudolf_wissell = {
-		name = "Rudolf Wissell"
+		name = GER_rudolf_wissell
 		portraits = {
 			civilian = {
 				small = "gfx/advisors/GER/GER_wissell.dds"
@@ -611,7 +589,7 @@ characters = {
 	}
 
 	GER_kurt_von_hammerstein_equord = {
-		name = "Kurt von Hammerstein-Equord"
+		name = GER_kurt_von_hammerstein_equord
 		portraits = {
 			civilian = {
 				small = "gfx/advisors/GER/GER_hammerstein_equord.dds"
