@@ -1117,6 +1117,64 @@ focus_tree = {
     }
 
     focus = {
+        id = FIN_church_role_in_society
+        icon = GFX_goal_FIN_kokoomus
+        x = 20
+        y = 3
+
+        allow_branch = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+
+        prerequisite = {
+            focus = FIN_return_to_tradition
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 5
+
+        search_filters = { 
+
+        }
+    }
+
+    focus = {
+        id = FIN_erode_the_poison_of_liberalism
+        icon = GFX_goal_FIN_kokoomus
+        x = 23
+        y = 3
+
+        allow_branch = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+
+        prerequisite = {
+            focus = FIN_return_to_tradition
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 5
+
+        search_filters = { 
+
+        }
+    }
+
+    focus = {
         id = FIN_economic_restoration
         icon = GFX_goal_FIN_kokoomus
         x = 15
