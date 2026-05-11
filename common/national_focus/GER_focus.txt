@@ -1013,4 +1013,25 @@ focus_tree = {
 			}
 		}
 	}
+
+	GER_reform_the_weimar_constitution = {
+		id = GER_reform_the_weimar_constitution
+		icon = GFX_goal_GER_Reform_Weimar_Constitution
+
+		x = -5
+		y = 10
+
+		cost = 3
+
+		available = {
+			has_country_flag = GER_
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GER_reform_the_weimar_constitution_tt
+			add_ideas = GER_reformed_constitution
+			set_country_flag = GER_reformed_constitution_flag
+		}
+	}
 }
+
