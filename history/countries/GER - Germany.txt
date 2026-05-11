@@ -23,9 +23,9 @@ IF = {
 	limit = {
 		has_dlc = "Gotterdammerung"
 	}
-	set_stability = 0.6 # Was 0.75, but get 5% from the Reichstag
+	set_stability = 0.65 # Was 0.75, but get 5% from the Reichstag
 	ELSE = {
-		set_stability = 0.65
+		set_stability = 0.70
 	}
 }
 set_war_support = 0.3

@@ -25,5 +25,6 @@ state={
 	}
 	manpower=4144743
 	buildings_max_level_factor=1
+	state_category=megalopolis
 	local_supplies=0
 }

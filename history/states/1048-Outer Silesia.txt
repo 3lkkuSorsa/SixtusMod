@@ -1,0 +1,23 @@
+state={
+	id=1048
+	name="STATE_1048"
+	provinces={
+		584 3230 6321 6401 9290 9316 9439 9546 11515 
+	}
+	history={
+		victory_points = {
+			3230 5
+		}
+		owner = GER
+		add_core_of = GER
+		add_core_of = POL
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1 #WAS 2
+		}
+	}
+	manpower=1276740
+	buildings_max_level_factor=1
+	state_category=town
+	local_supplies=0
+}
