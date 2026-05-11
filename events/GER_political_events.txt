@@ -75,6 +75,31 @@ country_event = {
 }
 
 country_event = {
+	id = GER_spring_coalition.3
+	title = "Schleicher's Coup"
+	desc = GER_spring_coalition.3.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Fallout between Schleicher and Papen"
+	}
+}
+
+country_event = {
+	id = GER_spring_coalition.4
+	title = "Trade unions protest against the bourgeois government"
+	desc = GER_spring_coalition.4.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "But the people voted for us!"
+		add_ideas = GER_mass_strikes
+	}
+}
+
+country_event = {
 	id = GER_political_manoeuvres.1
 	title = "Zentrum demands chancellorship"
 	desc = GER_political_manoeuvres.1.d
@@ -303,6 +328,7 @@ country_event = {
 			remove_ideas = GER_government_in_crisis
 			add_ideas = GER_kurt_von_schleicher_hog_idea
 			set_country_flag = GER_show_authoritarian_tree
+			clr_country_flag = GER_show_moderate_tree
 			set_country_flag = GER_authoritarian_government
 			mark_focus_tree_layout_dirty = yes
 			clr_country_flag = GER_spring_coalition
@@ -382,7 +408,10 @@ country_event = {
 			has_country_flag = GER_spring_coalition
 		}
 		set_country_flag = GER_spring_coalition_2
-		unlock_national_focus = GER_promised_and_delivered
+		country_event = {
+			id = GER_spring_coalition.4
+			days = 4
+		}
 		if = {
 			limit = {
 				has_country_flag = GER_agreed_to_stegerwald
@@ -438,6 +467,7 @@ country_event = {
 				set_country_flag = GER_winner_SPD_volksblock
 			}
 		}
+		clr_country_flag = GER_show_moderate_tree
 		set_country_flag = GER_show_democratic_tree
 		mark_focus_tree_layout_dirty = yes
 		unlock_national_focus = GER_volksblock_triumphs

@@ -94,6 +94,13 @@ ideas = {
 			}
 		}
 
+		GER_schleicher_in_prussia = {
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = 0.15
+			}
+		}
+
 		GER_minority_prussian_government = {
 			modifier = {
 				stability_factor = -0.02
@@ -133,5 +140,34 @@ ideas = {
 				social_democracy_drift = 0.01
 				communism_drift = -0.01
 			}
+		}
+
+		GER_mass_strikes = {
+			cancel = {
+				NOT = {
+					has_country_flag = GER_spring_coalition
+				}
+			}
+			modifier = {
+				political_power_factor = -0.25
+				consumer_goods_factor = 0.25
+				line_change_production_efficiency_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.3
+			}
+		}
+
+		GER_curtailed_political_freedoms = {
+			cancel = {
+				NOT = {
+					has_country_flag = GER_spring_coalition
+				}
+			}
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = 0.1
+				social_liberalism_drift = -0.01
+				social_democracy_drift = -0.01
+			}
+		}
 	}
 }

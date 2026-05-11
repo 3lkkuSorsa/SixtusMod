@@ -599,7 +599,7 @@ focus_tree = {
 			has_completed_focus = GER_imperial_mediation
 			has_country_flag = GER_schleicher_coup_planned
 			GER_kurt_von_schleicher = {
-				is_character_slot = minister
+				is_hired_as_advisor = yes
 			}
 		}
 
@@ -649,7 +649,6 @@ focus_tree = {
 				remove_idea = GER_minority_prussian_government
 				add_idea = GER_prussian_grand_coalition
 			}
-			custom_effect_tooltip = GER_electoral_support_change_intro_tt
 		}
 	}
 
@@ -752,6 +751,490 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_promised_and_delivered
+		icon = GFX_goal_ideology_social_conservative
+
+		x = 0
+		y = 6
+
+		cost = 2
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+			NOT = {
+				has_country_flag = GER_schleicher_coup_planned
+			}
+		}
+
+		allow_branch = {
+			has_country_flag = GER_show_moderate_tree
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_uphold_the_weimar_constitution
+		icon = GFX_goal_constitutional_guarantees
+
+		x = 0
+		y = 1
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_promised_and_delivered
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_further_liberal_market_reforms
+		icon = GFX_goal_generic_financial_markets
+
+		x = -4
+		y = 1
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_promised_and_delivered
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_cut_taxes_on_the_bourgeoisie
+		icon = GFX_goal_constitutional_guarantees
+
+		x = -3
+		y = 2
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_further_liberal_market_reforms
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_junker-transformationsplan
+		icon = GFX_focus_generic_industrialists
+
+		x = -6
+		y = 2
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_further_liberal_market_reforms
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_concentrate_on_industry
+		icon = GFX_focus_generic_industry_investment
+
+		x = -4
+		y = 3
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_junker-transformationsplan
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_sideline_agriculture
+		icon = GFX_goal_generic_landowner_tax_cuts
+
+		x = -6
+		y = 3
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_junker-transformationsplan
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_cut_tariffs_on_grain_imports
+		icon = GFX_goal_agricultural_aid
+
+		x = -5
+		y = 4
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_sideline_agriculture
+		}
+
+		prerequisite = {
+			focus = GER_concentrate_on_industry
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_cheap_industrial_loans
+		icon = GFX_goal_generic_loans
+
+		x = -7
+		y = 4
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_junker-transformationsplan
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_deny_authoritarianism
+		icon = GFX_goal_liberty
+
+		x = 2
+		y = 1
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_promised_and_delivered
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_greener_grass_somewhere_else
+		icon = GFX_focus_ARG_establish_the_free_association
+
+		x = 1
+		y = 2
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_uphold_the_weimar_constitution
+		}
+		mutually_exclusive = {
+			focus = GER_compromise_with_the_right
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+			NOT = {
+				GER_kurt_von_schleicher = {
+					is_hired_as_advisor = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			retire_character = GER_kurt_von_schleicher
+		}
+	}
+
+	focus = {
+		id = GER_compromise_with_the_right
+		icon = GFX_goal_align_germany
+
+		x = -1
+		y = 2
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_uphold_the_weimar_constitution
+		}
+		mutually_exclusive = {
+			focus = GER_greener_grass_somewhere_else
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+			GER_kurt_von_schleicher = {
+				is_hired_as_advisor = yes
+			}
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_support_schleichers_coup
+		icon = GFX_goal_GER_Red_General_Regime
+
+		x = 0
+		y = 3
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_compromise_with_the_right
+		}
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+			country_event = {
+				id = GER_spring_coalition.3
+				days = 2
+			}
+			custom_effect_tooltip = "        "
+			swap_ideas = {
+				remove_idea = GER_papen_in_prussia
+				add_idea = GER_schleicher_in_prussia
+			}
+		}
+	}
+
+	focus = {
+		id = GER_curtail_political_freedoms
+		icon = GFX_goal_treaty_fails
+
+		x = -2
+		y = 3
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_compromise_with_the_right
+		}
+
+		cost = 0
+
+		available = {
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GER_mass_strikes
+				add_idea = GER_curtailed_political_freedoms
+			}
+			modify_timed_idea = {
+				idea = GER_curtailed_political_freedoms
+				days = 180
+			}
+		}
+	}
+
+	focus = {
+		id = GER_state_oversight_committee
+		icon = GFX_goal_agency
+
+		x = -1
+		y = 4
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_curtail_political_freedoms
+		}
+
+		cost = 0
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_expel_the_DUVP
+		icon = GFX_focus_ARG_defense_and_democracy
+
+		x = 2
+		y = 3
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_greener_grass_somewhere_else
+		}
+
+		prerequisite = {
+			focus = GER_deny_authoritarianism
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_broaded_the_coalition
+		icon = GFX_goal_ideology_social_liberal
+
+		x = 1
+		y = 4
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_expel_the_DUVP
+		}
+
+		mutually_exclusive = {
+			focus = GER_weimar_coalition
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_weimar_coalition
+		icon = GFX_goal_INS_focus_party_coalition
+
+		x = 4
+		y = 4
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_expel_the_DUVP
+		}
+
+		mutually_exclusive = {
+			focus = GER_broaded_the_coalition
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_negotiate_with_the_unions
+		icon = GFX_goal_INS_focus_party_coalition
+
+		x = 2
+		y = 5
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_broaded_the_coalition
+			focus = GER_weimar_coalition
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id = GER_volksblock_triumphs
 		icon = GFX_goal_liberty
 
@@ -847,8 +1330,8 @@ focus_tree = {
 		id = GER_rhineland_referendum
 		icon = GFX_goal_generic_elections
 
-		x = -6
-		y = 4
+		x = -8
+		y = 3
 
 		cost = 0
 
