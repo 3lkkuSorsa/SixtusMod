@@ -1011,6 +1011,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			set_country_flag = GER_ensured_coalition_victory
 		}
 	}
 

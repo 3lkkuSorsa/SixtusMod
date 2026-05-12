@@ -115,6 +115,13 @@ ideas = {
 			}
 		}
 
+		GER_conservative_prussian_government = {
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.1
+			}
+		}
+
 		GER_expanded_workers_protections = {
 			cancel = {
 				NOT = {

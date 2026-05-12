@@ -100,6 +100,68 @@ country_event = {
 }
 
 country_event = {
+	id = GER_spring_coalition.5
+	title = "Prussian Landtagswahl"
+	desc = GER_spring_coalition.5.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = GER_prussian_elections_coming_up
+		}
+	}
+
+	option = {
+		name = "Elections cancelled..."
+		trigger = {
+			has_idea = GER_schleicher_in_prussia
+			NOT = {
+				has_idea = GER_prussian_grand_coalition
+			}
+		}
+	}
+
+	option = {
+		name = "Weimar majority!"
+		add_stability = 0.07
+		trigger = {
+			has_country_flag = GER_ensured_coalition_victory
+			has_idea = GER_prussian_grand_coalition
+			NOT = {
+				has_idea = GER_schleicher_in_prussia
+			}
+		}
+	}
+
+	option = {
+		name = "DkP established a right-wing coalition!"
+		add_stability = -0.07
+		if = {
+			limit = {
+				has_idea = GER_prussian_grand_coalition
+			}
+			swap_ideas = {
+				remove_idea = GER_prussian_grand_coalition
+				add_idea = GER_conservative_prussian_government
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = GER_minority_prussian_government
+					add_idea = GER_conservative_prussian_government
+				}
+			}
+		}
+		NOT = {
+			OR = {
+				has_country_flag = GER_ensured_coalition_victory
+				has_idea = GER_schleicher_in_prussia
+			}
+		}
+	}
+}
+
+country_event = {
 	id = GER_political_manoeuvres.1
 	title = "Zentrum demands chancellorship"
 	desc = GER_political_manoeuvres.1.d
