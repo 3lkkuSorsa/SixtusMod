@@ -986,6 +986,35 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_ensure_coalition_victory
+		icon = GFX_goal_liberty
+
+		x = 3
+		y = 2
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_deny_authoritarianism
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+			NOT = {
+				GER_kurt_von_schleicher = {
+					is_hired_as_advisor = yes
+				}
+			}
+			has_country_flag = GER_prussian_elections_coming_up
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id = GER_greener_grass_somewhere_else
 		icon = GFX_focus_ARG_establish_the_free_association
 
