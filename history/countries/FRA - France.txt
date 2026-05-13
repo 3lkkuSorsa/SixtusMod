@@ -1,0 +1,26 @@
+set_capital = 16
+set_stability = 0.57
+set_war_support = 0.36
+
+add_ideas = {
+    FRA_major_strikes
+    FRA_won_ww1
+    FRA_war_reparations
+    FRA_political_instability
+}
+
+set_politics = {
+	ruling_party = conservatism
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	ultra_nationalism = 6
+	authoritarianism = 11
+	conservatism = 28
+	market_liberalism = 10
+	social_liberalism = 7
+	social_democracy = 32
+	communism = 6
+}
