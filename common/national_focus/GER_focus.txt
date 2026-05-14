@@ -604,7 +604,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.15
+			add_stability = 0.08
 			custom_effect_tooltip = GER_bring_von_below_back_tt
 			hidden_effect = {
 				remove_ideas = GER_kurt_von_schleicher_min_idea
@@ -810,13 +810,17 @@ focus_tree = {
 			focus = GER_promised_and_delivered
 		}
 
-		cost = 0
+		cost = 6
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
 		}
 
 		completion_reward = {
+			add_timed_idea = {
+				idea = GER_further_privatisations
+				days = 180
+			}
 		}
 	}
 
@@ -833,13 +837,17 @@ focus_tree = {
 			focus = GER_further_liberal_market_reforms
 		}
 
-		cost = 0
+		cost = 5
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
 		}
 
 		completion_reward = {
+			add_timed_idea = {
+				idea = GER_bourgeoisie_tax_cuts
+				days = 180
+			}
 		}
 	}
 
@@ -856,13 +864,14 @@ focus_tree = {
 			focus = GER_further_liberal_market_reforms
 		}
 
-		cost = 0
+		cost = 8
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
 		}
 
 		completion_reward = {
+			add_dynamic_modifier = { modifier = GER_junker_transformationsplan }
 		}
 	}
 
@@ -879,13 +888,37 @@ focus_tree = {
 			focus = GER_junker-transformationsplan
 		}
 
-		cost = 0
+		cost = 15
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Junker Transformationsplan"
+			}
+			add_to_variable = {
+				var = GER_junker_transformationsplan_stability_factor
+				value = -0.05
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				var = GER_junker_transformationsplan_industrial_capacity_factor
+				value = 0.02
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = {
+				var = GER_junker_transformationsplan_consumer_goods_factor
+				value = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				var = GER_junker_transformationsplan_production_factory_efficiency_gain_factor
+				value = 0.1
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
 		}
 	}
 
@@ -902,13 +935,32 @@ focus_tree = {
 			focus = GER_junker-transformationsplan
 		}
 
-		cost = 0
+		cost = 6
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Junker Transformationsplan"
+			}
+			add_to_variable = {
+				var = GER_junker_transformationsplan_stability_factor
+				value = -0.05
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				var = GER_junker_transformationsplan_industrial_capacity_factor
+				value = 0.08
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = {
+				var = GER_junker_transformationsplan_consumer_goods_factor
+				value = -0.02
+				tooltip = consumer_goods_factor_tt
+			}
 		}
 	}
 
@@ -929,13 +981,32 @@ focus_tree = {
 			focus = GER_concentrate_on_industry
 		}
 
-		cost = 0
+		cost = 6
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Junker Transformationsplan"
+			}
+			add_to_variable = {
+				var = GER_junker_transformationsplan_stability_factor
+				value = 0.15
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				var = GER_junker_transformationsplan_industrial_capacity_factor
+				value = 0.08
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = {
+				var = GER_junker_transformationsplan_consumer_goods_factor
+				value = 0.10
+				tooltip = consumer_goods_factor_tt
+			}
 		}
 	}
 
@@ -952,13 +1023,27 @@ focus_tree = {
 			focus = GER_junker-transformationsplan
 		}
 
-		cost = 0
+		cost = 8
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Junker Transformationsplan"
+			}
+			add_to_variable = {
+				var = GER_junker_transformationsplan_production_speed_industrial_complex_factor
+				value = 0.12
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
+			add_to_variable = {
+				var = GER_junker_transformationsplan_consumer_goods_factor
+				value = 0.05
+				tooltip = consumer_goods_factor_tt
+			}
 		}
 	}
 
@@ -1199,37 +1284,6 @@ focus_tree = {
 			focus = GER_expel_the_DUVP
 		}
 
-		mutually_exclusive = {
-			focus = GER_weimar_coalition
-		}
-
-		cost = 0
-
-		available = {
-			has_country_flag = GER_spring_coalition_2
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_weimar_coalition
-		icon = GFX_goal_INS_focus_party_coalition
-
-		x = 4
-		y = 4
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_expel_the_DUVP
-		}
-
-		mutually_exclusive = {
-			focus = GER_broaded_the_coalition
-		}
-
 		cost = 0
 
 		available = {
@@ -1244,14 +1298,13 @@ focus_tree = {
 		id = GER_negotiate_with_the_unions
 		icon = GFX_goal_INS_focus_party_coalition
 
-		x = 2
-		y = 5
+		x = 3
+		y = 4
 
 		relative_position_id = GER_promised_and_delivered
 
 		prerequisite = {
-			focus = GER_broaded_the_coalition
-			focus = GER_weimar_coalition
+			focus = GER_expel_the_DUVP
 		}
 
 		cost = 0
@@ -1261,6 +1314,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			country_event = {
+				id = GER_spring_coalition.6
+				days = 5
+			}
 		}
 	}
 

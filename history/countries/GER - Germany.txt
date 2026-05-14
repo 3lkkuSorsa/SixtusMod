@@ -94,6 +94,14 @@ set_variable = { zentrum_current_cab_seats = 0 }
 set_variable = { spd_current_cab_seats = 0 }
 set_variable = { fvp_current_cab_seats = 0 }
 
+set_variable = { GER_junker_transformationsplan_stability_factor = -0.1 }
+set_variable = { GER_junker_transformationsplan_industrial_capacity_factor = 0.05 }
+set_variable = { GER_junker_transformationsplan_consumer_goods_factor = 0.20 }
+set_variable = { GER_junker_transformationsplan_production_factory_efficiency_gain_factor = 0.05 }
+set_variable = { GER_junker_transformationsplan_production_factory_start_efficiency_factor = 0.05 }
+set_variable = { GER_junker_transformationsplan_production_factory_max_efficiency_factor = 0.05 }
+
+
 # Wowow nice faction
 create_faction_from_template = faction_template_axis
 add_to_faction = GER

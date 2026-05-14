@@ -162,6 +162,22 @@ country_event = {
 }
 
 country_event = {
+	id = GER_spring_coalition.6
+	title = "Negotiations with the unions"
+	desc = GER_spring_coalition.6.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The empire was built on compromises!"
+		swap_ideas = {
+			remove_idea = GER_mass_strikes
+			add_idea = GER_berlin_concessions
+		}
+	}
+}
+
+country_event = {
 	id = GER_political_manoeuvres.1
 	title = "Zentrum demands chancellorship"
 	desc = GER_political_manoeuvres.1.d
@@ -358,6 +374,10 @@ country_event = {
 		name = "Period of instability for the government"
 		fire_ministers = yes
 		hidden_effect = {
+			set_country_flag = GER_spring_is_over
+			clr_country_flag = GER_kampf_aus_der_mitte
+			clr_country_flag = GER_spring_coalition
+			clr_country_flag = GER_spring_coalition_2
 			promote_character = {
 				character = GER_reichstag
 			}

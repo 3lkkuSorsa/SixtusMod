@@ -163,6 +163,21 @@ ideas = {
 			}
 		}
 
+		GER_berlin_concessions = {
+			cancel = {
+				NOT = {
+					has_country_flag = GER_spring_coalition
+				}
+			}
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.1
+				consumer_goods_factor = 0.15
+				line_change_production_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.1
+			}
+		}
+
 		GER_curtailed_political_freedoms = {
 			cancel = {
 				NOT = {
@@ -170,10 +185,34 @@ ideas = {
 				}
 			}
 			modifier = {
-				stability_factor = -0.05
+				stability_factor = -0.15
 				political_power_factor = 0.1
 				social_liberalism_drift = -0.01
 				social_democracy_drift = -0.01
+			}
+		}
+
+		GER_further_privatisations = {
+			cancel = {
+				NOT = {
+					has_country_flag = GER_spring_coalition
+				}
+			}
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = -0.15
+			}
+		}
+
+		GER_bourgeoisie_tax_cuts = {
+			cancel = {
+				NOT = {
+					has_country_flag = GER_spring_coalition
+				}
+			}
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = -0.15
 			}
 		}
 	}
