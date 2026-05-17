@@ -8,6 +8,18 @@ ideas = {
                 stability_weekly = -0.002
                 industrial_capacity_factory = -0.2
                 industrial_capacity_dockyard = -0.2
+				social_democracy_drift = 0.04
+			}
+		}
+
+		FRA_major_strikes2 = {
+			picture = ICE_general_strike
+			modifier = {
+                consumer_goods_factor = 0.1
+                stability_weekly = -0.0015
+                industrial_capacity_factory = -0.2
+                industrial_capacity_dockyard = -0.2
+				social_democracy_drift = 0.02
 			}
 		}
 
@@ -34,6 +46,33 @@ ideas = {
 			modifier = {
                 stability_factor = -0.1
 				political_power_cost = 0.3
+			}
+		}
+
+		FRA_economic_reforms = {
+			picture = can_wartime_prices_and_trade_board
+			modifier = {
+                consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		FRA_populist_rethoric = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+                political_power_factor = 0.1
+				war_support_weekly = 0.001
+				conservatism_drift = 0.02
+			}
+		}
+
+		FRA_socialist_campaign = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+                social_democracy_drift = 0.02
 			}
 		}
 

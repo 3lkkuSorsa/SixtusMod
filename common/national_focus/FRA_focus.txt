@@ -1,0 +1,151 @@
+focus_tree = {
+    id = FRA_focus_tree
+    country = {
+        factor = 0
+
+        modifier = {
+            add = 10
+            tag = FRA
+        }
+    }
+
+    continuous_focus_position = { x = 100 y = 2000 }
+
+    default = no
+
+    #CONSERVATIVE POLITCAL PATH
+
+    focus = {
+        id = FRA_adress_the_strike_crisis
+        icon = GFX_goal_NFA_pays_reel
+        x = 20
+        y = 0
+
+        mutually_exclusive = {
+            focus = FRA_unite_the_leftist_opposition
+        }
+		
+        completion_reward = {
+            add_stability = 0.05
+
+            add_popularity = {
+                ideology = conservatism
+                popularity = 0.05
+            }
+
+            swap_ideas = {
+                remove_idea = FRA_major_strikes
+                add_idea = FRA_major_strikes2
+            }
+
+            custom_effect_tooltip = FRA_conservatism_tt
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_increase_populist_rethoric
+        icon = GFX_goal_NFA_france_first
+        x = 18
+        y = 1
+
+        prerequisite = {
+            focus = FRA_adress_the_strike_crisis
+        }
+
+        mutually_exclusive = {
+            focus = FRA_pass_economic_reforms
+        }
+		
+        completion_reward = {
+            add_popularity = {
+                ideology = conservatism
+                popularity = 0.05
+            }
+            
+            add_timed_idea = {
+                idea = FRA_populist_rethoric
+                days = 365
+            }
+        }  
+
+		cost = 4
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_pass_economic_reforms
+        icon = GFX_goal_generic_positive_trade_relations
+        x = 22
+        y = 1
+
+        prerequisite = {
+            focus = FRA_adress_the_strike_crisis
+        }
+
+        mutually_exclusive = {
+            focus = FRA_increase_populist_rethoric
+        }
+		
+        completion_reward = {
+            add_popularity = {
+                ideology = conservatism
+                popularity = 0.03
+            }
+            
+            add_timed_idea = {
+                idea = FRA_economic_reforms
+                days = 365
+            }
+        }  
+
+		cost = 4
+
+        search_filters = { 
+        
+        }
+    }
+
+    #LEFTIST POLITICAL PATH
+
+    focus = {
+        id = FRA_unite_the_leftist_opposition
+        icon = GFX_focus_generic_social_democracy
+        x = 34
+        y = 0
+
+        mutually_exclusive = {
+            focus = FRA_adress_the_strike_crisis
+        }
+		
+        completion_reward = {
+            add_political_power = 50
+
+            add_popularity = {
+                ideology = social_democracy
+                popularity = 0.03
+            }
+
+            add_timed_idea = {
+                idea = FRA_socialist_campaign
+                days = 100
+            }
+
+            custom_effect_tooltip = FRA_socialism_tt
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+}

@@ -1,0 +1,15 @@
+characters = {
+    FRA_louis_marin = {
+		name = FRA_marin_name
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Louis_marin.dds"
+			}
+		}
+		country_leader = {
+			ideology = conservatism_sub
+		}
+    }
+}
+
+
