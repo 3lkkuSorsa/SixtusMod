@@ -494,6 +494,7 @@ country_event = {
 			id = GER_spring_coalition.4
 			days = 4
 		}
+		unlock_national_focus = GER_promised_and_delivered
 		if = {
 			limit = {
 				has_country_flag = GER_agreed_to_stegerwald
@@ -617,7 +618,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = "The Hohenzollerns are really taking over the government, aren't they?"
+		name = "Look at that, even Papen is distancing himself from Schleicher!"
 		swap_ideas = {
 			remove_idea = GER_imperial_block_1
 			add_idea = GER_imperial_block_2

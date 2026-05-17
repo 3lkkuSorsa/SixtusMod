@@ -10,7 +10,8 @@
 
  GER_coalition_stability_change_tt: "§YCoalition stability§!: $RIGHT|+=0..0$"
  GER_coalition_centrists_for_left_tt: "Centrists siding with the left: $RIGHT|-=0..0$"
- GER_kampf_aus_der_mitte_available_tt: "§YCoalition stability§! is atleast §Y10§!."
+ GER_kampf_aus_der_mitte_available_1_tt: "§YCoalition stability§! is atleast §Y7§!."
+ GER_kampf_aus_der_mitte_available_2_tt: "No more than §Y15 centrists§! are siding with the §tleft§!."
 
  GER_cabinet_seat_change_fvp_tt: "§9FVP§! possible cabinet seats: $RIGHT|+=0..0$"
  GER_cabinet_seat_change_spd_tt: "§tSPD§! possible cabinet seats: $RIGHT|+=0..0$"
@@ -38,6 +39,11 @@
  GER_kampf_aus_der_mitte_NOT: "§YKampf aus der Mitte§! is over"
  GER_kampf_aus_der_mitte_crisis_tt: "\n\n§RWe will lose on the next turn, if we don't do something about the crisis.§!"
  GER_kampf_aus_der_mitte_success_tt: "The §tleft-wing§! of §3Zentrum§! has seriously been weakened and now we'll reap the benefits of our efforts."
+ GER_uphold_the_weimar_constitution_tt: "We will make atleast §Ysome promises§! of upholding the §YWeimar Constitution§!. This will prevent §tleft-wing§! from attacking our coalition stability."
+ GER_spokesman_office_tt: "We will expand the office of the §3Zentrum§! spokesman, and appoint a §Ycoalition-friendly§! politician to the position, which will help us with our propaganda efforts.\n\n"
+ GER_attack_the_left_tt: "\nAdditionally, if we have §Ydefeated Scleicher§! by attacking him, we will get following rewards:\n\n"
+
+ GER_promised_and_delivered_tt: "The §YSpring§! §3coalition§! must now fulfill its promises and promote §3Zentrum§!'s chair to the chancellorship."
 
  GER_zentrum_collapse_tt: "After a §Rperiod of instability§!, the §gReichswehr§! led by §gKurt Scleicher§! has couped the government and §Roccupied§! the capital to establish a §Ynew regime§!.\n\n"
 

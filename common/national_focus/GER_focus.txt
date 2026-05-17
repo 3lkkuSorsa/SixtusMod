@@ -452,6 +452,14 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.08
+			}
+			add_popularity = {
+				ideology = authoritarianism
+				popularity = 0.02
+			}
 		}
 	}
 
@@ -505,7 +513,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_continuous_campaigning
+		id = GER_expand_spokesman_office
 		icon = GFX_goal_generic_propaganda
 
 		x = 3
@@ -522,26 +530,17 @@ focus_tree = {
 		available = {
 			has_country_flag = GER_spring_coalition
 			has_country_flag = GER_kampf_aus_der_mitte
-			has_country_flag = {
-				flag = GER_continuous_campaigning_cooldown
-				days > 29
-			}
 		}
 
 		completion_reward = {
-			set_country_flag = {
-				flag = GER_continuous_campaigning_cooldown
+			custom_effect_tooltip = GER_spokesman_office_tt
+			custom_effect_tooltip = {
+				localization_key = GER_enable_decision
+				DEC = "Attack the left"
 			}
-			custom_effect_tooltip = GER_continuous_campaigning_tt
-			add_to_variable = {
-				var = GER.coalition_stability
-				value = 1
-				tooltip = GER_coalition_stability_change_tt
-			}
-			hidden_effect = {
-				uncomplete_national_focus = {
-					focus = GER_continuous_campaigning
-				}
+			custom_effect_tooltip = {
+				localization_key = GER_enable_decision
+				DEC = "Utilize the Party Whip"
 			}
 		}
 	}
@@ -794,6 +793,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_stability = 0.1
+			custom_effect_tooltip = GER_uphold_the_weimar_constitution_tt
 		}
 	}
 
