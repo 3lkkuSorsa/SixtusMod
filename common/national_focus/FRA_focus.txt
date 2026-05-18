@@ -114,6 +114,71 @@ focus_tree = {
         }
     }
 
+    focus = {
+        id = FRA_second_mandate
+        icon = GFX_goal_NFA_deal_with_the_devil
+        x = 20
+        y = 2
+
+        available = {
+            always = no
+        }
+
+        prerequisite = {
+            focus = FRA_pass_economic_reforms
+            focus = FRA_increase_populist_rethoric
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 1
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_three_promises
+        icon = GFX_goal_generic_improve_relations
+        x = 20
+        y = 3
+
+        prerequisite = {
+            focus = FRA_second_mandate
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            add_political_power = 25
+
+            add_popularity = {
+                ideology = conservatism
+                popularity = 0.03
+            }
+            
+            add_popularity = {
+                ideology = market_liberalism
+                popularity = 0.02
+            }
+        }  
+
+		cost = 4
+
+        search_filters = { 
+        
+        }
+    }
+
     #LEFTIST POLITICAL PATH
 
     focus = {
