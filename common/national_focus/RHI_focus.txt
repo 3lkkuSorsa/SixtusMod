@@ -1,0 +1,381 @@
+
+
+
+focus_tree = {
+	id = RHI_focus_tree
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = RHI
+		}
+	}
+
+	continuous_focus_position = { x = 300 y = 2000 }
+
+	default = no
+
+	focus = {
+		id = RHI_future_of_the_republic
+		icon = GFX_goal_generic_political_reform
+		x = 0
+		y = 0
+
+		completion_reward = {
+		}
+
+		cost = 5
+	}
+
+	focus = {
+		id = RHI_fourth_adenauer_cabinet
+		icon = GFX_goal_generic_political_reform
+		x = 4
+		y = 1
+
+		prerequisite = {
+			focus = RHI_future_of_the_republic
+		}
+
+		completion_reward = {
+		}
+
+		cost = 5
+	}
+
+	focus = {
+		id = RHI_economic_liberalism
+		icon = GFX_goal_generic_political_reform
+		x = 13
+		y = 2
+
+		prerequisite = {
+			focus = RHI_fourth_adenauer_cabinet
+		}
+
+		completion_reward = {
+		}
+
+		cost = 5
+	}
+
+	focus = {
+		id = RHI_devalue_the_rheinmark
+		icon = GFX_goal_generic_political_reform
+		x = 2
+		y = 1
+
+		relative_position_id = RHI_economic_liberalism
+
+		prerequisite = {
+			focus = RHI_economic_liberalism
+		}
+
+		completion_reward = {
+		}
+
+		cost = 5
+	}
+
+	focus = {
+		id = RHI_empower_financial_sector
+		icon = GFX_goal_generic_political_reform
+		x = 1
+		y = 2
+
+		relative_position_id = RHI_economic_liberalism
+
+		prerequisite = {
+			focus = RHI_devalue_the_rheinmark
+		}
+
+		completion_reward = {
+		}
+
+		cost = 5
+	}
+
+	focus = {
+		id = RHI_recovery_from_rhein_crisis
+		icon = GFX_goal_generic_political_reform
+		x = 2
+		y = 3
+
+		relative_position_id = RHI_economic_liberalism
+
+		prerequisite = {
+			focus = RHI_empower_financial_sector
+		}
+
+		prerequisite = {
+			focus = RHI_reduce_import_duties
+		}
+
+		completion_reward = {
+		}
+
+		cost = 5
+	}
+
+	focus = {
+		id = RHI_reduce_import_duties
+		icon = GFX_goal_generic_political_reform
+		x = 3
+		y = 2
+
+		relative_position_id = RHI_economic_liberalism
+
+		prerequisite = {
+			focus = RHI_economic_liberalism
+		}
+
+		completion_reward = {
+		}
+
+		cost = 5
+	}
+
+	focus = {
+		id = RHI_privatization_program
+		icon = GFX_goal_generic_political_reform
+		x = -2
+		y = 1
+
+		relative_position_id = RHI_economic_liberalism
+
+		prerequisite = {
+			focus = RHI_economic_liberalism
+		}
+
+		completion_reward = {
+		}
+
+		cost = 5
+	}
+
+	focus = {
+		id = RHI_end_state_railways_monopoly
+		icon = GFX_goal_generic_political_reform
+		x = -2
+		y = 3
+
+		relative_position_id = RHI_economic_liberalism
+
+		prerequisite = {
+			focus = RHI_privatization_program
+		}
+
+		completion_reward = {
+		}
+
+		cost = 5
+	}
+
+	focus = {
+		id = RHI_sell_state_owned_industries
+		icon = GFX_goal_generic_political_reform
+		x = -1
+		y = 2
+
+		relative_position_id = RHI_economic_liberalism
+
+		prerequisite = {
+			focus = RHI_privatization_program
+		}
+
+		prerequisite = {
+			focus = RHI_devalue_the_rheinmark
+		}
+
+		completion_reward = {
+		}
+
+		cost = 5
+	}
+
+	focus = {
+		id = RHI_coalition_formation
+		icon = GFX_goal_generic_political_reform
+		x = 2
+		y = 2
+
+		prerequisite = {
+			focus = RHI_fourth_adenauer_cabinet
+		}
+
+		completion_reward = {
+		}
+
+		cost = 5
+	}
+
+	focus = {
+		id = RHI_coalition_of_constitutionalists
+		icon = GFX_goal_generic_political_reform
+		x = 1
+		y = 3
+
+		prerequisite = {
+			focus = RHI_coalition_formation
+		}
+
+		mutually_exclusive = {
+			focus = RHI_primacy_of_the_bourgeoisie
+		}
+
+		completion_reward = {
+		}
+
+		cost = 5
+	}
+
+	focus = {
+		id = RHI_primacy_of_the_bourgeoisie
+		icon = GFX_goal_generic_political_reform
+		x = 3
+		y = 3
+
+		prerequisite = {
+			focus = RHI_coalition_formation
+		}
+
+		mutually_exclusive = {
+			focus = RHI_coalition_of_constitutionalists
+		}
+
+		completion_reward = {
+		}
+
+		cost = 5
+	}
+
+	focus = {
+		id = RHI_situation_on_the_rhine
+		icon = GFX_goal_generic_political_reform
+		x = -3
+		y = 1
+
+		prerequisite = {
+			focus = RHI_future_of_the_republic
+		}
+
+		completion_reward = {
+		}
+
+		cost = 5
+	}
+
+	focus = {
+		id = RHI_closer_ties_with_germany
+		icon = GFX_goal_germany
+		x = -4
+		y = 2
+
+		prerequisite = {
+			focus = RHI_situation_on_the_rhine
+		}
+
+		mutually_exclusive = {
+			focus = RHI_pursue_independence
+		}
+
+		completion_reward = {
+		}
+
+		cost = 5
+	}
+
+	focus = {
+		id = RHI_referendum_on_joining_germany
+		icon = GFX_goal_generic_political_reform
+		x = -5
+		y = 3
+
+		prerequisite = {
+			focus = RHI_closer_ties_with_germany
+		}
+
+		mutually_exclusive = {
+			focus = RHI_independent_ally
+		}
+
+		completion_reward = {
+		}
+
+		cost = 5
+	}
+
+	focus = {
+		id = RHI_independent_ally
+		icon = GFX_goal_COS_German_Bailout
+		x = -3
+		y = 3
+
+		prerequisite = {
+			focus = RHI_closer_ties_with_germany
+		}
+
+		mutually_exclusive = {
+			focus = RHI_referendum_on_joining_germany
+		}
+
+		completion_reward = {
+		}
+
+		cost = 5
+	}
+
+	focus = {
+		id = RHI_pursue_independence
+		icon = GFX_goal_generic_political_reform
+		x = -2
+		y = 2
+
+		prerequisite = {
+			focus = RHI_situation_on_the_rhine
+		}
+
+		mutually_exclusive = {
+			focus = RHI_closer_ties_with_germany
+		}
+
+		completion_reward = {
+		}
+
+		cost = 5
+	}
+
+	focus = {
+		id = RHI_cologne_agreements
+		icon = GFX_focus_chi_reach_out_to_france
+		x = -1
+		y = 3
+
+		prerequisite = {
+			focus = RHI_pursue_independence
+		}
+
+		completion_reward = {
+		}
+
+		cost = 5
+	}
+
+	focus = {
+		id = RHI_join_france
+		icon = GFX_goal_generic_political_reform
+		x = -2
+		y = 4
+
+		prerequisite = {
+			focus = RHI_cologne_agreements
+		}
+
+		completion_reward = {
+		}
+
+		cost = 5
+	}
+}
+
