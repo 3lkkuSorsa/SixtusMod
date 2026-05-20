@@ -49,6 +49,14 @@ ideas = {
 			}
 		}
 
+		FRA_political_instability2 = {
+			picture = FRA_political_violence
+			modifier = {
+                stability_factor = -0.2
+				political_power_cost = 0.4
+			}
+		}
+
 		FRA_economic_reforms = {
 			picture = can_wartime_prices_and_trade_board
 			modifier = {

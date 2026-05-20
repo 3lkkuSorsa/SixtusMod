@@ -24,6 +24,10 @@ focus_tree = {
         mutually_exclusive = {
             focus = FRA_unite_the_leftist_opposition
         }
+
+        mutually_exclusive = {
+            focus = FRA_supremacy_of_the_leagues
+        }
 		
         completion_reward = {
             add_stability = 0.05
@@ -265,6 +269,10 @@ focus_tree = {
         mutually_exclusive = {
             focus = FRA_adress_the_strike_crisis
         }
+
+        mutually_exclusive = {
+            focus = FRA_supremacy_of_the_leagues
+        }
 		
         completion_reward = {
             add_political_power = 50
@@ -308,6 +316,51 @@ focus_tree = {
 		
         completion_reward = {
             add_political_power = 75
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_supremacy_of_the_leagues
+        icon = GFX_goal_NFA_end_parliamentarism
+        x = 52
+        y = 0
+
+        mutually_exclusive = {
+            focus = FRA_adress_the_strike_crisis
+        }
+
+        mutually_exclusive = {
+            focus = FRA_unite_the_leftist_opposition
+        }
+
+        available = {date < "1936.05.20"}
+		
+        completion_reward = {
+
+            add_political_power = 100
+            
+            swap_ideas = {
+                remove_idea = FRA_political_instability
+                add_idea = FRA_political_instability2
+            }
+
+            add_popularity = {
+                ideology = authoritarianism
+                popularity = 0.05
+            }
+
+            add_popularity = {
+                ideology = ultra_nationalism
+                popularity = 0.05
+            }
+
+            custom_effect_tooltip = FRA_sigma_tt
         }  
 
 		cost = 5
