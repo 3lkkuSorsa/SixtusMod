@@ -179,12 +179,87 @@ focus_tree = {
         }
     }
 
+    focus = {
+        id = FRA_stability_and_order
+        icon = GFX_goal_ideology_authoritarian_democrat
+        x = 15
+        y = 4
+
+        prerequisite = {
+            focus = FRA_three_promises
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_restoring_the_economy
+        icon = GFX_goal_generic_cash_stimulus_plan
+        x = 20
+        y = 4
+
+        prerequisite = {
+            focus = FRA_three_promises
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_rearmament_program
+        icon = GFX_goal_munitions_factories
+        x = 25
+        y = 4
+
+        prerequisite = {
+            focus = FRA_three_promises
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
     #LEFTIST POLITICAL PATH
 
     focus = {
         id = FRA_unite_the_leftist_opposition
         icon = GFX_focus_generic_social_democracy
-        x = 34
+        x = 36
         y = 0
 
         mutually_exclusive = {
@@ -213,4 +288,34 @@ focus_tree = {
         
         }
     }
+
+    #COLONIAL MANAGEMENT
+
+    focus = {
+        id = FRA_refine_colonial_management
+        icon = GFX_goal_NFA_africa
+        x = 28
+        y = 1
+
+        prerequisite = {
+            focus = FRA_unite_the_leftist_opposition
+            focus = FRA_adress_the_strike_crisis
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            add_political_power = 75
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+
 }
