@@ -209,6 +209,40 @@ focus_tree = {
     }
 
     focus = {
+        id = FRA_dispersing_the_strikes
+        icon = GFX_goal_generic_political_pressure
+        x = 14
+        y = 5
+
+        prerequisite = {
+            focus = FRA_stability_and_order
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            add_stability = -0.05
+
+            add_popularity = {
+                ideology = social_democracy
+                popularity = -0.05
+            }
+            swap_ideas = {
+                remove_idea = FRA_major_strikes2
+                add_idea = FRA_major_strikes3
+            }
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
         id = FRA_restoring_the_economy
         icon = GFX_goal_generic_cash_stimulus_plan
         x = 20

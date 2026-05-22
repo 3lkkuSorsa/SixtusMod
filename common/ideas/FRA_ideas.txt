@@ -23,6 +23,17 @@ ideas = {
 			}
 		}
 
+		FRA_major_strikes3 = {
+			picture = ICE_general_strike
+			modifier = {
+                consumer_goods_factor = 0.1
+                stability_weekly = -0.0015
+                industrial_capacity_factory = -0.1
+                industrial_capacity_dockyard = -0.1
+				social_democracy_drift = 0.01
+			}
+		}
+
         FRA_won_ww1 = {
 			picture = generic_victors_of_ww1
 			modifier = {
