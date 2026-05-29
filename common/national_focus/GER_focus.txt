@@ -777,7 +777,7 @@ focus_tree = {
 		id = GER_uphold_the_weimar_constitution
 		icon = GFX_goal_constitutional_guarantees
 
-		x = 0
+		x = 2
 		y = 1
 
 		relative_position_id = GER_promised_and_delivered
@@ -795,6 +795,531 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.1
 			custom_effect_tooltip = GER_uphold_the_weimar_constitution_tt
+		}
+	}
+
+	focus = {
+		id = GER_neue_sozialpolitik_sc
+		icon = GFX_goal_constitutional_guarantees
+
+		x = -1
+		y = 2
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_uphold_the_weimar_constitution
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_reichsregierung_reformieren
+		icon = GFX_goal_constitutional_guarantees
+
+		x = 5
+		y = 2
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_uphold_the_weimar_constitution
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_second_burgfriedenspolitik
+		icon = GFX_goal_constitutional_guarantees
+
+		x = 5
+		y = 5
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_uphold_the_weimar_constitution
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_maintain_consitutional_guarantees
+		icon = GFX_goal_constitutional_guarantees
+
+		x = 1
+		y = 6
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_second_burgfriedenspolitik
+		}
+
+		mutually_exclusive = {
+			focus = GER_staatsminister_takes_on_the_government
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_staatsminister_takes_on_the_government
+		icon = GFX_goal_constitutional_guarantees
+
+		x = 6
+		y = 6
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_second_burgfriedenspolitik
+		}
+
+		mutually_exclusive = {
+			focus = GER_maintain_consitutional_guarantees
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_integrate_imperialer_block
+		icon = GFX_goal_constitutional_guarantees
+
+		x = 7
+		y = 3
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_reichsregierung_reformieren
+		}
+
+		mutually_exclusive = {
+			focus = GER_relinquish_schleichers_control_over_military
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_schleichers_coup
+		icon = GFX_goal_constitutional_guarantees
+
+		x = 8
+		y = 4
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_integrate_imperialer_block
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_relinquish_schleichers_control_over_military
+		icon = GFX_goal_constitutional_guarantees
+
+		x = 9
+		y = 3
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_reichsregierung_reformieren
+		}
+
+		mutually_exclusive = {
+			focus = GER_integrate_imperialer_block
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_issue_ultimatum
+		icon = GFX_goal_constitutional_guarantees
+
+		x = 3
+		y = 2
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_uphold_the_weimar_constitution
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_intervention_in_prussia
+		icon = GFX_goal_constitutional_guarantees
+
+		x = 1
+		y = 2
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_uphold_the_weimar_constitution
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_silence_the_socialist_opposition
+		icon = GFX_goal_constitutional_guarantees
+
+		x = 2
+		y = 3
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_reichsregierung_reformieren
+		}
+
+		prerequisite = {
+			focus = GER_issue_ultimatum
+		}
+
+		mutually_exclusive = {
+			focus = GER_collude_with_spd
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_collude_with_spd
+		icon = GFX_goal_constitutional_guarantees
+
+		x = 4
+		y = 3
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_reichsregierung_reformieren
+		}
+
+		prerequisite = {
+			focus = GER_issue_ultimatum
+		}
+
+		mutually_exclusive = {
+			focus = GER_silence_the_socialist_opposition
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_towards_a_weimar_coalition
+		icon = GFX_goal_constitutional_guarantees
+
+		x = 3
+		y = 4
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_collude_with_spd
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_moderate_pension_reform
+		icon = GFX_goal_constitutional_guarantees
+
+		x = -2
+		y = 3
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_neue_sozialpolitik_sc
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_raise_taxes_on_dividends
+		icon = GFX_goal_constitutional_guarantees
+
+		x = -3
+		y = 4
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_moderate_pension_reform
+		}
+
+		prerequisite = {
+			focus = GER_concentrate_on_industry
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_action_against_political_militias
+		icon = GFX_goal_constitutional_guarantees
+
+		x = -1
+		y = 4
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_moderate_pension_reform
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_staatssicherheitsburo
+		icon = GFX_goal_constitutional_guarantees
+
+		x = -2
+		y = 5
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_action_against_political_militias
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_catholic_education_reforms
+		icon = GFX_goal_constitutional_guarantees
+
+		x = 0
+		y = 5
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_catholic_trade_unions
+		}
+
+		prerequisite = {
+			focus = GER_moderate_pension_reform
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_catholic_trade_unions
+		icon = GFX_goal_constitutional_guarantees
+
+		x = 0
+		y = 3
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_neue_sozialpolitik_sc
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_enforce_loyalty_of_trade_unions
+		icon = GFX_goal_constitutional_guarantees
+
+		x = 1
+		y = 4
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_catholic_trade_unions
+		}
+
+		prerequisite = {
+			focus = GER_silence_the_socialist_opposition
+			focus = GER_collude_with_spd
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+			add_stability = 0.1
 		}
 	}
 
@@ -1049,280 +1574,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_deny_authoritarianism
-		icon = GFX_goal_liberty
-
-		x = 2
-		y = 1
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_promised_and_delivered
-		}
-
-		cost = 0
-
-		available = {
-			has_country_flag = GER_spring_coalition_2
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_ensure_coalition_victory
-		icon = GFX_goal_liberty
-
-		x = 3
-		y = 2
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_deny_authoritarianism
-		}
-
-		cost = 0
-
-		available = {
-			has_country_flag = GER_spring_coalition_2
-			NOT = {
-				GER_kurt_von_schleicher = {
-					is_hired_as_advisor = yes
-				}
-			}
-			has_country_flag = GER_prussian_elections_coming_up
-		}
-
-		completion_reward = {
-			set_country_flag = GER_ensured_coalition_victory
-		}
-	}
-
-	focus = {
-		id = GER_greener_grass_somewhere_else
-		icon = GFX_focus_ARG_establish_the_free_association
-
-		x = 1
-		y = 2
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_uphold_the_weimar_constitution
-		}
-		mutually_exclusive = {
-			focus = GER_compromise_with_the_right
-		}
-
-		cost = 0
-
-		available = {
-			has_country_flag = GER_spring_coalition_2
-			NOT = {
-				GER_kurt_von_schleicher = {
-					is_hired_as_advisor = yes
-				}
-			}
-		}
-
-		completion_reward = {
-			retire_character = GER_kurt_von_schleicher
-		}
-	}
-
-	focus = {
-		id = GER_compromise_with_the_right
-		icon = GFX_goal_align_germany
-
-		x = -1
-		y = 2
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_uphold_the_weimar_constitution
-		}
-		mutually_exclusive = {
-			focus = GER_greener_grass_somewhere_else
-		}
-
-		cost = 0
-
-		available = {
-			has_country_flag = GER_spring_coalition_2
-			GER_kurt_von_schleicher = {
-				is_hired_as_advisor = yes
-			}
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_support_schleichers_coup
-		icon = GFX_goal_GER_Red_General_Regime
-
-		x = 0
-		y = 3
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_compromise_with_the_right
-		}
-
-		cost = 5
-
-		available = {
-		}
-
-		completion_reward = {
-			country_event = {
-				id = GER_spring_coalition.3
-				days = 2
-			}
-			custom_effect_tooltip = "        "
-			swap_ideas = {
-				remove_idea = GER_papen_in_prussia
-				add_idea = GER_schleicher_in_prussia
-			}
-		}
-	}
-
-	focus = {
-		id = GER_curtail_political_freedoms
-		icon = GFX_goal_treaty_fails
-
-		x = -2
-		y = 3
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_compromise_with_the_right
-		}
-
-		cost = 0
-
-		available = {
-		}
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = GER_mass_strikes
-				add_idea = GER_curtailed_political_freedoms
-			}
-			modify_timed_idea = {
-				idea = GER_curtailed_political_freedoms
-				days = 180
-			}
-		}
-	}
-
-	focus = {
-		id = GER_indefinite_ban_on_communism
-		icon = GFX_goal_agency
-
-		x = -1
-		y = 4
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_curtail_political_freedoms
-		}
-
-		cost = 0
-
-		available = {
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_expel_the_DUVP
-		icon = GFX_focus_ARG_defense_and_democracy
-
-		x = 2
-		y = 3
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_greener_grass_somewhere_else
-		}
-
-		prerequisite = {
-			focus = GER_deny_authoritarianism
-		}
-
-		cost = 0
-
-		available = {
-			has_country_flag = GER_spring_coalition_2
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_broaden_the_coalition
-		icon = GFX_goal_ideology_social_liberal
-
-		x = 1
-		y = 4
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_expel_the_DUVP
-		}
-
-		cost = 0
-
-		available = {
-			has_country_flag = GER_spring_coalition_2
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_negotiate_with_the_unions
-		icon = GFX_goal_INS_focus_party_coalition
-
-		x = 3
-		y = 4
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_expel_the_DUVP
-		}
-
-		cost = 0
-
-		available = {
-			has_country_flag = GER_spring_coalition_2
-		}
-
-		completion_reward = {
-			country_event = {
-				id = GER_spring_coalition.6
-				days = 5
-			}
-		}
-	}
-
-	focus = {
 		id = GER_volksblock_triumphs
 		icon = GFX_goal_liberty
 
@@ -1335,9 +1586,9 @@ focus_tree = {
 			has_country_flag = GER_volksblock
 		}
 
-	#	allow_branch = {
-	#		has_country_flag = GER_show_democratic_tree
-	#	}
+		allow_branch = {
+			has_country_flag = GER_show_democratic_tree
+		}
 
 		completion_reward = {
 		}
@@ -1430,9 +1681,9 @@ focus_tree = {
 		available = {
 		}
 
-	#	allow_branch = {
-	#		has_country_flag = GER_imperial_veto
-	#	}
+		allow_branch = {
+			has_country_flag = GER_imperial_veto
+		}
 
 		completion_reward = {
 		}
