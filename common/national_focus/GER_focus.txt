@@ -790,6 +790,9 @@ focus_tree = {
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
+			NOT = {
+				has_country_flag = GER_kampf_aus_der_mitte
+			}
 		}
 
 		completion_reward = {
@@ -856,7 +859,7 @@ focus_tree = {
 		relative_position_id = GER_promised_and_delivered
 
 		prerequisite = {
-			focus = GER_uphold_the_weimar_constitution
+			focus = GER_reichsregierung_reformieren
 		}
 
 		cost = 0
@@ -950,6 +953,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = GER_right_focus
 			add_stability = 0.1
 		}
 	}
@@ -971,9 +975,14 @@ focus_tree = {
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
+			power_balance_value = {
+				id = GER_spring_coalition_bop
+				value > 0.8
+			}
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = GER_right_focus
 			add_stability = 0.1
 		}
 	}
@@ -1002,6 +1011,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = GER_left_focus
 			add_stability = 0.1
 		}
 	}
@@ -1046,11 +1056,15 @@ focus_tree = {
 		cost = 0
 
 		available = {
-			has_country_flag = GER_spring_coalition_2
+			has_idea = GER_prussian_grand_coalition
+			has_country_flag = GER_prussian_elections_coming_up
 		}
 
 		completion_reward = {
-			add_stability = 0.1
+			custom_effect_tooltip = GER_left_focus
+			set_country_flag = GER_ensured_coalition_victory
+			custom_effect_tooltip = GER_intervention_in_prussia_tt
+			add_stability = 0.07
 		}
 	}
 
@@ -1082,7 +1096,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.1
+			custom_effect_tooltip = GER_right_focus
+			add_power_balance_value = {
+				id = GER_spring_coalition_bop
+				value = 0.1
+				tooltip_side = GER_sc_right_side
+			}
 		}
 	}
 
@@ -1114,7 +1133,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.1
+			custom_effect_tooltip = GER_left_focus
+			add_power_balance_value = {
+				id = GER_spring_coalition_bop
+				value = -0.1
+				tooltip_side = GER_sc_left_side
+			}
 		}
 	}
 
@@ -1138,6 +1162,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = GER_left_focus
 			add_stability = 0.1
 		}
 	}
@@ -1319,7 +1344,57 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.1
+			custom_effect_tooltip = GER_enforce_loyalty_of_trade_unions_1_tt
+			effect_tooltip = {
+				add_power_balance_value = {
+					id = GER_spring_coalition_bop
+					value = 0.05
+					tooltip_side = GER_sc_right_side
+				}
+				swap_ideas = {
+					remove_idea = GER_mass_strikes
+					add_idea = GER_curtailed_political_freedoms
+				}
+			}
+			custom_effect_tooltip = "     "
+			custom_effect_tooltip = GER_enforce_loyalty_of_trade_unions_2_tt
+			effect_tooltip = {
+				add_power_balance_value = {
+					id = GER_spring_coalition_bop
+					value = -0.05
+					tooltip_side = GER_sc_left_side
+				}
+				swap_ideas = {
+					remove_idea = GER_mass_strikes
+					add_idea = GER_berlin_concessions
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = GER_silence_the_socialist_opposition
+					}
+					add_power_balance_value = {
+						id = GER_spring_coalition_bop
+						value = 0.05
+						tooltip_side = GER_sc_right_side
+					}
+					remove_ideas = GER_mass_strikes
+					add_ideas = GER_curtailed_political_freedoms
+				}
+				if = {
+					limit = {
+						has_completed_focus = GER_collude_with_spd
+					}
+					add_power_balance_value = {
+						id = GER_spring_coalition_bop
+						value = -0.05
+						tooltip_side = GER_sc_left_side
+					}
+					remove_ideas = GER_mass_strikes
+					add_ideas = GER_berlin_concessions
+				}
+			}
 		}
 	}
 

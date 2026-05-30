@@ -26,6 +26,9 @@
  GER_reconcile_volksblock_tt: "§tSPD§!, §9FVP§! and §3Z§! will §Yreform§! the once collapsed §9Volksblock§! with §3Adam Stegerwald§! as chancellor candidate.\n\n"
  GER_divert_funds_to_zentrum_right_tt: "We will try to §tdivert funds§! from leftists to §Ycoalition-friendly§! centrists, but they could find out about our plotting.\n\n"
 
+ GER_enforce_loyalty_of_trade_unions_1_tt: "§CIf we completed focus §!§YSilence the Socialist Opposition:§!"
+ GER_enforce_loyalty_of_trade_unions_2_tt: "§CIf we completed focus §!§YCollude with the SPD:§!"
+
  GER_spring_coalition: "The §YSpring§! §3coalition§! is active"
  GER_spring_coalition_2: "The §YSpring§! §3coalition§! won the elections"
  GER_democratic_government: "The §9Volksblock§! government is active"
@@ -76,6 +79,11 @@
  GER_prussian_grand_coalition_tt: "The §3Zentrum§! will join the §tSPD§! in a grand coalition in Prussia, which will be a major win to the current §tSPD§!-§9FVP§! minority coalition.\n\n"
  GER_schleicher_coup_fails_tt: "Any attempts to §Ycoup the government§! by §gKurt Schleicher§! have failed.\n\n"
  GER_foment_a_split_between_kaiser_and_schleicher_tt: "After solving successfully the §tPrussian crisis§!, we have earned some §Ygoodwill§! with the kaiser, which we can use to try to §Yfoment a split§! between him and §gKurt Schleicher§!."
+
+ GER_right_focus: "This is a §3Rightist§! focus"
+ GER_left_focus: "This is a §tLeftist§! focus"
+
+ GER_intervention_in_prussia_tt: "This will §Yensure§! the victory of the §3Zentrum§!-§9FVP§!-§tSPD§! coalition in the §gPrussian elections.§!"
 
  GER_canidate_choice_tt_volksblock: "§YChancellor will have a impact on available focuses.§!"
  GER_question_of_the_chancellorship_tt: "We need to decide on a chancellor our new §9democratic§! government. The largest party in our coalition will demand the position, but we also can choose a §Yliberal§! §9FVP§!-leaning candidate as chancellor.\n\nIf §3Zentrum§! won the elections, the party chair, will be their candidate. Having elected §gBrüning§!, it will make our job much more difficult.\n\n"

@@ -95,6 +95,9 @@ country_event = {
 
 	option = {
 		name = "But the people voted for us!"
+		set_power_balance = {
+			id = GER_spring_coalition_bop
+		}
 		add_ideas = GER_mass_strikes
 	}
 }
@@ -135,7 +138,7 @@ country_event = {
 	}
 
 	option = {
-		name = "DkP established a right-wing coalition!"
+		name = "DkP establishes a right-wing coalition!"
 		add_stability = -0.07
 		if = {
 			limit = {
@@ -152,10 +155,12 @@ country_event = {
 				}
 			}
 		}
-		NOT = {
-			OR = {
-				has_country_flag = GER_ensured_coalition_victory
-				has_idea = GER_schleicher_in_prussia
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = GER_ensured_coalition_victory
+					has_idea = GER_schleicher_in_prussia
+				}
 			}
 		}
 	}
