@@ -1,4 +1,5 @@
 GER_junker_transformationsplan = {
+	icon = GFX_idea_unknown
 	stability_factor = GER_junker_transformationsplan_stability_factor
 	industrial_capacity_factory = GER_junker_transformationsplan_industrial_capacity_factor
 	consumer_goods_factor = GER_junker_transformationsplan_consumer_goods_factor
@@ -6,4 +7,11 @@ GER_junker_transformationsplan = {
 	production_factory_start_efficiency_factor = GER_junker_transformationsplan_production_factory_start_efficiency_factor
 	production_factory_max_efficiency_factor = GER_junker_transformationsplan_production_factory_max_efficiency_factor
 	production_speed_industrial_complex_factor = GER_junker_transformationsplan_production_speed_industrial_complex_factor
+}
+
+GER_left_wing_focuses = {
+	power_balance_weekly = GER_left_wing_focuses_power_balance_weekly
+}
+GER_right_wing_focuses = {
+	power_balance_weekly = GER_right_wing_focuses_power_balance_weekly
 }

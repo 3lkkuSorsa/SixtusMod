@@ -854,68 +854,12 @@ focus_tree = {
 		icon = GFX_goal_constitutional_guarantees
 
 		x = 5
-		y = 5
+		y = 6
 
 		relative_position_id = GER_promised_and_delivered
 
 		prerequisite = {
 			focus = GER_reichsregierung_reformieren
-		}
-
-		cost = 0
-
-		available = {
-			has_country_flag = GER_spring_coalition_2
-		}
-
-		completion_reward = {
-			add_stability = 0.1
-		}
-	}
-
-	focus = {
-		id = GER_maintain_consitutional_guarantees
-		icon = GFX_goal_constitutional_guarantees
-
-		x = 1
-		y = 6
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_second_burgfriedenspolitik
-		}
-
-		mutually_exclusive = {
-			focus = GER_staatsminister_takes_on_the_government
-		}
-
-		cost = 0
-
-		available = {
-			has_country_flag = GER_spring_coalition_2
-		}
-
-		completion_reward = {
-			add_stability = 0.1
-		}
-	}
-
-	focus = {
-		id = GER_staatsminister_takes_on_the_government
-		icon = GFX_goal_constitutional_guarantees
-
-		x = 6
-		y = 6
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_second_burgfriedenspolitik
-		}
-
-		mutually_exclusive = {
-			focus = GER_maintain_consitutional_guarantees
 		}
 
 		cost = 0
@@ -933,7 +877,7 @@ focus_tree = {
 		id = GER_integrate_imperialer_block
 		icon = GFX_goal_constitutional_guarantees
 
-		x = 7
+		x = 6
 		y = 3
 
 		relative_position_id = GER_promised_and_delivered
@@ -950,6 +894,7 @@ focus_tree = {
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
+			has_completed_focus = GER_sack_braun_from_prussia
 		}
 
 		completion_reward = {
@@ -962,7 +907,7 @@ focus_tree = {
 		id = GER_schleichers_coup
 		icon = GFX_goal_constitutional_guarantees
 
-		x = 8
+		x = 7
 		y = 4
 
 		relative_position_id = GER_promised_and_delivered
@@ -983,7 +928,10 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = GER_right_focus
-			add_stability = 0.1
+			country_event = {
+				id = GER_spring_coalition.3
+				days = 10
+			}
 		}
 	}
 
@@ -991,7 +939,7 @@ focus_tree = {
 		id = GER_relinquish_schleichers_control_over_military
 		icon = GFX_goal_constitutional_guarantees
 
-		x = 9
+		x = 8
 		y = 3
 
 		relative_position_id = GER_promised_and_delivered
@@ -1008,6 +956,7 @@ focus_tree = {
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
+			has_completed_focus = GER_foment_a_split_between_kaiser_and_schleicher
 		}
 
 		completion_reward = {
@@ -1130,6 +1079,9 @@ focus_tree = {
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
+			NOT = {
+				has_completed_focus = GER_sack_braun_from_prussia
+			}
 		}
 
 		completion_reward = {
@@ -1164,6 +1116,86 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = GER_left_focus
 			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_fate_of_authoritarian_parties
+		icon = GFX_goal_constitutional_guarantees
+
+		x = 2
+		y = 5
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_towards_a_weimar_coalition
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GER_left_focus
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_root_out_extremists_from_military
+		icon = GFX_goal_constitutional_guarantees
+
+		x = 4
+		y = 5
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_towards_a_weimar_coalition
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GER_left_focus
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_kaiserliches_dekret_14
+		icon = GFX_goal_constitutional_guarantees
+
+		x = 1
+		y = 6
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_enforce_loyalty_of_trade_unions
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+			has_country_flag = GER_investigation_on_socialism_success
+			has_completed_focus = GER_integrate_imperialer_block
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GER_right_focus
+			swap_ideas = {
+				remove_idea = GER_curtailed_political_freedoms
+				add_idea = GER_kaiserliches_dekret_14
+			}
 		}
 	}
 
@@ -1215,6 +1247,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = GER_left_focus
 			add_stability = 0.1
 		}
 	}

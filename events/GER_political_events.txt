@@ -76,7 +76,7 @@ country_event = {
 
 country_event = {
 	id = GER_spring_coalition.3
-	title = "Schleicher's Coup"
+	title = "Schleicher in Wilhelmstrasse 63"
 	desc = GER_spring_coalition.3.d
 
 	is_triggered_only = yes
