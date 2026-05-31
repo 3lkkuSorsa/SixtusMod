@@ -83,6 +83,10 @@ country_event = {
 
 	option = {
 		name = "Fallout between Schleicher and Papen"
+		swap_ideas = {
+			remove_idea = GER_papen_in_prussia_idea
+			add_idea = GER_schleicher_in_prussia_idea
+		}
 	}
 }
 
@@ -97,6 +101,9 @@ country_event = {
 		name = "But the people voted for us!"
 		set_power_balance = {
 			id = GER_spring_coalition_bop
+		}
+		add_dynamic_modifier = {
+			modifier = GER_focuses
 		}
 		add_ideas = GER_mass_strikes
 	}
@@ -118,7 +125,10 @@ country_event = {
 	option = {
 		name = "Elections cancelled..."
 		trigger = {
-			has_idea = GER_schleicher_in_prussia
+			OR = {
+				has_idea = GER_papen_in_prussia
+				has_idea = GER_schleicher_in_prussia
+			}
 			NOT = {
 				has_idea = GER_prussian_grand_coalition
 			}
@@ -168,17 +178,78 @@ country_event = {
 
 country_event = {
 	id = GER_spring_coalition.6
-	title = "Negotiations with the unions"
+	title = "Reichstag issues ultimatum to the unions"
 	desc = GER_spring_coalition.6.d
 
 	is_triggered_only = yes
 
 	option = {
-		name = "The empire was built on compromises!"
-		swap_ideas = {
-			remove_idea = GER_mass_strikes
-			add_idea = GER_berlin_concessions
+		name = "And we shall wait for their response..."
+		hidden_effect = {
+			country_event = {
+				id = GER_spring_coalition.7
+				days = 7
+			}
 		}
+	}
+}
+
+country_event = {
+	id = GER_spring_coalition.7
+	title = "Trade unions delay the negotiations"
+	desc = GER_spring_coalition.7.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "What a mess!"
+		unlock_national_focus = GER_issue_ultimatum
+	}
+}
+
+country_event = {
+	id = GER_spring_coalition.8
+	title = "Authoritarian forces in the coalition"
+	desc = GER_spring_coalition.8.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Simply expel the DUVP!"
+		add_political_power = 25
+		add_stability = 0.025
+	}
+
+	option = {
+		name = "Expelling them is not enough... Ban them!"
+		add_political_power = 50
+		add_stability = -0.05
+		add_popularity = {
+			ideology = ultra_nationalism
+			popularity = -0.07
+		}
+		add_power_balance_value = {
+			id = GER_spring_coalition_bop
+			value = -0.1
+			tooltip_side = GER_sc_left_side
+		}
+	}
+}
+
+country_event = {
+	id = GER_spring_coalition.9
+	title = "Schleicher loses confidence in the Civilian government"
+	desc = GER_spring_coalition.9.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Victory demands greatness"
+		set_politics = {
+			ruling_party = ultra_nationalism
+			elections_allowed = no
+		}
+		promote_character = GER_kurt_von_schleicher
 	}
 }
 

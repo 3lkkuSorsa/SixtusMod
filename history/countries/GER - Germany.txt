@@ -29,13 +29,6 @@ IF = {
 	}
 }
 
-add_dynamic_modifier = {
-	modifier = GER_left_wing_focuses
-}
-add_dynamic_modifier = {
-	modifier = GER_right_wing_focuses
-}
-
 set_war_support = 0.3
 
 recruit_character = GER_reichstag
@@ -119,6 +112,7 @@ add_ideas = {
 	GER_may_betrayal
 	GER_spirit_of_weimar
 	GER_red_scare
+	GER_questionable_army_loyalty
 	GER_minority_prussian_government
 	GER_era_of_imperial_cabinets
 	limited_exports

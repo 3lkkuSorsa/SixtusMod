@@ -498,3 +498,474 @@ GER_RHI_unification_category = {
 		}
 	}
 }
+
+GER_reichsregierung_reform_category = {
+	GER_introduce_oath_of_loyalty = {
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			has_country_flag = GER_reichsregierung_reform
+			NOT = { has_country_flag = GER_doing_reforms }
+		}
+
+		visible = {
+			has_country_flag = GER_reichsregierung_reform
+			NOT = { has_country_flag = GER_doing_reforms }
+		}
+
+		is_good = yes
+
+		fire_only_once = yes
+
+		days_remove = 30
+
+		modifier = {
+			stability_factor = -0.05
+			political_power_factor = -0.1
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = GER_doing_reforms
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = GER_doing_reforms
+			add_to_variable = {
+				var = GER_completed_reichsregierung_reforms
+				value = 1
+			}
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Reichsregierung Reform"
+			}
+			add_to_variable = {
+				var = GER_reichsregierung_reform_political_power_factor
+				value = 0.025
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = {
+				var = GER_reichsregierung_reform_stability_factor
+				value = 0.025
+				tooltip = stability_factor_tt
+			}
+		}
+	}
+
+	GER_emergency_powers_act = {
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			has_country_flag = GER_reichsregierung_reform
+			NOT = { has_country_flag = GER_doing_reforms }
+		}
+
+		visible = {
+			has_country_flag = GER_reichsregierung_reform
+			NOT = { has_country_flag = GER_doing_reforms }
+		}
+
+		is_good = yes
+
+		fire_only_once = yes
+
+		days_remove = 30
+
+		modifier = {
+			stability_factor = -0.05
+			political_power_factor = -0.1
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = GER_doing_reforms
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = GER_doing_reforms
+			add_to_variable = {
+				var = GER_completed_reichsregierung_reforms
+				value = 1
+			}
+			custom_effect_tooltip = GER_emergency_powers_act_tt
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Reichsregierung Reform"
+			}
+			add_to_variable = {
+				var = GER_reichsregierung_reform_political_power_factor
+				value = 0.025
+				tooltip = political_power_factor_tt
+			}
+			set_country_flag = GER_emergency_powers_act_passed
+		}
+	}
+
+	GER_subordinate_reichswehr_to_reichstag = {
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			has_country_flag = GER_reichsregierung_reform
+			NOT = { has_country_flag = GER_doing_reforms }
+		}
+
+		visible = {
+			has_country_flag = GER_reichsregierung_reform
+			NOT = { has_country_flag = GER_doing_reforms }
+		}
+
+		is_good = yes
+
+		fire_only_once = yes
+
+		days_remove = 30
+
+		modifier = {
+			stability_factor = -0.05
+			political_power_factor = -0.1
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = GER_doing_reforms
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = GER_doing_reforms
+			add_to_variable = {
+				var = GER_completed_reichsregierung_reforms
+				value = 1
+			}
+			remove_ideas = GER_questionable_army_loyalty
+			custom_effect_tooltip = "      "
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Reichsregierung Reform"
+			}
+			add_to_variable = {
+				var = GER_reichsregierung_reform_war_support_factor
+				value = 0.075
+				tooltip = war_support_factor_tt
+			}
+		}
+	}
+
+	GER_enforce_the_supermacy_of_the_supreme_court = {
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			has_country_flag = GER_reichsregierung_reform
+			NOT = { has_country_flag = GER_doing_reforms }
+		}
+
+		visible = {
+			has_country_flag = GER_reichsregierung_reform
+			NOT = { has_country_flag = GER_doing_reforms }
+		}
+
+		is_good = yes
+
+		fire_only_once = yes
+
+		days_remove = 30
+
+		modifier = {
+			stability_factor = -0.05
+			political_power_factor = -0.1
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = GER_doing_reforms
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = GER_doing_reforms
+			add_to_variable = {
+				var = GER_completed_reichsregierung_reforms
+				value = 1
+			}
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Reichsregierung Reform"
+			}
+			add_to_variable = {
+				var = GER_reichsregierung_reform_stability_factor
+				value = 0.05
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				var = GER_reichsregierung_reform_political_power_factor
+				value = -0.05
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = {
+				var = GER_reichsregierung_reform_consumer_goods_factor
+				value = -0.075
+				tooltip = consumer_goods_factor_tt
+			}
+		}
+	}
+
+	GER_principle_of_reichstag_control_over_prussia = {
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			has_country_flag = GER_reichsregierung_reform
+			NOT = { has_country_flag = GER_doing_reforms }
+		}
+
+		visible = {
+			has_country_flag = GER_reichsregierung_reform
+			NOT = { has_country_flag = GER_doing_reforms }
+		}
+
+		is_good = yes
+
+		fire_only_once = yes
+
+		days_remove = 30
+
+		modifier = {
+			stability_factor = -0.05
+			political_power_factor = -0.1
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = GER_doing_reforms
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = GER_doing_reforms
+			add_to_variable = {
+				var = GER_completed_reichsregierung_reforms
+				value = 1
+			}
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Reichsregierung Reform"
+			}
+			add_to_variable = {
+				var = GER_reichsregierung_reform_political_power_factor
+				value = 0.15
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = {
+				var = GER_reichsregierung_reform_stability_factor
+				value = -0.15
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				var = GER_reichsregierung_reform_consumer_goods_factor
+				value = -0.075
+				tooltip = consumer_goods_factor_tt
+			}
+			set_country_flag = GER_prussian_integration
+		}
+	}
+
+	GER_constitutional_basis_for_state_administration = {
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			has_country_flag = GER_reichsregierung_reform
+			NOT = { has_country_flag = GER_doing_reforms }
+		}
+
+		visible = {
+			has_country_flag = GER_reichsregierung_reform
+			NOT = { has_country_flag = GER_doing_reforms }
+		}
+
+		is_good = yes
+
+		fire_only_once = yes
+
+		days_remove = 30
+
+		modifier = {
+			stability_factor = -0.05
+			political_power_factor = -0.1
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = GER_doing_reforms
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = GER_doing_reforms
+			add_to_variable = {
+				var = GER_completed_reichsregierung_reforms
+				value = 1
+			}
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Reichsregierung Reform"
+			}
+			add_to_variable = {
+				var = GER_reichsregierung_reform_political_power_factor
+				value = -0.075
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = {
+				var = GER_reichsregierung_reform_stability_factor
+				value = 0.075
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				var = GER_reichsregierung_reform_consumer_goods_factor
+				value = -0.075
+				tooltip = consumer_goods_factor_tt
+			}
+		}
+	}
+
+	GER_outlaw_republicanism = {
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			has_country_flag = GER_reichsregierung_reform
+			NOT = { has_country_flag = GER_doing_reforms }
+		}
+
+		visible = {
+			has_completed_focus = GER_silence_the_socialist_opposition
+		}
+
+		is_good = yes
+
+		fire_only_once = yes
+
+		days_remove = 30
+
+		modifier = {
+			stability_factor = -0.05
+			political_power_factor = -0.1
+			social_liberalism_drift = -0.01
+			social_democracy_drift = -0.01
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = GER_doing_reforms
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = GER_doing_reforms
+			add_to_variable = {
+				var = GER_completed_reichsregierung_reforms
+				value = 1
+			}
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Reichsregierung Reform"
+			}
+			add_to_variable = {
+				var = GER_reichsregierung_reform_stability_factor
+				value = -0.025
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				var = GER_reichsregierung_reform_social_democracy_drift
+				value = -0.0025
+				tooltip = social_democracy_drift_tt
+			}
+			add_to_variable = {
+				var = GER_reichsregierung_reform_social_liberalism_drift
+				value = -0.0025
+				tooltip = social_liberalism_drift_tt
+			}
+			set_country_flag = GER_republicanism_outlawed
+		}
+	}
+
+	GER_enforce_democratic_governane_in_states = {
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			has_country_flag = GER_reichsregierung_reform
+			NOT = { has_country_flag = GER_doing_reforms }
+		}
+
+		visible = {
+			has_completed_focus = GER_collude_with_spd
+		}
+
+		is_good = yes
+
+		fire_only_once = yes
+
+		days_remove = 30
+
+		modifier = {
+			stability_factor = -0.05
+			political_power_factor = -0.1
+			social_liberalism_drift = 0.01
+			social_democracy_drift = 0.01
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = GER_doing_reforms
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = GER_doing_reforms
+			add_to_variable = {
+				var = GER_completed_reichsregierung_reforms
+				value = 1
+			}
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Reichsregierung Reform"
+			}
+			add_to_variable = {
+				var = GER_reichsregierung_reform_stability_factor
+				value = 0.025
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				var = GER_reichsregierung_reform_political_power_factor
+				value = -0.025
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = {
+				var = GER_reichsregierung_reform_authoritarianism_drift
+				value = -0.0025
+				tooltip = authoritarianism_drift_tt
+			}
+			add_to_variable = {
+				var = GER_reichsregierung_reform_ultra_nationalism_drift
+				value = -0.0025
+				tooltip = ultra_nationalism_drift_tt
+			}
+			set_country_flag = GER_democratic_governance_enforced_in_states
+		}
+	}
+}

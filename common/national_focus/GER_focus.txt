@@ -12,7 +12,7 @@ focus_tree = {
 		}
 	}
 
-	continuous_focus_position = { x = 300 y = 2000 }
+	continuous_focus_position = { x = 300 y = 2800 }
 
 	default = no
 
@@ -644,9 +644,14 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = GER_prussian_grand_coalition_tt
-			swap_ideas = {
-				remove_idea = GER_minority_prussian_government
-				add_idea = GER_prussian_grand_coalition
+			if = {
+				limit = {
+					has_country_flag = GER_prussian_elections_coming_up
+				}
+				swap_ideas = {
+					remove_idea = GER_minority_prussian_government
+					add_idea = GER_prussian_grand_coalition
+				}
 			}
 		}
 	}
@@ -796,14 +801,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.1
 			custom_effect_tooltip = GER_uphold_the_weimar_constitution_tt
 		}
 	}
 
 	focus = {
 		id = GER_neue_sozialpolitik_sc
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_goal_social_reforms
 
 		x = -1
 		y = 2
@@ -821,13 +825,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.1
 		}
 	}
 
 	focus = {
 		id = GER_reichsregierung_reformieren
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_goal_ideology_market_liberal
 
 		x = 5
 		y = 2
@@ -845,16 +848,46 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.1
+			custom_effect_tooltip = GER_following_decisions_available_tt
+			custom_effect_tooltip = {
+				localization_key = list_of_decisions_tt
+				DEC = "Introduce Oath of Loyalty for bureaucrats"
+			}
+			custom_effect_tooltip = {
+				localization_key = list_of_decisions_tt
+				DEC = "Emergency Powers Act"
+			}
+			custom_effect_tooltip = {
+				localization_key = list_of_decisions_tt
+				DEC = "Subordinate Reichswehr to the will of the Reichstag"
+			}
+			custom_effect_tooltip = {
+				localization_key = list_of_decisions_tt
+				DEC = "Enforce the Supremacy of the Supreme Court"
+			}
+			custom_effect_tooltip = {
+				localization_key = list_of_decisions_tt
+				DEC = "Principle of Reichstag control over Prussia"
+			}
+			custom_effect_tooltip = {
+				localization_key = list_of_decisions_tt
+				DEC = "Constitutional basis for state administrators"
+			}
+			set_country_flag = GER_reichsregierung_reform
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = GER_reichsregierung_reform
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = GER_second_burgfriedenspolitik
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_goal_generic_castle
 
 		x = 5
-		y = 6
+		y = 7
 
 		relative_position_id = GER_promised_and_delivered
 
@@ -865,11 +898,83 @@ focus_tree = {
 		cost = 0
 
 		available = {
+			has_global_flag = second_weltkrieg
+			has_country_flag = GER_spring_coalition_2
+			OR = {
+				has_country_flag = GER_toleration_with_spd
+				has_completed_focus = GER_kaiserliches_dekret_14
+			}
+		}
+
+		completion_reward = {
+			remove_power_balance = {
+				id = GER_spring_coalition_bop
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = GER_toleration_with_spd
+						has_idea = GER_schleicher_in_prussia
+					}
+
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_continue_civilian_governance
+		icon = GFX_goal_generic_castle
+
+		x = 2
+		y = 8
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_second_burgfriedenspolitik
+		}
+
+		mutually_exclusive = {
+			focus = GER_save_the_government_from_themselves
+		}
+
+		cost = 0
+
+		available = {
+			has_global_flag = second_weltkrieg
 			has_country_flag = GER_spring_coalition_2
 		}
 
 		completion_reward = {
-			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_save_the_government_from_themselves
+		icon = GFX_goal_generic_castle
+
+		x = -3
+		y = 8
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_second_burgfriedenspolitik
+		}
+
+		mutually_exclusive = {
+			focus = GER_continue_civilian_governance
+		}
+
+		cost = 0
+
+		available = {
+			has_global_flag = second_weltkrieg
+			has_country_flag = GER_schleicher_war_coup
+		}
+
+		completion_reward = {
 		}
 	}
 
@@ -899,13 +1004,21 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = GER_right_focus
+			add_to_variable = {
+				var = GER_right_wing_focuses
+				value = 1
+			}
+			add_to_variable = {
+				var = GER_focuses_power_balance_weekly
+				value = 0.01
+			}
 			add_stability = 0.1
 		}
 	}
 
 	focus = {
 		id = GER_schleichers_coup
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_goal_GER_Red_General_Regime
 
 		x = 7
 		y = 4
@@ -924,10 +1037,19 @@ focus_tree = {
 				id = GER_spring_coalition_bop
 				value > 0.8
 			}
+			has_country_flag = GER_prussian_integration
 		}
 
 		completion_reward = {
 			custom_effect_tooltip = GER_right_focus
+			add_to_variable = {
+				var = GER_right_wing_focuses
+				value = 1
+			}
+			add_to_variable = {
+				var = GER_focuses_power_balance_weekly
+				value = 0.01
+			}
 			country_event = {
 				id = GER_spring_coalition.3
 				days = 10
@@ -961,13 +1083,25 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = GER_left_focus
-			add_stability = 0.1
+			add_to_variable = {
+				var = GER_left_wing_focuses
+				value = 1
+			}
+			add_to_variable = {
+				var = GER_focuses_power_balance_weekly
+				value = -0.01
+			}
+			retire_character = GER_kurt_von_schleicher
+			add_timed_idea = {
+				idea = GER_waning_legacy_of_schleicher
+				days = 480
+			}
 		}
 	}
 
 	focus = {
 		id = GER_issue_ultimatum
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_goal_generic_crush_unions
 
 		x = 3
 		y = 2
@@ -978,20 +1112,33 @@ focus_tree = {
 			focus = GER_uphold_the_weimar_constitution
 		}
 
-		cost = 0
+		cost = 10
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
 		}
 
+		select_effect = {
+			country_event = {
+				id = GER_spring_coalition.6
+				days = 10
+			}
+		}
+
 		completion_reward = {
-			add_stability = 0.1
+			custom_effect_tooltip = select_effect
+			effect_tooltip = {
+				country_event = {
+					id = GER_spring_coalition.6
+					days = 10
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = GER_intervention_in_prussia
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_GER_prussian_local_goverment_reform
 
 		x = 1
 		y = 2
@@ -1011,6 +1158,14 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = GER_left_focus
+			add_to_variable = {
+				var = GER_left_wing_focuses
+				value = 1
+			}
+			add_to_variable = {
+				var = GER_focuses_power_balance_weekly
+				value = -0.01
+			}
 			set_country_flag = GER_ensured_coalition_victory
 			custom_effect_tooltip = GER_intervention_in_prussia_tt
 			add_stability = 0.07
@@ -1019,7 +1174,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_silence_the_socialist_opposition
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_goal_GER_Anti_Socialist_Laws
 
 		x = 2
 		y = 3
@@ -1046,6 +1201,18 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = GER_right_focus
+			add_to_variable = {
+				var = GER_right_wing_focuses
+				value = 1
+			}
+			add_to_variable = {
+				var = GER_focuses_power_balance_weekly
+				value = 0.01
+			}
+			custom_effect_tooltip = {
+				localization_key = GER_enable_decision
+				DEC = "Outlaw Republicanism"
+			}
 			add_power_balance_value = {
 				id = GER_spring_coalition_bop
 				value = 0.1
@@ -1056,7 +1223,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_collude_with_spd
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_goal_GER_SPD_agreement
 
 		x = 4
 		y = 3
@@ -1086,6 +1253,18 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = GER_left_focus
+			add_to_variable = {
+				var = GER_left_wing_focuses
+				value = 1
+			}
+			add_to_variable = {
+				var = GER_focuses_power_balance_weekly
+				value = -0.01
+			}
+			custom_effect_tooltip = {
+				localization_key = GER_enable_decision
+				DEC = "Enforce Democratic Governance in States"
+			}
 			add_power_balance_value = {
 				id = GER_spring_coalition_bop
 				value = -0.1
@@ -1096,7 +1275,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_towards_a_weimar_coalition
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_goal_INS_focus_party_coalition
 
 		x = 3
 		y = 4
@@ -1115,13 +1294,24 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = GER_left_focus
-			add_stability = 0.1
+			add_to_variable = {
+				var = GER_left_wing_focuses
+				value = 1
+			}
+			add_to_variable = {
+				var = GER_focuses_power_balance_weekly
+				value = -0.01
+			}
+			custom_effect_tooltip = {
+				localization_key = GER_enable_decision
+				DEC = "Ally the FVP"
+			}
 		}
 	}
 
 	focus = {
 		id = GER_fate_of_authoritarian_parties
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_goal_ideology_authoritarian_democrat
 
 		x = 2
 		y = 5
@@ -1140,13 +1330,23 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = GER_left_focus
-			add_stability = 0.1
+			add_to_variable = {
+				var = GER_left_wing_focuses
+				value = 1
+			}
+			add_to_variable = {
+				var = GER_focuses_power_balance_weekly
+				value = -0.01
+			}
+			country_event = {
+				id = GER_spring_coalition.8
+			}
 		}
 	}
 
 	focus = {
 		id = GER_root_out_extremists_from_military
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_focus_generic_ban_right_wing
 
 		x = 4
 		y = 5
@@ -1161,17 +1361,32 @@ focus_tree = {
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
+			has_country_flag = GER_investigation_on_military_success
+			has_completed_focus = GER_relinquish_schleichers_control_over_military
+			has_country_flag = GER_duvp_expelled_from_spring_coalition
 		}
 
 		completion_reward = {
 			custom_effect_tooltip = GER_left_focus
-			add_stability = 0.1
+			add_to_variable = {
+				var = GER_left_wing_focuses
+				value = 1
+			}
+			add_to_variable = {
+				var = GER_focuses_power_balance_weekly
+				value = -0.01
+			}
+			add_stability = 0.08
+			custom_effect_tooltip = {
+				localization_key = GER_enable_decision
+				DEC = "Toleration agreement with the SPD"
+			}
 		}
 	}
 
 	focus = {
 		id = GER_kaiserliches_dekret_14
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_goal_GER_Fundamental_Rights
 
 		x = 1
 		y = 6
@@ -1188,10 +1403,19 @@ focus_tree = {
 			has_country_flag = GER_spring_coalition_2
 			has_country_flag = GER_investigation_on_socialism_success
 			has_completed_focus = GER_integrate_imperialer_block
+			has_country_flag = GER_republicanism_outlawed
 		}
 
 		completion_reward = {
 			custom_effect_tooltip = GER_right_focus
+			add_to_variable = {
+				var = GER_right_wing_focuses
+				value = 1
+			}
+			add_to_variable = {
+				var = GER_focuses_power_balance_weekly
+				value = 0.01
+			}
 			swap_ideas = {
 				remove_idea = GER_curtailed_political_freedoms
 				add_idea = GER_kaiserliches_dekret_14
@@ -1248,13 +1472,21 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = GER_left_focus
+			add_to_variable = {
+				var = GER_left_wing_focuses
+				value = 1
+			}
+			add_to_variable = {
+				var = GER_focuses_power_balance_weekly
+				value = -0.01
+			}
 			add_stability = 0.1
 		}
 	}
 
 	focus = {
 		id = GER_action_against_political_militias
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_goal_HOL_ban_paramilitary
 
 		x = -1
 		y = 4
@@ -1278,7 +1510,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_staatssicherheitsburo
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_goal_generic_investigation
 
 		x = -2
 		y = 5
@@ -1302,7 +1534,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_catholic_education_reforms
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_goal_BRA_catholic_education
 
 		x = 0
 		y = 5
@@ -1330,7 +1562,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_catholic_trade_unions
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_goal_generic_church_socialist_cooporation
 
 		x = 0
 		y = 3
@@ -1354,7 +1586,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_enforce_loyalty_of_trade_unions
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_goal_generic_controlled_board
 
 		x = 1
 		y = 4
@@ -1374,6 +1606,10 @@ focus_tree = {
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
+			custom_trigger_tooltip = {
+				tooltip = GER_has_done_3_reichsregierung_reforms_tt
+				check_variable = { GER_completed_reichsregierung_reforms > 2 }
+			}
 		}
 
 		completion_reward = {

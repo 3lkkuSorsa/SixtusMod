@@ -9,9 +9,21 @@ GER_junker_transformationsplan = {
 	production_speed_industrial_complex_factor = GER_junker_transformationsplan_production_speed_industrial_complex_factor
 }
 
-GER_left_wing_focuses = {
-	power_balance_weekly = GER_left_wing_focuses_power_balance_weekly
+GER_focuses = {
+	icon = GFX_idea_unknown
+	custom_modifier_tooltip = GER_left_focuses
+	custom_modifier_tooltip = GER_right_focuses
+	power_balance_weekly = GER_focuses_power_balance_weekly
 }
-GER_right_wing_focuses = {
-	power_balance_weekly = GER_right_wing_focuses_power_balance_weekly
+
+GER_reichsregierung_reform = {
+	icon = GFX_idea_unknown
+	stability_factor = GER_reichsregierung_reform_stability_factor
+	war_support_factor = GER_reichsregierung_reform_war_support_factor
+	political_power_factor = GER_reichsregierung_reform_political_power_factor
+	consumer_goods_factor = GER_reichsregierung_reform_consumer_goods_factor
+	authoritarianism_drift = GER_reichsregierung_reform_authoritarianism_drift
+	ultra_nationalism_drift = GER_reichsregierung_reform_ultra_nationalism_drift
+	social_democracy_drift = GER_reichsregierung_reform_social_democracy_drift
+	social_liberalism_drift = GER_reichsregierung_reform_social_liberalism_drift
 }

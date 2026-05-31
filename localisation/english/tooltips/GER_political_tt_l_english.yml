@@ -8,6 +8,14 @@
  GER_dkp_votes_change_tt: "§2DkP§! electoral support: $RIGHT|+=0..0$"
  GER_duvp_votes_change_tt: "§gDUVP§! electoral support: $RIGHT|+=0..0$"
 
+ second_weltkrieg: "Second Weltkrieg"
+
+ GER_toleration_with_spd: "Toleration with the §tSPD§!"
+ GER_duvp_expelled_from_spring_coalition: "§gDUVP§! expelled from the §YSpring§! §3coalition§!"
+ GER_investigation_on_military_success: "Investigation on the §gReichswehr§! was successful"
+ GER_investigation_on_socialism_success: "Investigation on the §tSocialists§! was successful"
+ GER_republicanism_outlawed: "§9Republicanism§! Outlawed"
+
  GER_coalition_stability_change_tt: "§YCoalition stability§!: $RIGHT|+=0..0$"
  GER_coalition_centrists_for_left_tt: "Centrists siding with the left: $RIGHT|-=0..0$"
  GER_kampf_aus_der_mitte_available_1_tt: "§YCoalition stability§! is atleast §Y7§!."
@@ -16,6 +24,10 @@
  GER_cabinet_seat_change_fvp_tt: "§9FVP§! possible cabinet seats: $RIGHT|+=0..0$"
  GER_cabinet_seat_change_spd_tt: "§tSPD§! possible cabinet seats: $RIGHT|+=0..0$"
  GER_cabinet_seat_change_zentrum_tt: "§3Z§! possible cabinet seats: $RIGHT|+=0..0$"
+
+ GER_schleicher_war_coup: "§gStaatsminister§! took on the §Yimperial government§!"
+ GER_has_done_3_reichsregierung_reforms_tt: "Atleast §Y3 Reichsregierung reforms§! completed"
+ GER_prussian_integration: "Prussian chancellor is subordinate to the Reichstag"
 
  GER_freeze_spd_tt: "The §tSPD§! campaign will be §Yfrozen§! for one turn.\n\n"
 
@@ -84,6 +96,8 @@
  GER_left_focus: "This is a §tLeftist§! focus"
 
  GER_intervention_in_prussia_tt: "This will §Yensure§! the victory of the §3Zentrum§!-§9FVP§!-§tSPD§! coalition in the §gPrussian elections.§!"
+
+ GER_emergency_powers_act_tt: "This will allow us to effectively §Yrule by decree§! in a §tstate of emergency§! such as war, and enable us to do §Yvarious things§!.\n\n"
 
  GER_canidate_choice_tt_volksblock: "§YChancellor will have a impact on available focuses.§!"
  GER_question_of_the_chancellorship_tt: "We need to decide on a chancellor our new §9democratic§! government. The largest party in our coalition will demand the position, but we also can choose a §Yliberal§! §9FVP§!-leaning candidate as chancellor.\n\nIf §3Zentrum§! won the elections, the party chair, will be their candidate. Having elected §gBrüning§!, it will make our job much more difficult.\n\n"

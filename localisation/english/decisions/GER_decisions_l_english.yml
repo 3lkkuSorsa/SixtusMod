@@ -1,5 +1,7 @@
 ﻿l_english:
  GER_enable_decision: "Available as decision: £GFX_decision_icon_small $DEC|Y$"
+ GER_following_decisions_available_tt: "Following £GFX_decision_icon_small §Ydecisions§! will be available:"
+ list_of_decisions_tt: " - §Y$DEC$§!"
 
  GER_red_scare: "Red Scare"
  GER_red_scare_desc: "The growing influence and popularity of the §RKPD§! and other §tsocialist§! parties has resulted in a mass campaign of fear and propaganda against them, mainly from the conservatives and right-wing groups. This campaign has resulted in a collection of legislation known as the §Ycommunist laws§! which limit and restrict the activites and campaigning of parties and groups deemed communist."
@@ -14,3 +16,15 @@
 
  GER_RHI_unification_category: "Situation in the Rhineland"
  GER_RHI_unification_category_desc: "Rhineland has been an semi-independent state since the end of the First World War, and it has been a constant source of tension and conflict between Germany and France. The Rhineland's government is currently divided on the issue of unification with Germany, with some factions advocating for it and others opposing it. However, the unification fervour is only increasing in the region, and only time will tell if the Rhineland will finally rejoin Germany."
+
+ GER_reichsregierung_reform_category: "Reichsregierung Reform"
+ GER_introduce_oath_of_loyalty: "Introduce Oath of Loyalty for Bureaucrats"
+ GER_emergency_powers_act: "Emergency Powers Act"
+ GER_subordinate_reichswehr_to_reichstag: "Subordinate Reichswehr to the will of the Reichstag"
+ GER_enforce_the_supermacy_of_the_supreme_court: "Enforce the Supremacy of the Supreme Court"
+ GER_principle_of_reichstag_control_over_prussia: "Principle of Reichstag control over Prussia"
+ GER_constitutional_basis_for_state_administration: "Constitutional Basis for State Administrators"
+ GER_outlaw_republicanism: "Outlaw Republicanism"
+ GER_enforce_democratic_governane_in_states: "Enforce Democratic Governance in States"
+
+ GER_doing_reforms: "Doing another reform"

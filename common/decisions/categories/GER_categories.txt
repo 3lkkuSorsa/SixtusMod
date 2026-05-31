@@ -22,6 +22,20 @@ GER_spring_coalition_category = {
 	priority = 9
 }
 
+GER_reichsregierung_reform_category = {
+	allowed = {
+		original_tag = GER
+	}
+
+	visible = {
+		has_country_flag = GER_reichsregierung_reform
+	}
+
+	visible_when_empty = yes
+
+	priority = 9
+}
+
 GER_forming_a_cabinet_category = {
 	allowed = {
 		original_tag = GER
