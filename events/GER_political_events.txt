@@ -254,6 +254,103 @@ country_event = {
 }
 
 country_event = {
+	id = GER_spring_coalition.10
+	title = "Resurgence of the Anti-federalists"
+	desc = GER_spring_coalition.10.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A one empire, found on the principle of democracy"
+		add_timed_idea = {
+			idea = GER_return_of_anti_federalists
+			duration = 200
+		}
+		add_popularity = {
+			ideology = social_democracy
+			popularity = 0.08
+		}
+		add_popularity = {
+			ideology = market_liberalism
+			popularity = 0.03
+		}
+	}
+}
+
+country_event = {
+	id = GER_spring_coalition.11
+	title = "Christian People's Party"
+	desc = GER_spring_coalition.11.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Nightmare of Bismarck realized"
+		set_party_name = {
+			ideology = conservatism
+			name = GER_christian_peoples_party
+			long_name = GER_christian_peoples_party_long
+		}
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.13
+		}
+		add_popularity = {
+			ideology = authoritarianism
+			popularity = -0.08
+		}
+		add_popularity = {
+			ideology = market_liberalism
+			popularity = -0.05
+		}
+	}
+}
+
+country_event = {
+	id = GER_spring_coalition.12
+	title = "Conservatives question Zentrum's chancellorship"
+	desc = GER_spring_coalition.12.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "It seems that Spring won't be eternal..."
+		unlock_national_focus = GER_conspire_against_zentrum
+	}
+}
+
+country_event = {
+	id = GER_spring_coalition.12
+	title = "Situation stabilizes"
+	desc = GER_spring_coalition.12.d
+
+	fire_only_once = yes
+
+	trigger = {
+		has_completed_focus = GER_seek_to_maintain_the_coalition
+		is_power_balance_in_range = {
+			id = GER_spring_coalition_bop
+			range = GER_sc_mid
+		}
+	}
+
+	option = {
+		name = "Victory for the people!"
+		if = {
+			limit = { has_idea = GER_berlin_concessions }
+			remove_ideas = GER_berlin_concessions
+		}
+		if = {
+			limit = { has_idea = GER_curtailed_political_freedoms }
+			remove_ideas = GER_curtailed_political_freedoms
+		}
+	}
+}
+
+
+country_event = {
 	id = GER_political_manoeuvres.1
 	title = "Zentrum demands chancellorship"
 	desc = GER_political_manoeuvres.1.d

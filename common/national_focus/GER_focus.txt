@@ -883,6 +883,46 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_the_everlasting_spring
+		icon = GFX_goal_generic_castle
+
+		x = -4
+		y = 7
+
+		relative_position_id = GER_promised_and_delivered
+
+		mutually_exclusive = {
+			focus = GER_second_burgfriedenspolitik
+		}
+
+		cost = 0
+
+		available = {
+			has_global_flag = second_weltkrieg
+			has_country_flag = GER_spring_coalition_2
+			OR = {
+				has_country_flag = GER_toleration_with_spd
+				has_completed_focus = GER_kaiserliches_dekret_14
+			}
+		}
+
+		completion_reward = {
+			remove_power_balance = {
+				id = GER_spring_coalition_bop
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = GER_toleration_with_spd
+						has_idea = GER_schleicher_in_prussia
+					}
+
+				}
+			}
+		}
+	}
+
+	focus = {
 		id = GER_second_burgfriedenspolitik
 		icon = GFX_goal_generic_castle
 
@@ -890,6 +930,10 @@ focus_tree = {
 		y = 7
 
 		relative_position_id = GER_promised_and_delivered
+
+		mutually_exclusive = {
+			focus = GER_the_everlasting_spring
+		}
 
 		prerequisite = {
 			focus = GER_reichsregierung_reformieren
@@ -926,10 +970,10 @@ focus_tree = {
 		id = GER_continue_civilian_governance
 		icon = GFX_goal_generic_castle
 
-		x = 2
-		y = 8
+		x = -3
+		y = 1
 
-		relative_position_id = GER_promised_and_delivered
+		relative_position_id = GER_second_burgfriedenspolitik
 
 		prerequisite = {
 			focus = GER_second_burgfriedenspolitik
@@ -954,10 +998,10 @@ focus_tree = {
 		id = GER_save_the_government_from_themselves
 		icon = GFX_goal_generic_castle
 
-		x = -3
-		y = 8
+		x = 3
+		y = 1
 
-		relative_position_id = GER_promised_and_delivered
+		relative_position_id = GER_second_burgfriedenspolitik
 
 		prerequisite = {
 			focus = GER_second_burgfriedenspolitik
@@ -979,7 +1023,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_integrate_imperialer_block
+		id = GER_seek_to_maintain_the_coalition
 		icon = GFX_goal_constitutional_guarantees
 
 		x = 6
@@ -993,6 +1037,50 @@ focus_tree = {
 
 		mutually_exclusive = {
 			focus = GER_relinquish_schleichers_control_over_military
+		}
+
+		mutually_exclusive = {
+			focus = GER_integrate_imperialer_block
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+			has_completed_focus = GER_sack_braun_from_prussia
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = {
+				localization_key = GER_enable_decision
+				DEC = "Compromise efforts to maintain the coalition"
+			}
+			custom_effect_tooltip = {
+				localization_key = GER_enable_decision
+				DEC = "Reassign Schleicher"
+			}
+		}
+	}
+
+	focus = {
+		id = GER_integrate_imperialer_block
+		icon = GFX_goal_constitutional_guarantees
+
+		x = 8
+		y = 3
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_reichsregierung_reformieren
+		}
+
+		mutually_exclusive = {
+			focus = GER_relinquish_schleichers_control_over_military
+		}
+
+		mutually_exclusive = {
+			focus = GER_seek_to_maintain_the_coalition
 		}
 
 		cost = 0
@@ -1058,10 +1146,238 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_conspire_against_zentrum
+		icon = GFX_goal_GER_Red_General_Regime
+
+		x = 9
+		y = 4
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_integrate_imperialer_block
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+			power_balance_value = {
+				id = GER_spring_coalition_bop
+				value > 0.8
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = GER_right_focus
+			add_to_variable = {
+				var = GER_right_wing_focuses
+				value = 1
+			}
+			add_to_variable = {
+				var = GER_focuses_power_balance_weekly
+				value = 0.01
+			}
+		}
+	}
+
+	focus = {
+		id = GER_call_out_on_zentrum_for_colluding_with_socialists
+		icon = GFX_goal_GER_Red_General_Regime
+
+		x = 8
+		y = 5
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_conspire_against_zentrum
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+			power_balance_value = {
+				id = GER_spring_coalition_bop
+				value > 0.8
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = GER_right_focus
+			add_to_variable = {
+				var = GER_right_wing_focuses
+				value = 1
+			}
+			add_to_variable = {
+				var = GER_focuses_power_balance_weekly
+				value = 0.01
+			}
+		}
+	}
+
+	focus = {
+		id = GER_anti_socialist_laws
+		icon = GFX_goal_GER_Red_General_Regime
+
+		x = 9
+		y = 6
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_conspire_against_zentrum
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+			power_balance_value = {
+				id = GER_spring_coalition_bop
+				value > 0.8
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = GER_right_focus
+			add_to_variable = {
+				var = GER_right_wing_focuses
+				value = 1
+			}
+			add_to_variable = {
+				var = GER_focuses_power_balance_weekly
+				value = 0.01
+			}
+		}
+	}
+
+	focus = {
+		id = GER_national_union_of_trade_unions
+		icon = GFX_goal_GER_Red_General_Regime
+
+		x = 7
+		y = 6
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_call_out_on_zentrum_for_colluding_with_socialists
+		}
+
+		prerequisite = {
+			focus = GER_shuffle_zentrum_out_of_prussia
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+			power_balance_value = {
+				id = GER_spring_coalition_bop
+				value > 0.8
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = GER_right_focus
+			add_to_variable = {
+				var = GER_right_wing_focuses
+				value = 1
+			}
+			add_to_variable = {
+				var = GER_focuses_power_balance_weekly
+				value = 0.01
+			}
+		}
+	}
+
+	focus = {
+		id = GER_end_the_weimar_system
+		icon = GFX_goal_GER_Red_General_Regime
+
+		x = 8
+		y = 7
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_national_union_of_trade_unions
+		}
+
+		prerequisite = {
+			focus = GER_anti_socialist_laws
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+			power_balance_value = {
+				id = GER_spring_coalition_bop
+				value > 0.8
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = GER_right_focus
+			add_to_variable = {
+				var = GER_right_wing_focuses
+				value = 1
+			}
+			add_to_variable = {
+				var = GER_focuses_power_balance_weekly
+				value = 0.01
+			}
+		}
+	}
+
+	focus = {
+		id = GER_shuffle_zentrum_out_of_prussia
+		icon = GFX_goal_GER_Red_General_Regime
+
+		x = 6
+		y = 5
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_conspire_against_zentrum
+		}
+
+		prerequisite = {
+			focus = GER_schleichers_coup
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+			power_balance_value = {
+				id = GER_spring_coalition_bop
+				value > 0.8
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = GER_right_focus
+			add_to_variable = {
+				var = GER_right_wing_focuses
+				value = 1
+			}
+			add_to_variable = {
+				var = GER_focuses_power_balance_weekly
+				value = 0.01
+			}
+		}
+	}
+
+	focus = {
 		id = GER_relinquish_schleichers_control_over_military
 		icon = GFX_goal_constitutional_guarantees
 
-		x = 8
+		x = 10
 		y = 3
 
 		relative_position_id = GER_promised_and_delivered
@@ -1072,6 +1388,10 @@ focus_tree = {
 
 		mutually_exclusive = {
 			focus = GER_integrate_imperialer_block
+		}
+
+		mutually_exclusive = {
+			focus = GER_seek_to_maintain_the_coalition
 		}
 
 		cost = 0
@@ -1165,6 +1485,10 @@ focus_tree = {
 			add_to_variable = {
 				var = GER_focuses_power_balance_weekly
 				value = -0.01
+			}
+			country_event = {
+				id = GER_spring_coalition.10
+				days = 2
 			}
 			set_country_flag = GER_ensured_coalition_victory
 			custom_effect_tooltip = GER_intervention_in_prussia_tt
@@ -1326,6 +1650,10 @@ focus_tree = {
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
+			has_power_balance_value = {
+				id = GER_spring_coalition_bop
+				value < -0.8
+			}
 		}
 
 		completion_reward = {
@@ -1580,6 +1908,15 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = GER_right_focus
+			add_to_variable = {
+				var = GER_right_wing_focuses
+				value = 1
+			}
+			add_to_variable = {
+				var = GER_focuses_power_balance_weekly
+				value = 0.01
+			}
 			add_stability = 0.1
 		}
 	}

@@ -23,6 +23,12 @@ GER_spring_coalition_bop = {
 				stability_factor = 0.15
 				war_support_factor = -0.15
 			}
+
+			on_activate = {
+				country_event = {
+					id = GER_spring_coalition.11
+				}
+			}
 		}
 		range = {
 			id = GER_sc_left_side_2
@@ -53,6 +59,11 @@ GER_spring_coalition_bop = {
 			modifier = {
 				stability_factor = -0.15
 				war_support_factor = 0.15
+			}
+			on_activate = {
+				country_event = {
+					id = GER_spring_coalition.12
+				}
 			}
 		}
 		range = {

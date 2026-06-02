@@ -246,5 +246,15 @@ ideas = {
 				consumer_goods_factor = -0.15
 			}
 		}
+		GER_return_of_anti_federalists = {
+			cancel = {
+				NOT = {
+					has_country_flag = GER_spring_coalition
+				}
+			}
+			modifier = {
+				power_balance_weekly = -0.03
+			}
+		}
 	}
 }
