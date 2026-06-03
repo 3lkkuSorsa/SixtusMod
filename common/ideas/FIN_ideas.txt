@@ -1,5 +1,35 @@
 ideas = {
 	country = {
+
+		FIN_ongoing_industrialization = {
+			picture = FIN_finnish_federation_of_trade_unions_heavy
+			modifier = {
+                consumer_goods_factor = 0.15
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+
+		FIN_rising_nationalism = {
+			picture = FIN_patriotic_peoples_movement
+			modifier = {
+                stability_factor = -0.1
+				war_support_factor = 0.05
+				ultra_nationalism_drift = 0.02
+			}
+		}
+
+		FIN_finnish_resilience = {
+			picture = sisu
+			modifier = {
+                conscription_factor = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
 		
         FIN_agrarian_policies = {
 			picture = LIT_invested_in_farms
