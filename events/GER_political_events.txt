@@ -99,13 +99,16 @@ country_event = {
 
 	option = {
 		name = "But the people voted for us!"
-		set_power_balance = {
-			id = GER_spring_coalition_bop
-		}
+		custom_effect_tooltip = GER_trade_unions_protest_tt
 		add_dynamic_modifier = {
 			modifier = GER_focuses
 		}
 		add_ideas = GER_mass_strikes
+		hidden_effect = {
+			set_power_balance = {
+				id = GER_spring_coalition_bop
+			}
+		}
 	}
 }
 
@@ -271,7 +274,7 @@ country_event = {
 		name = "A one empire, found on the principle of democracy"
 		add_timed_idea = {
 			idea = GER_return_of_anti_federalists
-			duration = 200
+			days = 60
 		}
 		add_popularity = {
 			ideology = social_democracy
