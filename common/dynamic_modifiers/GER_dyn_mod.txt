@@ -27,3 +27,23 @@ GER_reichsregierung_reform = {
 	social_democracy_drift = GER_reichsregierung_reform_social_democracy_drift
 	social_liberalism_drift = GER_reichsregierung_reform_social_liberalism_drift
 }
+
+GER_steer_to_center_left = {
+	enable = {
+		power_balance_value = {
+			id = GER_spring_coalition_bop
+			value < -0.2
+		}
+	}
+	power_balance_weekly = 0.03
+}
+
+GER_steer_to_center_right = {
+	enable = {
+		power_balance_value = {
+			id = GER_spring_coalition_bop
+			value > 0.2
+		}
+	}
+	power_balance_weekly = -0.03
+}

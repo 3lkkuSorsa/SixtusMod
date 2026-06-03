@@ -250,6 +250,13 @@ country_event = {
 			elections_allowed = no
 		}
 		promote_character = GER_kurt_von_schleicher
+		clr_country_flag = GER_spring_coalition
+		clr_country_flag = GER_spring_coalition_2
+		set_country_flag = GER_schleicher_war_coup
+		hidden_effect = {
+			complete_national_focus = GER_second_burgfriedenspolitik
+			unlock_national_focus = GER_save_the_government_from_themselves
+		}
 	}
 }
 
@@ -322,9 +329,9 @@ country_event = {
 }
 
 country_event = {
-	id = GER_spring_coalition.12
+	id = GER_spring_coalition.13
 	title = "Situation stabilizes"
-	desc = GER_spring_coalition.12.d
+	desc = GER_spring_coalition.13.d
 
 	fire_only_once = yes
 
@@ -349,6 +356,24 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = GER_spring_coalition.14
+	title = "The Everlasting Spring"
+	desc = GER_spring_coalition.14.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Against all odds, the coalition has survived!"
+		add_stability = 0.15
+		add_war_support = 0.15
+		unlock_national_focus = GER_the_everlasting_spring
+		remove_power_balance = {
+			id = GER_spring_coalition_bop
+		}
+	}
+}
 
 country_event = {
 	id = GER_political_manoeuvres.1
@@ -832,6 +857,10 @@ country_event = {
 	trigger = {
 		has_stability < 0.2
 		has_country_flag = GER_schleicher_coup_planned
+		has_country_flag = GER_spring_coalition
+		NOT = {
+			has_completed_focus = GER_reconcile_volksblock
+		}
 	}
 
 	option = {

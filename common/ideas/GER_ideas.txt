@@ -177,6 +177,7 @@ ideas = {
 				stability_weekly = -0.01
 				line_change_production_efficiency_factor = -0.15
 				production_factory_efficiency_gain_factor = -0.3
+				power_balance_weekly = 0.04
 			}
 		}
 
@@ -216,7 +217,7 @@ ideas = {
 				}
 			}
 			modifier = {
-				stability_factor = -0.05
+				stability_factor = -0.08
 				political_power_factor = 0.15
 				social_liberalism_drift = -0.01
 				social_democracy_drift = -0.01

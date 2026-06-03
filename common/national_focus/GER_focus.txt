@@ -425,6 +425,7 @@ focus_tree = {
 				days = 2
 			}
 			custom_effect_tooltip = GER_reconcile_volksblock_tt
+			clr_country_flag = GER_schleicher_coup_planned
 		}
 	}
 
@@ -886,7 +887,7 @@ focus_tree = {
 		id = GER_the_everlasting_spring
 		icon = GFX_goal_generic_castle
 
-		x = -4
+		x = 5
 		y = 7
 
 		relative_position_id = GER_promised_and_delivered
@@ -895,15 +896,16 @@ focus_tree = {
 			focus = GER_second_burgfriedenspolitik
 		}
 
+		prerequisite = {
+			focus = GER_reichsregierung_reformieren
+		}
+
 		cost = 0
 
 		available = {
-			has_global_flag = second_weltkrieg
 			has_country_flag = GER_spring_coalition_2
-			OR = {
-				has_country_flag = GER_toleration_with_spd
-				has_completed_focus = GER_kaiserliches_dekret_14
-			}
+			has_country_flag = GER_coalition_survived
+			has_completed_focus = GER_seek_to_maintain_the_coalition
 		}
 
 		completion_reward = {
@@ -926,17 +928,13 @@ focus_tree = {
 		id = GER_second_burgfriedenspolitik
 		icon = GFX_goal_generic_castle
 
-		x = 5
+		x = -4
 		y = 7
 
 		relative_position_id = GER_promised_and_delivered
 
 		mutually_exclusive = {
 			focus = GER_the_everlasting_spring
-		}
-
-		prerequisite = {
-			focus = GER_reichsregierung_reformieren
 		}
 
 		cost = 0
@@ -950,18 +948,13 @@ focus_tree = {
 			}
 		}
 
+		allow_branch = {
+			has_country_flag = GER_show_moderate_tree
+		}
+
 		completion_reward = {
 			remove_power_balance = {
 				id = GER_spring_coalition_bop
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						has_country_flag = GER_toleration_with_spd
-						has_idea = GER_schleicher_in_prussia
-					}
-
-				}
 			}
 		}
 	}
@@ -1014,7 +1007,6 @@ focus_tree = {
 		cost = 0
 
 		available = {
-			has_global_flag = second_weltkrieg
 			has_country_flag = GER_schleicher_war_coup
 		}
 
@@ -1051,6 +1043,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			activate_mission = GER_keeping_coalition_together
 			custom_effect_tooltip = {
 				localization_key = GER_enable_decision
 				DEC = "Compromise efforts to maintain the coalition"
@@ -1058,6 +1051,45 @@ focus_tree = {
 			custom_effect_tooltip = {
 				localization_key = GER_enable_decision
 				DEC = "Reassign Schleicher"
+			}
+			hidden_effect = {
+				set_power_power_balance = {
+					id = GER_spring_coalition_bop
+					value = 0
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_spring_betrothal
+		icon = GFX_goal_constitutional_guarantees
+
+		x = 6
+		y = 5
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_seek_to_maintain_the_coalition
+		}
+
+		cost = 0
+
+		available = {
+			has_country_flag = GER_spring_coalition_2
+			has_completed_focus = GER_sack_braun_from_prussia
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GER_spring_betrothal_tt
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = GER_steer_to_center_left
+				}
+				add_dynamic_modifier = {
+					modifier = GER_steer_to_center_right
+				}
 			}
 		}
 	}
@@ -1141,234 +1173,6 @@ focus_tree = {
 			country_event = {
 				id = GER_spring_coalition.3
 				days = 10
-			}
-		}
-	}
-
-	focus = {
-		id = GER_conspire_against_zentrum
-		icon = GFX_goal_GER_Red_General_Regime
-
-		x = 9
-		y = 4
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_integrate_imperialer_block
-		}
-
-		cost = 0
-
-		available = {
-			has_country_flag = GER_spring_coalition_2
-			power_balance_value = {
-				id = GER_spring_coalition_bop
-				value > 0.8
-			}
-		}
-		
-		completion_reward = {
-			custom_effect_tooltip = GER_right_focus
-			add_to_variable = {
-				var = GER_right_wing_focuses
-				value = 1
-			}
-			add_to_variable = {
-				var = GER_focuses_power_balance_weekly
-				value = 0.01
-			}
-		}
-	}
-
-	focus = {
-		id = GER_call_out_on_zentrum_for_colluding_with_socialists
-		icon = GFX_goal_GER_Red_General_Regime
-
-		x = 8
-		y = 5
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_conspire_against_zentrum
-		}
-
-		cost = 0
-
-		available = {
-			has_country_flag = GER_spring_coalition_2
-			power_balance_value = {
-				id = GER_spring_coalition_bop
-				value > 0.8
-			}
-		}
-		
-		completion_reward = {
-			custom_effect_tooltip = GER_right_focus
-			add_to_variable = {
-				var = GER_right_wing_focuses
-				value = 1
-			}
-			add_to_variable = {
-				var = GER_focuses_power_balance_weekly
-				value = 0.01
-			}
-		}
-	}
-
-	focus = {
-		id = GER_anti_socialist_laws
-		icon = GFX_goal_GER_Red_General_Regime
-
-		x = 9
-		y = 6
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_conspire_against_zentrum
-		}
-
-		cost = 0
-
-		available = {
-			has_country_flag = GER_spring_coalition_2
-			power_balance_value = {
-				id = GER_spring_coalition_bop
-				value > 0.8
-			}
-		}
-		
-		completion_reward = {
-			custom_effect_tooltip = GER_right_focus
-			add_to_variable = {
-				var = GER_right_wing_focuses
-				value = 1
-			}
-			add_to_variable = {
-				var = GER_focuses_power_balance_weekly
-				value = 0.01
-			}
-		}
-	}
-
-	focus = {
-		id = GER_national_union_of_trade_unions
-		icon = GFX_goal_GER_Red_General_Regime
-
-		x = 7
-		y = 6
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_call_out_on_zentrum_for_colluding_with_socialists
-		}
-
-		prerequisite = {
-			focus = GER_shuffle_zentrum_out_of_prussia
-		}
-
-		cost = 0
-
-		available = {
-			has_country_flag = GER_spring_coalition_2
-			power_balance_value = {
-				id = GER_spring_coalition_bop
-				value > 0.8
-			}
-		}
-		
-		completion_reward = {
-			custom_effect_tooltip = GER_right_focus
-			add_to_variable = {
-				var = GER_right_wing_focuses
-				value = 1
-			}
-			add_to_variable = {
-				var = GER_focuses_power_balance_weekly
-				value = 0.01
-			}
-		}
-	}
-
-	focus = {
-		id = GER_end_the_weimar_system
-		icon = GFX_goal_GER_Red_General_Regime
-
-		x = 8
-		y = 7
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_national_union_of_trade_unions
-		}
-
-		prerequisite = {
-			focus = GER_anti_socialist_laws
-		}
-
-		cost = 0
-
-		available = {
-			has_country_flag = GER_spring_coalition_2
-			power_balance_value = {
-				id = GER_spring_coalition_bop
-				value > 0.8
-			}
-		}
-		
-		completion_reward = {
-			custom_effect_tooltip = GER_right_focus
-			add_to_variable = {
-				var = GER_right_wing_focuses
-				value = 1
-			}
-			add_to_variable = {
-				var = GER_focuses_power_balance_weekly
-				value = 0.01
-			}
-		}
-	}
-
-	focus = {
-		id = GER_shuffle_zentrum_out_of_prussia
-		icon = GFX_goal_GER_Red_General_Regime
-
-		x = 6
-		y = 5
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_conspire_against_zentrum
-		}
-
-		prerequisite = {
-			focus = GER_schleichers_coup
-		}
-
-		cost = 0
-
-		available = {
-			has_country_flag = GER_spring_coalition_2
-			power_balance_value = {
-				id = GER_spring_coalition_bop
-				value > 0.8
-			}
-		}
-		
-		completion_reward = {
-			custom_effect_tooltip = GER_right_focus
-			add_to_variable = {
-				var = GER_right_wing_focuses
-				value = 1
-			}
-			add_to_variable = {
-				var = GER_focuses_power_balance_weekly
-				value = 0.01
 			}
 		}
 	}
