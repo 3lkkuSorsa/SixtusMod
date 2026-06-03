@@ -62,3 +62,9 @@ GER_RHI_unification_category = {
 
 	visible_when_empty = yes
 }
+
+GER_sc_decision_category = {
+	allowed = {
+		original_tag = GER
+	}
+}
