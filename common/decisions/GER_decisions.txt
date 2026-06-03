@@ -139,7 +139,7 @@ GER_spring_coalition_category = {
 			}
 			if = {
 				limit = {
-					has_completed_focus = GER_uphold_the_weimar_constitution
+					has_government = conservatism
 				}
 				custom_effect_tooltip = GER_kampf_aus_der_mitte_success_tt
 				add_to_variable = {
@@ -173,6 +173,7 @@ GER_spring_coalition_category = {
 				days = 2
 			}
 			remove_ideas = GER_kampf_aus_der_mitte_idea
+			clr_country_flag = GER_kampf_aus_der_mitte
 		}
 	}
 
@@ -512,7 +513,6 @@ GER_reichsregierung_reform_category = {
 
 		visible = {
 			has_country_flag = GER_reichsregierung_reform
-			NOT = { has_country_flag = GER_doing_reforms }
 		}
 
 		is_good = yes
@@ -567,7 +567,6 @@ GER_reichsregierung_reform_category = {
 
 		visible = {
 			has_country_flag = GER_reichsregierung_reform
-			NOT = { has_country_flag = GER_doing_reforms }
 		}
 
 		is_good = yes
@@ -619,7 +618,6 @@ GER_reichsregierung_reform_category = {
 
 		visible = {
 			has_country_flag = GER_reichsregierung_reform
-			NOT = { has_country_flag = GER_doing_reforms }
 		}
 
 		is_good = yes
@@ -671,7 +669,6 @@ GER_reichsregierung_reform_category = {
 
 		visible = {
 			has_country_flag = GER_reichsregierung_reform
-			NOT = { has_country_flag = GER_doing_reforms }
 		}
 
 		is_good = yes
@@ -731,7 +728,6 @@ GER_reichsregierung_reform_category = {
 
 		visible = {
 			has_country_flag = GER_reichsregierung_reform
-			NOT = { has_country_flag = GER_doing_reforms }
 		}
 
 		is_good = yes
@@ -792,7 +788,6 @@ GER_reichsregierung_reform_category = {
 
 		visible = {
 			has_country_flag = GER_reichsregierung_reform
-			NOT = { has_country_flag = GER_doing_reforms }
 		}
 
 		is_good = yes
