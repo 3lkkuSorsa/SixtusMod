@@ -38,5 +38,754 @@ focus_tree = {
 
     # POLITICAL TREE 
 
-    
+    focus = {
+        id = FIN_finland_proud_and_free
+        icon = GFX_goal_flag_finland
+        x = 34
+        y = 0
+
+        available = {
+            always = no
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            add_political_power = 100
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_second_mandate_of_the_people
+        icon = GFX_goal_FIN_maalaisliitto
+        x = 18
+        y = 1
+
+        prerequisite = {
+            focus = FIN_finland_proud_and_free
+        }
+
+        available = {
+            has_government = social_liberalism
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_agrarian_victory
+        icon = GFX_goal_FIN_maalaisliitto
+        x = 29
+        y = 1
+
+        prerequisite = {
+            focus = FIN_finland_proud_and_free
+        }
+
+        available = {
+            has_government = social_liberalism
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_conservative_resurgence
+        icon = GFX_goal_FIN_kokoomus_pataut
+        x = 42
+        y = 1
+
+        prerequisite = {
+            focus = FIN_finland_proud_and_free
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            add_popularity = {
+                ideology = conservatism
+                popularity = 0.05
+            }
+            add_political_power = 25
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_building_popular_coalition
+        icon = GFX_goal_government_icon
+        x = 38
+        y = 2
+
+        prerequisite = {
+            focus = FIN_conservative_resurgence
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            focus = FIN_renewal_of_anti_socialist_laws
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_economic_mobilization
+        icon = GFX_goal_Focus_Military_Mobilisation
+        x = 36
+        y = 3
+
+        prerequisite = {
+            focus = FIN_building_popular_coalition
+            focus = FIN_renewal_of_anti_socialist_laws
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_invite_the_national_liberals
+        icon = GFX_goal_FIN_edistys
+        x = 38
+        y = 3
+
+        prerequisite = {
+            focus = FIN_building_popular_coalition
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_fight_radical_movements
+        icon = GFX_focus_generic_ban_right_wing
+        x = 37
+        y = 5
+
+        prerequisite = {
+            focus = FIN_invite_the_national_liberals
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_rule_of_law
+        icon = GFX_goal_new_treaty
+        x = 38
+        y = 6
+
+        prerequisite = {
+            focus = FIN_invite_the_national_liberals
+        }
+
+        prerequisite = {
+            focus = FIN_fight_radical_movements
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_parlamentarian_conservatism
+        icon = GFX_goal_ideology_social_conservative
+        x = 39
+        y = 7
+
+        prerequisite = {
+            focus = FIN_rule_of_law
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_democratic_norms
+        icon = GFX_goal_support_democracy
+        x = 37
+        y = 7
+
+        prerequisite = {
+            focus = FIN_rule_of_law
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_pro_market_reforms
+        icon = GFX_goal_generic_financial_markets
+        x = 41
+        y = 3
+
+        prerequisite = {
+            focus = FIN_building_popular_coalition
+            focus = FIN_renewal_of_anti_socialist_laws
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_lower_taxes
+        icon = GFX_goal_bag_of_money
+        x = 39
+        y = 4
+
+        prerequisite = {
+            focus = FIN_pro_market_reforms
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_privatize_industries
+        icon = GFX_goal_generic_privatization
+        x = 39
+        y = 5
+
+        prerequisite = {
+            focus = FIN_lower_taxes
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_german_trade
+        icon = GFX_goal_COS_German_Bailout
+        x = 43
+        y = 3
+
+        prerequisite = {
+            focus = FIN_building_popular_coalition
+            focus = FIN_renewal_of_anti_socialist_laws
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_alliance_with_germany
+        icon = GFX_goal_align_germany
+        x = 42
+        y = 4
+
+        prerequisite = {
+            focus = FIN_german_trade
+        }
+
+        prerequisite = {
+            focus = FIN_pro_market_reforms
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_joint_army_drills
+        icon = GFX_goal_generic_army_training
+        x = 41
+        y = 5
+
+        prerequisite = {
+            focus = FIN_alliance_with_germany
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+
+
+    focus = {
+        id = FIN_claims_on_russia
+        icon = GFX_focus_FIN_greater_finland
+        x = 43
+        y = 6
+
+        prerequisite = {
+            focus = FIN_alliance_with_germany
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_renewal_of_anti_socialist_laws
+        icon = GFX_goal_broken_red_star
+        x = 45
+        y = 2
+
+        prerequisite = {
+            focus = FIN_conservative_resurgence
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            focus = FIN_building_popular_coalition
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_expand_suojeluskunta
+        icon = GFX_goal_finnish_spirit
+        x = 46
+        y = 3
+
+        prerequisite = {
+            focus = FIN_renewal_of_anti_socialist_laws
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_entrench_church_status
+        icon = GFX_goal_SHX_Christian_Influence
+        x = 45
+        y = 4
+
+        prerequisite = {
+            focus = FIN_expand_suojeluskunta
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_trial_socialists
+        icon = GFX_goal_generic_trial
+        x = 47
+        y = 4
+
+        prerequisite = {
+            focus = FIN_expand_suojeluskunta
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_ignite_nationalism
+        icon = GFX_focus_EST_national_pride_in_finland
+        x = 46
+        y = 5
+
+        prerequisite = {
+            focus = FIN_entrench_church_status
+        }
+
+        prerequisite = {
+            focus = FIN_trial_socialists
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_restore_monarchist_coalition
+        icon = GFX_goal_FIN_kokoomus
+        x = 46
+        y = 6
+
+        prerequisite = {
+            focus = FIN_ignite_nationalism
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_monarchy_revived
+        icon = GFX_focus_FIN_the_finnish_throne
+        x = 46
+        y = 7
+
+        allow_branch = {
+            has_government = conservatism
+            has_completed_focus = FIN_restore_monarchist_coalition
+            controls_state = 39
+            controls_state = 216
+            controls_state = 215
+            has_war = no
+        }
+
+        prerequisite = {
+            focus = FIN_restore_monarchist_coalition
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
 }

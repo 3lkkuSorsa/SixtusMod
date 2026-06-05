@@ -470,6 +470,9 @@
  POR_ADJ: "Portuguese"
  POR_subject: "$OVERLORDADJ$ $POR$"
  POR_subject_DEF: "$OVERLORDADJ$ $POR$"
+ FIN_ultra_nationalism: "Republic of Finland"
+ FIN_ultra_nationalism_DEF: "the Republic of Finland"
+ 
  FIN_fascism: "White Finland"
  FIN_fascism_DEF: "White Finland"
  FIN_democratic: "Republic of Finland"
