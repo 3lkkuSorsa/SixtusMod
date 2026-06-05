@@ -28,7 +28,7 @@
  GER_schleicher_war_coup: "§gSchleicher§! took on the §Yimperial government§!"
  GER_has_done_3_reichsregierung_reforms_tt: "Atleast §Y3 Reichsregierung reforms§! completed"
  GER_prussian_integration: "Prussian chancellor is subordinate to the Reichstag"
- GER_coalition_survived = "The §YSpring§! §3coalition§! has survived"
+ GER_coalition_survived: "The §YSpring§! §3coalition§! has survived"
 
  GER_freeze_spd_tt: "The §tSPD§! campaign will be §Yfrozen§! for one turn.\n\n"
 
