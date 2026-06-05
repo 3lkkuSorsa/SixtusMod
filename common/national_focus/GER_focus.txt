@@ -604,7 +604,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.08
+			add_stability = 0.05
 			custom_effect_tooltip = GER_bring_von_below_back_tt
 			hidden_effect = {
 				remove_ideas = GER_kurt_von_schleicher_min_idea
@@ -716,7 +716,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = GER_peace_with_the_block_tt
-			add_stability = 0.15
+			add_stability = 0.08
 			swap_ideas = {
 				remove_idea = GER_imperial_block_1
 				add_idea = GER_imperial_block_2
@@ -792,7 +792,7 @@ focus_tree = {
 			focus = GER_promised_and_delivered
 		}
 
-		cost = 0
+		cost = 5
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
@@ -819,13 +819,16 @@ focus_tree = {
 			focus = GER_uphold_the_weimar_constitution
 		}
 
-		cost = 0
+		cost = 5
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
 		}
 
 		completion_reward = {
+			add_dynamic_modifier = {
+				modifier = GER_social_reforms
+			}
 		}
 	}
 
@@ -842,7 +845,7 @@ focus_tree = {
 			focus = GER_uphold_the_weimar_constitution
 		}
 
-		cost = 0
+		cost = 4
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
@@ -900,7 +903,7 @@ focus_tree = {
 			focus = GER_reichsregierung_reformieren
 		}
 
-		cost = 0
+		cost = 6
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
@@ -1035,10 +1038,18 @@ focus_tree = {
 			focus = GER_integrate_imperialer_block
 		}
 
-		cost = 0
+		cost = 6
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
+			power_balance_value = {
+				id = GER_spring_coalition_bop
+				value > -0.25
+			}
+			power_balance_value = {
+				id = GER_spring_coalition_bop
+				value < 0.25
+			}
 		}
 
 		completion_reward = {
@@ -1050,12 +1061,6 @@ focus_tree = {
 			custom_effect_tooltip = {
 				localization_key = GER_enable_decision
 				DEC = "Reassign Schleicher"
-			}
-			hidden_effect = {
-				set_power_power_balance = {
-					id = GER_spring_coalition_bop
-					value = 0
-				}
 			}
 		}
 	}
@@ -1073,7 +1078,7 @@ focus_tree = {
 			focus = GER_seek_to_maintain_the_coalition
 		}
 
-		cost = 0
+		cost = 3
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
@@ -1113,7 +1118,7 @@ focus_tree = {
 			focus = GER_seek_to_maintain_the_coalition
 		}
 
-		cost = 0
+		cost = 6
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
@@ -1147,7 +1152,7 @@ focus_tree = {
 			focus = GER_integrate_imperialer_block
 		}
 
-		cost = 0
+		cost = 3
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
@@ -1196,7 +1201,7 @@ focus_tree = {
 			focus = GER_seek_to_maintain_the_coalition
 		}
 
-		cost = 0
+		cost = 6
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
@@ -1271,7 +1276,7 @@ focus_tree = {
 			focus = GER_uphold_the_weimar_constitution
 		}
 
-		cost = 0
+		cost = 5
 
 		available = {
 			has_idea = GER_prussian_grand_coalition
@@ -1319,7 +1324,7 @@ focus_tree = {
 			focus = GER_collude_with_spd
 		}
 
-		cost = 0
+		cost = 4
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
@@ -1368,7 +1373,7 @@ focus_tree = {
 			focus = GER_silence_the_socialist_opposition
 		}
 
-		cost = 0
+		cost = 4
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
@@ -1412,7 +1417,7 @@ focus_tree = {
 			focus = GER_collude_with_spd
 		}
 
-		cost = 0
+		cost = 5
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
@@ -1432,6 +1437,16 @@ focus_tree = {
 				localization_key = GER_enable_decision
 				DEC = "Ally the FVP"
 			}
+			custom_effect_tooltip = "        "
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Reichsregierung Reform"
+			}
+			add_to_variable = {
+				var = GER_reichsregierung_reform_political_power_factor
+				value = 0.1
+				tooltip = political_power_factor_tt
+			}
 		}
 	}
 
@@ -1448,7 +1463,7 @@ focus_tree = {
 			focus = GER_towards_a_weimar_coalition
 		}
 
-		cost = 0
+		cost = 6
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
@@ -1488,7 +1503,7 @@ focus_tree = {
 			focus = GER_towards_a_weimar_coalition
 		}
 
-		cost = 0
+		cost = 6
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
@@ -1528,7 +1543,7 @@ focus_tree = {
 			focus = GER_enforce_loyalty_of_trade_unions
 		}
 
-		cost = 0
+		cost = 6
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
@@ -1567,14 +1582,32 @@ focus_tree = {
 			focus = GER_neue_sozialpolitik_sc
 		}
 
-		cost = 0
+		cost = 5
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
 		}
 
 		completion_reward = {
-			add_stability = 0.1
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Social Reforms"
+			}
+			add_to_variable = {
+				var = GER_social_reforms_political_power_factor
+				value = 0.05
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = {
+				var = GER_social_reforms_consumer_goods_factor
+				value = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				var = GER_social_reforms_production_factory_efficiency_gain_factor
+				value = 0.1
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
 		}
 	}
 
@@ -1595,7 +1628,7 @@ focus_tree = {
 			focus = GER_concentrate_on_industry
 		}
 
-		cost = 0
+		cost = 5
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
@@ -1611,7 +1644,25 @@ focus_tree = {
 				var = GER_focuses_power_balance_weekly
 				value = -0.01
 			}
-			add_stability = 0.1
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Social Reforms"
+			}
+			add_to_variable = {
+				var = GER_social_reforms_political_power_factor
+				value = -0.05
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = {
+				var = GER_social_reforms_consumer_goods_factor
+				value = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				var = GER_social_reforms_stability_factor
+				value = -0.05
+				tooltip = stability_factor_tt
+			}
 		}
 	}
 
@@ -1628,7 +1679,7 @@ focus_tree = {
 			focus = GER_moderate_pension_reform
 		}
 
-		cost = 0
+		cost = 4
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
@@ -1652,7 +1703,7 @@ focus_tree = {
 			focus = GER_action_against_political_militias
 		}
 
-		cost = 0
+		cost = 4
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
@@ -1680,14 +1731,27 @@ focus_tree = {
 			focus = GER_moderate_pension_reform
 		}
 
-		cost = 0
+		cost = 6
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
 		}
 
 		completion_reward = {
-			add_stability = 0.1
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Social Reforms"
+			}
+			add_to_variable = {
+				var = GER_social_reforms_research_speed_factor
+				value = 0.1
+				tooltip = research_speed_factor_tt
+			}
+			add_to_variable = {
+				var = GER_social_reforms_stability_factor
+				value = 0.08
+				tooltip = stability_factor_tt
+			}
 		}
 	}
 
@@ -1704,7 +1768,7 @@ focus_tree = {
 			focus = GER_neue_sozialpolitik_sc
 		}
 
-		cost = 0
+		cost = 6
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
@@ -1720,7 +1784,16 @@ focus_tree = {
 				var = GER_focuses_power_balance_weekly
 				value = 0.01
 			}
-			add_stability = 0.1
+			add_stability = 0.08
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Social Reforms"
+			}
+			add_to_variable = {
+				var = GER_social_reforms_political_power_factor
+				value = 0.05
+				tooltip = political_power_factor_tt
+			}
 		}
 	}
 
@@ -1742,7 +1815,7 @@ focus_tree = {
 			focus = GER_collude_with_spd
 		}
 
-		cost = 0
+		cost = 6
 
 		available = {
 			has_country_flag = GER_spring_coalition_2

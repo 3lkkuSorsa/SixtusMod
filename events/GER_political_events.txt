@@ -6,6 +6,7 @@ add_namespace = GER_volksblock
 add_namespace = GER_zentrum_leadership
 add_namespace = GER_elections_36
 add_namespace = GER_scleicher
+add_namespace = GER_staatssicherheitsburo_events
 
 country_event = {
 	id = GER_spring_coalition.0
@@ -878,5 +879,33 @@ country_event = {
 			remove_ideas = GER_imperial_block_2
 			clr_country_flag = GER_schleicher_coup_planned
 		}
+	}
+}
+
+country_event = {
+	id = GER_staatssicherheitsburo_events.1
+	title = "Successful investigation of the Reichswehr"
+	desc = GER_staatssicherheitsburo_events.1.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "I knew it!"
+		set_country_flag = GER_investigation_on_military_success
+	}
+}
+
+country_event = {
+	id = GER_staatssicherheitsburo_events.2
+	title = "Successful investigation of the Socialist opposition"
+	desc = GER_staatssicherheitsburo_events.2.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Truth sees the light!"
+		set_country_flag = GER_investigation_on_socialism_success
 	}
 }

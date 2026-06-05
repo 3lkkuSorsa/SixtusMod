@@ -25,9 +25,10 @@
  GER_cabinet_seat_change_spd_tt: "§tSPD§! possible cabinet seats: $RIGHT|+=0..0$"
  GER_cabinet_seat_change_zentrum_tt: "§3Z§! possible cabinet seats: $RIGHT|+=0..0$"
 
- GER_schleicher_war_coup: "§gStaatsminister§! took on the §Yimperial government§!"
+ GER_schleicher_war_coup: "§gSchleicher§! took on the §Yimperial government§!"
  GER_has_done_3_reichsregierung_reforms_tt: "Atleast §Y3 Reichsregierung reforms§! completed"
  GER_prussian_integration: "Prussian chancellor is subordinate to the Reichstag"
+ GER_coalition_survived = "The §YSpring§! §3coalition§! has survived"
 
  GER_freeze_spd_tt: "The §tSPD§! campaign will be §Yfrozen§! for one turn.\n\n"
 
