@@ -65,7 +65,7 @@ focus_tree = {
 
     focus = {
         id = FIN_second_mandate_of_the_people
-        icon = GFX_goal_FIN_maalaisliitto
+        icon = GFX_goal_FIN_SDP
         x = 18
         y = 1
 
@@ -74,7 +74,7 @@ focus_tree = {
         }
 
         available = {
-            has_government = social_liberalism
+            has_government = social_democracy
         }
 
         mutually_exclusive = {
@@ -363,6 +363,36 @@ focus_tree = {
     }
 
     focus = {
+        id = FIN_constitutional_amendments
+        icon = GFX_goal_constitutional_guarantees
+        x = 38
+        y = 8
+
+        prerequisite = {
+            focus = FIN_democratic_norms
+            focus = FIN_parlamentarian_conservatism
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
         id = FIN_pro_market_reforms
         icon = GFX_goal_generic_financial_markets
         x = 41
@@ -542,16 +572,76 @@ focus_tree = {
         }
     }
 
+    focus = {
+        id = FIN_german_military_technology
+        icon = GFX_focus_research2
+        x = 40
+        y = 6
 
+        prerequisite = {
+            focus = FIN_joint_army_drills
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
 
     focus = {
         id = FIN_claims_on_russia
         icon = GFX_focus_FIN_greater_finland
         x = 43
-        y = 6
+        y = 5
 
         prerequisite = {
             focus = FIN_alliance_with_germany
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_operation_nordlicht
+        icon = GFX_focus_ger_strike_at_the_source
+        x = 42
+        y = 7
+
+        prerequisite = {
+            focus = FIN_claims_on_russia
+        }
+
+        prerequisite = {
+            focus = FIN_joint_army_drills
         }
 
         available = {
@@ -591,11 +681,27 @@ focus_tree = {
             focus = FIN_building_popular_coalition
         }
 		
-        completion_reward = { 
-            
+        completion_reward = {
+            add_timed_idea = {
+                idea = FIN_anti_socialist_laws
+                days = 720
+            }
+            add_stability = -0.05 
+            add_popularity = {
+                ideology = communism
+                popularity = -0.05
+            }
+            add_popularity = {
+                ideology = social_democracy
+                popularity = -0.05
+            }
+            add_popularity = {
+                ideology = social_liberalism
+                popularity = -0.05
+            }
         }  
 
-		cost = 5
+		cost = 6
 
         search_filters = { 
         
@@ -621,10 +727,11 @@ focus_tree = {
         }
 		
         completion_reward = { 
-            
+            add_war_support = 0.05
+            add_ideas = FIN_expanded_suojeluskunta
         }  
 
-		cost = 5
+		cost = 6
 
         search_filters = { 
         
@@ -650,10 +757,18 @@ focus_tree = {
         }
 		
         completion_reward = { 
-            
+            add_stability = 0.05
+            add_popularity = {
+                ideology = conservatism
+                popularity = 0.1
+            }
+            add_popularity = {
+                ideology = authoritarianism
+                popularity = 0.1
+            }
         }  
 
-		cost = 5
+		cost = 6
 
         search_filters = { 
         
@@ -682,7 +797,47 @@ focus_tree = {
             
         }  
 
-		cost = 5
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_prioritize_the_military
+        icon = GFX_goal_military_academy
+        x = 48
+        y = 5
+
+        prerequisite = {
+            focus = FIN_expand_suojeluskunta
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            111 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            add_timed_idea = {
+                idea = FIN_high_military_spending
+                days = 365
+            }
+        }  
+
+		cost = 6
 
         search_filters = { 
         
@@ -712,10 +867,13 @@ focus_tree = {
         }
 		
         completion_reward = { 
-            
+            swap_ideas = {
+                remove_idea = FIN_rising_nationalism
+                add_idea = FIN_conservative_nationalism
+            }
         }  
 
-		cost = 5
+		cost = 6
 
         search_filters = { 
         
@@ -723,9 +881,9 @@ focus_tree = {
     }
 
     focus = {
-        id = FIN_restore_monarchist_coalition
-        icon = GFX_goal_FIN_kokoomus
-        x = 46
+        id = FIN_integrate_lapua_movement
+        icon = GFX_goal_FIN_Lapua_Movement
+        x = 45
         y = 6
 
         prerequisite = {
@@ -744,7 +902,40 @@ focus_tree = {
             
         }  
 
-		cost = 5
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_restore_monarchist_coalition
+        icon = GFX_goal_FIN_kokoomus
+        x = 47
+        y = 7
+
+        prerequisite = {
+            focus = FIN_ignite_nationalism
+        }
+
+        prerequisite = {
+            focus = FIN_prioritize_the_military
+        }
+
+        available = {
+            has_government = conservatism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            add_stability = 0.1
+        }  
+
+		cost = 6
 
         search_filters = { 
         
@@ -755,7 +946,7 @@ focus_tree = {
         id = FIN_monarchy_revived
         icon = GFX_focus_FIN_the_finnish_throne
         x = 46
-        y = 7
+        y = 8
 
         allow_branch = {
             has_government = conservatism
