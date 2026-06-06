@@ -416,7 +416,7 @@ focus_tree = {
 		}
 
 		mutually_exclusive = {
-			focus = GER_rally_the_catholic_right
+			focus = GER_placate_the_catholic_right
 		}
 
 		completion_reward = {
@@ -430,7 +430,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_rally_the_catholic_right
+		id = GER_placate_the_catholic_right
 		icon = GFX_goal_GER_Zentrum
 
 		x = 0
@@ -450,9 +450,22 @@ focus_tree = {
 
 		available = {
 			has_country_flag = GER_spring_coalition
+			has_country_flag = GER_kampf_aus_der_mitte
+			has_country_flag = GER_agreed_to_bruning
 		}
 
 		completion_reward = {
+			add_to_variable = {
+				var = GER.coalition_stability
+				value = 1
+				tooltip = GER_coalition_stability_change_tt
+			}
+			add_to_variable = {
+				var = GER.centrists_for_left
+				value = -2
+				tooltip = GER_coalition_centrists_for_left_tt
+			}
+			custom_effect_tooltip = "         "
 			add_popularity = {
 				ideology = conservatism
 				popularity = 0.08
@@ -776,6 +789,22 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_stability = 0.08
+			if = {
+				limit = {
+					has_completed_focus = GER_peace_with_the_block
+				}
+				custom_effect_tooltip = GER_scleicher_replaces_below_tt
+				add_trait = {
+					character = GER_kurt_von_schleicher
+					slot = minister
+					trait = GER_imperial_spy
+				}
+				hidden_effect = {
+					remove_ideas = GER_otto_von_below_idea
+					add_ideas = GER_kurt_von_schleicher_min_idea
+				}
+			}
 		}
 	}
 
@@ -888,19 +917,23 @@ focus_tree = {
 
 	focus = {
 		id = GER_the_everlasting_spring
-		icon = GFX_goal_generic_castle
+		icon = GFX_goal_GER_Conservative_Revolution
 
 		x = 5
 		y = 7
 
 		relative_position_id = GER_promised_and_delivered
 
-		mutually_exclusive = {
-			focus = GER_second_burgfriedenspolitik
-		}
 
 		prerequisite = {
 			focus = GER_reichsregierung_reformieren
+		}
+
+		allow_branch = {
+			NOT = {
+				has_country_flag = GER_show_second_burgfriedenspolitik
+				has_country_flag = GER_show_schleicher_war_coup
+			}
 		}
 
 		cost = 6
@@ -931,28 +964,22 @@ focus_tree = {
 		id = GER_second_burgfriedenspolitik
 		icon = GFX_goal_generic_castle
 
-		x = -4
+		x = 5
 		y = 7
 
 		relative_position_id = GER_promised_and_delivered
 
-		mutually_exclusive = {
-			focus = GER_the_everlasting_spring
+		prerequisite = {
+			focus = GER_reichsregierung_reformieren
 		}
 
-		cost = 0
+		cost = 6
 
 		available = {
-			has_global_flag = second_weltkrieg
-			has_country_flag = GER_spring_coalition_2
-			OR = {
-				has_country_flag = GER_toleration_with_spd
-				has_completed_focus = GER_kaiserliches_dekret_14
-			}
 		}
 
 		allow_branch = {
-			has_country_flag = GER_show_moderate_tree
+			has_country_flag = GER_show_second_burgfriedenspolitik
 		}
 
 		completion_reward = {
@@ -975,15 +1002,11 @@ focus_tree = {
 			focus = GER_second_burgfriedenspolitik
 		}
 
-		mutually_exclusive = {
-			focus = GER_save_the_government_from_themselves
-		}
-
-		cost = 0
+		cost = 6
 
 		available = {
 			has_global_flag = second_weltkrieg
-			has_country_flag = GER_spring_coalition_2
+			has_country_flag = GER_toleration_with_spd
 		}
 
 		completion_reward = {
@@ -994,20 +1017,20 @@ focus_tree = {
 		id = GER_save_the_government_from_themselves
 		icon = GFX_goal_generic_castle
 
-		x = 3
-		y = 1
+		x = 5
+		y = 7
 
-		relative_position_id = GER_second_burgfriedenspolitik
+		relative_position_id = GER_promised_and_delivered
 
 		prerequisite = {
-			focus = GER_second_burgfriedenspolitik
+			focus = GER_reichsregierung_reformieren
 		}
 
-		mutually_exclusive = {
-			focus = GER_continue_civilian_governance
+		allow_branch = {
+			has_country_flag = GER_show_schleicher_war_coup
 		}
 
-		cost = 0
+		cost = 6
 
 		available = {
 			has_country_flag = GER_schleicher_war_coup
@@ -1050,6 +1073,9 @@ focus_tree = {
 				id = GER_spring_coalition_bop
 				value < 0.25
 			}
+			NOT = {
+				has_completed_focus = GER_collude_with_spd
+			}
 		}
 
 		completion_reward = {
@@ -1061,6 +1087,15 @@ focus_tree = {
 			custom_effect_tooltip = {
 				localization_key = GER_enable_decision
 				DEC = "Reassign Schleicher"
+			}
+			hidden_effect = {
+				remove_power_balance = {
+					id = GER_spring_coalition_bop
+				}
+				set_power_balance = {
+					id = GER_spring_coalition_bop
+					value = 0
+				}
 			}
 		}
 	}
@@ -1133,7 +1168,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = GER_focuses_power_balance_weekly
-				value = 0.01
+				value = 0.003
 			}
 			add_stability = 0.1
 		}
@@ -1171,7 +1206,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = GER_focuses_power_balance_weekly
-				value = 0.01
+				value = 0.003
 			}
 			country_event = {
 				id = GER_spring_coalition.3
@@ -1216,7 +1251,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = GER_focuses_power_balance_weekly
-				value = -0.01
+				value = -0.003
 			}
 			retire_character = GER_kurt_von_schleicher
 			add_timed_idea = {
@@ -1291,7 +1326,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = GER_focuses_power_balance_weekly
-				value = -0.01
+				value = -0.003
 			}
 			country_event = {
 				id = GER_spring_coalition.10
@@ -1338,7 +1373,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = GER_focuses_power_balance_weekly
-				value = 0.01
+				value = 0.003
 			}
 			custom_effect_tooltip = {
 				localization_key = GER_enable_decision
@@ -1380,6 +1415,9 @@ focus_tree = {
 			NOT = {
 				has_completed_focus = GER_sack_braun_from_prussia
 			}
+			NOT = {
+				has_completed_focus = GER_seek_to_maintain_the_coalition
+			}
 		}
 
 		completion_reward = {
@@ -1390,7 +1428,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = GER_focuses_power_balance_weekly
-				value = -0.01
+				value = -0.003
 			}
 			custom_effect_tooltip = {
 				localization_key = GER_enable_decision
@@ -1431,7 +1469,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = GER_focuses_power_balance_weekly
-				value = -0.01
+				value = -0.003
 			}
 			custom_effect_tooltip = {
 				localization_key = GER_enable_decision
@@ -1482,7 +1520,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = GER_focuses_power_balance_weekly
-				value = -0.01
+				value = -0.003
 			}
 			country_event = {
 				id = GER_spring_coalition.8
@@ -1520,7 +1558,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = GER_focuses_power_balance_weekly
-				value = -0.01
+				value = -0.003
 			}
 			add_stability = 0.08
 			custom_effect_tooltip = {
@@ -1548,7 +1586,6 @@ focus_tree = {
 		available = {
 			has_country_flag = GER_spring_coalition_2
 			has_country_flag = GER_investigation_on_socialism_success
-			has_completed_focus = GER_integrate_imperialer_block
 			has_country_flag = GER_republicanism_outlawed
 		}
 
@@ -1560,7 +1597,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = GER_focuses_power_balance_weekly
-				value = 0.01
+				value = 0.003
 			}
 			swap_ideas = {
 				remove_idea = GER_curtailed_political_freedoms
@@ -1642,7 +1679,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = GER_focuses_power_balance_weekly
-				value = -0.01
+				value = -0.003
 			}
 			custom_effect_tooltip = {
 				localization_key = GER_modify_dyn_mod
@@ -1710,7 +1747,15 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.1
+			add_stability = 0.08
+			custom_effect_tooltip = {
+				localization_key = GER_enable_decision
+				DEC = "Order investigation on Military"
+			}
+			custom_effect_tooltip = {
+				localization_key = GER_enable_decision
+				DEC = "Order investigation on Socialists"
+			}
 		}
 	}
 
@@ -1757,7 +1802,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_catholic_trade_unions
-		icon = GFX_goal_generic_church_socialist_cooporation
+		icon = GFX_BEL_Improve_Catholic_Relations
 
 		x = 0
 		y = 3
@@ -1782,7 +1827,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = GER_focuses_power_balance_weekly
-				value = 0.01
+				value = 0.003
 			}
 			add_stability = 0.08
 			custom_effect_tooltip = {
@@ -1896,7 +1941,6 @@ focus_tree = {
 		cost = 6
 
 		available = {
-			has_country_flag = GER_spring_coalition_2
 		}
 
 		completion_reward = {
@@ -1923,7 +1967,6 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_country_flag = GER_spring_coalition_2
 		}
 
 		completion_reward = {
@@ -1950,7 +1993,6 @@ focus_tree = {
 		cost = 8
 
 		available = {
-			has_country_flag = GER_spring_coalition_2
 		}
 
 		completion_reward = {
@@ -1971,10 +2013,9 @@ focus_tree = {
 			focus = GER_junker-transformationsplan
 		}
 
-		cost = 15
+		cost = 6
 
 		available = {
-			has_country_flag = GER_spring_coalition_2
 		}
 
 		completion_reward = {
@@ -2021,7 +2062,6 @@ focus_tree = {
 		cost = 6
 
 		available = {
-			has_country_flag = GER_spring_coalition_2
 		}
 
 		completion_reward = {
@@ -2067,7 +2107,6 @@ focus_tree = {
 		cost = 6
 
 		available = {
-			has_country_flag = GER_spring_coalition_2
 		}
 
 		completion_reward = {
@@ -2109,7 +2148,6 @@ focus_tree = {
 		cost = 8
 
 		available = {
-			has_country_flag = GER_spring_coalition_2
 		}
 
 		completion_reward = {

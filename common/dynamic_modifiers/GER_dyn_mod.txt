@@ -44,7 +44,7 @@ GER_steer_to_center_left = {
 			value < -0.2
 		}
 	}
-	power_balance_weekly = 0.03
+	power_balance_weekly = 0.005
 }
 
 GER_steer_to_center_right = {
@@ -54,5 +54,5 @@ GER_steer_to_center_right = {
 			value > 0.2
 		}
 	}
-	power_balance_weekly = -0.03
+	power_balance_weekly = -0.005
 }

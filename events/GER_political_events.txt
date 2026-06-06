@@ -258,8 +258,14 @@ country_event = {
 		clr_country_flag = GER_spring_coalition_2
 		set_country_flag = GER_schleicher_war_coup
 		hidden_effect = {
-			complete_national_focus = GER_second_burgfriedenspolitik
 			unlock_national_focus = GER_save_the_government_from_themselves
+			set_country_flag = GER_show_schleicher_war_coup
+			mark_focus_tree_layout_dirty = yes
+			clr_country_flag = GER_spring_coalition
+			clr_country_flag = GER_spring_coalition_2
+			remove_power_balance = {
+				id = GER_spring_coalition_bop
+			}
 		}
 	}
 }
@@ -298,6 +304,10 @@ country_event = {
 
 	option = {
 		name = "Nightmare of Bismarck realized"
+		country_event = {
+			id = GER_spring_coalition.15
+			days = 13
+		}
 		set_party_name = {
 			ideology = conservatism
 			name = GER_christian_peoples_party
@@ -328,7 +338,10 @@ country_event = {
 
 	option = {
 		name = "It seems that Spring won't be eternal..."
-		unlock_national_focus = GER_conspire_against_zentrum
+		country_event = {
+			id = GER_spring_coalition.9
+			days = 20
+		}
 	}
 }
 
@@ -373,8 +386,34 @@ country_event = {
 		add_stability = 0.15
 		add_war_support = 0.15
 		unlock_national_focus = GER_the_everlasting_spring
-		remove_power_balance = {
-			id = GER_spring_coalition_bop
+		hidden_effect = {
+			remove_power_balance = {
+				id = GER_spring_coalition_bop
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_spring_coalition.15
+	title = "Conservatives Proclaim End of the Spring Coalition"
+	desc = GER_spring_coalition.15.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Blue spring turns into a Red autumn"
+		add_stability = -0.1
+		unlock_national_focus = GER_second_burgfriedenspolitik
+		hidden_effect = {
+			set_country_flag = GER_show_second_burgfriedenspolitik
+			mark_focus_tree_layout_dirty = yes
+			remove_power_balance = {
+				id = GER_spring_coalition_bop
+			}
+			clr_country_flag = GER_spring_coalition
+			clr_country_flag = GER_spring_coalition_2
 		}
 	}
 }

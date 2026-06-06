@@ -55,7 +55,7 @@ GER_spring_coalition_category = {
 				tooltip = GER_kampf_aus_der_mitte_available_1_tt
 				check_variable = {
 					var = GER.coalition_stability
-					value = 6
+					value = 4
 					compare = greater_than
 				}				
 			}
@@ -1025,6 +1025,14 @@ GER_sc_decision_category = {
 	GER_seek_compromises = {
 		visible = {
 			has_country_flag = GER_spring_coalition
+			has_power_balance = {
+				id = GER_spring_coalition_bop
+			}
+		}
+
+		days_re_enable = 30
+
+		available = {
 			OR = {
 				has_power_balance_value = {
 					id = GER_spring_coalition_bop
@@ -1037,10 +1045,7 @@ GER_sc_decision_category = {
 			}
 		}
 
-		days_re_enable = 30
-
-		available = {
-		}
+		cost = 30
 
 		complete_effect = {
 			add_stability = -0.03
@@ -1074,6 +1079,8 @@ GER_sc_decision_category = {
 		priority = 10
 
 		is_good = yes
+
+		fire_only_once = yes
 
 		available = {
 			NOT = {
