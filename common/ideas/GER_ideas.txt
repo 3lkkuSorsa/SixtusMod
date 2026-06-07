@@ -257,5 +257,12 @@ ideas = {
 				power_balance_weekly = -0.01
 			}
 		}
+		GER_rampant_paramilitaries = {
+			modifier = {
+				communism_drift = 0.01
+				ultra_nationalism_drift = 0.01
+				stability_factor = -0.03
+			}
+		}
 	}
 }

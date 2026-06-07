@@ -1042,7 +1042,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_seek_to_maintain_the_coalition
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_focus_BRA_reach_out_to_military_dem
 
 		x = 6
 		y = 3
@@ -1102,7 +1102,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_spring_betrothal
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_focus_JAP_an_integrated_union
 
 		x = 6
 		y = 5
@@ -1134,7 +1134,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_integrate_imperialer_block
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_goal_align_germany
 
 		x = 8
 		y = 3
@@ -1217,7 +1217,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_relinquish_schleichers_control_over_military
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_focus_ARG_defense_and_democracy
 
 		x = 10
 		y = 3
@@ -1615,7 +1615,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_moderate_pension_reform
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_goal_generic_deals
 
 		x = -2
 		y = 3
@@ -1657,7 +1657,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_raise_taxes_on_dividends
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_focus_RAJ_war_taxes
 
 		x = -3
 		y = 4
@@ -1730,7 +1730,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.1
+			remove_ideas = GER_rampant_paramilitaries
 		}
 	}
 
@@ -1960,7 +1960,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_cut_taxes_on_the_bourgeoisie
-		icon = GFX_goal_constitutional_guarantees
+		icon = GFX_goal_HOL_progressive_tax
 
 		x = -3
 		y = 2

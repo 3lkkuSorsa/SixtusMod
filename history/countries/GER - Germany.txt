@@ -16,6 +16,11 @@ country_event = {
 	days = 70
 }
 
+country_event = {
+	id = GER_spring_coalition.5
+	days = 400
+}
+
 # Starting Stats of various kinds
 set_research_slots = 4
 set_convoys = 200
@@ -117,6 +122,7 @@ add_ideas = {
 	GER_spirit_of_weimar
 	GER_red_scare
 	GER_questionable_army_loyalty
+	GER_rampant_paramilitaries
 	GER_minority_prussian_government
 	GER_era_of_imperial_cabinets
 	limited_exports
