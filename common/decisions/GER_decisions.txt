@@ -1034,11 +1034,11 @@ GER_sc_decision_category = {
 
 		available = {
 			OR = {
-				has_power_balance_value = {
+				power_balance_value = {
 					id = GER_spring_coalition_bop
 					value < -0.2
 				}
-				has_power_balance_value = {
+				power_balance_value = {
 					id = GER_spring_coalition_bop
 					value > 0.2
 				}
@@ -1051,7 +1051,7 @@ GER_sc_decision_category = {
 			add_stability = -0.03
 			if = {
 				limit = {
-					has_power_balance_value = {
+					power_balance_value = {
 						id = GER_spring_coalition_bop
 						value < -0.2
 					}
@@ -1136,7 +1136,7 @@ GER_staatssicherheitsburo_category = {
 
 		days_remove = 100
 
-		timeout_effect = {
+		remove_effect = {
 			country_event = {
 				id = GER_staatssicherheitsburo_events.1
 				days = 5
@@ -1167,7 +1167,7 @@ GER_staatssicherheitsburo_category = {
 
 		days_remove = 100
 
-		timeout_effect = {
+		remove_effect = {
 			country_event = {
 				id = GER_staatssicherheitsburo_events.2
 				days = 5

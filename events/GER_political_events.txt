@@ -222,6 +222,7 @@ country_event = {
 		name = "Simply expel the DUVP!"
 		add_political_power = 25
 		add_stability = 0.025
+		set_country_flag = GER_duvp_expelled_from_spring_coalition
 	}
 
 	option = {
@@ -237,6 +238,8 @@ country_event = {
 			value = -0.1
 			tooltip_side = GER_sc_left_side
 		}
+		set_country_flag = GER_duvp_expelled_from_spring_coalition
+
 	}
 }
 
@@ -266,6 +269,7 @@ country_event = {
 			remove_power_balance = {
 				id = GER_spring_coalition_bop
 			}
+			remove_dynamic_modifier = GER_focuses
 		}
 	}
 }
@@ -390,6 +394,7 @@ country_event = {
 			remove_power_balance = {
 				id = GER_spring_coalition_bop
 			}
+			remove_dynamic_modifier = GER_focuses
 		}
 	}
 }
@@ -412,6 +417,7 @@ country_event = {
 			remove_power_balance = {
 				id = GER_spring_coalition_bop
 			}
+			remove_dynamic_modifier = GER_focuses
 			clr_country_flag = GER_spring_coalition
 			clr_country_flag = GER_spring_coalition_2
 		}
@@ -735,7 +741,7 @@ country_event = {
 			id = GER_spring_coalition.4
 			days = 4
 		}
-		unlock_national_focus = GER_promised_and_delivered
+		complete_national_focus = GER_promised_and_delivered
 		if = {
 			limit = {
 				has_country_flag = GER_agreed_to_stegerwald

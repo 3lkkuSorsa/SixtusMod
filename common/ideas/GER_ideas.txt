@@ -177,7 +177,7 @@ ideas = {
 				stability_weekly = -0.0025
 				line_change_production_efficiency_factor = -0.15
 				production_factory_efficiency_gain_factor = -0.3
-				power_balance_weekly = 0.02
+				power_balance_weekly = 0.015
 			}
 		}
 
