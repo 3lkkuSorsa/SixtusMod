@@ -18,7 +18,7 @@
 
  GER_coalition_stability_change_tt: "§YCoalition stability§!: $RIGHT|+=0..0$"
  GER_coalition_centrists_for_left_tt: "Centrists siding with the left: $RIGHT|-=0..0$"
- GER_kampf_aus_der_mitte_available_1_tt: "§YCoalition stability§! is atleast §Y7§!."
+ GER_kampf_aus_der_mitte_available_1_tt: "§YCoalition stability§! is atleast §Y5§!."
  GER_kampf_aus_der_mitte_available_2_tt: "No more than §Y15 centrists§! are siding with the §tleft§!."
 
  GER_cabinet_seat_change_fvp_tt: "§9FVP§! possible cabinet seats: $RIGHT|+=0..0$"
@@ -33,6 +33,8 @@
  GER_freeze_spd_tt: "The §tSPD§! campaign will be §Yfrozen§! for one turn.\n\n"
 
  GER_z_spd_strain: "\n§tThis will strain the relations between Zentrum and the SPD!§!"
+
+ GER_agreed_to_bruning: "Compromised to elect §gBrüning§!"
 
  GER_spring_betrothal_tt: "By maintaining constant contact and cooperation with each other, the §YSpring§! §3coalition's§! direction will steer towards the §Ycenter§!."
  GER_trade_unions_protest_tt: "A §tfight for the future§! of the §YSpring§! §3coalition§! has begun between the §gAuthoritarians§! and §YLiberals§!.\n\n"
