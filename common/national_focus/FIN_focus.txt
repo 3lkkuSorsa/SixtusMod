@@ -66,11 +66,197 @@ focus_tree = {
     focus = {
         id = FIN_second_mandate_of_the_people
         icon = GFX_goal_FIN_SDP
-        x = 18
+        x = 17
         y = 1
 
         prerequisite = {
             focus = FIN_finland_proud_and_free
+        }
+
+        available = {
+            has_government = social_democracy
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_secure_a_coalition
+        icon = GFX_goal_generic_government_deals
+        x = 16
+        y = 2
+
+        prerequisite = {
+            focus = FIN_second_mandate_of_the_people
+        }
+
+        available = {
+            has_government = social_democracy
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_fight_right_obstructionism
+        icon = GFX_focus_generic_oppression
+        x = 18
+        y = 2
+
+        prerequisite = {
+            focus = FIN_second_mandate_of_the_people
+        }
+
+        available = {
+            has_government = social_democracy
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_bureaucratic_reformation
+        icon = GFX_goal_agency
+        x = 11
+        y = 3
+
+        prerequisite = {
+            focus = FIN_secure_a_coalition
+        }
+
+        prerequisite = {
+            focus = FIN_fight_right_obstructionism
+        }
+
+        available = {
+            has_government = social_democracy
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_limit_suojeluskunta
+        icon = GFX_goal_agency
+        x = 10
+        y = 4
+
+        prerequisite = {
+            focus = FIN_bureaucratic_reformation
+        }
+
+        available = {
+            has_government = social_democracy
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_extend_welfare_policies
+        icon = GFX_goal_generic_solidarity
+        x = 17
+        y = 3
+
+        prerequisite = {
+            focus = FIN_secure_a_coalition
+        }
+
+        prerequisite = {
+            focus = FIN_fight_right_obstructionism
+        }
+
+        available = {
+            has_government = social_democracy
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_reevaluate_finnish_foreign_policy
+        icon = GFX_goal_generic_join_faction
+        x = 24
+        y = 3
+
+        prerequisite = {
+            focus = FIN_secure_a_coalition
+        }
+
+        prerequisite = {
+            focus = FIN_fight_right_obstructionism
         }
 
         available = {
