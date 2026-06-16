@@ -1,0 +1,9 @@
+SOV_standoff = {
+	allowed = {
+		original_tag = SOV
+	}
+
+	visible = {
+		has_country_flag = SOV_standoff_active
+	}
+}

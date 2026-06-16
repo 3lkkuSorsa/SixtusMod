@@ -653,6 +653,7 @@ country_event = {
 		set_politics = {
 			ruling_party = ultra_nationalism
 		}
+		unlock_national_focus = GER_kaisers_most_loyal_cabinet
 		hidden_effect = {
 			remove_ideas = GER_government_in_crisis
 			add_ideas = GER_kurt_von_schleicher_hog_idea

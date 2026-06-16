@@ -996,7 +996,7 @@ GER_sc_decision_category = {
 
 	GER_toleration_with_spd = {
 		visible = {
-			has_completed_focus = GER_root_out_extremismists_from_military
+			has_completed_focus = GER_root_out_extremists_from_military
 			has_country_flag = GER_spring_coalition
 		}
 
@@ -1016,7 +1016,7 @@ GER_sc_decision_category = {
 				value = -0.05
 			}
 			add_popularity = {
-				ideology = social_liberalism
+				ideology = social_democracy
 				popularity = 0.08
 			}
 		}
@@ -1025,6 +1025,7 @@ GER_sc_decision_category = {
 	GER_seek_compromises = {
 		visible = {
 			has_country_flag = GER_spring_coalition
+			has_completed_focus = GER_seek_to_maintain_the_coalition
 			has_power_balance = {
 				id = GER_spring_coalition_bop
 			}
@@ -1066,6 +1067,42 @@ GER_sc_decision_category = {
 					id = GER_spring_coalition_bop
 					value = -0.1
 				}
+			}
+		}
+	}
+	
+	GER_reassign_schleicher = {
+		visible = {
+			has_country_flag = GER_spring_coalition
+			has_completed_focus = GER_seek_to_maintain_the_coalition
+			has_power_balance = {
+				id = GER_spring_coalition_bop
+			}
+		}
+
+		available = {
+			GER_kurt_von_schleicher = {
+				custom_trigger_tooltip = {
+					tooltip = "Is reichswehrminister"
+					is_hired_as_advisor = yes
+				}
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = 0.08
+			custom_effect_tooltip = GER_below_replaces_schleicher_tt
+			hidden_effect = {
+				remove_ideas = GER_kurt_von_schleicher_min_idea
+				add_ideas = GER_otto_von_below_idea
+			}
+			add_power_balance_value = {
+				id = GER_spring_coalition_bop
+				value = -0.1
 			}
 		}
 	}

@@ -18,7 +18,7 @@ country_event = {
 
 country_event = {
 	id = GER_spring_coalition.5
-	days = 400
+	days = 550
 }
 
 # Starting Stats of various kinds
