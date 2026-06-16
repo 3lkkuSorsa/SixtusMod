@@ -22,6 +22,14 @@ ideas = {
 			}
 		}
 
+		FIN_finnish_patriotism = {
+			picture = FIN_patriotic_peoples_movement
+			modifier = {
+				war_support_factor = 0.1
+				conscription_factor = 0.05
+			}
+		}
+
 		FIN_conservative_nationalism = {
 			picture = guns_shield
 			modifier = {
@@ -38,6 +46,16 @@ ideas = {
                 conscription_factor = 0.1
 				army_core_attack_factor = 0.1
 				army_core_defence_factor = 0.1
+			}
+		}
+
+		FIN_finnish_resilience2 = {
+			picture = sisu
+			modifier = {
+                conscription_factor = 0.15
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				war_support_factor = 0.1
 			}
 		}
 
@@ -67,6 +85,65 @@ ideas = {
 				experience_gain_army_factor = 0.1
 				production_speed_arms_factory_factor = 0.15
 				production_speed_industrial_complex_factor = -0.1
+			}
+		}
+
+		FIN_market_idea = {
+			picture = ARG_civilian_economy_boost
+			modifier = {
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		FIN_market_idea2 = {
+			picture = ARG_civilian_economy_boost
+			modifier = {
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.15
+			}
+		}
+
+		FIN_market_idea3 = {
+			picture = ARG_civilian_economy_boost
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.15
+			}
+		}
+
+		FIN_moderatism_idea = {
+			picture = neutrality_idea
+			modifier = {
+				political_power_factor = 0.1
+				social_liberalism_drift = 0.02
+			}
+		}
+
+		FIN_moderatism_idea2 = {
+			picture = neutrality_idea
+			modifier = {
+				political_power_factor = 0.1
+				social_liberalism_drift = 0.02
+				consumer_goods_factor = -0.1
+				global_building_slots_factor = 0.2
+			}
+		}
+
+		FIN_moderatism_idea3 = {
+			picture = neutrality_idea
+			modifier = {
+				political_power_factor = 0.1
+				social_liberalism_drift = 0.02
+				consumer_goods_factor = -0.1
+				global_building_slots_factor = 0.2
+				stability_factor = 0.05
+				monthly_population = 0.2
 			}
 		}
 

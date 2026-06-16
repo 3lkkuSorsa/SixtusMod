@@ -151,7 +151,7 @@ focus_tree = {
     }
 
     focus = {
-        id = FIN_bureaucratic_reformation
+        id = FIN_reforming_the_system
         icon = GFX_goal_agency
         x = 11
         y = 3
@@ -162,35 +162,6 @@ focus_tree = {
 
         prerequisite = {
             focus = FIN_fight_right_obstructionism
-        }
-
-        available = {
-            has_government = social_democracy
-        }
-
-        mutually_exclusive = {
-
-        }
-		
-        completion_reward = { 
-            
-        }  
-
-		cost = 5
-
-        search_filters = { 
-        
-        }
-    }
-
-    focus = {
-        id = FIN_limit_suojeluskunta
-        icon = GFX_goal_agency
-        x = 10
-        y = 4
-
-        prerequisite = {
-            focus = FIN_bureaucratic_reformation
         }
 
         available = {
@@ -248,23 +219,318 @@ focus_tree = {
     focus = {
         id = FIN_reevaluate_finnish_foreign_policy
         icon = GFX_goal_generic_join_faction
-        x = 24
+        x = 23
         y = 3
 
         prerequisite = {
             focus = FIN_secure_a_coalition
+            focus = FIN_champion_moderate_policies
         }
 
         prerequisite = {
             focus = FIN_fight_right_obstructionism
+            focus = FIN_champion_moderate_policies
         }
 
         available = {
-            has_government = social_democracy
+            
         }
 
         mutually_exclusive = {
 
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_emphasize_nordic_ties
+        icon = GFX_focus_FIN_northern_defense_front
+        x = 21
+        y = 4
+
+        prerequisite = {
+            focus = FIN_reevaluate_finnish_foreign_policy
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_nordic_economic_union
+        icon = GFX_goal_generic_positive_trade_relations_gold
+        x = 20
+        y = 5
+
+        prerequisite = {
+            focus = FIN_emphasize_nordic_ties
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_nordic_defence_pact
+        icon = GFX_focus_SWE_the_nordic_defense_council
+        x = 21
+        y = 6
+
+        prerequisite = {
+            focus = FIN_nordic_economic_union
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            focus = FIN_seek_german_alignment
+            focus = FIN_treaty_of_tarto
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_beyond_europe
+        icon = GFX_goal_generic_globe
+        x = 23
+        y = 4
+
+        prerequisite = {
+            focus = FIN_reevaluate_finnish_foreign_policy
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_ties_with_US
+        icon = GFX_focus_generic_befriend_usa
+        x = 22
+        y = 5
+
+        prerequisite = {
+            focus = FIN_beyond_europe
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_finnish_mission_to_east_asia
+        icon = GFX_focus_usa_focus_on_asia
+        x = 24
+        y = 5
+
+        prerequisite = {
+            focus = FIN_beyond_europe
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_align_with_european_powers
+        icon = GFX_focus_GER_european_confederation
+        x = 26
+        y = 4
+
+        prerequisite = {
+            focus = FIN_reevaluate_finnish_foreign_policy
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_mend_ties_with_russia
+        icon = GFX_focus_russian_cooperation
+        x = 27
+        y = 5
+
+        prerequisite = {
+            focus = FIN_align_with_european_powers
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_treaty_of_tarto
+        icon = GFX_goal_skull_treaty
+        y = 6
+        x = 27
+
+        prerequisite = {
+            focus = FIN_mend_ties_with_russia
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            focus = FIN_seek_german_alignment
+            focus = FIN_nordic_defence_pact
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_seek_german_alignment
+        icon = GFX_goal_COS_German_Bailout
+        y = 6
+        x = 25
+
+        prerequisite = {
+            focus = FIN_align_with_european_powers
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            focus = FIN_treaty_of_tarto
+            focus = FIN_nordic_defence_pact
         }
 		
         completion_reward = { 
@@ -297,10 +563,209 @@ focus_tree = {
         }
 		
         completion_reward = { 
+            add_popularity = {
+                ideology = social_liberalism
+                popularity = 0.05
+            }
+            add_political_power = 25
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_champion_moderate_policies
+        icon = GFX_focus_FIN_finnish_neutrality
+        x = 29
+        y = 2
+
+        prerequisite = {
+            focus = FIN_agrarian_victory
+        }
+
+        available = {
+            has_government = social_liberalism
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            add_stability = 0.05
+            add_ideas = FIN_moderatism_idea
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_discourage_radicalism
+        icon = GFX_focus_generic_anti_fascist_diplomacy
+        x = 29
+        y = 3
+
+        prerequisite = {
+            focus = FIN_champion_moderate_policies
+        }
+
+        available = {
+            has_government = social_liberalism
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            add_popularity = {
+                ideology = communism
+                popularity = -0.05
+            }
+            add_popularity = {
+                ideology = ultranationalism
+                popularity = -0.05
+            }
+            add_popularity = {
+                ideology = authoritarianism
+                popularity = -0.05
+            }
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_industrial_regulation
+        icon = GFX_goal_generic_takeover_industries
+        x = 28
+        y = 4
+
+        prerequisite = {
+            focus = FIN_discourage_radicalism
+        }
+
+        available = {
+            has_government = social_liberalism
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
             
         }  
 
 		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_healthy_patriotism
+        icon = GFX_focus_invite_finland
+        x = 30
+        y = 4
+
+        prerequisite = {
+            focus = FIN_discourage_radicalism
+        }
+
+        available = {
+            has_government = social_liberalism
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            swap_ideas = {
+                remove_idea = FIN_rising_nationalism
+                add_idea = FIN_finnish_patriotism
+            }
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_expand_land_reform_laws
+        icon = GFX_goal_agrarian_reform
+        x = 34
+        y = 3
+
+        prerequisite = {
+            focus = FIN_champion_moderate_policies
+        }
+
+        available = {
+            has_government = social_liberalism
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            swap_ideas = {
+                remove_idea = FIN_moderatism_idea
+                add_idea = FIN_moderatism_idea2
+            }
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_ensuring_prosperity_of_countryside
+        icon = GFX_focus_generic_agriculture
+        x = 34
+        y = 5
+
+        prerequisite = {
+            focus = FIN_expand_land_reform_laws
+        }
+
+        available = {
+            has_government = social_liberalism
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            swap_ideas = {
+                remove_idea = FIN_moderatism_idea2
+                add_idea = FIN_moderatism_idea3
+            }
+        }  
+
+		cost = 6
 
         search_filters = { 
         
@@ -378,10 +843,11 @@ focus_tree = {
         prerequisite = {
             focus = FIN_building_popular_coalition
             focus = FIN_renewal_of_anti_socialist_laws
+            focus = FIN_champion_moderate_policies
         }
 
         available = {
-            has_government = conservatism
+            
         }
 
         mutually_exclusive = {
@@ -598,10 +1064,10 @@ focus_tree = {
         }
 		
         completion_reward = { 
-            
+            add_ideas = FIN_market_idea
         }  
 
-		cost = 5
+		cost = 6
 
         search_filters = { 
         
@@ -627,10 +1093,13 @@ focus_tree = {
         }
 		
         completion_reward = { 
-            
+            swap_ideas = {
+                remove_idea = FIN_market_idea
+                add_idea = FIN_market_idea2
+            }
         }  
 
-		cost = 5
+		cost = 6
 
         search_filters = { 
         
@@ -655,11 +1124,22 @@ focus_tree = {
             
         }
 		
-        completion_reward = { 
-            
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = FIN_market_idea2
+                add_idea = FIN_market_idea3
+            }
+            926 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
         }  
 
-		cost = 5
+		cost = 6
 
         search_filters = { 
         
@@ -897,7 +1377,7 @@ focus_tree = {
     focus = {
         id = FIN_expand_suojeluskunta
         icon = GFX_goal_finnish_spirit
-        x = 46
+        x = 45
         y = 3
 
         prerequisite = {
@@ -927,7 +1407,7 @@ focus_tree = {
     focus = {
         id = FIN_entrench_church_status
         icon = GFX_goal_SHX_Christian_Influence
-        x = 45
+        x = 44
         y = 4
 
         prerequisite = {
@@ -964,7 +1444,7 @@ focus_tree = {
     focus = {
         id = FIN_trial_socialists
         icon = GFX_goal_generic_trial
-        x = 47
+        x = 46
         y = 4
 
         prerequisite = {
@@ -993,7 +1473,7 @@ focus_tree = {
     focus = {
         id = FIN_prioritize_the_military
         icon = GFX_goal_military_academy
-        x = 48
+        x = 47
         y = 5
 
         prerequisite = {
@@ -1005,7 +1485,7 @@ focus_tree = {
         }
 
         mutually_exclusive = {
-            
+            focus = FIN_seize_total_control_of_economy
         }
 		
         completion_reward = { 
@@ -1033,7 +1513,7 @@ focus_tree = {
     focus = {
         id = FIN_ignite_nationalism
         icon = GFX_focus_EST_national_pride_in_finland
-        x = 46
+        x = 45
         y = 5
 
         prerequisite = {
@@ -1069,7 +1549,7 @@ focus_tree = {
     focus = {
         id = FIN_integrate_lapua_movement
         icon = GFX_goal_FIN_Lapua_Movement
-        x = 45
+        x = 44
         y = 6
 
         prerequisite = {
@@ -1098,7 +1578,7 @@ focus_tree = {
     focus = {
         id = FIN_restore_monarchist_coalition
         icon = GFX_goal_FIN_kokoomus
-        x = 47
+        x = 46
         y = 7
 
         prerequisite = {
@@ -1160,6 +1640,333 @@ focus_tree = {
         }  
 
 		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_the_marshals_regime
+        icon = GFX_goal_ideology_paternal_autocrat
+        x = 50
+        y = 2
+
+        prerequisite = {
+            focus = FIN_conservative_resurgence
+        }
+
+        available = {
+            always = no
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_suspension_of_parliament
+        icon = GFX_focus_generic_authoritarian_government
+        x = 49
+        y = 3
+
+        prerequisite = {
+            focus = FIN_the_marshals_regime
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+           add_popularity = {
+                ideology = authoritarianism
+                popularity = 0.1
+           }
+            add_stability = -0.1
+        }  
+
+		cost = 7
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_pursue_independent_diplomacy
+        icon = GFX_goal_attack_germany
+        x = 51
+        y = 3
+
+        prerequisite = {
+            focus = FIN_the_marshals_regime
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_spirit_of_heimosota
+        icon = GFX_goal_generic_major_war
+        x = 50
+        y = 4
+
+        prerequisite = {
+            focus = FIN_pursue_independent_diplomacy
+        }
+
+        prerequisite = {
+            focus = FIN_suspension_of_parliament
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+           swap_ideas = {
+                remove_idea = FIN_finnish_resilience
+                add_idea = FIN_finnish_resilience2
+           }
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_seize_total_control_of_economy
+        icon = GFX_goal_state_economy
+        x = 49
+        y = 5
+
+        prerequisite = {
+            focus = FIN_spirit_of_heimosota
+        }
+
+        mutually_exclusive = {
+            focus = FIN_prioritize_the_military
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_utilize_trade_unions
+        icon = GFX_goal_syndicalist_workers
+        x = 48
+        y = 6
+
+        prerequisite = {
+            focus = FIN_seize_total_control_of_economy
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_empower_the_general_staff
+        icon = GFX_focus_generic_military_dictatorship
+        x = 52
+        y = 5
+
+        prerequisite = {
+            focus = FIN_spirit_of_heimosota
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_cult_of_mannerheim
+        icon = GFX_goal_FIN_Mannerheim
+        x = 53
+        y = 6
+
+        prerequisite = {
+            focus = FIN_empower_the_general_staff
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_crush_dissent
+        icon = GFX_goal_authoritarian
+        x = 51
+        y = 6
+
+        prerequisite = {
+            focus = FIN_empower_the_general_staff
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_national_defence_state
+        icon = GFX_goal_authority
+        x = 49
+        y = 7
+
+        prerequisite = {
+            focus = FIN_utilize_trade_unions
+        }
+
+        prerequisite = {
+            focus = FIN_crush_dissent
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_unity_of_the_finnic_peoples
+        icon = GFX_focus_TUR_crowning_ourselves_with_the_fin_ugor
+        x = 52
+        y = 7
+
+        prerequisite = {
+            focus = FIN_cult_of_mannerheim
+        }
+
+        prerequisite = {
+            focus = FIN_crush_dissent
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_proclaim_the_greater_finnish_state
+        icon = GFX_focus_FIN_a_cry_for_help_2
+        x = 50
+        y = 8
+
+        prerequisite = {
+            focus = FIN_unity_of_the_finnic_peoples
+        }
+
+        prerequisite = {
+            focus = FIN_national_defence_state
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 6
 
         search_filters = { 
         
