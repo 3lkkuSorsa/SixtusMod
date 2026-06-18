@@ -48,6 +48,8 @@ focus_tree = {
 		available = {
 			has_country_flag = GER_spring_coalition
 			has_country_flag = GER_kampf_aus_der_mitte
+			set_temp_variable = { coalition_partner_var = token:market_liberalism }
+			is_in_coalition = yes
 		}
 
 		completion_reward = {
@@ -1111,6 +1113,32 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_grand_coalition_in_the_reichstag
+		icon = GFX_goal_generic_castle
+
+		x = -2
+		y = 2
+
+		relative_position_id = GER_second_burgfriedenspolitik
+
+		prerequisite = {
+			focus = GER_continue_civilian_governance
+		}
+
+		cost = 6
+
+		available = {
+			has_global_flag = second_weltkrieg
+			has_country_flag = GER_toleration_with_spd
+		}
+
+		completion_reward = {
+			set_temp_variable = { coalition_partner_var = token:social_democracy }
+			add_to_coalition = yes
+		}
+	}
+
+	focus = {
 		id = GER_save_the_government_from_themselves
 		icon = GFX_goal_generic_castle
 
@@ -1162,13 +1190,12 @@ focus_tree = {
 
 		available = {
 			has_country_flag = GER_spring_coalition_2
-			power_balance_value = {
-				id = GER_spring_coalition_bop
-				value > -0.25
-			}
-			power_balance_value = {
-				id = GER_spring_coalition_bop
-				value < 0.25
+			OR = {
+				is_power_balance_in_range = {
+					id = GER_spring_coalition_bop
+					range = GER_sc_mid
+				}
+				has_country_flag = GER_republicanism_outlawed
 			}
 			NOT = {
 				has_completed_focus = GER_collude_with_spd
@@ -3711,4 +3738,3 @@ focus_tree = {
 		}
 	}
 }
-

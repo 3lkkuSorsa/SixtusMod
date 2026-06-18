@@ -72,6 +72,13 @@ country_event = {
 	option = {
 		name = "Can it be? A real political coalition in Germany?!"
 		GER_appoint_spring_coalition = yes
+		custom_effect_tooltip = "        "
+		set_temp_variable = { coalition_partner_var = token:market_liberalism }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:conservatism }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:ultra_nationalism }
+		add_to_coalition = yes
 	}
 }
 
@@ -223,6 +230,8 @@ country_event = {
 		add_political_power = 25
 		add_stability = 0.025
 		set_country_flag = GER_duvp_expelled_from_spring_coalition
+		set_temp_variable = { coalition_partner_var = token:ultra_nationalism }
+		remove_from_coalition = yes
 	}
 
 	option = {
@@ -239,7 +248,8 @@ country_event = {
 			tooltip_side = GER_sc_left_side
 		}
 		set_country_flag = GER_duvp_expelled_from_spring_coalition
-
+		set_temp_variable = { coalition_partner_var = token:ultra_nationalism }
+		remove_from_coalition = yes
 	}
 }
 
@@ -252,10 +262,13 @@ country_event = {
 
 	option = {
 		name = "Victory demands greatness"
+		end_coalition = yes
 		set_politics = {
 			ruling_party = ultra_nationalism
 			elections_allowed = no
 		}
+		set_temp_variable = { coalition_partner_var = token:authoritarianism }
+		add_to_coalition = yes
 		promote_character = GER_kurt_von_schleicher
 		clr_country_flag = GER_spring_coalition
 		clr_country_flag = GER_spring_coalition_2
@@ -409,6 +422,12 @@ country_event = {
 
 	option = {
 		name = "Blue spring turns into a Red autumn"
+		country_event = {
+			id = GER_spring_coalition.16
+			days = 3
+		}
+		custom_effect_tooltip = "         "
+		end_coalition = yes
 		add_stability = -0.1
 		unlock_national_focus = GER_second_burgfriedenspolitik
 		hidden_effect = {
@@ -421,6 +440,23 @@ country_event = {
 			clr_country_flag = GER_spring_coalition
 			clr_country_flag = GER_spring_coalition_2
 		}
+	}
+}
+
+country_event = {
+	id = GER_spring_coalition.16
+	title = "Coalition of Constitutionalists"
+	desc = GER_spring_coalition.16.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The coalition has failed... For now."
+		custom_effect_tooltip = GER_constitutionalists_join_tt
+		set_temp_variable = { coalition_partner_var = token:market_liberalism }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:social_liberalism }
+		add_to_coalition = yes
 	}
 }
 
@@ -508,6 +544,7 @@ country_event = {
 
 	option = {
 		name = "Spring turns into winter"
+		end_coalition = yes
 		fire_ministers = yes
 		hidden_effect = {
 			promote_character = {
@@ -619,6 +656,7 @@ country_event = {
 
 	option = {
 		name = "Period of instability for the government"
+		end_coalition = yes
 		fire_ministers = yes
 		hidden_effect = {
 			set_country_flag = GER_spring_is_over
@@ -773,6 +811,10 @@ country_event = {
 		}
 		hidden_effect = {
 			remove_ideas = GER_kuno_von_westarp_hog_idea
+			set_temp_variable = { coalition_partner_var = token:conservatism }
+			remove_from_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:authoritarianism }
+			add_to_coalition = yes
 		}
 	}
 
@@ -783,21 +825,7 @@ country_event = {
 				has_country_flag = GER_spring_coalition
 			}
 		}
-		if = {
-			limit = {
-				check_variable = {
-					var = z_votes
-					value = spd_votes
-					compare = greater_than_or_equals
-				}
-			}
-			custom_effect_tooltip = GER_Zentrum_wins_tt
-			set_country_flag = GER_winner_Z_volksblock
-			else = {
-				custom_effect_tooltip = GER_SPD_wins_tt
-				set_country_flag = GER_winner_SPD_volksblock
-			}
-		}
+		set_country_flag = GER_winner_Z_volksblock
 		clr_country_flag = GER_show_moderate_tree
 		set_country_flag = GER_show_democratic_tree
 		mark_focus_tree_layout_dirty = yes
@@ -843,6 +871,7 @@ country_event = {
 				has_country_flag = GER_spring_coalition
 			}
 		}
+		add_stability = -0.15
 	}
 }
 

@@ -1,0 +1,45 @@
+defined_text = {
+	name = GetCoalitionTooltipColour
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:communism }
+		}
+		localization_key = colour_com
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:social_democracy }
+		}
+		localization_key = colour_socdem
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:social_liberalism }
+		}
+		localization_key = colour_soclib
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:market_liberalism }
+		}
+		localization_key = colour_marlib
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:conservatism }
+		}
+		localization_key = colour_con
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:authoritarianism }
+		}
+		localization_key = colour_auth
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:ultra_nationalism }
+		}
+		localization_key = colour_ult_nat
+	}
+}

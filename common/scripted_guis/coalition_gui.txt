@@ -1,0 +1,21 @@
+scripted_gui = {
+	coalition_indicator = {
+		context_type = player_context
+		parent_window_name = coalition_pol_party_bg_anchor
+		window_name = "coalition_pol_party_bg"
+
+		ai_enabled = {
+			always = no
+		}
+
+		properties = {
+			coalition_pol_party_bg_com = { frame = coalitions_array^6 }
+			coalition_pol_party_bg_socdem = { frame = coalitions_array^5 }
+			coalition_pol_party_bg_soclib = { frame = coalitions_array^4 }
+			coalition_pol_party_bg_marlib = { frame = coalitions_array^3 }
+			coalition_pol_party_bg_con = { frame = coalitions_array^2 }
+			coalition_pol_party_bg_auth = { frame = coalitions_array^1 }
+			coalition_pol_party_bg_ult_nat = { frame = coalitions_array^0 }
+		}
+	}
+}

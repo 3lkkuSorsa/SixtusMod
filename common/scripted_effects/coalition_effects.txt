@@ -1,0 +1,56 @@
+create_coalitions_array_if_missing = {
+	if = {
+		limit = { NOT = { check_variable = { coalitions_array^num = global.ideology_groups^num } } }
+		resize_array = { array = coalitions_array value = constant:party_pop.party.none size = global.ideology_groups^num }
+	}
+}
+
+#for backwards compatibility with the previous version of the effects
+convert_coalition_partner_var_into_index = {
+	if = {
+		limit = { NOT = { check_variable = { coalition_partner_var < global.ideology_groups^num } } }
+		for_each_loop = {
+			array = global.ideology_groups
+			break = convert_to_index
+			if = {
+				limit = { check_variable = { coalition_partner_var = v } }
+				set_temp_variable = { coalition_partner_var = i }
+				set_temp_variable = { convert_to_index = 1 }
+			}
+		}
+	}
+}
+
+add_to_coalition = {
+	if = {
+		limit = { NOT = { has_variable = coalition_partner_var } }
+	}
+	else = {
+		create_coalitions_array_if_missing = yes
+		custom_effect_tooltip = add_to_coalition
+		convert_coalition_partner_var_into_index = yes
+		set_variable = { coalitions_array^coalition_partner_var = 2 }
+	}
+}
+
+remove_from_coalition = {
+	if = {
+		limit = { NOT = { has_variable = coalition_partner_var } }
+	}
+	else = {
+		create_coalitions_array_if_missing = yes
+		custom_effect_tooltip = remove_from_coalition
+		convert_coalition_partner_var_into_index = yes
+		set_variable = { coalitions_array^coalition_partner_var = 0 }
+	}
+}
+
+end_coalition = {
+	create_coalitions_array_if_missing = yes
+	custom_effect_tooltip = end_coalition_tt
+	for_each_loop = {
+		array = coalitions_array
+		set_variable = { coalitions_array^i = 0 }
+	}
+	resize_array = { coalition_stability_array = global.ideology_groups^num }
+}

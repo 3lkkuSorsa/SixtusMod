@@ -983,6 +983,8 @@ GER_sc_decision_category = {
 
 		complete_effect = {
 			add_stability = -0.03
+			set_temp_variable = { coalition_partner_var = token:social_liberalism }
+			add_to_coalition = yes
 			add_power_balance_value = {
 				id = GER_spring_coalition_bop
 				value = -0.05
@@ -1059,13 +1061,13 @@ GER_sc_decision_category = {
 				}
 				add_power_balance_value = {
 					id = GER_spring_coalition_bop
-					value = 0.1
+					value = 0.15
 				}
 			}
 			else = {
 				add_power_balance_value = {
 					id = GER_spring_coalition_bop
-					value = -0.1
+					value = -0.15
 				}
 			}
 		}

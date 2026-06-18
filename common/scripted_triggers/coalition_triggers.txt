@@ -1,0 +1,8 @@
+is_in_coalition = {
+	custom_trigger_tooltip = {
+		tooltip = is_in_coalition
+		convert_coalition_partner_var_into_index = yes
+		check_variable = { coalitions_array^coalition_partner_var = 2 }
+		log = "[?coalitions_array^coalition_partner_var]"
+	}
+}
