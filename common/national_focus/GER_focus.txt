@@ -13,6 +13,35 @@ focus_tree = {
 
 	default = no
 
+	shortcut = {
+		name = GER_foreign_policy_shortcut
+		target = GER_take_on_stresemanns_legacy
+		scroll_wheel_factor = 0.885
+	}
+
+	shortcut = {
+		name = GER_politics_shortcut
+		target = GER_ascension_of_spring_coalition
+		scroll_wheel_factor = 0.685
+		trigger = {
+			has_country_flag = GER_spring_coalition
+			NOT = {
+				has_country_flag = GER_spring_coalition_2
+			}
+		}
+	}
+
+	shortcut = {
+		name = GER_politics_shortcut
+		target = GER_promised_and_delivered
+		scroll_wheel_factor = 0.685
+		trigger = {
+			OR = {
+				has_country_flag = GER_spring_coalition_2
+			}
+		}
+	}
+
 	focus = {
 		id = GER_ascension_of_spring_coalition
 		icon = GFX_focus_generic_authoritarian_government
@@ -48,8 +77,6 @@ focus_tree = {
 		available = {
 			has_country_flag = GER_spring_coalition
 			has_country_flag = GER_kampf_aus_der_mitte
-			set_temp_variable = { coalition_partner_var = token:market_liberalism }
-			is_in_coalition = yes
 		}
 
 		completion_reward = {
@@ -59,9 +86,9 @@ focus_tree = {
 
 	focus = {
 		id = GER_take_on_stresemanns_legacy
-		icon = GFX_focus_eng_the_sun_never_sets
+		icon = GFX_goal_germany
 
-		x = -4
+		x = -8
 		y = 1
 
 		relative_position_id = GER_ascension_of_spring_coalition
@@ -85,13 +112,173 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_new_era_of_realpolitik
+		icon = GFX_goal_GER_Deutsches_Weltreich
+
+		x = 5
+		y = 1
+
+		relative_position_id = GER_take_on_stresemanns_legacy
+
+		cost = 2
+
+		prerequisite = {
+			focus = GER_take_on_stresemanns_legacy
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_ostpolitik
+		icon = GFX_focus_GER_eastern_grand_duchies
+
+		x = 4
+		y = 2
+
+		relative_position_id = GER_take_on_stresemanns_legacy
+
+		cost = 2
+
+		prerequisite = {
+			focus = GER_new_era_of_realpolitik
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_ally_the_eastern_states
+		icon = GFX_focus_SWE_reclaiming_the_rus
+
+		x = 3
+		y = 3
+
+		relative_position_id = GER_take_on_stresemanns_legacy
+
+		cost = 2
+
+		prerequisite = {
+			focus = GER_ostpolitik
+		}
+
+		prerequisite = {
+			focus = GER_berlin_pact
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_integration_of_anti_russian_economies
+		icon = GFX_focus_GER_integrated_economies
+
+		x = 4
+		y = 4
+
+		relative_position_id = GER_take_on_stresemanns_legacy
+
+		cost = 2
+
+		prerequisite = {
+			focus = GER_ally_the_eastern_states
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_end_the_russian_menace
+		icon = GFX_goal_MON_we_dont_need_russia
+
+		x = 2
+		y = 4
+
+		relative_position_id = GER_take_on_stresemanns_legacy
+
+		cost = 2
+
+		prerequisite = {
+			focus = GER_ally_the_eastern_states
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_berlin_pact
+		icon = GFX_focus_GER_european_confederation
+
+		x = 3
+		y = 1
+
+		relative_position_id = GER_take_on_stresemanns_legacy
+
+		cost = 2
+
+		prerequisite = {
+			focus = GER_take_on_stresemanns_legacy
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_denounce_france
+		icon = GFX_focus_attack_france
+
+		x = 2
+		y = 2
+
+		relative_position_id = GER_take_on_stresemanns_legacy
+
+		cost = 2
+
+		prerequisite = {
+			focus = GER_berlin_pact
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_formalize_the_alliance
+		icon = GFX_focus_chi_british_cooperation
+
+		x = 1
+		y = 3
+
+		relative_position_id = GER_take_on_stresemanns_legacy
+
+		cost = 2
+
+		prerequisite = {
+			focus = GER_denounce_france
+		}
+
+		prerequisite = {
+			focus = GER_sign_the_frankfurt_treaties
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id = GER_propose_economic_cooperation_with_britain
 		icon = GFX_goal_bag_of_money
 
-		x = -5
-		y = 2
+		x = -1
+		y = 1
 
-		relative_position_id = GER_ascension_of_spring_coalition
+		relative_position_id = GER_take_on_stresemanns_legacy
 
 		cost = 2
 
@@ -115,10 +302,10 @@ focus_tree = {
 		id = GER_negotiate_for_common_defense_pact_with_britain
 		icon = GFX_goal_generic_allies_build_infantry
 
-		x = -3
-		y = 2
+		x = 1
+		y = 1
 
-		relative_position_id = GER_ascension_of_spring_coalition
+		relative_position_id = GER_take_on_stresemanns_legacy
 
 		cost = 2
 
@@ -138,10 +325,10 @@ focus_tree = {
 		id = GER_sign_the_frankfurt_treaties
 		icon = GFX_focus_RAJ_seek_allies_with_the_muslim_league
 
-		x = -4
-		y = 3
+		x = 0
+		y = 2
 
-		relative_position_id = GER_ascension_of_spring_coalition
+		relative_position_id = GER_take_on_stresemanns_legacy
 
 		cost = 2
 
@@ -1105,7 +1292,6 @@ focus_tree = {
 
 		available = {
 			has_global_flag = second_weltkrieg
-			has_country_flag = GER_toleration_with_spd
 		}
 
 		completion_reward = {
@@ -1113,27 +1299,32 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_grand_coalition_in_the_reichstag
+		id = GER_constitutionalist_coalition
 		icon = GFX_goal_generic_castle
 
-		x = -2
-		y = 2
+		x = -1
+		y = 1
 
 		relative_position_id = GER_second_burgfriedenspolitik
 
 		prerequisite = {
-			focus = GER_continue_civilian_governance
+			focus = GER_second_burgfriedenspolitik
 		}
 
 		cost = 6
 
 		available = {
-			has_global_flag = second_weltkrieg
 			has_country_flag = GER_toleration_with_spd
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = GER_constitutionalists_join_tt
+			custom_effect_tooltip = "           "
 			set_temp_variable = { coalition_partner_var = token:social_democracy }
+			add_to_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:social_liberalism }
+			add_to_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:market_liberalism }
 			add_to_coalition = yes
 		}
 	}
@@ -1583,7 +1774,10 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_country_flag = GER_spring_coalition_2
+			OR = {
+				has_country_flag = GER_spring_coalition_2
+				has_completed_focus = GER_second_burgfriedenspolitik
+			}
 		}
 
 		completion_reward = {
@@ -1629,7 +1823,10 @@ focus_tree = {
 		cost = 6
 
 		available = {
-			has_country_flag = GER_spring_coalition_2
+			OR = {
+				has_country_flag = GER_spring_coalition_2
+				has_completed_focus = GER_second_burgfriedenspolitik
+			}
 			has_power_balance_value = {
 				id = GER_spring_coalition_bop
 				value < -0.8
@@ -1764,12 +1961,12 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = GER_social_reforms_political_power_factor
-				value = 0.05
+				value = 0.08
 				tooltip = political_power_factor_tt
 			}
 			add_to_variable = {
 				var = GER_social_reforms_consumer_goods_factor
-				value = -0.1
+				value = -0.12
 				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
@@ -1829,7 +2026,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = GER_social_reforms_stability_factor
-				value = -0.05
+				value = -0.02
 				tooltip = stability_factor_tt
 			}
 		}
@@ -1926,7 +2123,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = GER_social_reforms_stability_factor
-				value = 0.08
+				value = 0.12
 				tooltip = stability_factor_tt
 			}
 		}
@@ -1968,7 +2165,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = GER_social_reforms_political_power_factor
-				value = 0.05
+				value = 0.1
 				tooltip = political_power_factor_tt
 			}
 		}
@@ -2162,7 +2359,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = GER_junker_transformationsplan_industrial_capacity_factor
-				value = 0.02
+				value = 0.12
 				tooltip = industrial_capacity_factory_tt
 			}
 			add_to_variable = {
@@ -2258,7 +2455,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = GER_junker_transformationsplan_consumer_goods_factor
-				value = 0.10
+				value = -0.05
 				tooltip = consumer_goods_factor_tt
 			}
 		}
@@ -3531,16 +3728,21 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_germany_on_the_world_stage
+		id = GER_adenauers_overtures
 		icon = GFX_goal_generic_elections
 
-		x = 13
+		x = -3
 		y = 1
 
-		cost = 0
+		relative_position_id = GER_take_on_stresemanns_legacy
+
+		cost = 5
+
+		prerequisite = {
+			focus = GER_take_on_stresemanns_legacy
+		}
 
 		available = {
-			has_completed_focus = GER_sign_the_frankfurt_treaty
 		}
 
 		completion_reward = {
@@ -3548,193 +3750,232 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_rhineland_referendum
-		icon = GFX_goal_generic_elections
+		id = GER_sponsor_the_rhenish_government
+		icon = GFX_goal_generic_government_deals
 
-		x = -8
-		y = 3
+		x = -4
+		y = 2
 
-		cost = 0
+		relative_position_id = GER_take_on_stresemanns_legacy
+
+		cost = 3
+
+		prerequisite = {
+			focus = GER_adenauers_overtures
+		}
 
 		available = {
-			has_global_flag = GER_rhineland_referendum
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_economic_integration_with_rhineland
+		icon = GFX_goal_state_economy
+
+		x = -2
+		y = 2
+
+		relative_position_id = GER_take_on_stresemanns_legacy
+
+		cost = 2
+
+		prerequisite = {
+			focus = GER_adenauers_overtures
+		}
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_crisis_in_the_rhine
+		icon = GFX_goal_generic_crisis
+
+		x = -1
+		y = 3
+
+		relative_position_id = GER_take_on_stresemanns_legacy
+
+		cost = 2
+
+		available = {
+			has_global_flag = GER_rhineland_crisis
+		}
+
+		prerequisite = {
+			focus = GER_economic_integration_with_rhineland
+		}
+
+		mutually_exclusive = {
+			focus = GER_mainz_conference
+		}
+
+		completion_reward = {
+			declare_war_on = {
+				target = RHI
+				war_goal = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = GER_mainz_conference
+		icon = GFX_goal_new_treaty
+
+		x = -3
+		y = 3
+
+		relative_position_id = GER_take_on_stresemanns_legacy
+
+		cost = 4
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GER_sponsor_the_rhenish_government
+		}
+
+		prerequisite = {
+			focus = GER_economic_integration_with_rhineland
+		}
+
+		mutually_exclusive = {
+			focus = GER_crisis_in_the_rhine
 		}
 
 		completion_reward = {
 			RHI = {
 				add_ideas = RHI_protectorate_1
+				add_ideas = RHI_unsure_catholics
 			}
 		}
 	}
 
 	focus = {
-		id = GER_annex_rhineland
-		icon = GFX_focus_GER_remilitarize_the_rhineland
+		id = GER_major_investments_in_the_rhine
+		icon = GFX_goal_generic_recovery
 
-		x = -1
-		y = 1
+		x = -4
+		y = 4
 
-		relative_position_id = GER_rhineland_referendum
+		relative_position_id = GER_take_on_stresemanns_legacy
 
-		prerequisite = {
-			focus = GER_rhineland_referendum
-		}
-
-		mutually_exclusive = {
-			focus = GER_rhenish_protectorate
-		}
-
-		cost = 10
+		cost = 3
 
 		available = {
-			has_country_flag = GER_authoritarian_government
+		}
+
+		prerequisite = {
+			focus = GER_mainz_conference
 		}
 
 		completion_reward = {
-			set_global_flag = GER_rhineland_annex
-			news_event = {
-				id = RHI_events.1
-				days = 5
-			}
-			annex_country = {
-				target = RHI
-				transfer_troops = yes
-			}
 		}
 	}
 
 	focus = {
-		id = GER_rhenish_protectorate
-		icon = GFX_focus_CHI_registry_of_property
+		id = GER_reassure_the_catholics
+		icon = GFX_BEL_Federalism
 
-		x = 2
-		y = 1
+		x = -2
+		y = 4
 
-		relative_position_id = GER_rhineland_referendum
-
-		prerequisite = {
-			focus = GER_rhineland_referendum
-		}
-
-		mutually_exclusive = {
-			focus = GER_annex_rhineland
-		}
-
-		cost = 10
-
-		available = {
-			OR = {
-				has_country_flag = GER_democratic_government
-				has_country_flag = GER_spring_coalition
-			}
-		}
-
-		completion_reward = {
-			RHI = {
-				swap_ideas = {
-					remove_idea = RHI_protectorate_1
-					add_idea = RHI_protectorate_2
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = GER_uphold_the_status_quo
-		icon = GFX_goal_generic_stable_government
-
-		x = 1
-		y = 2
-
-		relative_position_id = GER_rhineland_referendum
-
-		prerequisite = {
-			focus = GER_rhenish_protectorate
-		}
-
-		mutually_exclusive = {
-			focus = GER_slow_integration_of_rhineland
-		}
+		relative_position_id = GER_take_on_stresemanns_legacy
 
 		cost = 2
 
 		available = {
 		}
 
+		prerequisite = {
+			focus = GER_mainz_conference
+		}
+
 		completion_reward = {
 			RHI = {
-				swap_ideas = {
-					remove_idea = RHI_protectorate_2
-					add_idea = RHI_protectorate_3
+				remove_ideas = RHI_unsure_catholics
+			}
+			custom_effect_tooltip = "          "
+			every_state = {
+				limit = {
+					OR = {
+						state = 51
+						state = 42
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = GER_catholic_privileges
 				}
 			}
 		}
 	}
 
 	focus = {
-		id = GER_slow_integration_of_rhineland
-		icon = GFX_focus_generic_treaty
-		x = 3
-		y = 2
+		id = GER_stabilize_the_protectorate
+		icon = GFX_goal_DOM_End_Judicial_Corruption
 
-		relative_position_id = GER_rhineland_referendum
+		x = 0
+		y = 4
 
-		prerequisite = {
-			focus = GER_rhenish_protectorate
-		}
+		relative_position_id = GER_take_on_stresemanns_legacy
 
-		mutually_exclusive = {
-			focus = GER_uphold_the_status_quo
-		}
-
-		cost = 5
+		cost = 4
 
 		available = {
 		}
 
+		prerequisite = {
+			focus = GER_mainz_conference
+		}
+
 		completion_reward = {
-			custom_effect_tooltip = GER_slow_integration_of_rhineland_tt
-			add_ideas = GER_integrating_rhineland
-			custom_effect_tooltip = "           "
 			RHI = {
-				country_event = {
-					id = RHI_events.2
-					days = 5
-				}
 				swap_ideas = {
-					remove_idea = RHI_protectorate_2
-					add_idea = RHI_protectorate_1
+					add_idea = RHI_protectorate_2
+					remove_idea = RHI_protectorate_1
 				}
-			}
-			every_country = {
-				limit = {
-					OR = {
-						original_tag = GER
-						original_tag = RHI
-					}
-				}
-				activate_mission = GER_rhineland_slow_timer
 			}
 		}
 	}
 
-	GER_reform_the_weimar_constitution = {
-		id = GER_reform_the_weimar_constitution
-		icon = GFX_goal_GER_Reform_Weimar_Constitution
+	focus = {
+		id = GER_end_the_rhenish_republic
+		icon = GFX_goal_generic_suspend_constitution
 
-		x = -5
-		y = 10
+		x = -2
+		y = 5
 
-		cost = 3
+		relative_position_id = GER_take_on_stresemanns_legacy
+
+		cost = 4
 
 		available = {
-			has_country_flag = GER_
+		}
+
+		prerequisite = {
+			focus = GER_major_investments_in_the_rhine
+		}
+
+		prerequisite = {
+			focus = GER_reassure_the_catholics
+		}
+
+		prerequisite = {
+			focus = GER_stabilize_the_protectorate
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = GER_reform_the_weimar_constitution_tt
-			add_ideas = GER_reformed_constitution
-			set_country_flag = GER_reformed_constitution_flag
+			annex_country = {
+				target = RHI
+				transfer_armies = yes
+			}
 		}
 	}
 }

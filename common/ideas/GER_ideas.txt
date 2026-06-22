@@ -43,22 +43,6 @@ ideas = {
 			}
 		}
 
-		RHI_protectorate_1 = {
-			modifier = {
-				stability_factor = -0.05
-				political_power_factor = -0.25
-				cic_to_overlord_factor = -0.5
-				mic_to_overlord_factor = -0.85
-			}
-		}
-
-		RHI_protectorate_2 = {
-			modifier = {
-				stability_factor = 0.05
-				political_power_factor = 0.1
-			}
-		}
-
 		RHI_protectorate_3 = {
 			modifier = {
 				stability_factor = 0.1

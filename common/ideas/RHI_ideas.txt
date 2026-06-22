@@ -1,0 +1,26 @@
+ideas = {
+	country = {
+		RHI_protectorate_1 = {
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.25
+			}
+		}
+
+		RHI_protectorate_2 = {
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.1
+				cic_to_overlord_factor = 0.15
+				mic_to_overlord_factor = 0.25
+			}
+		}
+
+		RHI_unsure_catholics = {
+			modifier = {
+				stability_factor = -0.12
+				political_power_factor = -0.25
+			}
+		}
+	}
+}

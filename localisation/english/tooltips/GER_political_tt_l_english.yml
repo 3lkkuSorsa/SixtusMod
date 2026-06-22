@@ -1,17 +1,17 @@
 ﻿l_english:
  GER_electoral_support_change_intro_tt: "Following parties' §Yelectoral support§! will change:"
  GER_kpd_votes_change_tt: "§RKPD§! electoral support: $RIGHT|+=0..0$"
- GER_spd_votes_change_tt: "§tSPD§! electoral support: $RIGHT|+=0..0$"
+ GER_spd_votes_change_tt: "§SSPD§! electoral support: $RIGHT|+=0..0$"
  GER_fvp_votes_change_tt: "§9FVP§! electoral support: $RIGHT|+=0..0$"
  GER_nlp_votes_change_tt: "§7NLP§! electoral support: $RIGHT|+=0..0$"
  GER_z_votes_change_tt: "§3Z§! electoral support: $RIGHT|+=0..0$"
- GER_dkp_votes_change_tt: "§2DkP§! electoral support: $RIGHT|+=0..0$"
- GER_duvp_votes_change_tt: "§gDUVP§! electoral support: $RIGHT|+=0..0$"
+ GER_dkp_votes_change_tt: "§aDkP§! electoral support: $RIGHT|+=0..0$"
+ GER_duvp_votes_change_tt: "§nDUVP§! electoral support: $RIGHT|+=0..0$"
 
  second_weltkrieg: "Second Weltkrieg"
 
- GER_toleration_with_spd: "Toleration with the §tSPD§!"
- GER_duvp_expelled_from_spring_coalition: "§gDUVP§! expelled from the §YSpring§! §3coalition§!"
+ GER_toleration_with_spd: "Toleration with the §SSPD§!"
+ GER_duvp_expelled_from_spring_coalition: "§nDUVP§! expelled from the §YSpring§! §3coalition§!"
  GER_investigation_on_military_success: "Investigation on the §gReichswehr§! was successful"
  GER_investigation_on_socialism_success: "Investigation on the §tSocialists§! was successful"
  GER_republicanism_outlawed: "§9Republicanism§! Outlawed"
@@ -22,7 +22,7 @@
  GER_kampf_aus_der_mitte_available_2_tt: "No more than §Y15 centrists§! are siding with the §tleft§!."
 
  GER_cabinet_seat_change_fvp_tt: "§9FVP§! possible cabinet seats: $RIGHT|+=0..0$"
- GER_cabinet_seat_change_spd_tt: "§tSPD§! possible cabinet seats: $RIGHT|+=0..0$"
+ GER_cabinet_seat_change_spd_tt: "§SSPD§! possible cabinet seats: $RIGHT|+=0..0$"
  GER_cabinet_seat_change_zentrum_tt: "§3Z§! possible cabinet seats: $RIGHT|+=0..0$"
 
  GER_schleicher_war_coup: "§gSchleicher§! took on the §Yimperial government§!"
@@ -30,7 +30,7 @@
  GER_prussian_integration: "Prussian chancellor is subordinate to the Reichstag"
  GER_coalition_survived: "The §YSpring§! §3coalition§! has survived"
 
- GER_freeze_spd_tt: "The §tSPD§! campaign will be §Yfrozen§! for one turn.\n\n"
+ GER_freeze_spd_tt: "The §SSPD§! campaign will be §Yfrozen§! for one turn.\n\n"
 
  GER_z_spd_strain: "\n§tThis will strain the relations between Zentrum and the SPD!§!"
 
@@ -43,14 +43,15 @@
  GER_extend_the_communist_laws_tt: "The communist §RKPD§! will be banned from publically campaigning, and thus, lose §Ysupport§!.\n\n"
  GER_political_manoeuvres_success_tt: "If the negotiations §Gsucceed§!:\n §YSpring§! §3coalition§!, by virtue of their political maneuvering, §7will survive§!, for now.\n\n"
  GER_political_manoeuvres_failure_tt: "If the negotiations §Rfail§!:\n §YSpring§! §3coalition§! §twill collapse§!, and stop campaigning.\n\n"
- GER_reconcile_volksblock_tt: "§tSPD§!, §9FVP§! and §3Z§! will §Yreform§! the once collapsed §9Volksblock§! with §3Adam Stegerwald§! as chancellor candidate.\n\n"
+ GER_reconcile_volksblock_tt: "§SSPD§!, §9FVP§! and §3Z§! will §Yreform§! the once collapsed §9Volksblock§! with §3Adam Stegerwald§! as chancellor candidate.\n\n"
  GER_divert_funds_to_zentrum_right_tt: "We will try to §tdivert funds§! from leftists to §Ycoalition-friendly§! centrists, but they could find out about our plotting.\n\n"
 
  GER_enforce_loyalty_of_trade_unions_1_tt: "§CIf we completed focus §!§YSilence the Socialist Opposition:§!"
  GER_enforce_loyalty_of_trade_unions_2_tt: "§CIf we completed focus §!§YCollude with the SPD:§!"
 
  GER_spring_coalition: "The §YSpring§! §3coalition§! is active"
- GER_spring_coalition_2: "The §YSpring§! §3coalition§! won the elections"
+ GER_spring_coalition_2: "The §YSpring§! §3coalition§! survived"
+ GER_constitutionalists: "The §9Constitutionalist§! Government"
  GER_democratic_government: "The §9Volksblock§! government is active"
  GER_authoritarian_government: "The §gKabinett Schleicher§! is active"
  GER_spring_is_over: "The §YSpring§! §3coalition§! has collapsed"
@@ -74,13 +75,13 @@
  GER_scleicher_replaces_below_tt: "§gKurt Schleicher§! will replace §gOtto von Below§! as Reichswehrminister.\n\n"
  GER_below_replaces_schleicher_tt: "§gOtto von Below§! will replace §gKurt Schleicher§! as Reichswehrminister.\n\n"
  GER_papen_appointed_tt: "The kaiser has asked the §3Zentrum§!-leaning authoritarian §gFranz von Papen§! to form a technocratic government as independent. Even his own party doesn't trust him and the so-called §YSpring§! §3coalition§! is actively trying to oust him and appoint their own chancellor."
- GER_spring_turns_into_winter_tt: "The §YSpring§! §3coalition§! has collapsed after §3Zentrum§! resigned from the government. They will now seek to rebuild the '§9Volksblock§!' with the §tSPD§!, §9FVP§! and §3Z§! as main parties.\n\n"
+ GER_spring_turns_into_winter_tt: "The §YSpring§! §3coalition§! has collapsed after §3Zentrum§! resigned from the government. They will now seek to rebuild the '§9Volksblock§!' with the §SSPD§!, §9FVP§! and §3Z§! as main parties.\n\n"
 
- GER_constitutionalists_join_tt: "We will form a new coalition with §3Conservatives§! and §9Liberals§! with the support of the §tSocial Democrats§!."
+ GER_constitutionalists_join_tt: "We will form a new coalition with §3Conservatives§! and §9Liberals§! with the support of the §SSocial Democrats§!."
 
  GER_communist_laws_extended: "The §Ycommunist laws§! have been extended by completing any of the following focuses:\n - §YExtend the Communist Laws§!\n - §YCrackdown on the KPD§!"
 
- GER_appoint_spring_coalition_tt: "Ministries will be:\n  - Reichskanzler: Kuno von Westarp, §2DkP§!\n  - Interior Minister: Wilhelm Groener, §2DkP§!\n  - Economic Minister: Julius Curtius, §7NLP§!\n  - Finance Minister: Hjalmar Schacht, §7NLP§!\n  - Foreign Minister: Konstantin von Neurath, §3Z§!\n  - Reichswehrminister: Otto von Below, §gDUVP§!"
+ GER_appoint_spring_coalition_tt: "Ministries will be:\n  - Reichskanzler: Kuno von Westarp, §aDkP§!\n  - Interior Minister: Wilhelm Groener, §aDkP§!\n  - Economic Minister: Julius Curtius, §7NLP§!\n  - Finance Minister: Hjalmar Schacht, §7NLP§!\n  - Foreign Minister: Konstantin von Neurath, §3Z§!\n  - Reichswehrminister: Otto von Below, §nDUVP§!"
  GER_appoint_democratic_government_tt: "Ministries will be:\n  - Reichskanzler: [GER_VBChancellorT]\n  - Interior Minister: [GER_VBInteriorT]\n  - Economic Minister: [GER_VBEconomicT]\n  - Finance Minister: [GER_VBFinanceT]\n  - Foreign Minister: [GER_VBForeignT]\n  - Reichswehrminister: [GER_VBArmyT]"
 
  GER_fire_all_ministers_tt: "§tAll ministers will be fired.§!"
@@ -92,21 +93,21 @@
  GER_continuous_campaigning_cooldown: "Atleast §Y30 days§! from last completion of this focus. (Currently [?GER_continuous_campaigning_cooldown:days|Y0])"
 
  GER_Zentrum_wins_tt: "The §3Zentrum§! won the largest share of the vote."
- GER_SPD_wins_tt: "The §tSPD§! won the largest share of the vote."
+ GER_SPD_wins_tt: "The §SSPD§! won the largest share of the vote."
 
  GER_schleicher_coup_planned: "§gImperialer Block§! is planning a §Ycoup§!"
  GER_imperial_block_tt: "If stability §Rdrops below§! §Y20%§!, Scleicher will try to coup the government.\n\n"
  GER_peace_with_the_block_tt: "We will make peace with §gSchleicher§!, but we will also have to promise him a §Rministry§! after the elections, but nevertheless this alliance will be beneficial for us.\n\n"
  GER_papen_in_prussia_tt: "While §gFranz von Papen§! may not be the most loyal minister-president, he is still better than §tOtto Braun§!\n\n"
  GER_bring_von_below_back_tt: "§tSchleicher will be sacked from the reichswehr ministry§! and replaced with §gOtto von Below§!.\n\nThis will be a major blow to §gKurt Schleicher§!'s prestige and power.\n\n"
- GER_prussian_grand_coalition_tt: "The §3Zentrum§! will join the §tSPD§! in a grand coalition in Prussia, which will be a major win to the current §tSPD§!-§9FVP§! minority coalition.\n\n"
+ GER_prussian_grand_coalition_tt: "The §3Zentrum§! will join the §SSPD§! in a grand coalition in Prussia, which will be a major win to the current §SSPD§!-§9FVP§! minority coalition.\n\n"
  GER_schleicher_coup_fails_tt: "Any attempts to §Ycoup the government§! by §gKurt Schleicher§! have failed.\n\n"
  GER_foment_a_split_between_kaiser_and_schleicher_tt: "After solving successfully the §tPrussian crisis§!, we have earned some §Ygoodwill§! with the kaiser, which we can use to try to §Yfoment a split§! between him and §gKurt Schleicher§!."
 
  GER_right_focus: "This is a §3Rightist§! focus"
  GER_left_focus: "This is a §tLeftist§! focus"
 
- GER_intervention_in_prussia_tt: "This will §Yensure§! the victory of the §3Zentrum§!-§9FVP§!-§tSPD§! coalition in the §gPrussian elections.§!"
+ GER_intervention_in_prussia_tt: "This will §Yensure§! the victory of the §3Zentrum§!-§9FVP§!-§SSPD§! coalition in the §gPrussian elections.§!"
 
  GER_emergency_powers_act_tt: "This will allow us to effectively §Yrule by decree§! in a §tstate of emergency§! such as war, and enable us to do §Yvarious things§!.\n\n"
 

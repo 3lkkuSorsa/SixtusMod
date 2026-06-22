@@ -1,8 +1,48 @@
-is_in_coalition = {
+is_in_coalition_com = {
 	custom_trigger_tooltip = {
-		tooltip = is_in_coalition
-		convert_coalition_partner_var_into_index = yes
-		check_variable = { coalitions_array^coalition_partner_var = 2 }
-		log = "[?coalitions_array^coalition_partner_var]"
+		tooltip = is_in_coalition_com
+		check_variable = { coalitions_array^6 = 2 }
+	}
+}
+
+is_in_coalition_socdem = {
+	custom_trigger_tooltip = {
+		tooltip = is_in_coalition_socdem
+		check_variable = { coalitions_array^5 = 2 }
+	}
+}
+
+is_in_coalition_soclib = {
+	custom_trigger_tooltip = {
+		tooltip = is_in_coalition_soclib
+		check_variable = { coalitions_array^4 = 2 }
+	}
+}
+
+is_in_coalition_marlib = {
+	custom_trigger_tooltip = {
+		tooltip = is_in_coalition_marlib
+		check_variable = { coalitions_array^3 = 2 }
+	}
+}
+
+is_in_coalition_con = {
+	custom_trigger_tooltip = {
+		tooltip = is_in_coalition_con
+		check_variable = { coalitions_array^2 = 2 }
+	}
+}
+
+is_in_coalition_auth = {
+	custom_trigger_tooltip = {
+		tooltip = is_in_coalition_auth
+		check_variable = { coalitions_array^1 = 2 }
+	}
+}
+
+is_in_coalition_ult_nat = {
+	custom_trigger_tooltip = {
+		tooltip = is_in_coalition_ult_nat
+		check_variable = { coalitions_array^0 = 2 }
 	}
 }

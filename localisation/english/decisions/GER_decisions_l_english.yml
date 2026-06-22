@@ -15,7 +15,7 @@
  GER_forming_a_cabinet_category_desc: "Current §Ycabinet positions§!:\n - Reichskanzler: [GER_VBChancellorT]\n - Interior Minister: [GER_VBInteriorT]\n - Economic Minister: [GER_VBEconomicT]\n - Finance Minister: [GER_VBFinanceT]\n - Foreign Minister: [GER_VBForeignT]\n - Reichswehrminister: [GER_VBArmyT]\n\n§YCabinet balance§!:\n - §3Z§!: [?zentrum_current_cab_seats]/[?zentrum_cab_seats] seats\n - §tSPD§!: [?spd_current_cab_seats]/[?spd_cab_seats] seats\n - §9FVP§!: [?fvp_current_cab_seats]/[?fvp_cab_seats] seats"
 
  GER_RHI_unification_category: "Situation in the Rhineland"
- GER_RHI_unification_category_desc: "Rhineland has been an semi-independent state since the end of the First World War, and it has been a constant source of tension and conflict between Germany and France. The Rhineland's government is currently divided on the issue of unification with Germany, with some factions advocating for it and others opposing it. However, the unification fervour is only increasing in the region, and only time will tell if the Rhineland will finally rejoin Germany."
+ GER_RHI_unification_category_desc: "Progress for unification: [?RHI.unification_progress|Y]"
 
  GER_reichsregierung_reform_category: "Reichsregierung Reform"
  GER_introduce_oath_of_loyalty: "Introduce Oath of Loyalty for Bureaucrats"
