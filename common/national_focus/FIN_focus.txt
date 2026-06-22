@@ -608,6 +608,35 @@ focus_tree = {
     }
 
     focus = {
+        id = FIN_promote_finnish_language
+        icon = GFX_goal_flag_finland
+        x = 32
+        y = 3
+
+        prerequisite = {
+            focus = FIN_champion_moderate_policies
+        }
+
+        available = {
+            has_government = social_liberalism
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
         id = FIN_discourage_radicalism
         icon = GFX_focus_generic_anti_fascist_diplomacy
         x = 29
@@ -709,6 +738,36 @@ focus_tree = {
     }
 
     focus = {
+        id = FIN_pursue_education_reform
+        icon = GFX_focus_research
+        x = 29
+        y = 5
+
+        prerequisite = {
+            focus = FIN_industrial_regulation
+            focus = FIN_healthy_patriotism
+        }
+
+        available = {
+            has_government = social_liberalism
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
         id = FIN_expand_land_reform_laws
         icon = GFX_goal_agrarian_reform
         x = 34
@@ -748,6 +807,70 @@ focus_tree = {
 
         prerequisite = {
             focus = FIN_expand_land_reform_laws
+        }
+
+        available = {
+            has_government = social_liberalism
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            swap_ideas = {
+                remove_idea = FIN_moderatism_idea2
+                add_idea = FIN_moderatism_idea3
+            }
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_support_farmers
+        icon = GFX_focus_generic_farmland
+        x = 33
+        y = 6
+
+        prerequisite = {
+            focus = FIN_ensuring_prosperity_of_countryside
+        }
+
+        available = {
+            has_government = social_liberalism
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            swap_ideas = {
+                remove_idea = FIN_moderatism_idea2
+                add_idea = FIN_moderatism_idea3
+            }
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_build_up_local_services
+        icon = GFX_goal_FIN_promote_the_red_cross
+        x = 35
+        y = 6
+
+        prerequisite = {
+            focus = FIN_ensuring_prosperity_of_countryside
         }
 
         available = {
@@ -1620,7 +1743,6 @@ focus_tree = {
             controls_state = 39
             controls_state = 216
             controls_state = 215
-            has_war = no
         }
 
         prerequisite = {
