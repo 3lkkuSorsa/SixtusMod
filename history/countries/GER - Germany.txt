@@ -111,6 +111,9 @@ set_variable = { GER_social_reforms_stability_factor = 0.05 }
 set_variable = { GER_social_reforms_consumer_goods_factor = 0.15 }
 set_variable = { GER_social_reforms_political_power_factor = -0.10 }
 
+set_variable = { decision_cost_GER_utilize_the_party_whip = 75 }
+set_variable = { decision_cost_GER_attack_the_left = 30 }
+set_variable = { decision_cost_GER_campaign_against_trade_unions = 20 }
 
 # Wowow nice faction
 create_faction_from_template = faction_template_axis

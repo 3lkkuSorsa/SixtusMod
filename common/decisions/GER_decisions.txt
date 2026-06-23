@@ -192,7 +192,7 @@ GER_spring_coalition_category = {
 
 		days_re_enable = 60
 
-		cost = 75
+		cost = decision_cost_GER_utilize_the_party_whip
 
 		complete_effect = {
 			add_stability = -0.025
@@ -224,7 +224,7 @@ GER_spring_coalition_category = {
 
 		days_re_enable = 30
 
-		cost = 30
+		cost = decision_cost_GER_attack_the_left
 
 		complete_effect = {
 			add_to_variable = {
@@ -292,7 +292,7 @@ GER_spring_coalition_category = {
 
 		days_re_enable = 60
 
-		cost = 15
+		cost = decision_cost_GER_campaign_against_trade_unions
 
 		complete_effect = {
 			add_to_variable = {
@@ -348,7 +348,14 @@ GER_red_scare = {
 			always = no
 		}
 
-		is_good = yes
+		cancel_trigger = {
+			NOT = {
+				has_idea = GER_era_of_imperial_cabinets
+				has_country_flag = GER_spring_coalition
+			}
+		}
+
+		is_good = no
 		days_mission_timeout = 245
 
 		timeout_effect = {

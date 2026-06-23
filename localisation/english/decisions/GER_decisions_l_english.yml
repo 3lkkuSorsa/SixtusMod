@@ -2,6 +2,7 @@
  GER_enable_decision: "Available as decision: £GFX_decision_icon_small $DEC|Y$"
  GER_following_decisions_available_tt: "Following £GFX_decision_icon_small §Ydecisions§! will be available:"
  list_of_decisions_tt: " - §Y$DEC$§!"
+ GER_decision_cost_tt: "Changes the cost of £GFX_decision_icon_small $DEC|Y$ by $AMOUNT|Y$£GFX_pol_power"
 
  GER_red_scare: "Red Scare"
  GER_red_scare_desc: "The growing influence and popularity of the §RKPD§! and other §tsocialist§! parties has resulted in a mass campaign of fear and propaganda against them, mainly from the conservatives and right-wing groups. This campaign has resulted in a collection of legislation known as the §Ycommunist laws§! which limit and restrict the activites and campaigning of parties and groups deemed communist."

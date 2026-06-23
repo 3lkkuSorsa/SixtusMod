@@ -366,6 +366,25 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = {
+				localization_key = GER_decision_cost_tt
+				DEC = "All Kampf aus der Mitte Decisions"
+				AMOUNT = "-5"
+			}
+			custom_effect_tooltip = "           "
+			custom_effect_tooltip = "           "
+			add_to_variable = {
+				var = decision_cost_GER_utilize_the_party_whip
+				value = -5
+			}
+			add_to_variable = {
+				var = decision_cost_GER_attack_the_left
+				value = -5
+			}
+			add_to_variable = {
+				var = decision_cost_GER_campaign_against_trade_unions
+				value = -5
+			}
+			custom_effect_tooltip = {
 				localization_key = GER_modify_future_dyn_mod
 				IDEA = "Social Reforms"
 			}
@@ -790,6 +809,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = -80
+			add_stability = 0.08
 			add_popularity = {
 				ideology = ultra_nationalism
 				popularity = -0.05
