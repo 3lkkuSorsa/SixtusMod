@@ -365,6 +365,20 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = {
+				localization_key = GER_modify_future_dyn_mod
+				IDEA = "Social Reforms"
+			}
+			add_to_variable = {
+				var = GER_social_reforms_political_power_factor
+				value = 0.08
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = {
+				var = GER_social_reforms_consumer_goods_factor
+				value = -0.12
+				tooltip = consumer_goods_factor_tt
+			}
 		}
 	}
 
@@ -672,7 +686,7 @@ focus_tree = {
 
 		relative_position_id = GER_ascension_of_spring_coalition
 
-		cost = 3
+		cost = 2
 
 		prerequisite = {
 			focus = GER_biding_our_time
@@ -686,6 +700,11 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = GER_extend_the_communist_laws_tt
 			set_country_flag = GER_communist_laws_extended
+			add_to_variable = {
+				var = GER.centrists_for_left
+				value = -3
+				tooltip = GER_coalition_centrists_for_left_tt
+			}
 		}
 	}
 
@@ -709,6 +728,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = {
+				localization_key = GER_enable_decision
+				DEC = "Campaign against the Trade Unions"
+			}	
 		}
 	}
 
@@ -951,6 +974,7 @@ focus_tree = {
 				add_idea = GER_papen_in_prussia
 			}
 			clr_country_flag = GER_schleicher_coup_planned
+			set_country_flag = GER_schleicher_coup_failed
 		}
 	}
 
@@ -1110,10 +1134,17 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_country_flag = GER_spring_coalition_2
+			OR = {
+				has_country_flag = GER_spring_coalition_2
+				has_country_flag = GER_constitutionalists
+			}
 			NOT = {
 				has_country_flag = GER_kampf_aus_der_mitte
 			}
+		}
+
+		bypass = {
+			has_country_flag = GER_schleicher_war_coup
 		}
 
 		completion_reward = {
@@ -1137,7 +1168,14 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_country_flag = GER_spring_coalition_2
+			OR = {
+				has_country_flag = GER_spring_coalition_2
+				has_country_flag = GER_constitutionalists
+			}
+		}
+
+		bypass = {
+			has_country_flag = GER_schleicher_war_coup
 		}
 
 		completion_reward = {
@@ -1394,6 +1432,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			country_event = {
+				id = GER_spring_coalition.17
+				days = 3
+			}
 			activate_mission = GER_keeping_coalition_together
 			custom_effect_tooltip = {
 				localization_key = GER_enable_decision
@@ -1678,7 +1720,11 @@ focus_tree = {
 		cost = 4
 
 		available = {
-			has_country_flag = GER_spring_coalition_2
+			OR = {
+				has_country_flag = GER_spring_coalition_2
+				has_country_flag = GER_constitutionalists
+				has_country_flag = GER_schleicher_war_coup
+			}
 		}
 
 		completion_reward = {
@@ -1727,7 +1773,11 @@ focus_tree = {
 		cost = 4
 
 		available = {
-			has_country_flag = GER_spring_coalition_2
+			OR = {
+				has_country_flag = GER_spring_coalition_2
+				has_country_flag = GER_constitutionalists
+				has_country_flag = GER_schleicher_war_coup
+			}
 			NOT = {
 				has_completed_focus = GER_sack_braun_from_prussia
 			}
@@ -1913,7 +1963,10 @@ focus_tree = {
 		cost = 6
 
 		available = {
-			has_country_flag = GER_spring_coalition_2
+			OR = {
+				has_country_flag = GER_spring_coalition_2
+				has_country_flag = GER_schleicher_war_coup
+			}
 			has_country_flag = GER_investigation_on_socialism_success
 			has_country_flag = GER_republicanism_outlawed
 		}
@@ -1951,7 +2004,14 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_country_flag = GER_spring_coalition_2
+			OR = {
+				has_country_flag = GER_spring_coalition_2
+				has_country_flag = GER_constitutionalists
+			}
+		}
+
+		bypass = {
+			has_country_flag = GER_schleicher_war_coup
 		}
 
 		completion_reward = {
@@ -1997,7 +2057,10 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_country_flag = GER_spring_coalition_2
+			OR = {
+				has_country_flag = GER_spring_coalition_2
+				has_country_flag = GER_constitutionalists
+			}
 		}
 
 		completion_reward = {
@@ -2051,6 +2114,13 @@ focus_tree = {
 			has_country_flag = GER_spring_coalition_2
 		}
 
+		bypass = {
+			OR = {
+				has_country_flag = GER_schleicher_war_coup
+				has_country_flag = GER_constitutionalists
+			}
+		}
+
 		completion_reward = {
 			remove_ideas = GER_rampant_paramilitaries
 		}
@@ -2072,7 +2142,11 @@ focus_tree = {
 		cost = 4
 
 		available = {
-			has_country_flag = GER_spring_coalition_2
+			OR = {
+				has_country_flag = GER_spring_coalition_2
+				has_country_flag = GER_constitutionalists
+				has_country_flag = GER_schleicher_war_coup
+			}
 		}
 
 		completion_reward = {
@@ -2108,7 +2182,14 @@ focus_tree = {
 		cost = 6
 
 		available = {
-			has_country_flag = GER_spring_coalition_2
+			OR = {
+				has_country_flag = GER_spring_coalition_2
+				has_country_flag = GER_constitutionalists
+			}
+		}
+
+		bypass = {
+			has_country_flag = GER_schleicher_war_coup
 		}
 
 		completion_reward = {
@@ -2145,7 +2226,14 @@ focus_tree = {
 		cost = 6
 
 		available = {
-			has_country_flag = GER_spring_coalition_2
+			OR = {
+				has_country_flag = GER_spring_coalition_2
+				has_country_flag = GER_constitutionalists
+			}
+		}
+
+		bypass = {
+			has_country_flag = GER_schleicher_war_coup
 		}
 
 		completion_reward = {
@@ -2192,7 +2280,11 @@ focus_tree = {
 		cost = 6
 
 		available = {
-			has_country_flag = GER_spring_coalition_2
+			OR = {
+				has_country_flag = GER_spring_coalition_2
+				has_country_flag = GER_constitutionalists
+				has_country_flag = GER_schleicher_war_coup
+			}
 			custom_trigger_tooltip = {
 				tooltip = GER_has_done_3_reichsregierung_reforms_tt
 				check_variable = { GER_completed_reichsregierung_reforms > 2 }

@@ -461,6 +461,25 @@ country_event = {
 }
 
 country_event = {
+	id = GER_spring_coalition.17
+	title = "Schleicher Pledges Loyalty to the Coalition"
+	desc = GER_spring_coalition.17.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Step towards stability"
+		add_stability = 0.08
+		GER_kurt_von_schleicher = {
+			remove_trait = {
+				slot = minister
+				trait = GER_imperial_spy
+			}
+		}
+	}
+}
+
+country_event = {
 	id = GER_political_manoeuvres.1
 	title = "Zentrum demands chancellorship"
 	desc = GER_political_manoeuvres.1.d

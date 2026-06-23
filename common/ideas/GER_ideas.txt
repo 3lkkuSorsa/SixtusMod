@@ -43,15 +43,6 @@ ideas = {
 			}
 		}
 
-		RHI_protectorate_3 = {
-			modifier = {
-				stability_factor = 0.1
-				political_power_factor = 0.25
-				cic_to_overlord_factor = 0.25
-				mic_to_overlord_factor = 0.35
-			}
-		}
-
 		GER_integrating_rhineland = {
 			modifier = {
 				stability_factor = -0.1
@@ -167,7 +158,7 @@ ideas = {
 				stability_weekly = -0.0025
 				line_change_production_efficiency_factor = -0.15
 				production_factory_efficiency_gain_factor = -0.3
-				power_balance_weekly = 0.015
+				power_balance_weekly = 0.008
 			}
 		}
 
