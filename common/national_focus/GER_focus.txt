@@ -1168,7 +1168,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = GER_uphold_the_weimar_constitution_tt
+			country_event = {
+				id = GER_spring_coalition.17
+				days = 1
+			}
+			add_political_power = 150
+			add_stability = 0.15
 		}
 	}
 
@@ -1264,7 +1269,7 @@ focus_tree = {
 		icon = GFX_goal_GER_Conservative_Revolution
 
 		x = 5
-		y = 7
+		y = 6
 
 		relative_position_id = GER_promised_and_delivered
 
@@ -1309,7 +1314,7 @@ focus_tree = {
 		icon = GFX_goal_generic_castle
 
 		x = 5
-		y = 7
+		y = 6
 
 		relative_position_id = GER_promised_and_delivered
 
@@ -1376,6 +1381,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			hidden_effect = {
+				end_coalition = yes
+			}
 			custom_effect_tooltip = GER_constitutionalists_join_tt
 			custom_effect_tooltip = "           "
 			set_temp_variable = { coalition_partner_var = token:social_democracy }
@@ -1384,6 +1392,57 @@ focus_tree = {
 			add_to_coalition = yes
 			set_temp_variable = { coalition_partner_var = token:market_liberalism }
 			add_to_coalition = yes
+			set_country_flag = GER_constitutionalists
+		}
+	}
+
+	focus = {
+		id = GER_government_of_national_unity
+		icon = GFX_goal_generic_castle
+
+		x = -2
+		y = 2
+
+		relative_position_id = GER_second_burgfriedenspolitik
+
+		prerequisite = {
+			focus = GER_continue_civilian_governance
+		}
+
+		prerequisite = {
+			focus = GER_constitutionalist_coalition
+		}
+
+		cost = 6
+
+		available = {
+			has_global_flag = second_weltkrieg
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_promises_of_reform
+		icon = GFX_goal_generic_castle
+
+		x = 0
+		y = 3
+
+		relative_position_id = GER_second_burgfriedenspolitik
+
+		prerequisite = {
+			focus = GER_government_of_national_unity
+		}
+
+		cost = 6
+
+		available = {
+			has_global_flag = second_weltkrieg
+		}
+
+		completion_reward = {
 		}
 	}
 
@@ -1392,7 +1451,7 @@ focus_tree = {
 		icon = GFX_goal_generic_castle
 
 		x = 5
-		y = 7
+		y = 6
 
 		relative_position_id = GER_promised_and_delivered
 
@@ -1658,6 +1717,13 @@ focus_tree = {
 			has_country_flag = GER_spring_coalition_2
 		}
 
+		bypass = {
+			OR = {
+				has_country_flag = GER_schleicher_war_coup
+				has_country_flag = GER_constitutionalists
+			}
+		}
+
 		select_effect = {
 			country_event = {
 				id = GER_spring_coalition.6
@@ -1742,7 +1808,6 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_flag = GER_spring_coalition_2
-				has_country_flag = GER_constitutionalists
 				has_country_flag = GER_schleicher_war_coup
 			}
 		}
@@ -1796,7 +1861,6 @@ focus_tree = {
 			OR = {
 				has_country_flag = GER_spring_coalition_2
 				has_country_flag = GER_constitutionalists
-				has_country_flag = GER_schleicher_war_coup
 			}
 			NOT = {
 				has_completed_focus = GER_sack_braun_from_prussia

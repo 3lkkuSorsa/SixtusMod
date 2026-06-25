@@ -152,9 +152,6 @@ country_event = {
 		trigger = {
 			has_country_flag = GER_ensured_coalition_victory
 			has_idea = GER_prussian_grand_coalition
-			NOT = {
-				has_idea = GER_schleicher_in_prussia
-			}
 		}
 	}
 
@@ -178,11 +175,9 @@ country_event = {
 		}
 		trigger = {
 			NOT = {
-				OR = {
-					has_country_flag = GER_ensured_coalition_victory
-					has_idea = GER_schleicher_in_prussia
-				}
+				has_country_flag = GER_ensured_coalition_victory
 			}
+			has_idea = GER_prussian_grand_coalition
 		}
 	}
 }
@@ -475,6 +470,42 @@ country_event = {
 				slot = minister
 				trait = GER_imperial_spy
 			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_spring_coalition.17
+	title = "Show of Good Will towards the Left"
+	desc = GER_spring_coalition.17.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We must direct it to the liberals"
+		add_political_power = 50
+		add_power_balance_value = {
+			id = GER_spring_coalition_bop
+			value = -0.08
+		}
+	}
+
+	option = {
+		name = "Olive branch to the Socialists!"
+		add_stability = 0.05
+		add_power_balance_value = {
+			id = GER_spring_coalition_bop
+			value = -0.15
+		}
+	}
+
+	option = {
+		name = "No deal with the Traitors!"
+		add_political_power = 80
+		add_stability = -0.05
+		add_power_balance_value = {
+			id = GER_spring_coalition_bop
+			value = 0.08
 		}
 	}
 }
