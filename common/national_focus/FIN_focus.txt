@@ -13,29 +13,6 @@ focus_tree = {
 
     default = no
 
-    # ECONOMY TREE
-
-    focus = {
-        id = FIN_adress_economic_affairs
-        icon = GFX_goal_SCA_economy_finland
-        x = 7
-        y = 0
-
-        mutually_exclusive = {
-
-        }
-		
-        completion_reward = { 
-
-        }  
-
-		cost = 4
-
-        search_filters = { 
-        
-        }
-    }
-
     # POLITICAL TREE 
 
     focus = {
@@ -82,7 +59,11 @@ focus_tree = {
         }
 		
         completion_reward = { 
-            
+            add_popularity = {
+                ideology = social_democracy
+                popularity = 0.05
+            }
+            add_political_power = 25
         }  
 
 		cost = 5
@@ -199,6 +180,39 @@ focus_tree = {
 
         available = {
             has_government = social_democracy
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_memories_of_1918
+        icon = GFX_focus_FIN_suomalainen_sosialismi
+        x = 6
+        y = 3
+
+        prerequisite = {
+            focus = FIN_secure_a_coalition
+        }
+
+        prerequisite = {
+            focus = FIN_fight_right_obstructionism
+        }
+
+        available = {
+            always = no
         }
 
         mutually_exclusive = {
@@ -757,6 +771,39 @@ focus_tree = {
         }
 		
         completion_reward = { 
+            add_research_slot = 1
+            add_timed_idea = {
+                idea = FIN_education_reform
+                days = 365
+            }
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_political_stability
+        icon = GFX_goal_generic_stable_government
+        x = 29
+        y = 7
+
+        prerequisite = {
+            focus = FIN_pursue_education_reform
+        }
+
+        available = {
+            has_government = social_liberalism
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
             
         }  
 
@@ -851,12 +898,12 @@ focus_tree = {
 		
         completion_reward = { 
             swap_ideas = {
-                remove_idea = FIN_moderatism_idea2
-                add_idea = FIN_moderatism_idea3
+                remove_idea = FIN_moderatism_idea3
+                add_idea = FIN_moderatism_idea4
             }
         }  
 
-		cost = 6
+		cost = 5
 
         search_filters = { 
         
@@ -882,10 +929,40 @@ focus_tree = {
         }
 		
         completion_reward = { 
-            swap_ideas = {
-                remove_idea = FIN_moderatism_idea2
-                add_idea = FIN_moderatism_idea3
-            }
+            
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_rural_renaissance
+        icon = GFX_goal_generic_farmer_and_worker
+        x = 34
+        y = 7
+
+        prerequisite = {
+            focus = FIN_support_farmers
+        }
+
+        prerequisite = {
+            focus = FIN_build_up_local_services
+        }
+
+        available = {
+            has_government = social_liberalism
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = { 
+            
         }  
 
 		cost = 6
@@ -2095,4 +2172,448 @@ focus_tree = {
         
         }
     }
+
+    #POSTWAR POLITICS
+
+    focus = {
+        id = FIN_postwar_election
+        icon = GFX_goal_generic_elections
+        x = 24
+        y = 10
+
+        available = {
+            always = no
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_social_democrats
+        icon = GFX_goal_ideology_social_democrat
+        x = 19
+        y = 11 
+
+        prerequisite = {
+            focus = FIN_postwar_election
+        }
+
+        available = {
+            always = no
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_agrarians
+        icon = GFX_goal_ideology_social_liberal
+        x = 26
+        y = 11 
+
+        prerequisite = {
+            focus = FIN_postwar_election
+        }
+
+        available = {
+            always = no
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_national_liberals
+        icon = GFX_goal_ideology_market_liberal
+        x = 33
+        y = 11 
+
+        prerequisite = {
+            focus = FIN_postwar_election
+        }
+
+        available = {
+            always = no
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_national_coalition
+        icon = GFX_goal_ideology_social_conservative
+        x = 40
+        y = 11 
+
+        prerequisite = {
+            focus = FIN_postwar_election
+        }
+
+        available = {
+            always = no
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_patriotic_peoples_movement
+        icon = GFX_goal_ideology_national_populist_eagle
+        x = 47
+        y = 11 
+
+        prerequisite = {
+            focus = FIN_postwar_election
+        }
+
+        available = {
+            always = no
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_strong_willed_government
+        icon = GFX_goal_Centralised_Government
+        x = 46
+        y = 12 
+
+        prerequisite = {
+            focus = FIN_patriotic_peoples_movement
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_destory_opposition
+        icon = GFX_goal_generic_suspend_constitution
+        x = 45
+        y = 13
+
+        prerequisite = {
+            focus = FIN_strong_willed_government
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_implement_party_policies
+        icon = GFX_goal_generic_forceful_treaty
+        x = 49
+        y = 12 
+
+        prerequisite = {
+            focus = FIN_patriotic_peoples_movement
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_economic_corporatism
+        icon = GFX_goal_economic_control
+        x = 48
+        y = 13
+
+        prerequisite = {
+            focus = FIN_implement_party_policies
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_rehabilitate_blackshirts
+        icon = GFX_focus_FIN_mustapaidat
+        x = 50
+        y = 13
+
+        prerequisite = {
+            focus = FIN_implement_party_policies
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_national_unity_government
+        icon = GFX_focus_generic_authoritarian_government
+        x = 46
+        y = 14
+
+        prerequisite = {
+            focus = FIN_destory_opposition
+        }
+
+        prerequisite = {
+            focus = FIN_economic_corporatism
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_reassess_diplomatic_commitments
+        icon = GFX_focus_FIN_keepers_of_the_north
+        x = 51
+        y = 14
+
+        prerequisite = {
+            focus = FIN_economic_corporatism
+            focus = FIN_rehabilitate_blackshirts
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_support_aks
+        icon = GFX_focus_FIN_academic_karelian_society
+        x = 49
+        y = 14
+
+        prerequisite = {
+            focus = FIN_economic_corporatism
+            focus = FIN_rehabilitate_blackshirts
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_a_truly_proud_finland
+        icon = GFX_focus_FIN_the_lone_wolf
+        x = 47
+        y = 15
+
+        prerequisite = {
+            focus = FIN_national_unity_government
+        }
+
+        prerequisite = {
+            focus = FIN_support_aks
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
 }

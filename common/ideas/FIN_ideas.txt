@@ -147,5 +147,24 @@ ideas = {
 			}
 		}
 
+		FIN_moderatism_idea4 = {
+			picture = neutrality_idea
+			modifier = {
+				political_power_factor = 0.1
+				social_liberalism_drift = 0.03
+				consumer_goods_factor = -0.15
+				global_building_slots_factor = 0.2
+				stability_factor = 0.05
+				monthly_population = 0.25
+			}
+		}
+
+		FIN_education_reform = {
+			picture = generic_research_increase
+			modifier = {
+				research_speed_factor = 0.15
+			}
+		}
+
 	}
 }
