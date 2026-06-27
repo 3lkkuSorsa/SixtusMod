@@ -2670,6 +2670,11 @@ focus_tree = {
 				value = 0.05
 				tooltip = consumer_goods_factor_tt
 			}
+			add_to_variable = {
+				var = GER_junker_transformationsplan_equipment_conversion_speed
+				value = 0.15
+				tooltip = equipment_conversion_speed_tt
+			}
 		}
 	}
 
