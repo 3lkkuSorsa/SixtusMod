@@ -1,0 +1,15 @@
+guiTypes = {
+	containerWindowType = {
+		name = "dual_leader_window"
+		position = { x = 0 y = 0 }
+		size = { width = 216 height = 180 }
+		clipping = no
+
+		iconType = {
+			name = "dual_leader_dot"
+			position = { x = 105 y = 227 }
+			quadTextureSprite = "GFX_dual_leader_dot"
+            pdx_tooltip = "dual_leader_dot_tooltip"
+		}
+    }
+}

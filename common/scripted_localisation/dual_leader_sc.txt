@@ -1,0 +1,22 @@
+defined_text = {
+	name = GetDLPrefix
+	text = {
+		trigger = {
+			has_country_flag = DL_title_GER_kaiser
+		}
+		localization_key = "His imperial and royal majesty,"
+	}
+    text = {
+        localization_key = "The honorable"
+    }
+}
+
+defined_text = {
+    name = GetDLTitle
+    text = {
+        trigger = {
+            has_country_flag = DL_title_GER_kaiser
+        }
+        localization_key = "Kaiser"
+    }
+}

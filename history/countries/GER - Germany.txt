@@ -34,6 +34,10 @@ IF = {
 	}
 }
 
+set_country_flag = dual_leader_active
+set_country_flag = DL_title_GER_kaiser
+set_variable = { dual_leader = token:GER_wilhelm_ii }
+
 set_war_support = 0.3
 
 recruit_character = GER_reichstag
@@ -122,6 +126,7 @@ add_to_faction = GER
 # Setup of National Spirits
 add_ideas = {
 	GER_may_betrayal
+	GER_wilhelm_ii_idea
 	GER_spirit_of_weimar
 	GER_red_scare
 	GER_questionable_army_loyalty

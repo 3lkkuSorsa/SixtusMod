@@ -1,0 +1,19 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_dual_leader_dot"
+		textureFile = "gfx/interface/dl_dot.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_GER_wilhelm_ii"
+		textureFile = "gfx/leaders/GER/GER_wilhelm_ii.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_advisor_GER_wilhelm_ii"
+		textureFile = "gfx/advisors/GER/GER_wilhelm_ii.dds"
+		legacy_lazy_load = no
+	}
+}

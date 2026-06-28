@@ -1,0 +1,28 @@
+scripted_gui = {
+	dual_leader_system = {
+		context_type = selected_country_context
+		parent_window_token = selected_country_view_diplomacy
+		window_name = "dual_leader_window"
+
+		visible = {
+			has_country_flag = dual_leader_active
+		}
+
+		properties = {
+			dual_leader_dot = {
+				image = "GFX_advisor_[?dual_leader.GetTokenKey]"
+			}
+		}
+
+		effects = {
+			idea_grapper = {
+				meta_effect = {
+					text = {
+						show_ideas_tooltip = [DUAL_LEADER_IDEA]
+					}
+					DUAL_LEADER_IDEA = "[?dual_leader.GetTokenKey]_idea"
+				}
+			}
+		}
+	}
+}

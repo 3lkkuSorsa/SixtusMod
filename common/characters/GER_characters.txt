@@ -15,6 +15,15 @@ characters = {
 		}
 	}
 
+	GER_wilhelm_ii = {
+		name = GER_wilhelm_ii
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/GER_wilhelm_ii.png"
+			}
+		}
+	}
+
 	GER_franz_von_papen = {
 		name = GER_franz_von_papen
 		portraits = {

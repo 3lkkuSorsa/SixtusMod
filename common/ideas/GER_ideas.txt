@@ -1,4 +1,11 @@
 ideas = {
+	hidden_ideas = {
+		GER_wilhelm_ii_idea = {
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+	}
 	country = {
 		GER_may_betrayal = {
 			modifier = {
