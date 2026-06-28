@@ -287,7 +287,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_flag = GER_spring_coalition
 		}
 
 		bypass = {
