@@ -10,6 +10,7 @@ guiTypes = {
 			position = { x = 105 y = 227 }
 			quadTextureSprite = "GFX_dual_leader_dot"
             pdx_tooltip = "dual_leader_dot_tooltip"
+			pdx_tooltip_delayed = "dual_leader_dot_tooltip_delayed"
 		}
     }
 }

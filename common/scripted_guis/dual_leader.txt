@@ -18,9 +18,22 @@ scripted_gui = {
 			idea_grapper = {
 				meta_effect = {
 					text = {
-						show_ideas_tooltip = [DUAL_LEADER_IDEA]
+						if = {
+							limit = {
+								has_idea = [DUAL_LEADER_IDEA]
+							}
+							show_ideas_tooltip = [DUAL_LEADER_IDEA]
+						}
 					}
 					DUAL_LEADER_IDEA = "[?dual_leader.GetTokenKey]_idea"
+				}
+			}
+			desc_grapper = {
+				meta_effect = {
+					text = {
+						custom_effect_tooltip = [DUAL_LEADER_DESC]
+					}
+					DUAL_LEADER_DESC = "[?dual_leader.GetTokenKey]_desc"
 				}
 			}
 		}
