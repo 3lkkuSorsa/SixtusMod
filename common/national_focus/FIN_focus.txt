@@ -13,6 +13,103 @@ focus_tree = {
 
     default = no
 
+    # INDUSTRY TREE
+
+    focus = {
+        id = FIN_industrialization_drive
+        icon = GFX_focus_generic_industral_devlopment_bucket
+        x = 62
+        y = 0
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            focus = FIN_maintain_an_agrarian_economy
+        }
+		
+        completion_reward = { 
+            swap_ideas = {
+                remove_idea = FIN_ongoing_industrialization
+                add_idea = FIN_ongoing_industrialization2
+            }
+            927 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_uusimaa_industries
+        icon = GFX_focus_generic_industry_3
+        x = 61
+        y = 1
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FIN_industrialization_drive
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_maintain_an_agrarian_economy
+        icon = GFX_goal_generic_agriculture2
+        x = 69
+        y = 0
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            focus = FIN_industrialization_drive
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
     # POLITICAL TREE 
 
     focus = {

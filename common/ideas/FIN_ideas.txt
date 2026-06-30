@@ -2,14 +2,24 @@ ideas = {
 	country = {
 
 		FIN_ongoing_industrialization = {
-			picture = FIN_finnish_federation_of_trade_unions_heavy
+			picture = generic_mechanised_agriculture
 			modifier = {
-                consumer_goods_factor = 0.15
-				production_speed_industrial_complex_factor = 0.1
-				production_speed_infrastructure_factor = 0.1
+                consumer_goods_factor = -0.1
 				industrial_capacity_factory = -0.1
 				industrial_capacity_dockyard = -0.1
 				production_factory_efficiency_gain_factor = -0.05
+				production_speed_buildings_factor = -0.1
+			}
+		}
+
+		FIN_ongoing_industrialization2 = {
+			picture = FIN_finnish_federation_of_trade_unions_heavy
+			modifier = {
+                consumer_goods_factor = 0.1
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+				production_speed_industrial_complex_factor = 0.05
 			}
 		}
 
