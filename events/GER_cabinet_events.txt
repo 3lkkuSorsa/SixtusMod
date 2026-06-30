@@ -8,44 +8,27 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = "The winner shall get the chancellorship, of course!"
+		name = "Maybe we should appoint a liberal compromise candidate?"
 		custom_effect_tooltip = GER_canidate_choice_tt_volksblock
-		if = {
-			limit = {
-				has_country_flag = GER_winner_SPD_volksblock
-			}
-			set_politics = {
-				ruling_party = social_democracy
-			}
-			hidden_effect = {
-				add_ideas = {
-					GER_otto_braun_idea
-				}
-			}
-			else = {
-				set_politics = {
-					ruling_party = conservatism
-				}
-				if = {
-					limit = {
-						has_country_flag = GER_agreed_to_bruning
-					}
-					hidden_effect = {
-						add_ideas = {
-							GER_heinrich_bruning_hog_idea
-						}
-					}
-					else = {
-						hidden_effect = {
-							add_ideas = {
-								GER_adam_stegerwald_hog_idea
-							}
-						}
-					}
-				}
+		set_politics = {
+			ruling_party = conservatism
+		}
+		promote_character = {
+			character = GER_adam_stegerwald
+		}
+		add_to_variable = {
+			var = zentrum_cab_seats
+			value = -1
+			tooltip = GER_cabinet_seat_change_fvp_tt
+		}
+
+		hidden_effect = {
+			add_ideas = {
+				GER_adam_stegerwald_hog_idea
 			}
 		}
 	}
+}
 
 	option = {
 		name = "Maybe we should appoint a liberal compromise candidate?"
@@ -61,23 +44,12 @@ country_event = {
 			value = -1
 			tooltip = GER_cabinet_seat_change_fvp_tt
 		}
-		if = {
-			limit = {
-				has_country_flag = GER_winner_SPD_volksblock
-			}
-			add_to_variable = {
-				var = spd_cab_seats
-				value = 1
-				tooltip = GER_cabinet_seat_change_spd_tt
-			}
-			else = {
-				add_to_variable = {
-					var = zentrum_cab_seats
-					value = 1
-					tooltip = GER_cabinet_seat_change_zentrum_tt
-				}
-			}
+		add_to_variable = {
+			var = zentrum_cab_seats
+			value = 1
+			tooltip = GER_cabinet_seat_change_zentrum_tt
 		}
+
 		hidden_effect = {
 			add_ideas = {
 				GER_otto_gessler_hog_idea

@@ -1278,6 +1278,7 @@ focus_tree = {
 		}
 
 		allow_branch = {
+			has_country_flag = GER_show_moderate_tree
 			NOT = {
 				has_country_flag = GER_show_second_burgfriedenspolitik
 				has_country_flag = GER_show_schleicher_war_coup
@@ -1321,18 +1322,41 @@ focus_tree = {
 			focus = GER_reichsregierung_reformieren
 		}
 
+		offset = {
+			x = 5
+			y = 1
+
+			trigger = {
+				has_country_flag = GER_show_democratic_tree
+			}
+		}
+
 		cost = 6
 
 		available = {
+			if = {
+				limit = {
+					has_country_flag = GER_show_democratic_tree
+				}
+				has_global_flag = second_weltkrieg
+			}
 		}
 
 		allow_branch = {
-			has_country_flag = GER_show_second_burgfriedenspolitik
+			OR = {
+				has_country_flag = GER_show_second_burgfriedenspolitik
+				has_country_flag = GER_show_democratic_tree
+			}
 		}
 
 		completion_reward = {
-			remove_power_balance = {
-				id = GER_spring_coalition_bop
+			if = {
+				limit = {
+					has_country_flag = GER_show_second_burgfriedenspolitik
+				}
+				remove_power_balance = {
+					id = GER_spring_coalition_bop
+				}
 			}
 		}
 	}
@@ -1379,6 +1403,10 @@ focus_tree = {
 			has_country_flag = GER_toleration_with_spd
 		}
 
+		bypass = {
+			has_country_flag = GER_volksblock
+		}
+
 		completion_reward = {
 			hidden_effect = {
 				end_coalition = yes
@@ -1392,6 +1420,95 @@ focus_tree = {
 			set_temp_variable = { coalition_partner_var = token:market_liberalism }
 			add_to_coalition = yes
 			set_country_flag = GER_constitutionalists
+		}
+	}
+
+	focus = {
+		id = GER_
+		icon = GFX_goal_generic_castle
+
+		x = 3
+		y = 1
+
+		relative_position_id = GER_second_burgfriedenspolitik
+
+		prerequisite = {
+			focus = GER_second_burgfriedenspolitik
+		}
+
+		cost = 6
+
+		available = {
+			has_country_flag = GER_toleration_with_spd
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_confidence_of_the_radicals
+		icon = GFX_goal_generic_castle
+
+		x = 0
+		y = 2
+
+		relative_position_id = GER_second_burgfriedenspolitik
+
+		prerequisite = {
+			focus = GER_constitutionalist_coalition
+		}
+
+		mutually_exclusive = {
+			focus = GER_crackdown_on_anti_war_elements
+		}
+
+		cost = 6
+
+		available = {
+			has_country_flag = GER_volksblock
+			has_completed_focus = GER_coalition_of_purists
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_crackdown_on_anti_war_elements
+		icon = GFX_goal_generic_castle
+
+		x = 2
+		y = 2
+
+		relative_position_id = GER_second_burgfriedenspolitik
+
+		prerequisite = {
+			focus = GER_
+		}
+
+		mutually_exclusive = {
+			focus = GER_confidence_of_the_radicals
+		}
+
+		cost = 6
+
+		available = {
+			has_country_flag = GER_volksblock
+			has_completed_focus = GER_coalition_of_purists
+		}
+
+		allow_branch = {
+			OR = {
+				has_country_flag = GER_show_second_burgfriedenspolitik
+				has_country_flag = GER_show_democratic_tree
+			}
+		}
+
+		completion_reward = {
 		}
 	}
 
@@ -2665,14 +2782,14 @@ focus_tree = {
 				tooltip = production_speed_industrial_complex_factor_tt
 			}
 			add_to_variable = {
+				var = GER_junker_transformationsplan_production_speed_arms_factory_factor
+				value = 0.12
+				tooltip = production_speed_arms_factory_factor_tt
+			}
+			add_to_variable = {
 				var = GER_junker_transformationsplan_consumer_goods_factor
 				value = 0.05
 				tooltip = consumer_goods_factor_tt
-			}
-			add_to_variable = {
-				var = GER_junker_transformationsplan_equipment_conversion_speed
-				value = 0.15
-				tooltip = equipment_conversion_speed_tt
 			}
 		}
 	}
@@ -2742,8 +2859,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = GER_forming_a_cabinet_tt
-			set_country_flag = GER_forming_a_cabinet
 		}
 	}
 
@@ -2772,120 +2887,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_the_imperial_veto
-		icon = GFX_goal_generic_political_pressure
+		id = GER_gessler_program
+		icon = GFX_goal_generic_enforce_labor_regulation
 
-		x = 2
-		y = 6
-
-		relative_position_id = GER_volksblock_triumphs
-
-		cost = 3
-
-		available = {
-		}
-
-		allow_branch = {
-			has_country_flag = GER_imperial_veto
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_unions_sympathy_strikes
-		icon = GFX_goal_generic_political_pressure
-
-		x = 1
-		y = 7
-
-		relative_position_id = GER_volksblock_triumphs
-
-		cost = 3
-
-		prerequisite = {
-			focus = GER_the_imperial_veto
-		}
-
-		available = {
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_align_national_liberals
-		icon = GFX_goal_ideology_market_liberal
-
-		x = 3
-		y = 7
-
-		relative_position_id = GER_volksblock_triumphs
-
-		cost = 3
-
-		prerequisite = {
-			focus = GER_the_imperial_veto
-		}
-
-		available = {
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_law_on_imperial_salaries
-		icon = GFX_goal_generic_debt_negotiations
-
-		x = 2
-		y = 8
-
-		relative_position_id = GER_volksblock_triumphs
-
-		cost = 3
-
-		prerequisite = {
-			focus = GER_the_imperial_veto
-		}
-
-		available = {
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_denounce_radical_policies
-		icon = GFX_goal_generic_political_pressure
-
-		x = 4
-		y = 8
-
-		relative_position_id = GER_volksblock_triumphs
-
-		cost = 3
-
-		prerequisite = {
-			focus = GER_the_imperial_veto
-		}
-
-		available = {
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_adressing_the_economic_affairs
-		icon = GFX_goal_generic_political_pressure
-
-		x = 5
+		x = 7
 		y = 3
 
 		relative_position_id = GER_volksblock_triumphs
@@ -2904,33 +2909,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_affordable_housing_program
-		icon = GFX_focus_JAP_a_functionalist_housing_policy
+		id = GER_pursue_political_reforms
+		icon = GFX_goal_generic_enforce_labor_regulation
 
-		x = 3
-		y = 5
-
-		relative_position_id = GER_volksblock_triumphs
-
-		cost = 3
-
-		available = {
-		}
-
-		prerequisite = {
-			focus = GER_break_up_monopolies
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_break_up_monopolies
-		icon = GFX_goal_generic_political_pressure
-
-		x = 4
-		y = 4
+		x = 1
+		y = 3
 
 		relative_position_id = GER_volksblock_triumphs
 
@@ -2940,7 +2923,7 @@ focus_tree = {
 		}
 
 		prerequisite = {
-			focus = GER_adressing_the_economic_affairs
+			focus = GER_truly_responsible_government
 		}
 
 		completion_reward = {
@@ -2948,8 +2931,30 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_regulate_banking_industry
-		icon = GFX_goal_generic_banking_legislation
+		id = GER_pursue_political_reforms
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = -2
+		y = 3
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GER_truly_responsible_government
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_enforce_worker_protection_laws
+		icon = GFX_goal_generic_enforce_labor_regulation
 
 		x = 6
 		y = 4
@@ -2962,7 +2967,7 @@ focus_tree = {
 		}
 
 		prerequisite = {
-			focus = GER_adressing_the_economic_affairs
+			focus = GER_gessler_program
 		}
 
 		completion_reward = {
@@ -2970,8 +2975,74 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_strict_enforcement_of_8_hour_workday
-		icon = GFX_goal_generic_political_pressure
+		id = GER_social_insurance_reforms
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = 8
+		y = 4
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GER_gessler_program
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_public_works_programs
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = 9
+		y = 5
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GER_social_insurance_reforms
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_affordable_housing_initiative
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = 8
+		y = 6
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GER_social_insurance_reforms
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_8_hour_workday
+		icon = GFX_goal_generic_enforce_labor_regulation
 
 		x = 7
 		y = 5
@@ -2984,7 +3055,7 @@ focus_tree = {
 		}
 
 		prerequisite = {
-			focus = GER_adressing_the_economic_affairs
+			focus = GER_enforce_worker_protection_laws
 		}
 
 		completion_reward = {
@@ -2992,8 +3063,438 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_crackdown_on_dangerous_workplaces
-		icon = GFX_goal_generic_political_pressure
+		id = GER_establish_a_wealth_tax
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = 4
+		y = 4
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GER_gessler_program
+		}
+
+		prerequisite = {
+			focus = GER_pursue_political_reforms
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_coalition_of_purists
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = 2
+		y = 4
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GER_pursue_political_reforms
+		}
+
+		mutually_exclusive = {
+			focus = GER_ally_national_liberals
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_transformation_of_the_economy
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = 3
+		y = 5
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GER_coalition_of_purists
+		}
+
+		prerequisite = {
+			focus = GER_establish_a_wealth_tax
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_necessary_evil_of_pragmatism
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = 2
+		y = 6
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GER_coalition_of_purists
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_abandon_nationalisation_schemes
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = -5
+		y = 5
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GER_ally_national_liberals
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_liberal_future
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = -4
+		y = 6
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GER_abandon_nationalisation_schemes
+		}
+
+		prerequisite = {
+			focus = GER_investments_of_free_enterprise
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_investments_of_free_enterprise
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = -3
+		y = 5
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GER_ally_national_liberals
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_revisit_the_imperial_constitution
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = 1
+		y = 7
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GER_ally_national_liberals
+			focus = GER_coalition_of_purists
+		}
+
+		prerequisite = {
+			focus = GER_direct_control_over_prussia
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_abolish_the_bundesrat
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = -2
+		y = 8
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GER_end_the_prussian_veto
+		}
+
+		prerequisite = {
+			focus = GER_revisit_the_imperial_constitution
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_charter_of_freedoms
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = 0
+		y = 9
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GER_end_the_prussian_veto
+		}
+
+		prerequisite = {
+			focus = GER_revisit_the_imperial_constitution
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_secularisation_of_the_state
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = 1
+		y = 8
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GER_revisit_the_imperial_constitution
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_secularisation_of_the_state
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = 1
+		y = 8
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GER_revisit_the_imperial_constitution
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_purge_radical_elements_from_the_reichswehr
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = 3
+		y = 8
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GER_revisit_the_imperial_constitution
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_push_back_against_prussia
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = -1
+		y = 5
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GER_ally_national_liberals
+			focus = GER_coalition_of_purists
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_empire_on_democratic_foundations
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = -2
+		y = 6
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GER_push_back_against_prussia
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_direct_control_over_prussia
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = 0
+		y = 6
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GER_push_back_against_prussia
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_end_the_prussian_veto
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = -1
+		y = 7
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GER_direct_control_over_prussia
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_ally_national_liberals
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = -3
+		y = 4
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+		}
+
+		prerequisite = {
+			focus = GER_pursue_political_reforms
+		}
+
+		mutually_exclusive = {
+			focus = GER_coalition_of_purists
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_protect_the_unions
+		icon = GFX_goal_generic_enforce_labor_regulation
 
 		x = 5
 		y = 5
@@ -3006,11 +3507,7 @@ focus_tree = {
 		}
 
 		prerequisite = {
-			focus = GER_break_up_monopolies
-		}
-
-		prerequisite = {
-			focus = GER_regulate_banking_industry
+			focus = GER_gessler_program
 		}
 
 		completion_reward = {
@@ -3018,144 +3515,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_neue_sozialpolitik
-		icon = GFX_goal_social_reforms
+		id = GER_social_market_economy
+		icon = GFX_goal_generic_enforce_labor_regulation
 
-		x = 0
-		y = 3
-
-		relative_position_id = GER_volksblock_triumphs
-
-		cost = 3
-
-		available = {
-		}
-
-		prerequisite = {
-			focus = GER_truly_responsible_government
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_constitutionalist_prussian_coalition
-		icon = GFX_goal_INS_focus_party_coalition
-
-		x = 2
-		y = 3
-
-		relative_position_id = GER_volksblock_triumphs
-
-		cost = 3
-
-		available = {
-			has_country_flag = GER_prussian_elections_coming_up
-		}
-
-		prerequisite = {
-			focus = GER_truly_responsible_government
-		}
-
-		completion_reward = {
-			set_country_flag = GER_ensured_coalition_victory
-		}
-	}
-
-	focus = {
-		id = GER_education_for_the_masses
-		icon = GFX_goal_KTG_Educate_natives
-
-		x = 2
-		y = 4
-
-		relative_position_id = GER_volksblock_triumphs
-
-		cost = 3
-
-		available = {
-		}
-
-		prerequisite = {
-			focus = GER_neue_sozialpolitik
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_found_the_unemployment_fund
-		icon = GFX_goal_generic_political_pressure
-
-		x = 0
-		y = 4
-
-		relative_position_id = GER_volksblock_triumphs
-
-		cost = 3
-
-		available = {
-		}
-
-		prerequisite = {
-			focus = GER_neue_sozialpolitik
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_act_on_civil_liberties
-		icon = GFX_goal_GER_Fundamental_Rights
-
-		x = -2
-		y = 4
-
-		relative_position_id = GER_volksblock_triumphs
-
-		cost = 3
-
-		available = {
-		}
-
-		prerequisite = {
-			focus = GER_neue_sozialpolitik
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_reform_the_weimar_system
-		icon = GFX_goal_generic_political_pressure
-
-		x = -4
-		y = 5
-
-		relative_position_id = GER_volksblock_triumphs
-
-		cost = 3
-
-		available = {
-		}
-
-		prerequisite = {
-			focus = GER_act_on_civil_liberties
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_federalist_policy
-		icon = GFX_goal_generic_political_pressure
-
-		x = -3
+		x = 4
 		y = 6
 
 		relative_position_id = GER_volksblock_triumphs
@@ -3166,160 +3529,15 @@ focus_tree = {
 		}
 
 		prerequisite = {
-			focus = GER_reform_the_weimar_system
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_destroy_elitism_in_courts
-		icon = GFX_goal_generic_trial
-
-		x = -1
-		y = 6
-
-		relative_position_id = GER_volksblock_triumphs
-
-		cost = 3
-
-		available = {
+			focus = GER_protect_the_unions
 		}
 
 		prerequisite = {
-			focus = GER_reform_the_weimar_system
-		}
-
-		completion_reward = {
-		}
-	}
-
-
-	focus = {
-		id = GER_question_of_the_reichsrat
-		icon = GFX_goal_generic_political_pressure
-
-		x = -5
-		y = 6
-
-		relative_position_id = GER_volksblock_triumphs
-
-		cost = 3
-
-		available = {
+			focus = GER_transformation_of_the_economy
 		}
 
 		prerequisite = {
-			focus = GER_reform_the_weimar_system
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_end_to_imperial_influence
-		icon = GFX_focus_rom_parties_end
-
-		x = -4
-		y = 7
-
-		relative_position_id = GER_volksblock_triumphs
-
-		cost = 3
-
-		available = {
-		}
-
-		prerequisite = {
-			focus = GER_reform_the_weimar_system
-		}
-
-		prerequisite = {
-			focus = GER_question_of_the_reichsrat
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_special_sitting_of_the_reichstag
-		icon = GFX_goal_DOM_End_Judicial_Corruption
-
-		x = -3
-		y = 8
-
-		relative_position_id = GER_volksblock_triumphs
-
-		cost = 3
-
-		available = {
-		}
-
-		prerequisite = {
-			focus = GER_end_to_imperial_influence
-		}
-
-		prerequisite = {
-			focus = GER_destroy_elitism_in_courts
-		}
-
-		prerequisite = {
-			focus = GER_federalist_policy
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_never_another_kulturkampf
-		icon = GFX_goal_SHX_Christian_Influence
-
-		x = -1
-		y = 5
-
-		relative_position_id = GER_volksblock_triumphs
-
-		cost = 3
-
-		available = {
-		}
-
-		prerequisite = {
-			focus = GER_neue_sozialpolitik
-		}
-
-		mutually_exclusive = {
-			focus = GER_separate_church_and_state
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_separate_church_and_state
-		icon = GFX_goal_generic_political_pressure
-
-		x = 1
-		y = 5
-
-		relative_position_id = GER_volksblock_triumphs
-
-		cost = 3
-
-		available = {
-		}
-
-		prerequisite = {
-			focus = GER_neue_sozialpolitik
-		}
-
-		mutually_exclusive = {
-			focus = GER_never_another_kulturkampf
+			focus = GER_8_hour_workday
 		}
 
 		completion_reward = {
