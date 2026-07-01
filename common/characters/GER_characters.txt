@@ -531,7 +531,7 @@ characters = {
 		}
 	}
 
-	GER_hans_luther = {
+	GER_hans_luther_1 = {
 		name = GER_hans_luther
 		portraits = {
 			civilian = {

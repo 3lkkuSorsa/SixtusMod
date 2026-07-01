@@ -548,6 +548,7 @@ country_event = {
 
 	option = {
 		name = "Leave the negotiations"
+		set_country_flag = GER_agreed_to_stegerwald
 		country_event = {
 			id = GER_political_manoeuvres.2
 			days = 2

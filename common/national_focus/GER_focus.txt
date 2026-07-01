@@ -1323,8 +1323,8 @@ focus_tree = {
 		}
 
 		offset = {
-			x = 5
-			y = 1
+			x = 2
+			y = 0
 
 			trigger = {
 				has_country_flag = GER_show_democratic_tree
@@ -1368,6 +1368,14 @@ focus_tree = {
 		x = -3
 		y = 1
 
+		offset = {
+			x = 2
+
+			trigger = {
+				has_country_flag = GER_show_democratic_tree
+			}
+		}
+
 		relative_position_id = GER_second_burgfriedenspolitik
 
 		prerequisite = {
@@ -1390,6 +1398,14 @@ focus_tree = {
 
 		x = -1
 		y = 1
+
+		offset = {
+			x = 2
+
+			trigger = {
+				has_country_flag = GER_show_democratic_tree
+			}
+		}
 
 		relative_position_id = GER_second_burgfriedenspolitik
 
@@ -1430,6 +1446,14 @@ focus_tree = {
 		x = 3
 		y = 1
 
+		offset = {
+			x = 2
+
+			trigger = {
+				has_country_flag = GER_show_democratic_tree
+			}
+		}
+
 		relative_position_id = GER_second_burgfriedenspolitik
 
 		prerequisite = {
@@ -1455,6 +1479,14 @@ focus_tree = {
 
 		x = 0
 		y = 2
+
+		offset = {
+			x = 2
+
+			trigger = {
+				has_country_flag = GER_show_democratic_tree
+			}
+		}
 
 		relative_position_id = GER_second_burgfriedenspolitik
 
@@ -1483,6 +1515,14 @@ focus_tree = {
 
 		x = 2
 		y = 2
+
+		offset = {
+			x = 2
+
+			trigger = {
+				has_country_flag = GER_show_democratic_tree
+			}
+		}
 
 		relative_position_id = GER_second_burgfriedenspolitik
 
@@ -1519,6 +1559,14 @@ focus_tree = {
 		x = -2
 		y = 2
 
+		offset = {
+			x = 2
+
+			trigger = {
+				has_country_flag = GER_show_democratic_tree
+			}
+		}
+
 		relative_position_id = GER_second_burgfriedenspolitik
 
 		prerequisite = {
@@ -1545,6 +1593,14 @@ focus_tree = {
 
 		x = 0
 		y = 3
+
+		offset = {
+			x = 2
+
+			trigger = {
+				has_country_flag = GER_show_democratic_tree
+			}
+		}
 
 		relative_position_id = GER_second_burgfriedenspolitik
 
@@ -2826,6 +2882,10 @@ focus_tree = {
 
 		cost = 3
 
+		available = {
+			has_country_flag = GER_volksblock
+		}
+
 		prerequisite = {
 			focus = GER_volksblock_triumphs
 		}
@@ -2852,6 +2912,7 @@ focus_tree = {
 
 		available = {
 			has_completed_focus = GER_question_of_the_chancellorship
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -2859,6 +2920,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			set_country_flag = GER_forming_a_cabinet
 		}
 	}
 
@@ -2874,8 +2936,8 @@ focus_tree = {
 		cost = 3
 
 		available = {
-			has_completed_focus = GER_question_of_the_chancellorship
-			has_completed_focus = GER_distribute_cabinet_positions
+			has_country_flag = GER_coalition_finalized
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -2883,6 +2945,21 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			if = {
+				limit = {
+					has_government = social_liberalism
+				}
+				set_temp_variable = { coalition_partner_var = token:conservatism }
+				add_to_coalition = yes
+				set_temp_variable = { coalition_partner_var = token:social_democracy }
+				add_to_coalition = yes
+				else = {
+					set_temp_variable = { coalition_partner_var = token:social_liberalism }
+					add_to_coalition = yes
+					set_temp_variable = { coalition_partner_var = token:social_democracy }
+					add_to_coalition = yes
+				}
+			}
 		}
 	}
 
@@ -2898,28 +2975,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
-		}
-
-		prerequisite = {
-			focus = GER_truly_responsible_government
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_pursue_political_reforms
-		icon = GFX_goal_generic_enforce_labor_regulation
-
-		x = 1
-		y = 3
-
-		relative_position_id = GER_volksblock_triumphs
-
-		cost = 3
-
-		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -2942,6 +2998,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -2964,6 +3021,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -2986,6 +3044,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -3008,6 +3067,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -3030,6 +3090,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -3052,6 +3113,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -3074,6 +3136,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -3100,6 +3163,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -3126,6 +3190,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -3152,6 +3217,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -3174,6 +3240,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -3196,6 +3263,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -3222,6 +3290,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -3244,6 +3313,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -3271,6 +3341,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -3297,6 +3368,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -3323,6 +3395,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -3330,28 +3403,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_secularisation_of_the_state
-		icon = GFX_goal_generic_enforce_labor_regulation
-
-		x = 1
-		y = 8
-
-		relative_position_id = GER_volksblock_triumphs
-
-		cost = 3
-
-		available = {
-		}
-
-		prerequisite = {
-			focus = GER_revisit_the_imperial_constitution
-		}
-
-		completion_reward = {
+			remove_ideas = GER_questionable_army_loyalty
 		}
 	}
 
@@ -3367,6 +3419,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -3389,6 +3442,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -3412,6 +3466,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -3434,6 +3489,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -3456,6 +3512,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -3478,6 +3535,8 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_government = conservatism
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -3504,6 +3563,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {
@@ -3526,6 +3586,7 @@ focus_tree = {
 		cost = 3
 
 		available = {
+			has_country_flag = GER_volksblock
 		}
 
 		prerequisite = {

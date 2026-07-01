@@ -8,7 +8,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = "Maybe we should appoint a liberal compromise candidate?"
+		name = "Zentrum, as agreed."
 		custom_effect_tooltip = GER_canidate_choice_tt_volksblock
 		set_politics = {
 			ruling_party = conservatism
@@ -19,7 +19,7 @@ country_event = {
 		add_to_variable = {
 			var = zentrum_cab_seats
 			value = -1
-			tooltip = GER_cabinet_seat_change_fvp_tt
+			tooltip = GER_cabinet_seat_change_zentrum_tt
 		}
 
 		hidden_effect = {
@@ -28,7 +28,6 @@ country_event = {
 			}
 		}
 	}
-}
 
 	option = {
 		name = "Maybe we should appoint a liberal compromise candidate?"

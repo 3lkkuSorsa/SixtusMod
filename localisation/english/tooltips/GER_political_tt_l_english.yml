@@ -25,6 +25,8 @@
  GER_cabinet_seat_change_spd_tt: "§SSPD§! possible cabinet seats: $RIGHT|+=0..0$"
  GER_cabinet_seat_change_zentrum_tt: "§3Z§! possible cabinet seats: $RIGHT|+=0..0$"
 
+ GER_volksblock: "§9Volksblock§! is active"
+ 
  GER_schleicher_war_coup: "§gSchleicher§! took on the §Yimperial government§!"
  GER_has_done_3_reichsregierung_reforms_tt: "Atleast §Y3 Reichsregierung reforms§! completed"
  GER_prussian_integration: "Prussian chancellor is subordinate to the Reichstag"
