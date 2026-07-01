@@ -176,5 +176,13 @@ ideas = {
 			}
 		}
 
+		FIN_women_in_army = {
+			picture = generic_women_in_the_army
+			modifier = {
+				conscription_factor = 0.1
+				war_support_factor = 0.05
+			}
+		}
+
 	}
 }

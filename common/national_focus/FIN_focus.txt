@@ -13,6 +13,407 @@ focus_tree = {
 
     default = no
 
+    # MILITARY TREE
+
+    focus = {
+        id = FIN_evaluate_the_military
+        icon = GFX_focus_FIN_suomen_maavoimat
+        x = 64
+        y = 8
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_strenghten_land_forces
+        icon = GFX_goal_FIN_Army
+        x = 64
+        y = 9
+
+        prerequisite = {
+            focus = FIN_evaluate_the_military
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_massive_army_modernization_program
+        icon = GFX_focus_chi_army_reform
+        x = 61
+        y = 10
+
+        prerequisite = {
+            focus = FIN_strenghten_land_forces
+        }
+
+        mutually_exclusive = {
+            focus = FIN_supremacy_of_finnish_will
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_womens_volunteer_service
+        icon = GFX_focus_generic_women_in_military
+        x = 64
+        y = 11
+
+        prerequisite = {
+            focus = FIN_massive_army_modernization_program
+            focus = FIN_supremacy_of_finnish_will
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+           add_ideas = FIN_women_in_army
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_mechanized_efforts
+        icon = GFX_goal_generic_german_mechanized
+        x = 58
+        y = 11
+
+        prerequisite = {
+            focus = FIN_massive_army_modernization_program
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_anti_air_effort
+        icon = GFX_focus_generic_air_defense2
+        x = 60
+        y = 11
+
+        prerequisite = {
+            focus = FIN_massive_army_modernization_program
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_military_industrial_complex
+        icon = GFX_focus_generic_military_industry
+        x = 57
+        y = 12
+
+        prerequisite = {
+            focus = FIN_mechanized_efforts
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_mechanized_divisions
+        icon = GFX_goal_generic_mechanized_wave
+        x = 59
+        y = 14
+
+        prerequisite = {
+            focus = FIN_mechanized_efforts
+            focus = FIN_improve_soldier_training
+        }
+        
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_finnish_armor
+        icon = GFX_goal_generic_army_tanks3
+        x = 58
+        y = 13
+
+        prerequisite = {
+            focus = FIN_mechanized_efforts
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_improve_soldier_training
+        icon = GFX_goal_generic_army_training
+        x = 62
+        y = 11
+
+        prerequisite = {
+            focus = FIN_massive_army_modernization_program
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_invite_advisors
+        icon = GFX_focus_generic_military_mission
+        x = 61
+        y = 12
+
+        prerequisite = {
+            focus = FIN_improve_soldier_training
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_medical_advancements
+        icon = GFX_goal_FIN_promote_the_red_cross
+        x = 63
+        y = 12
+
+        prerequisite = {
+            focus = FIN_improve_soldier_training
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_professional_officer_core
+        icon = GFX_goal_officers
+        x = 62
+        y = 13
+
+        prerequisite = {
+            focus = FIN_invite_advisors
+            focus = FIN_medical_advancements
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_supremacy_of_finnish_will
+        icon = GFX_goal_offensive_army
+        x = 67
+        y = 10
+
+        prerequisite = {
+            focus = FIN_strenghten_land_forces
+        }
+
+        mutually_exclusive = {
+            focus = FIN_massive_army_modernization_program
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_building_finnish_navy
+        icon = GFX_goal_FIN_Army
+        x = 55
+        y = 9
+
+        prerequisite = {
+            focus = FIN_evaluate_the_military
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_establish_a_finnish_airforce
+        icon = GFX_goal_FIN_Army
+        x = 73
+        y = 9
+
+        prerequisite = {
+            focus = FIN_evaluate_the_military
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+           
+        }  
+
+		cost = 6
+
+        search_filters = { 
+        
+        }
+    }
+
     # INDUSTRY TREE
 
     focus = {
@@ -68,6 +469,65 @@ focus_tree = {
 
         prerequisite = {
             focus = FIN_industrialization_drive
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_turku_dockyards
+        icon = GFX_goal_generic_construct_naval_dockyard
+        x = 62
+        y = 2
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FIN_industrialization_drive
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FIN_improve_resource_extraction
+        icon = GFX_all_resource
+        x = 67
+        y = 1
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FIN_industrialization_drive
+            focus = FIN_maintain_an_agrarian_economy
         }
 
         mutually_exclusive = {
