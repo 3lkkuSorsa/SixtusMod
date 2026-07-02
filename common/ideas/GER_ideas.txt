@@ -57,6 +57,11 @@ ideas = {
 			}
 		}
 		GER_imperial_block_1 = {
+			cancel = {
+				NOT = {
+					has_country_flag = GER_spring_coalition
+				}
+			}
 			modifier = {
 				stability_weekly = -0.015
 				ultra_nationalism_drift = 0.025
@@ -64,12 +69,22 @@ ideas = {
 		}
 
 		GER_imperial_block_2 = {
+			cancel = {
+				NOT = {
+					has_country_flag = GER_spring_coalition
+				}
+			}
 			modifier = {
 				stability_weekly = -0.0075
 			}
 		}
 
 		GER_imperial_block_3 = {
+			cancel = {
+				NOT = {
+					has_country_flag = GER_spring_coalition
+				}
+			}
 			modifier = {
 				political_power_factor = 0.1
 			}

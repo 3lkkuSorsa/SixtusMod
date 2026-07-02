@@ -90,7 +90,9 @@ fire_ministers = {
 
 GER_appoint_volksblock_coalition = {
 	custom_effect_tooltip = GER_appoint_democratic_government_tt
+	set_country_flag = GER_coalition_finalized
 	hidden_effect = {
+		fire_ministers = yes
 		if = {
 			limit = {
 				has_country_flag = GER_stegerwald_interior_ministry
