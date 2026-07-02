@@ -1181,7 +1181,7 @@ focus_tree = {
     focus = {
         id = FIN_promote_finnish_language
         icon = GFX_goal_flag_finland
-        x = 32
+        x = 31
         y = 3
 
         prerequisite = {
