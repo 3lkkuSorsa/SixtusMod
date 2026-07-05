@@ -2,13 +2,13 @@
 
 
 focus_tree = {
-	id = RHI_focus_tree
+	id = POL_focus_tree
 	country = {
 		factor = 0
 
 		modifier = {
 			add = 10
-			tag = RHI
+			tag = POL
 		}
 	}
 
@@ -17,10 +17,46 @@ focus_tree = {
 	default = no
 
 	focus = {
-		id = RHI_
+		id = POL_aftermath_of_18_june_crisis
 		icon = GFX_goal_generic_political_reform
 		x = 0
 		y = 0
+
+		completion_reward = {
+		}
+
+		cost = 5
+	}
+
+	focus = {
+		id = POL_form_a_regency_council
+		icon = GFX_goal_generic_political_reform
+		x = -5
+		y = 1
+
+		relative_position_id = POL_aftermath_of_18_june_crisis
+
+		prerequisite = {
+			focus = POL_aftermath_of_18_june_crisis
+		}
+
+		completion_reward = {
+		}
+
+		cost = 5
+	}
+
+	focus = {
+		id = POL_maintain_the_monarchy
+		icon = GFX_goal_generic_political_reform
+		x = -3
+		y = 2
+
+		relative_position_id = POL_aftermath_of_18_june_crisis
+
+		prerequisite = {
+			focus = POL_form_a_regency_council
+		}
 
 		completion_reward = {
 		}
