@@ -331,4 +331,442 @@ focus_tree = {
         
         }
     }
+
+    # WAR TREE
+
+    focus = {
+        id = AUS_national_unity_government
+        icon = GFX_focus_austrian_cooperation
+        x = 18
+        y = 6
+
+        available = {
+            has_war = yes
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            add_stability = 0.05
+            add_war_support = 0.05
+        }  
+
+		cost = 3
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_prevent_partisanship
+        icon = GFX_goal_Centralised_Government
+        x = 18
+        y = 7
+
+        prerequisite = {
+            focus = AUS_national_unity_government
+        }
+
+        available = {
+            has_war = yes
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            add_stability = 0.05
+            add_war_support = 0.05
+        }  
+
+		cost = 3
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_war_production_act_focus
+        icon = GFX_goal_munitions_factories
+        x = 16
+        y = 7
+
+        prerequisite = {
+            focus = AUS_national_unity_government
+        }
+
+        available = {
+            has_war = yes
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            4 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            976 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            } 
+            add_timed_idea = {
+                idea = AUS_war_production_act
+                days = 365
+            }
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_army_reform
+        icon = GFX_goal_generic_army_high_command
+        x = 14
+        y = 8
+
+        prerequisite = {
+            focus = AUS_war_production_act_focus
+        }
+
+        available = {
+            has_war = yes
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 4
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_expand_conscription
+        icon = GFX_focus_generic_manpower
+        x = 15
+        y = 9
+
+        prerequisite = {
+            focus = AUS_army_reform
+        }
+
+        available = {
+            has_war = yes
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 4
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_learn_from_mistakes
+        icon = GFX_focus_RAJ_a_private_military
+        x = 13
+        y = 9
+
+        prerequisite = {
+            focus = AUS_army_reform
+        }
+
+        available = {
+            has_war = yes
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 4
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_towards_victory
+        icon = GFX_focus_AUS_strengthen_legitimistische_corps
+        x = 14
+        y = 10
+
+        prerequisite = {
+            focus = AUS_expand_conscription
+        }
+
+        prerequisite = {
+            focus = AUS_learn_from_mistakes
+        }
+
+        available = {
+            has_war = yes
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 4
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_emergency_war_loans
+        icon = GFX_goal_generic_loans
+        x = 17
+        y = 8
+
+        prerequisite = {
+            focus = AUS_war_production_act_focus
+        }
+
+        available = {
+            has_war = yes
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            add_timed_idea = {
+                idea = AUS_war_loan
+                days = 180
+            }
+        }  
+
+		cost = 4
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_private_financing
+        icon = GFX_focus_SWI_issue_war_bonds
+        x = 17
+        y = 9
+
+        prerequisite = {
+            focus = AUS_emergency_war_loans
+        }
+
+        available = {
+            has_war = yes
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 4
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_cancel_elections
+        icon = GFX_focus_usa_voter_registration_act
+        x = 20
+        y = 7
+
+        prerequisite = {
+            focus = AUS_national_unity_government
+        }
+
+        available = {
+            has_war = yes
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            add_stability = -0.1
+            add_political_power = 25
+            add_popularity = {
+                ideology = authoritarianism
+                popularity = 0.1
+            }
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_activate_propaganda
+        icon = GFX_goal_generic_propaganda
+        x = 22
+        y = 8
+
+        prerequisite = {
+            focus = AUS_cancel_elections
+        }
+
+        available = {
+            has_war = yes
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_empower_the_chancellor
+        icon = GFX_goal_ideology_authoritarian_democrat
+        x = 19
+        y = 9
+
+        prerequisite = {
+            focus = AUS_cancel_elections
+        }
+
+        available = {
+            has_war = yes
+        }
+
+        mutually_exclusive = {
+            focus = AUS_centralize_power_with_the_kaiser
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_centralize_power_with_the_kaiser
+        icon = GFX_focus_AUS_bring_back_the_habsburg_rule
+        x = 21
+        y = 9
+
+        prerequisite = {
+            focus = AUS_cancel_elections
+        }
+
+        available = {
+            has_war = yes
+        }
+
+        mutually_exclusive = {
+            focus = AUS_empower_the_chancellor
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_war_effort_unity
+        icon = GFX_goal_generic_major_war
+        x = 20
+        y = 10
+
+        prerequisite = {
+            focus = AUS_empower_the_chancellor
+            focus = AUS_centralize_power_with_the_kaiser
+        }
+
+        available = {
+            has_war = yes
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
 }
