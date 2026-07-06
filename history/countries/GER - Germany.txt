@@ -65,7 +65,7 @@ recruit_character = GER_heinrich_brauns
 recruit_character = GER_rudolf_wissell
 recruit_character = GER_kurt_von_hammerstein_equord
 
-set_country_flag = GER_show_moderate_tree
+set_country_flag = GER_show_democratic_tree
 set_country_flag = GER_prussian_elections_coming_up
 
 # Setup German Politics

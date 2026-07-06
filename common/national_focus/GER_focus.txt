@@ -1440,7 +1440,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_
+		id = GER_keep_up_with_war
 		icon = GFX_goal_generic_castle
 
 		x = 3
@@ -1527,7 +1527,7 @@ focus_tree = {
 		relative_position_id = GER_second_burgfriedenspolitik
 
 		prerequisite = {
-			focus = GER_
+			focus = GER_keep_up_with_war
 		}
 
 		mutually_exclusive = {
@@ -2873,7 +2873,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_question_of_the_chancellorship
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_generic_parliament2
 
 		x = -1
 		y = 1
@@ -2901,7 +2901,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_distribute_cabinet_positions
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_generic_elections_agreement
 
 		x = 1
 		y = 1
@@ -2965,7 +2965,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_gessler_program
-		icon = GFX_goal_generic_enforce_labor_regulation
+		icon = GFX_goal_social_reforms
 
 		x = 7
 		y = 3
@@ -2988,7 +2988,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_pursue_political_reforms
-		icon = GFX_goal_generic_enforce_labor_regulation
+		icon = GFX_goal_continuous_political
 
 		x = -2
 		y = 3
@@ -3011,7 +3011,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_enforce_worker_protection_laws
-		icon = GFX_goal_generic_enforce_labor_regulation
+		icon = GFX_goal_workers_rights
 
 		x = 6
 		y = 4
@@ -3057,7 +3057,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_public_works_programs
-		icon = GFX_goal_generic_enforce_labor_regulation
+		icon = GFX_goal_workers_for_business
 
 		x = 9
 		y = 5
@@ -3080,7 +3080,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_affordable_housing_initiative
-		icon = GFX_goal_generic_enforce_labor_regulation
+		icon = GFX_goal_generic_construct_public_housing
 
 		x = 8
 		y = 6
@@ -3126,7 +3126,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_establish_a_wealth_tax
-		icon = GFX_goal_generic_enforce_labor_regulation
+		icon = GFX_goal_HOL_progressive_tax
 
 		x = 4
 		y = 4
@@ -3153,7 +3153,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_coalition_of_purists
-		icon = GFX_goal_generic_enforce_labor_regulation
+		icon = GFX_goal_ideology_social_liberal
 
 		x = 2
 		y = 4
@@ -3180,7 +3180,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_transformation_of_the_economy
-		icon = GFX_goal_generic_enforce_labor_regulation
+		icon = GFX_goal_state_economy
 
 		x = 3
 		y = 5
@@ -3207,7 +3207,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_necessary_evil_of_pragmatism
-		icon = GFX_goal_generic_enforce_labor_regulation
+		icon = GFX_goal_generic_controlled_board
 
 		x = 2
 		y = 6
@@ -3230,7 +3230,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_abandon_nationalisation_schemes
-		icon = GFX_goal_generic_enforce_labor_regulation
+		icon = GFX_goal_generic_privatization
 
 		x = -5
 		y = 5
@@ -3253,7 +3253,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_liberal_future
-		icon = GFX_goal_generic_enforce_labor_regulation
+		icon = GFX_goal_liberty
 
 		x = -4
 		y = 6
@@ -3280,7 +3280,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_investments_of_free_enterprise
-		icon = GFX_goal_generic_enforce_labor_regulation
+		icon = GFX_goal_workers_for_business
 
 		x = -3
 		y = 5
@@ -3303,7 +3303,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_revisit_the_imperial_constitution
-		icon = GFX_goal_generic_enforce_labor_regulation
+		icon = GFX_goal_constitutional_guarantees
 
 		x = 1
 		y = 7
@@ -3331,7 +3331,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_abolish_the_bundesrat
-		icon = GFX_goal_generic_enforce_labor_regulation
+		icon = GFX_GER_break_down_the_rules_of_legislation
 
 		x = -2
 		y = 8
@@ -3358,7 +3358,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_charter_of_freedoms
-		icon = GFX_goal_generic_enforce_labor_regulation
+		icon = GFX_goal_Fight_for_Freedom
 
 		x = 0
 		y = 9
@@ -3409,7 +3409,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_purge_radical_elements_from_the_reichswehr
-		icon = GFX_goal_generic_enforce_labor_regulation
+		icon = GFX_goal_purge_the_Ikhwan
 
 		x = 3
 		y = 8
@@ -3432,7 +3432,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_push_back_against_prussia
-		icon = GFX_goal_generic_enforce_labor_regulation
+		icon = GFX_goal_GER_Pursue_Equal_Suffrage_in_Prussia
 
 		x = -1
 		y = 5
@@ -3456,7 +3456,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_empire_on_democratic_foundations
-		icon = GFX_goal_generic_enforce_labor_regulation
+		icon = GFX_focus_generic_bastion_of_democracy
 
 		x = -2
 		y = 6
@@ -3479,7 +3479,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_direct_control_over_prussia
-		icon = GFX_goal_generic_enforce_labor_regulation
+		icon = GFX_goal_GER_Prussia_Empire
 
 		x = 0
 		y = 6
@@ -3502,7 +3502,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_end_the_prussian_veto
-		icon = GFX_goal_generic_enforce_labor_regulation
+		icon = GFX_GER_prussian_local_goverment_reform
 
 		x = -1
 		y = 7
@@ -3525,7 +3525,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_ally_national_liberals
-		icon = GFX_goal_generic_enforce_labor_regulation
+		icon = GFX_goal_ideology_market_liberal
 
 		x = -3
 		y = 4
@@ -3548,12 +3548,14 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			set_temp_variable = { coalition_partner_var = token:market_liberalism }
+			add_to_coalition = yes
 		}
 	}
 
 	focus = {
 		id = GER_protect_the_unions
-		icon = GFX_goal_generic_enforce_labor_regulation
+		icon = GFX_goal_generic_union_agreement
 
 		x = 5
 		y = 5
