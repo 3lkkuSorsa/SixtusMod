@@ -1,0 +1,19 @@
+ideas = {
+	country = {
+		AUS_war_production_act = {
+			picture = KTG_Industrial_Crisis_Factories
+			modifier = {
+                industrial_capacity_factory = 0.1
+                industrial_capacity_dockyard = 0.1
+			}
+		}
+
+        AUS_war_loan = {
+			picture = KTG_Industrial_Crisis_Factories
+			modifier = {
+                political_power_cost = 0.2
+                consumer_goods_factor = -0.25
+			}
+		}
+    }
+}
