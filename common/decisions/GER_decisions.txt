@@ -1159,14 +1159,17 @@ GER_sc_decision_category = {
 		fire_only_once = yes
 
 		available = {
+			has_power_balance = {
+				id = GER_spring_coalition_bop
+			}
 			OR = {
 				power_balance_value = {
 					id = GER_spring_coalition_bop
-					value < -0.25
+					value < -0.8
 				}
 				power_balance_value = {
 					id = GER_spring_coalition_bop
-					value > 0.25
+					value > 0.8
 				}
 			}
 		}

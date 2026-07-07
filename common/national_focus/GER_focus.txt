@@ -1683,10 +1683,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			country_event = {
-				id = GER_spring_coalition.17
-				days = 3
-			}
 			activate_mission = GER_keeping_coalition_together
 			custom_effect_tooltip = {
 				localization_key = GER_enable_decision
