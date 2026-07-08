@@ -305,9 +305,12 @@ focus_tree = {
         x = 18
         y = 0
 
+        allow_branch = {
+            has_government = conservatism
+        }
 
         available = {
-            has_government = social_conservative
+            has_government = conservatism
         }
 
         mutually_exclusive = {
@@ -340,10 +343,11 @@ focus_tree = {
 
         prerequisite = {
             focus = AUS_kurt_schuschniggs_chancellorship
+            focus = AUS_towards_the_great_past
         }
 
         available = {
-            has_government = social_conservative
+            
         }
 
         mutually_exclusive = {
@@ -355,6 +359,38 @@ focus_tree = {
         }  
 
 		cost = 3
+
+        search_filters = { 
+        
+        }
+    }
+
+    # MONARCHIST PATH
+
+    focus = {
+        id = AUS_towards_the_great_past
+        icon = GFX_focus_AUS_heritage_of_an_empire
+        x = 18
+        y = 0
+
+        allow_branch = {
+            has_government = authoritarianism
+        }
+
+        available = {
+            has_government = authoritarianism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            add_stability = 0.05
+            custom_effect_tooltip = AUS_monarchism_tt
+        }  
+
+		cost = 5
 
         search_filters = { 
         
@@ -798,4 +834,5 @@ focus_tree = {
         
         }
     }
+
 }

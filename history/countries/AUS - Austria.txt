@@ -3,8 +3,12 @@ set_stability = 0.62
 set_war_support = 0.346
 
 add_ideas = {
-
-
+	AUS_multiethnic_empire
+	AUS_growing_labour_movement
+	AUS_underfunded_military
+	civilian_economy
+	export_focus
+	limited_conscription
 }
 
 set_popularities = {
@@ -18,7 +22,7 @@ set_popularities = {
 }
 
 set_politics = {
-	ruling_party = social_conservative
+	ruling_party = conservatism
 	last_election = "1932.07.03"
 	election_frequency = 48
 	elections_allowed = yes

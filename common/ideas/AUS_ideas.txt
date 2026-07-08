@@ -1,5 +1,32 @@
 ideas = {
 	country = {
+		AUS_multiethnic_empire = {
+			picture = AUS_part_of_the_Empire
+			modifier = {
+                political_power_factor = -0.15
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		AUS_growing_labour_movement = {
+			picture = AUS_austromarxism
+			modifier = {
+                social_democracy_drift = 0.04
+				communism_drift = 0.04
+			}
+		}
+
+		AUS_underfunded_military = {
+			picture = advisors_austria
+			modifier = {
+                conscription_factor = -0.1
+				army_org_factor = -0.1
+				experience_gain_army_factor = -0.15
+				experience_gain_navy_factor = -0.15
+				experience_gain_air_factor = -0.15
+			}
+		}
+
 		AUS_war_production_act = {
 			picture = KTG_Industrial_Crisis_Factories
 			modifier = {
