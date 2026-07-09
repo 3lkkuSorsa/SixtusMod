@@ -272,3 +272,82 @@ country_event = {
 		name = "May this bring us stability and prosperity!"
 	}
 }
+
+country_event = {
+	id = RHI_events.13
+	title = "Köln at the Negotiating Table Again"
+	desc = RHI_events.13.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Sure, this is a good compromise."
+		set_autonomy = {
+			target = RHI
+			autonomous_state = autonomy_protectorate
+			end_wars = no
+			end_civil_wars = no
+		}
+		effect_tooltip = {
+			RHI = {
+				swap_ideas = {
+					remove_idea = RHI_dependence_on_germany
+					add_idea = RHI_at_the_fatherlands_helm
+				}
+			}
+		}
+		hidden_effect = {
+			RHI = {
+				country_event = {
+					id = RHI_events.14
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "No, we cannot accept this!"
+		hidden_effect = {
+			RHI = {
+				country_event = {
+					id = RHI_events.15
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = RHI_events.14
+	title = "Imperial Government Welcoms Us Back"
+	desc = RHI_events.14.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Great!"
+		add_political_power = 150
+		add_stability = 0.1
+		swap_ideas = {
+			remove_idea = RHI_dependence_on_germany
+			add_idea = RHI_at_the_fatherlands_helm
+		}
+	}
+}
+
+country_event = {
+	id = RHI_events.15
+	title = "Cold Response from Berlin"
+	desc = RHI_events.15.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Well, we tried..."
+		uncomplete_national_focus = {
+			focus = RHI_contact_the_germans
+			uncomplete_children = yes
+		}
+		complete_national_focus = RHI_assert_our_independence
+	}
+}

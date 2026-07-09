@@ -11,6 +11,7 @@ country_event = RHI_events.13
 
 add_ideas = {
     RHI_unstable_republic
+	RHI_dependence_on_germany
 }
 
 set_politics = {

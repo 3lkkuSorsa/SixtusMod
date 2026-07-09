@@ -1,2 +1,3 @@
 our_foreign_policy = {
+    priority = 5
 }

@@ -1,4 +1,6 @@
 ﻿l_english:
+ if_they_accept: "§YEffects if they accept:§!"
+
  dual_leader_dot_tooltip: "§g[GetDLPrefix]§!\n[GetDLTitle] §Y[?dual_leader.GetTokenLocalizedKey]§!\n \n \n \n \n \n \n \n£[?dual_leader.GetTokenKey] \n \n \n \n \n \n \n \n[!idea_grapper]"
  dual_leader_dot_tooltip_delayed: "§L[!desc_grapper]§!"
 

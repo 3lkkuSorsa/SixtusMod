@@ -78,6 +78,7 @@ ideas = {
 		RHI_dependence_on_germany = {
 			cancel = {
 				is_puppet = yes
+				NOT = { is_subject_of = GER }
 			}
 			modifier = {
 				stability_factor = 0.05
@@ -87,6 +88,22 @@ ideas = {
 				tag = GER
 				cic_to_target_factor = 0.15
 				mic_to_target_factor = 0.25
+			}
+		}
+
+		RHI_at_the_fatherlands_helm = {
+			cancel = {
+				NOT = { is_subject_of = GER }
+			}
+			modifier = {
+				stability_factor = 0.15
+				consumer_goods_factor = -0.25
+				production_speed_buildings_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = GER
+				cic_to_target_factor = 0.2
+				mic_to_target_factor = 0.4
 			}
 		}
 	}

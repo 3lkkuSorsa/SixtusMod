@@ -18,7 +18,7 @@ focus_tree = {
 
 	focus = {
 		id = RHI_republic_on_the_rhine
-		icon = GFX_goal_generic_political_reform
+		icon = GFX_goal_generic_dissolve_parliament2
 		x = 8
 		y = 0
 
@@ -34,7 +34,7 @@ focus_tree = {
 
 	focus = {
 		id = RHI_adenauers_fourth_cabinet
-		icon = GFX_goal_generic_political_reform
+		icon = GFX_focus_por_concordat
 		x = -1
 		y = 1
 
@@ -42,6 +42,7 @@ focus_tree = {
 
 		completion_reward = {
 			remove_ideas = RHI_strikes
+			clr_country_flag = RHI_industrial_workers_strike
 		}
 
 		prerequisite = {
@@ -61,7 +62,7 @@ focus_tree = {
 
 	focus = {
 		id = RHI_hold_snap_elections
-		icon = GFX_goal_generic_political_reform
+		icon = GFX_goal_generic_elections
 		x = 1
 		y = 1
 
@@ -95,7 +96,7 @@ focus_tree = {
 
 	focus = {
 		id = RHI_negotiate_end_to_the_strikes
-		icon = GFX_goal_generic_political_reform
+		icon = GFX_focus_GER_strengthen_the_proletarian_international
 		x = 2
 		y = 2
 
@@ -111,6 +112,7 @@ focus_tree = {
 					remove_ideas = RHI_general_strike
 				}
 			}
+			clr_country_flag = RHI_industrial_workers_strike
 		}
 
 		prerequisite = {
@@ -129,7 +131,7 @@ focus_tree = {
 
 	focus = {
 		id = RHI_new_rhenish_constitution
-		icon = GFX_goal_generic_political_reform
+		icon = GFX_goal_constitutional_guarantees
 		x = 0
 		y = 2
 
@@ -158,7 +160,7 @@ focus_tree = {
 
 	focus = {
 		id = RHI_contact_the_germans
-		icon = GFX_goal_generic_political_reform
+		icon = GFX_goal_COS_German_Bailout
 		x = -1
 		y = 3
 
@@ -184,6 +186,7 @@ focus_tree = {
 		available = {
 			NOT = {
 				has_government = market_liberalism
+				has_country_flag = RHI_industrial_workers_strike
 			}
 		}
 
@@ -192,7 +195,7 @@ focus_tree = {
 
 	focus = {
 		id = RHI_assert_our_independence
-		icon = GFX_goal_generic_political_reform
+		icon = GFX_focus_generic_bastion_of_democracy
 
 		x = 1
 		y = 3
@@ -209,6 +212,12 @@ focus_tree = {
 
 		mutually_exclusive = {
 			focus = RHI_contact_the_germans
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = RHI_industrial_workers_strike
+			}
 		}
 
 		completion_reward = {
@@ -243,25 +252,34 @@ focus_tree = {
 
 	focus = {
 		id = RHI_denounce_german_influence
-		icon = GFX_goal_generic_political_reform
+		icon = GFX_goal_RUS_exploit_german
 
 		x = 2
 		y = 4
 
 		relative_position_id = RHI_republic_on_the_rhine
 
+		available = {
+			NOT = {
+				is_in_faction_with = GER
+				is_subject_of = GER
+				has_completed_focus = RHI_secession_of_sovereignity
+			}
+		}
+
 		prerequisite = {
 			focus = RHI_assert_our_independence
 		}
 
 		completion_reward = {
+			add_stability = -0.08
 			remove_ideas = RHI_dependence_on_germany
 		}
 	}
 
 	focus = {
 		id = RHI_seek_guarantees_from_france
-		icon = GFX_goal_generic_political_reform
+		icon = GFX_focus_chi_reach_out_to_france
 
 		x = 0
 		y = 4
@@ -270,6 +288,18 @@ focus_tree = {
 
 		prerequisite = {
 			focus = RHI_assert_our_independence
+		}
+
+		mutually_exclusive = {
+			focus = RHI_secession_of_sovereignity
+		}
+
+		bypass = {
+			is_in_faction = yes
+		}
+
+		available = {
+			is_subject = no
 		}
 
 		completion_reward = {
@@ -283,17 +313,74 @@ focus_tree = {
 				FRA_FACTION_JOIN = "Join the [FRA.GetFactionName]"
 			}
 			add_to_array = { join_faction_targets = FRA }
-			meta_effect = {
-				text = {
-					custom_effect_tooltip = {
-						localisation_key = GER_enable_decision
-						DEC = [GER_FACTION_JOIN]
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = RHI_secession_of_sovereignity
+		icon = GFX_goal_align_germany
+
+		x = -2
+		y = 4
+
+		relative_position_id = RHI_republic_on_the_rhine
+
+		prerequisite = {
+			focus = RHI_assert_our_independence
+			focus = RHI_contact_the_germans
+		}
+
+		mutually_exclusive = {
+			focus = RHI_seek_guarantees_from_france
+		}
+
+		bypass = {
+			OR = {
+				is_in_faction = yes
+				is_subject_of = GER
+			}
+		}
+
+		available = {
+			is_subject = no
+			OR = {
+				AND = {
+					has_completed_focus = RHI_assert_our_independence
+					NOT = { has_completed_focus = RHI_denounce_german_influence }
+				}
+				AND = {
+					has_completed_focus = RHI_contact_the_germans
+					has_global_flag = GER_rhineland_declined_by_germany
+				}
+			}
+		}
+
+		completion_reward = {
+			GER = {
+				country_event = {
+					id = RHI_events.13
+					days = 3
+				}
+			}
+			custom_effect_tooltip = "          "
+			custom_effect_tooltip = if_they_accept
+			effect_tooltip = {
+				GER = {
+					set_autonomy = {
+						target = RHI
+						autonomous_state = autonomy_protectorate
+						end_wars = no
+						end_civil_wars = no
+					}
+					RHI = {
+						swap_ideas = {
+							remove_idea = RHI_dependence_on_germany
+							add_idea = RHI_at_the_fatherlands_helm
+						}
 					}
 				}
-				GER_FACTION_JOIN = "Join the [GER.GetFactionName]"
 			}
-			add_to_array = { join_faction_targets = GER }
-			add_stability = 0.1
 		}
 	}
 }
