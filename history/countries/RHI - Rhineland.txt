@@ -1,0 +1,31 @@
+set_capital = 16
+set_stability = 0.57
+set_war_support = 0.3
+
+country_event = {
+	id = RHI_events.6
+	days = 34
+}
+
+country_event = RHI_events.13
+
+add_ideas = {
+    RHI_unstable_republic
+}
+
+set_politics = {
+	ruling_party = conservatism
+	last_election = "1934.02.03"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	ultra_nationalism = 2
+	authoritarianism = 8
+	conservatism = 22
+	market_liberalism = 20
+	social_liberalism = 13
+	social_democracy = 23
+	communism = 12
+}

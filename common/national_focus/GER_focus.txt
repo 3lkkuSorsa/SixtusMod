@@ -3632,13 +3632,14 @@ focus_tree = {
 
 		relative_position_id = GER_take_on_stresemanns_legacy
 
-		cost = 5
+		cost = 0
 
 		prerequisite = {
 			focus = GER_take_on_stresemanns_legacy
 		}
 
 		available = {
+			has_global_flag = GER_rhineland_ready
 		}
 
 		completion_reward = {
@@ -3704,10 +3705,6 @@ focus_tree = {
 			has_global_flag = GER_rhineland_crisis
 		}
 
-		prerequisite = {
-			focus = GER_economic_integration_with_rhineland
-		}
-
 		mutually_exclusive = {
 			focus = GER_mainz_conference
 		}
@@ -3749,6 +3746,7 @@ focus_tree = {
 		completion_reward = {
 			RHI = {
 				add_ideas = RHI_protectorate_1
+				custom_effect_tooltip = "                                             "
 				add_ideas = RHI_unsure_catholics
 			}
 		}

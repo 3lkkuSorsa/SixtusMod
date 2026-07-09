@@ -1,0 +1,3 @@
+﻿l_english:
+ our_foreign_policy: "[GetAdjectiveCap] Foreign Policy"
+ join_faction: "Join the [FROM.GetFactionName]"

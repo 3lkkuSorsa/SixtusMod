@@ -3,7 +3,7 @@ add_namespace = RHI_events
 news_event = {
 	id = RHI_events.1
 	title = "Rhineland reunites with Germany"
-	desc = RHI_unification.1.d
+	desc = RHI_events.1.d
 
 	is_triggered_only = yes
 	major = yes
@@ -34,7 +34,7 @@ news_event = {
 country_event = {
 	id = RHI_events.2
 	title = "Germany starts integrating us!"
-	desc = RHI_unification.2.d
+	desc = RHI_events.2.d
 
 	is_triggered_only = yes
 
@@ -46,7 +46,7 @@ country_event = {
 news_event = {
 	id = RHI_events.3
 	title = "France protests Rhineland annexation"
-	desc = RHI_unification.3.d
+	desc = RHI_events.3.d
 
 	is_triggered_only = yes
 	major = yes
@@ -61,5 +61,214 @@ news_event = {
 
 	option = {
 		name = "Oh well..."
+	}
+}
+
+country_event = {
+	id = RHI_events.4
+	title = "Rhenish Government Approaches Us"
+	desc = RHI_events.4.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Back at the fatherland's helm"
+		RHI = {
+			country_event = {
+				id = RHI_events.5
+				days = 3
+			}
+		}
+		unlock_national_focus = GER_adenauers_overtures
+		set_global_flag = GER_rhineland_ready
+	}
+
+	option = {
+		name = "We cannot risk our precarious peace with France"
+		RHI = {
+			country_event = {
+				id = RHI_events.5
+				days = 3
+			}
+		}
+		set_global_flag = GER_rhineland_declined_by_germany
+	}
+}
+
+country_event = {
+	id = RHI_events.5
+	title = "Telegram from the Imperial German Government"
+	desc = RHI_events.5.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "May we be unified someday!"
+		trigger = {
+			has_global_flag = GER_rhineland_ready
+		}
+	}
+
+	option = {
+		name = "They... refused us?!"
+		trigger = {
+			has_global_flag = GER_rhineland_declined_by_germany
+		}
+	}
+}
+
+country_event = {
+	id = RHI_events.6
+	title = "Industrial Workers' Strike"
+	desc = RHI_events.6.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Unstable republic, without a doubt"
+		unlock_national_focus = RHI_republic_on_the_rhine
+		add_ideas = RHI_strikes
+		hidden_effect = {
+			set_country_flag = RHI_industrial_workers_strike
+			country_event = {
+				id = RHI_events.7
+				days = 8
+			}
+		}
+	}
+}
+
+country_event = {
+	id = RHI_events.7
+	title = "Adenauer's actions against the Strikes"
+	desc = RHI_events.7.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Send in the Police to disperse the Strikers"
+		hidden_effect = {
+			country_event = {
+				id = RHI_events.8
+				days = 4
+			}
+		}
+	}
+
+	option = {
+		name = "Adenauer must resign!"
+		end_coalition = yes
+		country_event = {
+			id = RHI_events.10
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = RHI_events.8
+	title = "Strikes turn into a bloodbath"
+	desc = RHI_events.8.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Government must flee the city"
+		end_coalition = yes
+		swap_ideas = {
+			remove_idea = RHI_strikes
+			add_idea = RHI_general_strike
+		}
+		hidden_effect = {
+			country_event = {
+				id = RHI_events.9
+				days = 16
+			}
+		}
+	}
+}
+
+country_event = {
+	id = RHI_events.9
+	title = "Chaos in the Council"
+	desc = RHI_events.9.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = RHI_provisional_government
+			set_politics = {
+				ruling_party = authoritarianism
+			}
+		}
+	}
+
+	option = {
+		name = "New elections must be held!"
+		add_ideas = RHI_republic_without_government
+	}
+}
+
+country_event = {
+	id = RHI_events.10
+	title = "Adenauer's Resignation"
+	desc = RHI_events.10.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "He successfully forms a new government"
+		set_country_flag = RHI_adenauer_maintained
+		set_temp_variable = { coalition_partner_var = token:market_liberalism }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:authoritarianism }
+		add_to_coalition = yes
+	}
+
+	option = {
+		name = "Elections must be held"
+		set_country_flag = RHI_adenauers_new_elections
+	}
+}
+
+country_event = {
+	id = RHI_events.11
+	title = "Elections to the Council"
+	desc = RHI_events.11.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "SDAP-RVP Victory"
+		set_politics = {
+			ruling_party = social_democracy
+		}
+		set_temp_variable = { coalition_partner_var = token:social_liberalism }
+		add_to_coalition = yes
+	}
+
+	option = {
+		name = "RRP wins with support of the catholics"
+		custom_effect_tooltip = RHI_marlib_warning
+		set_politics = {
+			ruling_party = market_liberalism
+		}
+		set_temp_variable = { coalition_partner_var = token:conservatism }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:authoritarianism }
+		add_to_coalition = yes
+	}
+}
+
+country_event = {
+	id = RHI_events.12
+	title = "Constitution of the Rhenish Republic"
+	desc = RHI_events.12.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "May this bring us stability and prosperity!"
 	}
 }

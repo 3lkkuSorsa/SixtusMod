@@ -17,365 +17,284 @@ focus_tree = {
 	default = no
 
 	focus = {
-		id = RHI_future_of_the_republic
+		id = RHI_republic_on_the_rhine
 		icon = GFX_goal_generic_political_reform
-		x = 0
+		x = 8
 		y = 0
 
 		completion_reward = {
 		}
 
-		cost = 5
+		available = {
+			has_country_flag = RHI_industrial_workers_strike
+		}
+
+		cost = 0
 	}
 
 	focus = {
-		id = RHI_fourth_adenauer_cabinet
-		icon = GFX_goal_generic_political_reform
-		x = 4
-		y = 1
-
-		prerequisite = {
-			focus = RHI_future_of_the_republic
-		}
-
-		completion_reward = {
-		}
-
-		cost = 5
-	}
-
-	focus = {
-		id = RHI_economic_liberalism
-		icon = GFX_goal_generic_political_reform
-		x = 13
-		y = 2
-
-		prerequisite = {
-			focus = RHI_fourth_adenauer_cabinet
-		}
-
-		completion_reward = {
-		}
-
-		cost = 5
-	}
-
-	focus = {
-		id = RHI_devalue_the_rheinmark
-		icon = GFX_goal_generic_political_reform
-		x = 2
-		y = 1
-
-		relative_position_id = RHI_economic_liberalism
-
-		prerequisite = {
-			focus = RHI_economic_liberalism
-		}
-
-		completion_reward = {
-		}
-
-		cost = 5
-	}
-
-	focus = {
-		id = RHI_empower_financial_sector
-		icon = GFX_goal_generic_political_reform
-		x = 1
-		y = 2
-
-		relative_position_id = RHI_economic_liberalism
-
-		prerequisite = {
-			focus = RHI_devalue_the_rheinmark
-		}
-
-		completion_reward = {
-		}
-
-		cost = 5
-	}
-
-	focus = {
-		id = RHI_recovery_from_rhein_crisis
-		icon = GFX_goal_generic_political_reform
-		x = 2
-		y = 3
-
-		relative_position_id = RHI_economic_liberalism
-
-		prerequisite = {
-			focus = RHI_empower_financial_sector
-		}
-
-		prerequisite = {
-			focus = RHI_reduce_import_duties
-		}
-
-		completion_reward = {
-		}
-
-		cost = 5
-	}
-
-	focus = {
-		id = RHI_reduce_import_duties
-		icon = GFX_goal_generic_political_reform
-		x = 3
-		y = 2
-
-		relative_position_id = RHI_economic_liberalism
-
-		prerequisite = {
-			focus = RHI_economic_liberalism
-		}
-
-		completion_reward = {
-		}
-
-		cost = 5
-	}
-
-	focus = {
-		id = RHI_privatization_program
-		icon = GFX_goal_generic_political_reform
-		x = -2
-		y = 1
-
-		relative_position_id = RHI_economic_liberalism
-
-		prerequisite = {
-			focus = RHI_economic_liberalism
-		}
-
-		completion_reward = {
-		}
-
-		cost = 5
-	}
-
-	focus = {
-		id = RHI_end_state_railways_monopoly
-		icon = GFX_goal_generic_political_reform
-		x = -2
-		y = 3
-
-		relative_position_id = RHI_economic_liberalism
-
-		prerequisite = {
-			focus = RHI_privatization_program
-		}
-
-		completion_reward = {
-		}
-
-		cost = 5
-	}
-
-	focus = {
-		id = RHI_sell_state_owned_industries
+		id = RHI_adenauers_fourth_cabinet
 		icon = GFX_goal_generic_political_reform
 		x = -1
-		y = 2
+		y = 1
 
-		relative_position_id = RHI_economic_liberalism
-
-		prerequisite = {
-			focus = RHI_privatization_program
-		}
-
-		prerequisite = {
-			focus = RHI_devalue_the_rheinmark
-		}
+		relative_position_id = RHI_republic_on_the_rhine
 
 		completion_reward = {
+			remove_ideas = RHI_strikes
+		}
+
+		prerequisite = {
+			focus = RHI_republic_on_the_rhine
+		}
+
+		mutually_exclusive = {
+			focus = RHI_hold_snap_elections
+		}
+
+		available = {
+			has_country_flag = RHI_adenauer_maintained
 		}
 
 		cost = 5
 	}
 
 	focus = {
-		id = RHI_coalition_formation
+		id = RHI_hold_snap_elections
+		icon = GFX_goal_generic_political_reform
+		x = 1
+		y = 1
+
+		relative_position_id = RHI_republic_on_the_rhine
+
+		completion_reward = {
+			country_event = {
+				id = RHI_events.11
+				days = 2
+			}
+			remove_ideas = RHI_republic_without_government
+		}
+
+		prerequisite = {
+			focus = RHI_republic_on_the_rhine
+		}
+
+		mutually_exclusive = {
+			focus = RHI_adenauers_fourth_cabinet
+		}
+
+		available = {
+			OR = {
+				has_country_flag = RHI_adenauers_new_elections
+				has_country_flag = RHI_provisional_government
+			}
+		}
+
+		cost = 5
+	}
+
+	focus = {
+		id = RHI_negotiate_end_to_the_strikes
 		icon = GFX_goal_generic_political_reform
 		x = 2
 		y = 2
 
-		prerequisite = {
-			focus = RHI_fourth_adenauer_cabinet
-		}
+		relative_position_id = RHI_republic_on_the_rhine
 
 		completion_reward = {
+			if = {
+				limit = {
+					has_idea = RHI_strikes
+				}
+				remove_ideas = RHI_strikes
+				else = {
+					remove_ideas = RHI_general_strike
+				}
+			}
+		}
+
+		prerequisite = {
+			focus = RHI_hold_snap_elections
+		}
+
+		available = {
+			OR = {
+				has_idea = RHI_strikes
+				has_idea = RHI_general_strike
+			}
 		}
 
 		cost = 5
 	}
 
 	focus = {
-		id = RHI_coalition_of_constitutionalists
+		id = RHI_new_rhenish_constitution
 		icon = GFX_goal_generic_political_reform
-		x = 1
-		y = 3
-
-		prerequisite = {
-			focus = RHI_coalition_formation
-		}
-
-		mutually_exclusive = {
-			focus = RHI_primacy_of_the_bourgeoisie
-		}
-
-		completion_reward = {
-		}
-
-		cost = 5
-	}
-
-	focus = {
-		id = RHI_primacy_of_the_bourgeoisie
-		icon = GFX_goal_generic_political_reform
-		x = 3
-		y = 3
-
-		prerequisite = {
-			focus = RHI_coalition_formation
-		}
-
-		mutually_exclusive = {
-			focus = RHI_coalition_of_constitutionalists
-		}
-
-		completion_reward = {
-		}
-
-		cost = 5
-	}
-
-	focus = {
-		id = RHI_situation_on_the_rhine
-		icon = GFX_goal_generic_political_reform
-		x = -3
-		y = 1
-
-		prerequisite = {
-			focus = RHI_future_of_the_republic
-		}
-
-		completion_reward = {
-		}
-
-		cost = 5
-	}
-
-	focus = {
-		id = RHI_closer_ties_with_germany
-		icon = GFX_goal_germany
-		x = -4
+		x = 0
 		y = 2
 
-		prerequisite = {
-			focus = RHI_situation_on_the_rhine
-		}
-
-		mutually_exclusive = {
-			focus = RHI_pursue_independence
-		}
+		relative_position_id = RHI_republic_on_the_rhine
 
 		completion_reward = {
+			country_event = {
+				id = RHI_events.12
+			}
+			swap_ideas = {
+				remove_idea = RHI_unstable_republic
+				add_idea = RHI_renewed_republic
+			}
+		}
+
+		prerequisite = {
+			focus = RHI_adenauers_fourth_cabinet
+			focus = RHI_hold_snap_elections
+		}
+
+		available = {
 		}
 
 		cost = 5
 	}
 
 	focus = {
-		id = RHI_referendum_on_joining_germany
+		id = RHI_contact_the_germans
 		icon = GFX_goal_generic_political_reform
-		x = -5
-		y = 3
-
-		prerequisite = {
-			focus = RHI_closer_ties_with_germany
-		}
-
-		mutually_exclusive = {
-			focus = RHI_independent_ally
-		}
-
-		completion_reward = {
-		}
-
-		cost = 5
-	}
-
-	focus = {
-		id = RHI_independent_ally
-		icon = GFX_goal_COS_German_Bailout
-		x = -3
-		y = 3
-
-		prerequisite = {
-			focus = RHI_closer_ties_with_germany
-		}
-
-		mutually_exclusive = {
-			focus = RHI_referendum_on_joining_germany
-		}
-
-		completion_reward = {
-		}
-
-		cost = 5
-	}
-
-	focus = {
-		id = RHI_pursue_independence
-		icon = GFX_goal_generic_political_reform
-		x = -2
-		y = 2
-
-		prerequisite = {
-			focus = RHI_situation_on_the_rhine
-		}
-
-		mutually_exclusive = {
-			focus = RHI_closer_ties_with_germany
-		}
-
-		completion_reward = {
-		}
-
-		cost = 5
-	}
-
-	focus = {
-		id = RHI_cologne_agreements
-		icon = GFX_focus_chi_reach_out_to_france
 		x = -1
 		y = 3
 
-		prerequisite = {
-			focus = RHI_pursue_independence
-		}
+		relative_position_id = RHI_republic_on_the_rhine
 
 		completion_reward = {
+			GER = {
+				country_event = {
+					id = RHI_events.4
+					days = 3
+				}
+			}
+		}
+
+		prerequisite = {
+			focus = RHI_new_rhenish_constitution
+		}
+
+		mutually_exclusive = {
+			focus = RHI_assert_our_independence
+		}
+
+		available = {
+			NOT = {
+				has_government = market_liberalism
+			}
 		}
 
 		cost = 5
 	}
 
 	focus = {
-		id = RHI_join_france
+		id = RHI_assert_our_independence
 		icon = GFX_goal_generic_political_reform
-		x = -2
+
+		x = 1
+		y = 3
+
+		relative_position_id = RHI_republic_on_the_rhine
+
+		prerequisite = {
+			focus = RHI_hold_snap_elections
+		}
+
+		prerequisite = {
+			focus = RHI_new_rhenish_constitution
+		}
+
+		mutually_exclusive = {
+			focus = RHI_contact_the_germans
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RHI_renewed_republic
+				add_idea = RHI_spirit_of_the_rhine
+			}
+			custom_effect_tooltip = "          "
+			51 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			42 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RHI_denounce_german_influence
+		icon = GFX_goal_generic_political_reform
+
+		x = 2
 		y = 4
 
+		relative_position_id = RHI_republic_on_the_rhine
+
 		prerequisite = {
-			focus = RHI_cologne_agreements
+			focus = RHI_assert_our_independence
 		}
 
 		completion_reward = {
+			remove_ideas = RHI_dependence_on_germany
+		}
+	}
+
+	focus = {
+		id = RHI_seek_guarantees_from_france
+		icon = GFX_goal_generic_political_reform
+
+		x = 0
+		y = 4
+
+		relative_position_id = RHI_republic_on_the_rhine
+
+		prerequisite = {
+			focus = RHI_assert_our_independence
 		}
 
-		cost = 5
+		completion_reward = {
+			meta_effect = {
+				text = {
+					custom_effect_tooltip = {
+						localisation_key = GER_enable_decision
+						DEC = [FRA_FACTION_JOIN]
+					}
+				}
+				FRA_FACTION_JOIN = "Join the [FRA.GetFactionName]"
+			}
+			add_to_array = { join_faction_targets = FRA }
+			meta_effect = {
+				text = {
+					custom_effect_tooltip = {
+						localisation_key = GER_enable_decision
+						DEC = [GER_FACTION_JOIN]
+					}
+				}
+				GER_FACTION_JOIN = "Join the [GER.GetFactionName]"
+			}
+			add_to_array = { join_faction_targets = GER }
+			add_stability = 0.1
+		}
 	}
 }
 
