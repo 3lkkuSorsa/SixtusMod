@@ -16,6 +16,23 @@ ideas = {
 			}
 		}
 
+		AUS_eroding_parliamentarianism = {
+			picture = AUS_part_of_the_Empire
+			modifier = {
+                political_power_factor = -0.1
+				weekly_stability = 0.002
+				authoritarianism_drift = 0.03
+			}
+		}
+
+		AUS_noble_wealth = {
+			picture = AUS_part_of_the_Empire
+			modifier = {
+                political_power_factor = 0.05
+				consumer_goods_factor = -0.1
+			}
+		}
+
 		AUS_underfunded_military = {
 			picture = advisors_austria
 			modifier = {
