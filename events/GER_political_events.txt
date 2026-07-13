@@ -878,6 +878,7 @@ country_event = {
 			}
 		}
 		set_country_flag = GER_winner_Z_volksblock
+		set_country_flag = GER_volksblock
 		clr_country_flag = GER_show_moderate_tree
 		set_country_flag = GER_show_democratic_tree
 		mark_focus_tree_layout_dirty = yes
