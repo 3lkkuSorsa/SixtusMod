@@ -88,11 +88,51 @@ fire_ministers = {
 	}
 }
 
+fire_ministers_no_hog = {
+	hidden_effect = {
+		THIS = {
+			every_character = {
+				limit = {
+					is_character_slot = minister
+				}
+				retire = yes
+				set_nationality = PREV
+
+				remove_trait = {
+					character = THIS
+					slot = minister
+					trait = interior_minister
+				}
+				remove_trait = {
+					character = THIS
+					slot = minister
+					trait = foreign_minister
+				}
+				remove_trait = {
+					character = THIS
+					slot = minister
+					trait = finance_minister
+				}
+				remove_trait = {
+					character = THIS
+					slot = minister
+					trait = economy_minister
+				}
+				remove_trait = {
+					character = THIS
+					slot = minister
+					trait = army_minister
+				}
+			}
+		}
+	}
+}
+
 GER_appoint_volksblock_coalition = {
 	custom_effect_tooltip = GER_appoint_democratic_government_tt
 	set_country_flag = GER_coalition_finalized
 	hidden_effect = {
-		fire_ministers = yes
+		fire_ministers_no_hog = yes
 		if = {
 			limit = {
 				has_country_flag = GER_stegerwald_interior_ministry

@@ -26,6 +26,11 @@ ideas = {
 			}
 		}
 		GER_kampf_aus_der_mitte_idea = {
+			cancel = {
+				NOT = {
+					has_country_flag = GER_spring_coalition
+				}
+			}
 			modifier = {
 				stability_factor = -0.08
 				political_power_factor = -0.35
