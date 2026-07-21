@@ -9,39 +9,55 @@ focus_tree = {
         }
     }
 
-    continuous_focus_position = { x = 100 y = 2000 }
+    continuous_focus_position = { x = 100 y = 1500 }
 
     default = no
 
-    #CONSERVATIVE POLITCAL PATH
+    #Industry Branch
+
+    focus = {
+        id = FRA_industrial_buildup
+        icon = GFX_focus_generic_industry_3
+        x = 7
+        y = 0
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    #Early Politics
 
     focus = {
         id = FRA_adress_the_strike_crisis
         icon = GFX_goal_NFA_pays_reel
-        x = 20
+        x = 18
         y = 0
 
         mutually_exclusive = {
-            focus = FRA_unite_the_leftist_opposition
-        }
 
-        mutually_exclusive = {
-            focus = FRA_supremacy_of_the_leagues
         }
 		
         completion_reward = {
             add_stability = 0.05
-
             add_popularity = {
                 ideology = conservatism
-                popularity = 0.05
+                popularity = 0.03
             }
-
             swap_ideas = {
                 remove_idea = FRA_major_strikes
                 add_idea = FRA_major_strikes2
             }
-
             custom_effect_tooltip = FRA_conservatism_tt
         }  
 
@@ -53,182 +69,24 @@ focus_tree = {
     }
 
     focus = {
-        id = FRA_increase_populist_rethoric
-        icon = GFX_goal_NFA_france_first
-        x = 18
+        id = FRA_negotiation_success
+        icon = GFX_goal_generic_union_agreement
+        x = 17
         y = 1
-
-        prerequisite = {
-            focus = FRA_adress_the_strike_crisis
-        }
-
-        mutually_exclusive = {
-            focus = FRA_pass_economic_reforms
-        }
-		
-        completion_reward = {
-            add_popularity = {
-                ideology = conservatism
-                popularity = 0.05
-            }
-            
-            add_timed_idea = {
-                idea = FRA_populist_rethoric
-                days = 365
-            }
-        }  
-
-		cost = 4
-
-        search_filters = { 
-        
-        }
-    }
-
-    focus = {
-        id = FRA_pass_economic_reforms
-        icon = GFX_goal_generic_positive_trade_relations
-        x = 22
-        y = 1
-
-        prerequisite = {
-            focus = FRA_adress_the_strike_crisis
-        }
-
-        mutually_exclusive = {
-            focus = FRA_increase_populist_rethoric
-        }
-		
-        completion_reward = {
-            add_popularity = {
-                ideology = conservatism
-                popularity = 0.03
-            }
-            
-            add_timed_idea = {
-                idea = FRA_economic_reforms
-                days = 365
-            }
-        }  
-
-		cost = 4
-
-        search_filters = { 
-        
-        }
-    }
-
-    focus = {
-        id = FRA_second_mandate
-        icon = GFX_goal_NFA_deal_with_the_devil
-        x = 20
-        y = 2
 
         available = {
             always = no
         }
 
         prerequisite = {
-            focus = FRA_pass_economic_reforms
-            focus = FRA_increase_populist_rethoric
+            focus = FRA_adress_the_strike_crisis
         }
 
         mutually_exclusive = {
-            
+            focus = FRA_negotiation_failure
         }
 		
         completion_reward = {
-            
-        }  
-
-		cost = 1
-
-        search_filters = { 
-        
-        }
-    }
-
-    focus = {
-        id = FRA_three_promises
-        icon = GFX_goal_generic_improve_relations
-        x = 20
-        y = 3
-
-        prerequisite = {
-            focus = FRA_second_mandate
-        }
-
-        mutually_exclusive = {
-            
-        }
-		
-        completion_reward = {
-            add_political_power = 25
-
-            add_popularity = {
-                ideology = conservatism
-                popularity = 0.03
-            }
-            
-            add_popularity = {
-                ideology = market_liberalism
-                popularity = 0.02
-            }
-        }  
-
-		cost = 4
-
-        search_filters = { 
-        
-        }
-    }
-
-    focus = {
-        id = FRA_stability_and_order
-        icon = GFX_goal_ideology_authoritarian_democrat
-        x = 15
-        y = 4
-
-        prerequisite = {
-            focus = FRA_three_promises
-        }
-
-        mutually_exclusive = {
-            
-        }
-		
-        completion_reward = {
-            
-        }  
-
-		cost = 5
-
-        search_filters = { 
-        
-        }
-    }
-
-    focus = {
-        id = FRA_dispersing_the_strikes
-        icon = GFX_goal_generic_political_pressure
-        x = 14
-        y = 5
-
-        prerequisite = {
-            focus = FRA_stability_and_order
-        }
-
-        mutually_exclusive = {
-            
-        }
-		
-        completion_reward = {
-            add_stability = -0.05
-
-            add_popularity = {
-                ideology = social_democracy
-                popularity = -0.05
-            }
             swap_ideas = {
                 remove_idea = FRA_major_strikes2
                 add_idea = FRA_major_strikes3
@@ -243,113 +101,29 @@ focus_tree = {
     }
 
     focus = {
-        id = FRA_restoring_the_economy
-        icon = GFX_goal_generic_cash_stimulus_plan
-        x = 20
-        y = 4
-
-        prerequisite = {
-            focus = FRA_three_promises
-        }
-
-        mutually_exclusive = {
-            
-        }
-		
-        completion_reward = {
-            
-        }  
-
-		cost = 5
-
-        search_filters = { 
-        
-        }
-    }
-
-    focus = {
-        id = FRA_rearmament_program
-        icon = GFX_goal_munitions_factories
-        x = 25
-        y = 4
-
-        prerequisite = {
-            focus = FRA_three_promises
-        }
-
-        mutually_exclusive = {
-            
-        }
-		
-        completion_reward = {
-            
-        }  
-
-		cost = 5
-
-        search_filters = { 
-        
-        }
-    }
-
-    #LEFTIST POLITICAL PATH
-
-    focus = {
-        id = FRA_unite_the_leftist_opposition
-        icon = GFX_focus_generic_social_democracy
-        x = 36
-        y = 0
-
-        mutually_exclusive = {
-            focus = FRA_adress_the_strike_crisis
-        }
-
-        mutually_exclusive = {
-            focus = FRA_supremacy_of_the_leagues
-        }
-		
-        completion_reward = {
-            add_political_power = 50
-
-            add_popularity = {
-                ideology = social_democracy
-                popularity = 0.03
-            }
-
-            add_timed_idea = {
-                idea = FRA_socialist_campaign
-                days = 100
-            }
-
-            custom_effect_tooltip = FRA_socialism_tt
-        }  
-
-		cost = 5
-
-        search_filters = { 
-        
-        }
-    }
-
-    #COLONIAL MANAGEMENT
-
-    focus = {
-        id = FRA_refine_colonial_management
-        icon = GFX_goal_NFA_africa
-        x = 28
+        id = FRA_negotiation_failure
+        icon = GFX_goal_revolution
+        x = 19
         y = 1
 
+        available = {
+            always = no
+        }
+
         prerequisite = {
-            focus = FRA_unite_the_leftist_opposition
             focus = FRA_adress_the_strike_crisis
         }
 
         mutually_exclusive = {
-            
+            focus = FRA_negotiation_success
         }
 		
         completion_reward = {
-            add_political_power = 75
+            add_stability =  -0.1
+            add_popularity = {
+                ideology = conservatism
+                popularity = -0.05
+            }
         }  
 
 		cost = 5
@@ -360,49 +134,35 @@ focus_tree = {
     }
 
     focus = {
-        id = FRA_supremacy_of_the_leagues
-        icon = GFX_goal_NFA_end_parliamentarism
-        x = 52
-        y = 0
+        id = FRA_sfio_victorious
+        icon = GFX_goal_ideology_social_democrat
+        x = 18
+        y = 2
 
-        mutually_exclusive = {
-            focus = FRA_adress_the_strike_crisis
+        available = {
+            
+        }
+
+        prerequisite = {
+            
         }
 
         mutually_exclusive = {
-            focus = FRA_unite_the_leftist_opposition
+            
         }
-
-        available = {date < "1936.05.20"}
 		
         completion_reward = {
-
-            add_political_power = 100
-            
-            swap_ideas = {
-                remove_idea = FRA_political_instability
-                add_idea = FRA_political_instability2
-            }
-
+            add_stability =  0.05
             add_popularity = {
-                ideology = authoritarianism
+                ideology = social_democracy
                 popularity = 0.05
             }
-
-            add_popularity = {
-                ideology = ultra_nationalism
-                popularity = 0.05
-            }
-
-            custom_effect_tooltip = FRA_sigma_tt
         }  
 
-		cost = 5
+		cost = 3
 
         search_filters = { 
         
         }
     }
-
-
 }

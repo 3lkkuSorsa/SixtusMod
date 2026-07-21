@@ -9,6 +9,9 @@ add_ideas = {
     FRA_won_ww1
     FRA_war_reparations
     FRA_political_instability
+	civilian_economy
+	limited_conscription
+	export_focus
 }
 
 set_politics = {
