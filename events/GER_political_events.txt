@@ -888,6 +888,37 @@ country_event = {
 }
 
 country_event = {
+	id = GER_volksblock.1
+	title = "Bundesrat Vetoes Progressive Legislation"
+	desc = GER_volksblock.1.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = GER_bundesrat_veto
+		}
+	}
+
+	option = {
+		name = "Plainly unconstitutional!"
+		add_ideas = GER_bundesrat_veto
+	}
+}
+
+country_event = {
+	id = GER_volksblock.2
+	title = "End of the Bundesrat Veto"
+	desc = GER_volksblock.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A crisis curtailed."
+	}
+}
+
+country_event = {
 	id = GER_scleicher.1
 	title = "Imperialer Block"
 	desc = GER_scleicher.1.d

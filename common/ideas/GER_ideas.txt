@@ -272,5 +272,18 @@ ideas = {
 				stability_factor = -0.03
 			}
 		}
+		GER_bundesrat_veto = {
+			modifier = {
+				custom_modifier_tooltip = GER_can_pass_social_reforms_tt
+				stability_factor = -0.15
+				political_power_factor = -0.3
+			}
+		}
+		GER_obstructionist_bundesrat = {
+			modifier = {
+				stability_factor = -0.075
+				political_power_factor = -0.1
+			}
+		}
 	}
 }

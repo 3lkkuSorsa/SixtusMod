@@ -1078,26 +1078,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_
-		icon = GFX_goal_ideology_social_conservative
-
-		x = 2
-		y = 8
-
-		cost = 2
-
-		prerequisite = {
-			focus = GER_start_dismantling_democratic_institutions
-		}
-
-		available = {
-		}
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
 		id = GER_promised_and_delivered
 		icon = GFX_goal_ideology_social_conservative
 
@@ -2968,14 +2948,28 @@ focus_tree = {
 
 		relative_position_id = GER_volksblock_triumphs
 
-		cost = 3
+		cost = 5
 
 		available = {
 			has_country_flag = GER_volksblock
+			NOT = {
+				has_country_flag = GER_bundesrat_veto
+			}
 		}
 
 		prerequisite = {
 			focus = GER_truly_responsible_government
+		}
+
+		select_effect = {
+			country_event = {
+				id = GER_volksblock.1
+				days = 12
+			}
+		}
+
+		cancel = {
+			has_country_flag = GER_bundesrat_veto
 		}
 
 		completion_reward = {
@@ -3349,6 +3343,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			remove_ideas = GER_obstructionist_bundesrat
 		}
 	}
 
@@ -3516,6 +3511,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_stability = 0.1
+			custom_effect_tooltip = "           "
+			swap_ideas = {
+				remove_idea = GER_bundesrat_veto
+				add_idea = GER_obstructionist_bundesrat
+			}
 		}
 	}
 
