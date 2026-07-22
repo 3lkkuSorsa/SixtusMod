@@ -1,0 +1,80 @@
+add_namespace = FRA_strike_negotiations
+
+country_event = {
+	id = FRA_strike_negotiations.0
+	title = "Negotiating With The Strikers"
+	desc = FRA_strike_negotiations.0.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The Negotiations are Successful"
+
+		hidden_effect = {
+			country_event = {
+				id = FRA_strike_negotiations.1
+				days = 100
+			}
+			swap_ideas = {
+                remove_idea = FRA_major_strikes2
+                add_idea = FRA_major_strikes3
+            }
+            complete_national_focus = FRA_negotiation_success
+		}
+	}
+
+    option = {
+		name = "The Negotiations Fail!"
+
+		hidden_effect = {
+			country_event = {
+				id = FRA_strike_negotiations.2
+				days = 100
+			}
+			add_stability =  -0.1
+            add_popularity = {
+                ideology = conservatism
+                popularity = -0.05
+            }
+            complete_national_focus = FRA_negotiation_failure
+		}
+	}
+}
+
+country_event = {
+	id = FRA_strike_negotiations.1
+	title = "The Election Results"
+	desc = FRA_strike_negotiations.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The National Bloc Is Re-elected!"
+
+		hidden_effect = {
+			complete_national_focus = FRA_national_bloc_two
+		}
+	}
+
+}
+
+country_event = {
+	id = FRA_strike_negotiations.2
+	title = "The Election Results"
+	desc = FRA_strike_negotiations.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The Popular Front Is Victorious"
+
+		hidden_effect = {
+			set_politics = {
+                ruling_party = social_democracy
+                elections_allowed = yes
+            }
+            mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+}

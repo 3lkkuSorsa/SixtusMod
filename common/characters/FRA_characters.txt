@@ -10,6 +10,18 @@ characters = {
 			ideology = conservatism_sub
 		}
     }
+
+	FRA_leon_blum = {
+		name = FRA_blum_name
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/leon_blum.dds"
+			}
+		}
+		country_leader = {
+			ideology = social_democracy_sub
+		}
+    }
 }
 
 

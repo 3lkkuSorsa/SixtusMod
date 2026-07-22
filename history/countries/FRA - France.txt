@@ -3,6 +3,7 @@ set_stability = 0.57
 set_war_support = 0.36
 
 recruit_character = FRA_louis_marin
+recruit_character = FRA_leon_blum
 
 add_ideas = {
     FRA_major_strikes
@@ -30,3 +31,5 @@ set_popularities = {
 	social_democracy = 32
 	communism = 6
 }
+
+set_variable = { FRA_popular_front_modifier_war_support_factor = 0.05 }

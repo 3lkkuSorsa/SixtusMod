@@ -59,6 +59,9 @@ focus_tree = {
                 add_idea = FRA_major_strikes2
             }
             custom_effect_tooltip = FRA_conservatism_tt
+            hidden_effect = {
+                country_event = FRA_strike_negotiations.0
+            }
         }  
 
 		cost = 5
@@ -134,13 +137,56 @@ focus_tree = {
     }
 
     focus = {
+        id = FRA_national_bloc_two
+        icon = GFX_goal_ideology_social_conservative
+        x = 18
+        y = 2
+
+        allow_branch = {
+            has_government = conservatism
+        }
+
+        available = {
+            always = no
+        }
+
+        prerequisite = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            add_stability =  0.05
+            add_popularity = {
+                ideology = conservatism
+                popularity = 0.05
+            }
+        }  
+
+		cost = 3
+
+        search_filters = { 
+        
+        }
+    }
+
+    #Social Democratic Path
+
+    focus = {
         id = FRA_sfio_victorious
         icon = GFX_goal_ideology_social_democrat
         x = 18
         y = 2
 
+        allow_branch = {
+            has_government = social_democracy
+        }
+
         available = {
-            
+            has_government = social_democracy
         }
 
         prerequisite = {
@@ -160,6 +206,1129 @@ focus_tree = {
         }  
 
 		cost = 3
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_form_popular_front
+        icon = GFX_goal_generic_enforce_labor_regulation
+        x = 18
+        y = 3
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_sfio_victorious
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            add_political_power = 100
+            add_dynamic_modifier = { modifier = FRA_popular_front_modifier }
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_expand_welfare_programs
+        icon = GFX_goal_generic_solidarity
+        x = 15
+        y = 4
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_form_popular_front
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            add_popularity = {
+                ideology = social_democracy
+                popularity = 0.03
+            }
+            custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "The Popular Front"
+			}
+            add_to_variable = {
+				var = FRA_popular_front_modifier_stability_factor
+				value = 0.05
+				tooltip = stability_factor_tt
+			}
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_nationalize_industry
+        icon = GFX_goal_state_economy
+        x = 16
+        y = 5
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_expand_welfare_programs
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            17 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            25 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "The Popular Front"
+			}
+            add_to_variable = {
+				var = FRA_popular_front_modifier_industrial_capacity_factor
+				value = 0.1
+				tooltip = industrial_capacity_factory_tt
+			}
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_raise_minimum_wage
+        icon = GFX_goal_generic_cash_stimulus_plan
+        x = 14
+        y = 5
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_expand_welfare_programs
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "The Popular Front"
+			}
+            add_to_variable = {
+				var = FRA_popular_front_modifier_production_factory_efficiency_gain_factor
+				value = 0.1
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+            add_to_variable = {
+				var = FRA_popular_front_modifier_production_factory_max_efficiency_factor
+				value = 0.1
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_enact_fairer_taxation
+        icon = GFX_goal_generic_seize_money
+        x = 13
+        y = 6
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_raise_minimum_wage
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "The Popular Front"
+			}
+            add_to_variable = {
+				var = FRA_popular_front_modifier_consumer_goods_factor
+				value = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+            add_to_variable = {
+				var = FRA_popular_front_modifier_stability_factor
+				value = 0.05
+				tooltip = stability_factor_tt
+			}
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_market_socialist_economics
+        icon = GFX_goal_generic_market_socialism
+        x = 15
+        y = 6
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_nationalize_industry
+        }
+
+        prerequisite = {
+            focus = FRA_raise_minimum_wage
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "The Popular Front"
+			}
+            add_to_variable = {
+				var = FRA_popular_front_modifier_production_speed_industrial_complex_factor
+				value = 0.1
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
+            add_to_variable = {
+				var = FRA_popular_front_modifier_production_speed_arms_factory_factor
+				value = 0.1
+				tooltip = production_speed_arms_factory_factor_tt
+			}
+            add_to_variable = {
+				var = FRA_popular_front_modifier_consumer_goods_factor
+				value = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_promote_unions
+        icon = GFX_GBR_fate_of_unions
+        x = 13
+        y = 7
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_market_socialist_economics
+            focus = FRA_enact_fairer_taxation
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_limit_workhours
+        icon = GFX_goal_workers_rights
+        x = 11
+        y = 8
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_promote_unions
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_combat_worker_exploitation
+        icon = GFX_focus_generic_workers
+        x = 13
+        y = 8
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_promote_unions
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_comprehensive_workers_rights_bill
+        icon = GFX_focus_ICE_embrace_the_workers_revolution
+        x = 12
+        y = 9
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_limit_workhours
+        }
+
+        prerequisite = {
+            focus = FRA_combat_worker_exploitation
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_legislate_freedoms
+        icon = GFX_goal_new_treaty
+        x = 16
+        y = 7
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_market_socialist_economics
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_abolish_death_penalty
+        icon = GFX_goal_NFA_abolish_death_penalty
+        x = 15
+        y = 8
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_legislate_freedoms
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_womens_suffrage
+        icon = GFX_focus_generic_universal_suffrage
+        x = 17
+        y = 8
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_legislate_freedoms
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_society_of_equals
+        icon = GFX_goal_generic_government_deals
+        x = 16
+        y = 9
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_legislate_freedoms
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_true_french_socialism
+        icon = GFX_goal_red_star_dove
+        x = 14
+        y = 10
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_society_of_equals
+        }
+
+        prerequisite = {
+            focus = FRA_comprehensive_workers_rights_bill
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_review_legal_system
+        icon = GFX_goal_generic_trial
+        x = 17
+        y = 4
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_form_popular_front
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_spirit_of_sacred_union
+        icon = GFX_goal_NFA_republic
+        x = 18
+        y = 5
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_review_legal_system
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "The Popular Front"
+			}
+            add_to_variable = {
+				var = FRA_popular_front_modifier_stability_factor
+				value = 0.05
+				tooltip = stability_factor_tt
+			}
+            add_to_variable = {
+				var = FRA_popular_front_modifier_political_power_factor
+				value = 0.05
+				tooltip = political_power_factor_tt
+			}
+            add_to_variable = {
+				var = FRA_popular_front_modifier_consumer_goods_factor
+				value = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_reform_conscription
+        icon = GFX_goal_NFA_troops
+        x = 17
+        y = 6
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_spirit_of_sacred_union
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_end_to_strikes
+        icon = GFX_goal_generic_intelligence_exchange
+        x = 19
+        y = 4
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_form_popular_front
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_ban_radical_leagues
+        icon = GFX_focus_generic_ban_right_wing
+        x = 19
+        y = 6
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_end_to_strikes
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_raise_defence_spending
+        icon = GFX_goal_generic_military_sphere
+        x = 18
+        y = 7
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_reform_conscription
+        }
+
+        prerequisite = {
+            focus = FRA_ban_radical_leagues
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_placate_moderates
+        icon = GFX_goal_ideology_social_liberal
+        x = 21
+        y = 4
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_form_popular_front
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            add_popularity = {
+                ideology = social_liberalism
+                popularity = 0.03
+            }
+            custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "The Popular Front"
+			}
+            add_to_variable = {
+				var = FRA_popular_front_modifier_political_power_factor
+				value = 0.05
+				tooltip = political_power_factor_tt
+			}
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_enact_progressive_reforms
+        icon = GFX_goal_generic_neutrality_focus
+        x = 21
+        y = 5
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_placate_moderates
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_pragmatic_economics
+        icon = GFX_goal_generic_banking_legislation
+        x = 21
+        y = 6
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_enact_progressive_reforms
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_tax_reform
+        icon = GFX_focus_DEN_no_regulations
+        x = 20
+        y = 7
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_pragmatic_economics
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_ensure_coalition_stability
+        icon = GFX_goal_government_icon
+        x = 23
+        y = 5
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_placate_moderates
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_placate_rightist_liberals
+        icon = GFX_goal_ideology_market_liberal
+        x = 23
+        y = 6
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_ensure_coalition_stability
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_pragmatic_reformation
+        icon = GFX_goal_generic_stable_government
+        x = 22
+        y = 7
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_pragmatic_economics
+            focus = FRA_placate_rightist_liberals
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_promote_small_business
+        icon = GFX_focus_RAJ_special_economic_zones
+        x = 21
+        y = 8
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_pragmatic_reformation
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_revitalize_construction
+        icon = GFX_goal_workers_for_business
+        x = 20
+        y = 9
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_promote_small_business
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_responsible_governance
+        icon = GFX_goal_generic_improve_relations
+        x = 23
+        y = 8
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_pragmatic_reformation
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_investments
+        icon = GFX_goal_generic_foreign_investments
+        x = 22
+        y = 9
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_responsible_governance
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_societal_harmony
+        icon = GFX_goal_social_reforms
+        x = 24
+        y = 9
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_responsible_governance
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = FRA_france_truly_free
+        icon = GFX_goal_liberty
+        x = 22
+        y = 10
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            focus = FRA_societal_harmony
+        }
+
+        prerequisite = {
+            focus = FRA_investments
+        }
+
+        prerequisite = {
+            focus = FRA_revitalize_construction
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
 
         search_filters = { 
         
