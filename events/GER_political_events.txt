@@ -714,6 +714,7 @@ country_event = {
 			clr_country_flag = GER_kampf_aus_der_mitte
 			clr_country_flag = GER_spring_coalition
 			clr_country_flag = GER_spring_coalition_2
+			clr_country_flag = GER_schleicher_coup_planned
 			promote_character = {
 				character = GER_reichstag
 			}
@@ -753,6 +754,7 @@ country_event = {
 			clr_country_flag = GER_spring_coalition
 			clr_country_flag = GER_kampf_aus_der_mitte
 			clr_country_flag = GER_elections_36
+			clr_country_flag = GER_schleicher_coup_planned
 			remove_mission = GER_kampf_aus_der_mitte_mission
 			remove_mission = GER_elections_timer
 		}
@@ -818,6 +820,12 @@ country_event = {
 		hidden_effect = {
 			remove_mission = GER_elections_timer
 			clr_country_flag = GER_elections_36
+			if = {
+				limit = {
+					has_active_mission = GER_address_the_ongoing_crisis
+				}
+				set_country_flag = GER_volksblock_elected
+			}
 		}
 	}
 

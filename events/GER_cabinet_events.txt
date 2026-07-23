@@ -515,5 +515,6 @@ country_event = {
 	option = {
 		name = "Truly a new era!"
 		GER_appoint_volksblock_coalition = yes
+		clr_country_flag = GER_forming_a_cabinet
 	}
 }

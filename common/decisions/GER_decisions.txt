@@ -313,7 +313,10 @@ GER_spring_coalition_category = {
 		}
 
 		available = {
-			has_completed_focus = GER_reconcile_volksblock
+			OR = {
+				has_completed_focus = GER_reconcile_volksblock
+				has_country_flag = GER_volksblock_elected
+			}
 		}
 
 		activation = {
