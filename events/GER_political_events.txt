@@ -151,7 +151,10 @@ country_event = {
 		add_stability = 0.07
 		trigger = {
 			has_country_flag = GER_ensured_coalition_victory
-			has_idea = GER_prussian_grand_coalition
+			OR = {
+				has_idea = GER_prussian_grand_coalition
+				has_country_flag = GER_volksblock
+			}
 		}
 	}
 
@@ -176,8 +179,9 @@ country_event = {
 		trigger = {
 			NOT = {
 				has_country_flag = GER_ensured_coalition_victory
+				has_idea = GER_papen_in_prussia
+				has_idea = GER_schleicher_in_prussia
 			}
-			has_idea = GER_prussian_grand_coalition
 		}
 	}
 }

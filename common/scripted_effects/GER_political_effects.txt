@@ -55,8 +55,9 @@ fire_ministers = {
 						is_character_slot = head_of_government
 					}
 				}
-				retire = yes
-				set_nationality = PREV
+				owner = {
+					deactivate_advisor = PREV
+				}
 
 				remove_trait = {
 					character = THIS
@@ -94,9 +95,13 @@ fire_ministers_no_hog = {
 			every_character = {
 				limit = {
 					is_character_slot = minister
+					NOT = {
+						is_character_slot = head_of_government
+					}
 				}
-				retire = yes
-				set_nationality = PREV
+				owner = {
+					deactivate_advisor = PREV
+				}
 
 				remove_trait = {
 					character = THIS
