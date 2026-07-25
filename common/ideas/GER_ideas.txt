@@ -285,5 +285,16 @@ ideas = {
 				political_power_factor = -0.1
 			}
 		}
+		GER_major_public_works = {
+			modifier = {
+				production_speed_infrastructure_factor = 0.2
+			}
+		}
+		GER_nationalisation_costs = {
+			modifier = {
+				political_power_cost = -0.2
+				stability_factor = -0.12
+			}
+		}
 	}
 }

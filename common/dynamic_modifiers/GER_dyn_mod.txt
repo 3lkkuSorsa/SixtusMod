@@ -38,6 +38,20 @@ GER_social_reforms = {
 	production_factory_efficiency_gain_factor = GER_social_reforms_production_factory_efficiency_gain_factor
 }
 
+GER_gessler_program = {
+	icon = GFX_idea_unknown
+	stability_factor = GER_gessler_program_stability_factor
+	war_support_factor = GER_gessler_program_war_support_factor
+	political_power_factor = GER_gessler_program_political_power_factor
+	consumer_goods_factor = GER_gessler_program_consumer_goods_factor
+	production_factory_efficiency_gain_factor = GER_gessler_program_production_factory_efficiency_gain_factor
+	production_factory_start_efficiency_factor = GER_gessler_program_production_factory_start_efficiency_factor
+	production_factory_max_efficiency_factor = GER_gessler_program_production_factory_max_efficiency_factor
+	production_speed_arms_factory_factor = GER_gessler_program_production_speed_arms_factory_factor
+	production_speed_industrial_complex_factor = GER_gessler_program_production_speed_industrial_complex_factor
+	industrial_capacity_factory = GER_gessler_program_industrial_capacity_factor
+}
+
 GER_steer_to_center_left = {
 	enable = {
 		power_balance_value = {

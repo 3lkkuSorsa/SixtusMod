@@ -47,42 +47,54 @@ GER_appoint_spring_coalition = {
 fire_ministers = {
 	custom_effect_tooltip = GER_fire_all_ministers_tt
 	hidden_effect = {
-		THIS = {
-			every_character = {
+		every_character = {
+			limit = {
+				OR = {
+					is_character_slot = minister
+					is_character_slot = head_of_government
+				}
+				is_hired_as_advisor = yes
+			}
+			if = {
 				limit = {
-					OR = {
-						is_character_slot = minister
-						is_character_slot = head_of_government
+					is_character_slot = minister
+				}
+				remove_advisor_role = {
+					slot = minister
+				}
+				add_advisor_role = {
+					advisor = {
+						slot = minister
+						can_be_fired = no
+						available = {
+							is_hired_as_advisor = yes
+						}
+
+						allowed = {
+							is_hired_as_advisor = yes
+						}
 					}
 				}
-				owner = {
-					deactivate_advisor = PREV
+			}
+			if = {
+				limit = {
+					is_character_slot = head_of_government
 				}
+				remove_advisor_role = {
+					slot = head_of_government
+				}
+				add_advisor_role = {
+					advisor = {
+						slot = head_of_government
+						can_be_fired = no
+						available = {
+							is_hired_as_advisor = yes
+						}
 
-				remove_trait = {
-					character = THIS
-					slot = minister
-					trait = interior_minister
-				}
-				remove_trait = {
-					character = THIS
-					slot = minister
-					trait = foreign_minister
-				}
-				remove_trait = {
-					character = THIS
-					slot = minister
-					trait = finance_minister
-				}
-				remove_trait = {
-					character = THIS
-					slot = minister
-					trait = economy_minister
-				}
-				remove_trait = {
-					character = THIS
-					slot = minister
-					trait = army_minister
+						allowed = {
+							is_hired_as_advisor = yes
+						}
+					}
 				}
 			}
 		}
@@ -91,42 +103,25 @@ fire_ministers = {
 
 fire_ministers_no_hog = {
 	hidden_effect = {
-		THIS = {
-			every_character = {
-				limit = {
-					is_character_slot = minister
-					NOT = {
-						is_character_slot = head_of_government
+		every_character = {
+			limit = {
+				is_character_slot = minister
+				is_hired_as_advisor = yes
+			}
+			remove_advisor_role = {
+				slot = minister
+			}
+			add_advisor_role = {
+				advisor = {
+					slot = minister
+					can_be_fired = no
+					available = {
+						is_hired_as_advisor = yes
 					}
-				}
-				owner = {
-					deactivate_advisor = PREV
-				}
 
-				remove_trait = {
-					character = THIS
-					slot = minister
-					trait = interior_minister
-				}
-				remove_trait = {
-					character = THIS
-					slot = minister
-					trait = foreign_minister
-				}
-				remove_trait = {
-					character = THIS
-					slot = minister
-					trait = finance_minister
-				}
-				remove_trait = {
-					character = THIS
-					slot = minister
-					trait = economy_minister
-				}
-				remove_trait = {
-					character = THIS
-					slot = minister
-					trait = army_minister
+					allowed = {
+						is_hired_as_advisor = yes
+					}
 				}
 			}
 		}

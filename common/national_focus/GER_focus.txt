@@ -1518,7 +1518,6 @@ focus_tree = {
 
 		available = {
 			has_country_flag = GER_volksblock
-			has_completed_focus = GER_coalition_of_purists
 		}
 
 		allow_branch = {
@@ -2591,7 +2590,7 @@ focus_tree = {
 			focus = GER_promised_and_delivered
 		}
 
-		cost = 6
+		cost = 3
 
 		available = {
 		}
@@ -2643,7 +2642,7 @@ focus_tree = {
 			focus = GER_further_liberal_market_reforms
 		}
 
-		cost = 8
+		cost = 6
 
 		available = {
 		}
@@ -2798,7 +2797,7 @@ focus_tree = {
 			focus = GER_junker-transformationsplan
 		}
 
-		cost = 8
+		cost = 6
 
 		available = {
 		}
@@ -2977,6 +2976,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_dynamic_modifier = { modifier = GER_gessler_program }
 		}
 	}
 
@@ -3012,7 +3012,7 @@ focus_tree = {
 
 		relative_position_id = GER_volksblock_triumphs
 
-		cost = 3
+		cost = 5
 
 		available = {
 			has_country_flag = GER_volksblock
@@ -3023,6 +3023,25 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Gessler Program"
+			}
+			add_to_variable = {
+				var = GER_gessler_program_stability_factor
+				value = 0.05
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				var = GER_gessler_program_consumer_goods_factor
+				value = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				var = GER_gessler_program_production_factory_start_efficiency_factor
+				value = 0.15
+				tooltip = production_factory_start_efficiency_factor_tt
+			}
 		}
 	}
 
@@ -3046,6 +3065,15 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Gessler Program"
+			}
+			add_to_variable = {
+				var = GER_gessler_program_production_speed_industrial_complex_factor
+				value = 0.1
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
 		}
 	}
 
@@ -3069,29 +3097,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = GER_affordable_housing_initiative
-		icon = GFX_goal_generic_construct_public_housing
-
-		x = 8
-		y = 6
-
-		relative_position_id = GER_volksblock_triumphs
-
-		cost = 3
-
-		available = {
-			has_country_flag = GER_volksblock
-		}
-
-		prerequisite = {
-			focus = GER_social_insurance_reforms
-		}
-
-		completion_reward = {
+			add_timed_idea = {
+				idea = GER_major_public_works
+				days = 580
+			}
 		}
 	}
 
@@ -3104,7 +3113,7 @@ focus_tree = {
 
 		relative_position_id = GER_volksblock_triumphs
 
-		cost = 3
+		cost = 6
 
 		available = {
 			has_country_flag = GER_volksblock
@@ -3115,6 +3124,20 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Gessler Program"
+			}
+			add_to_variable = {
+				var = GER_gessler_program_production_factory_efficiency_gain_factor
+				value = 0.08
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+			add_to_variable = {
+				var = GER_gessler_program_industrial_capacity_factor
+				value = 0.12
+				tooltip = industrial_capacity_factory_tt
+			}
 		}
 	}
 
@@ -3142,6 +3165,20 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Gessler Program"
+			}
+			add_to_variable = {
+				var = GER_gessler_program_political_power_factor
+				value = 0.05
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = {
+				var = GER_gessler_program_consumer_goods_factor
+				value = -0.08
+				tooltip = consumer_goods_factor_tt
+			}
 		}
 	}
 
@@ -3181,7 +3218,7 @@ focus_tree = {
 
 		relative_position_id = GER_volksblock_triumphs
 
-		cost = 3
+		cost = 8
 
 		available = {
 			has_country_flag = GER_volksblock
@@ -3196,6 +3233,24 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_timed_idea = {
+				idea = GER_nationalisation_costs
+				days = 365
+			}
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Gessler Program"
+			}
+			add_to_variable = {
+				var = GER_gessler_program_production_factory_efficiency_gain_factor
+				value = 0.08
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+			add_to_variable = {
+				var = GER_gessler_program_production_factory_efficiency_start_factor
+				value = 0.12
+				tooltip = industrial_capacity_factory_tt
+			}
 		}
 	}
 
@@ -3212,6 +3267,7 @@ focus_tree = {
 
 		available = {
 			has_country_flag = GER_volksblock
+			has_completed_focus = GER_purge_radical_elements_from_the_reichswehr
 		}
 
 		prerequisite = {
@@ -3235,6 +3291,7 @@ focus_tree = {
 
 		available = {
 			has_country_flag = GER_volksblock
+			has_completed_focus = GER_gessler_program
 		}
 
 		prerequisite = {
@@ -3269,6 +3326,20 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Gessler Program"
+			}
+			add_to_variable = {
+				var = GER_gessler_program_stability_factor
+				value = 0.15
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				var = GER_gessler_program_war_support_factor
+				value = 0.25
+				tooltip = war_support_factor_tt
+			}
 		}
 	}
 
@@ -3398,7 +3469,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			remove_ideas = GER_questionable_army_loyalty
+			
 		}
 	}
 
@@ -3422,6 +3493,30 @@ focus_tree = {
 		}
 
 		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_democratize_the_reichswehr
+		icon = GFX_goal_purge_the_Ikhwan
+
+		x = 2
+		y = 9
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 3
+
+		available = {
+			has_country_flag = GER_volksblock
+		}
+
+		prerequisite = {
+			focus = GER_purge_radical_elements_from_the_reichswehr
+		}
+
+		completion_reward = {
+			remove_ideas = GER_questionable_army_loyalty
 		}
 	}
 
@@ -3569,6 +3664,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			country_event = {
+				id = GER_volksblock.3
+			}
 			set_temp_variable = { coalition_partner_var = token:market_liberalism }
 			add_to_coalition = yes
 		}
@@ -3583,7 +3681,7 @@ focus_tree = {
 
 		relative_position_id = GER_volksblock_triumphs
 
-		cost = 3
+		cost = 10
 
 		available = {
 			has_country_flag = GER_volksblock
@@ -3594,6 +3692,30 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Gessler Program"
+			}
+			add_to_variable = {
+				var = GER_gessler_program_political_power_factor
+				value = -0.05
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = {
+				var = GER_gessler_program_consumer_goods_factor
+				value = -0.08
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				var = GER_gessler_program_stability_factor
+				value = 0.05
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				var = GER_gessler_program_production_factory_max_efficiency_factor
+				value = 0.1
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
 		}
 	}
 
@@ -3625,6 +3747,57 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Gessler Program"
+			}
+			add_to_variable = {
+				var = GER_gessler_program_stability_factor
+				value = 0.25
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				var = GER_gessler_program_war_support_factor
+				value = 0.15
+				tooltip = war_support_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = GER_encourage_worker_investments
+		icon = GFX_goal_generic_enforce_labor_regulation
+
+		x = 8
+		y = 6
+
+		relative_position_id = GER_volksblock_triumphs
+
+		cost = 5
+
+		available = {
+			has_country_flag = GER_volksblock
+		}
+
+		prerequisite = {
+			focus = GER_social_insurance_reforms
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = {
+				localization_key = GER_modify_dyn_mod
+				IDEA = "Gessler Program"
+			}
+			add_to_variable = {
+				var = GER_gessler_program_production_speed_industrial_complex_factor
+				value = 0.15
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
+			add_to_variable = {
+				var = GER_gessler_program_production_speed_arms_factory_factor
+				value = 0.12
+				tooltip = production_speed_arms_factory_factor_tt
+			}
 		}
 	}
 

@@ -931,6 +931,18 @@ country_event = {
 }
 
 country_event = {
+	id = GER_volksblock.3
+	title = "Restoration of the Verfassungskoalition"
+	desc = GER_volksblock.3.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A crisis curtailed."
+	}
+}
+
+country_event = {
 	id = GER_scleicher.1
 	title = "Imperialer Block"
 	desc = GER_scleicher.1.d

@@ -28,9 +28,9 @@ IF = {
 	limit = {
 		has_dlc = "Gotterdammerung"
 	}
-	set_stability = 0.65 # Was 0.75, but get 5% from the Reichstag
+	set_stability = 0.58 # Was 0.75, but get 5% from the Reichstag
 	ELSE = {
-		set_stability = 0.70
+		set_stability = 0.63
 	}
 }
 
@@ -38,7 +38,7 @@ set_country_flag = dual_leader_active
 set_country_flag = DL_title_GER_kaiser
 set_variable = { dual_leader = token:GER_wilhelm_ii }
 
-set_war_support = 0.3
+set_war_support = 0.35
 
 recruit_character = GER_reichstag
 recruit_character = GER_franz_von_papen
@@ -115,6 +115,10 @@ set_variable = { GER_social_reforms_stability_factor = 0.05 }
 set_variable = { GER_social_reforms_consumer_goods_factor = 0.15 }
 set_variable = { GER_social_reforms_political_power_factor = -0.10 }
 
+set_variable = { GER_gessler_program_stability_factor = 0.12 }
+set_variable = { GER_gessler_program_political_power_factor = 0.05 }
+set_variable = { GER_gessler_program_consumer_goods_factor = 0.10 }
+
 set_variable = { decision_cost_GER_utilize_the_party_whip = 75 }
 set_variable = { decision_cost_GER_attack_the_left = 30 }
 set_variable = { decision_cost_GER_campaign_against_trade_unions = 20 }
@@ -125,7 +129,6 @@ add_to_faction = GER
 
 # Setup of National Spirits
 add_ideas = {
-	GER_may_betrayal
 	GER_wilhelm_ii_idea
 	GER_spirit_of_weimar
 	GER_red_scare
