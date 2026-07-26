@@ -136,6 +136,8 @@ focus_tree = {
         }
     }
 
+    #Conservative Political Path
+
     focus = {
         id = FRA_national_bloc_two
         icon = GFX_goal_ideology_social_conservative
@@ -182,7 +184,10 @@ focus_tree = {
         y = 2
 
         allow_branch = {
-            has_government = social_democracy
+            OR = {
+                has_government = social_democracy
+                has_government = social_liberalism
+            }
         }
 
         available = {
@@ -1334,4 +1339,82 @@ focus_tree = {
         
         }
     }
+
+    #Monarchy Path
+
+    focus = {
+        id = FRA_monarchist_restoration
+        icon = GFX_goal_NFA_restauration
+        x = 18
+        y = 2
+
+        allow_branch = {
+            has_government = authoritarianism
+        }
+
+        available = {
+            
+        }
+
+        prerequisite = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            add_stability =  0.05
+            add_popularity = {
+                ideology = authoritarianism
+                popularity = 0.05
+            }
+        }  
+
+		cost = 3
+
+        search_filters = { 
+        
+        }
+    }
+
+    #Postwar Election
+
+    focus = {
+        id = FRA_hold_elections
+        icon = GFX_goal_generic_elections
+        x = 18
+        y = 10
+
+        allow_branch = {
+            OR = {
+                has_government = social_liberalism
+                has_government = social_democracy
+            }
+        }
+
+        available = {
+            always = no
+        }
+
+        prerequisite = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 3
+
+        search_filters = { 
+        
+        }
+    }
+
 }
