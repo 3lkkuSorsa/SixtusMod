@@ -1247,8 +1247,8 @@ focus_tree = {
 		id = GER_the_everlasting_spring
 		icon = GFX_goal_GER_Conservative_Revolution
 
-		x = 7
-		y = 3
+		x = 6
+		y = 4
 
 		relative_position_id = GER_promised_and_delivered
 
@@ -1302,7 +1302,7 @@ focus_tree = {
 		}
 
 		offset = {
-			x = -2
+			x = -1
 			y = 3
 
 			trigger = {
@@ -1600,8 +1600,8 @@ focus_tree = {
 		id = GER_save_the_government_from_themselves
 		icon = GFX_goal_generic_castle
 
-		x = 5
-		y = 6
+		x = 8
+		y = 4
 
 		relative_position_id = GER_promised_and_delivered
 
@@ -1821,7 +1821,7 @@ focus_tree = {
 		id = GER_towards_a_weimar_coalition
 		icon = GFX_goal_INS_focus_party_coalition
 
-		x = 4
+		x = 3
 		y = 5
 
 		relative_position_id = GER_promised_and_delivered
@@ -1875,7 +1875,7 @@ focus_tree = {
 		id = GER_fate_of_authoritarian_parties
 		icon = GFX_goal_ideology_authoritarian_democrat
 
-		x = 5
+		x = 4
 		y = 6
 
 		relative_position_id = GER_promised_and_delivered
@@ -1923,7 +1923,7 @@ focus_tree = {
 		icon = GFX_focus_generic_ban_right_wing
 
 		x = 3
-		y = 6
+		y = 7
 
 		relative_position_id = GER_promised_and_delivered
 
@@ -1965,13 +1965,17 @@ focus_tree = {
 		id = GER_kaiserliches_dekret_14
 		icon = GFX_goal_GER_Fundamental_Rights
 
-		x = 2
+		x = 0
 		y = 5
 
 		relative_position_id = GER_promised_and_delivered
 
 		prerequisite = {
 			focus = GER_enforce_loyalty_of_trade_unions
+		}
+
+		prerequisite = {
+			focus = GER_action_against_political_militias
 		}
 
 		mutually_exclusive = {
@@ -2017,10 +2021,6 @@ focus_tree = {
 
 		prerequisite = {
 			focus = GER_kaiserliches_dekret_14
-		}
-
-		prerequisite = {
-			focus = GER_catholic_education_reforms
 		}
 
 		cost = 6
@@ -2165,6 +2165,10 @@ focus_tree = {
 			focus = GER_moderate_pension_reform
 		}
 
+		prerequisite = {
+			focus = GER_catholic_trade_unions
+		}
+
 		cost = 4
 
 		available = {
@@ -2187,8 +2191,8 @@ focus_tree = {
 		id = GER_staatssicherheitsburo
 		icon = GFX_goal_generic_investigation
 
-		x = -2
-		y = 5
+		x = -1
+		y = 6
 
 		relative_position_id = GER_promised_and_delivered
 
@@ -2223,17 +2227,13 @@ focus_tree = {
 		id = GER_catholic_education_reforms
 		icon = GFX_goal_BRA_catholic_education
 
-		x = 0
+		x = -2
 		y = 5
 
 		relative_position_id = GER_promised_and_delivered
 
 		prerequisite = {
 			focus = GER_catholic_trade_unions
-		}
-
-		prerequisite = {
-			focus = GER_moderate_pension_reform
 		}
 
 		cost = 6
