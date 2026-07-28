@@ -1193,7 +1193,7 @@ focus_tree = {
 		id = GER_reichsregierung_reformieren
 		icon = GFX_goal_ideology_market_liberal
 
-		x = 5
+		x = 6
 		y = 2
 
 		relative_position_id = GER_promised_and_delivered
@@ -1247,8 +1247,8 @@ focus_tree = {
 		id = GER_the_everlasting_spring
 		icon = GFX_goal_GER_Conservative_Revolution
 
-		x = 5
-		y = 6
+		x = 7
+		y = 3
 
 		relative_position_id = GER_promised_and_delivered
 
@@ -1270,7 +1270,6 @@ focus_tree = {
 		available = {
 			has_country_flag = GER_spring_coalition_2
 			has_country_flag = GER_coalition_survived
-			has_completed_focus = GER_seek_to_maintain_the_coalition
 		}
 
 		completion_reward = {
@@ -1293,8 +1292,8 @@ focus_tree = {
 		id = GER_second_burgfriedenspolitik
 		icon = GFX_goal_generic_castle
 
-		x = 5
-		y = 6
+		x = 8
+		y = 3
 
 		relative_position_id = GER_promised_and_delivered
 
@@ -1303,8 +1302,8 @@ focus_tree = {
 		}
 
 		offset = {
-			x = 2
-			y = 0
+			x = -2
+			y = 3
 
 			trigger = {
 				has_country_flag = GER_show_democratic_tree
@@ -1625,227 +1624,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_seek_to_maintain_the_coalition
-		icon = GFX_focus_BRA_reach_out_to_military_dem
-
-		x = 6
-		y = 3
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_reichsregierung_reformieren
-		}
-
-		mutually_exclusive = {
-			focus = GER_relinquish_schleichers_control_over_military
-		}
-
-		mutually_exclusive = {
-			focus = GER_integrate_imperialer_block
-		}
-
-		cost = 6
-
-		available = {
-			has_country_flag = GER_spring_coalition_2
-			OR = {
-				is_power_balance_in_range = {
-					id = GER_spring_coalition_bop
-					range = GER_sc_mid
-				}
-				has_country_flag = GER_republicanism_outlawed
-			}
-			NOT = {
-				has_completed_focus = GER_collude_with_spd
-			}
-		}
-
-		completion_reward = {
-			activate_mission = GER_keeping_coalition_together
-			custom_effect_tooltip = {
-				localization_key = GER_enable_decision
-				DEC = "Compromise efforts to maintain the coalition"
-			}
-			custom_effect_tooltip = {
-				localization_key = GER_enable_decision
-				DEC = "Reassign Schleicher"
-			}
-			hidden_effect = {
-				remove_power_balance = {
-					id = GER_spring_coalition_bop
-				}
-				set_power_balance = {
-					id = GER_spring_coalition_bop
-					value = 0
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = GER_spring_betrothal
-		icon = GFX_focus_JAP_an_integrated_union
-
-		x = 6
-		y = 5
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_seek_to_maintain_the_coalition
-		}
-
-		cost = 3
-
-		available = {
-			has_country_flag = GER_spring_coalition_2
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = GER_spring_betrothal_tt
-			hidden_effect = {
-				add_dynamic_modifier = {
-					modifier = GER_steer_to_center_left
-				}
-				add_dynamic_modifier = {
-					modifier = GER_steer_to_center_right
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = GER_integrate_imperialer_block
-		icon = GFX_goal_align_germany
-
-		x = 8
-		y = 3
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_reichsregierung_reformieren
-		}
-
-		mutually_exclusive = {
-			focus = GER_relinquish_schleichers_control_over_military
-		}
-
-		mutually_exclusive = {
-			focus = GER_seek_to_maintain_the_coalition
-		}
-
-		cost = 6
-
-		available = {
-			has_country_flag = GER_spring_coalition_2
-			has_completed_focus = GER_sack_braun_from_prussia
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = GER_right_focus
-			add_to_variable = {
-				var = GER_right_wing_focuses
-				value = 1
-			}
-			add_to_variable = {
-				var = GER_focuses_power_balance_weekly
-				value = 0.003
-			}
-			add_stability = 0.08
-			add_ideas = GER_imperial_block_3
-		}
-	}
-
-	focus = {
-		id = GER_schleichers_coup
-		icon = GFX_goal_GER_Red_General_Regime
-
-		x = 7
-		y = 4
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_integrate_imperialer_block
-		}
-
-		cost = 3
-
-		available = {
-			has_country_flag = GER_spring_coalition_2
-			power_balance_value = {
-				id = GER_spring_coalition_bop
-				value > 0.8
-			}
-			has_country_flag = GER_prussian_integration
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = GER_right_focus
-			add_to_variable = {
-				var = GER_right_wing_focuses
-				value = 1
-			}
-			add_to_variable = {
-				var = GER_focuses_power_balance_weekly
-				value = 0.003
-			}
-			country_event = {
-				id = GER_spring_coalition.3
-				days = 10
-			}
-		}
-	}
-
-	focus = {
-		id = GER_relinquish_schleichers_control_over_military
-		icon = GFX_focus_ARG_defense_and_democracy
-
-		x = 10
-		y = 3
-
-		relative_position_id = GER_promised_and_delivered
-
-		prerequisite = {
-			focus = GER_reichsregierung_reformieren
-		}
-
-		mutually_exclusive = {
-			focus = GER_integrate_imperialer_block
-		}
-
-		mutually_exclusive = {
-			focus = GER_seek_to_maintain_the_coalition
-		}
-
-		cost = 6
-
-		available = {
-			has_country_flag = GER_spring_coalition_2
-			has_completed_focus = GER_foment_a_split_between_kaiser_and_schleicher
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = GER_left_focus
-			add_to_variable = {
-				var = GER_left_wing_focuses
-				value = 1
-			}
-			add_to_variable = {
-				var = GER_focuses_power_balance_weekly
-				value = -0.003
-			}
-			retire_character = GER_kurt_von_schleicher
-			add_timed_idea = {
-				idea = GER_waning_legacy_of_schleicher
-				days = 480
-			}
-		}
-	}
-
-	focus = {
 		id = GER_issue_ultimatum
 		icon = GFX_goal_generic_crush_unions
 
@@ -2043,13 +1821,17 @@ focus_tree = {
 		id = GER_towards_a_weimar_coalition
 		icon = GFX_goal_INS_focus_party_coalition
 
-		x = 3
-		y = 4
+		x = 4
+		y = 5
 
 		relative_position_id = GER_promised_and_delivered
 
 		prerequisite = {
-			focus = GER_collude_with_spd
+			focus = GER_enforce_loyalty_of_trade_unions
+		}
+
+		mutually_exclusive = {
+			focus = GER_kaiserliches_dekret_14
 		}
 
 		cost = 5
@@ -2063,6 +1845,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = GER_left_focus
+			custom_effect_tooltip = GER_no_return_tt
 			add_to_variable = {
 				var = GER_left_wing_focuses
 				value = 1
@@ -2092,8 +1875,8 @@ focus_tree = {
 		id = GER_fate_of_authoritarian_parties
 		icon = GFX_goal_ideology_authoritarian_democrat
 
-		x = 2
-		y = 5
+		x = 5
+		y = 6
 
 		relative_position_id = GER_promised_and_delivered
 
@@ -2139,8 +1922,8 @@ focus_tree = {
 		id = GER_root_out_extremists_from_military
 		icon = GFX_focus_generic_ban_right_wing
 
-		x = 4
-		y = 5
+		x = 3
+		y = 6
 
 		relative_position_id = GER_promised_and_delivered
 
@@ -2182,13 +1965,17 @@ focus_tree = {
 		id = GER_kaiserliches_dekret_14
 		icon = GFX_goal_GER_Fundamental_Rights
 
-		x = 1
-		y = 6
+		x = 2
+		y = 5
 
 		relative_position_id = GER_promised_and_delivered
 
 		prerequisite = {
 			focus = GER_enforce_loyalty_of_trade_unions
+		}
+
+		mutually_exclusive = {
+			focus = GER_towards_a_weimar_coalition
 		}
 
 		cost = 6
@@ -2215,6 +2002,45 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = GER_curtailed_political_freedoms
 				add_idea = GER_kaiserliches_dekret_14
+			}
+		}
+	}
+
+	focus = {
+		id = GER_renewed_vows_for_future
+		icon = GFX_goal_GER_Fundamental_Rights
+
+		x = 1
+		y = 6
+
+		relative_position_id = GER_promised_and_delivered
+
+		prerequisite = {
+			focus = GER_kaiserliches_dekret_14
+		}
+
+		prerequisite = {
+			focus = GER_catholic_education_reforms
+		}
+
+		cost = 6
+
+		available = {
+			OR = {
+				has_country_flag = GER_spring_coalition_2
+				has_country_flag = GER_schleicher_war_coup
+			}
+			has_country_flag = GER_investigation_on_socialism_success
+			has_country_flag = GER_republicanism_outlawed
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GER_enable_negotiations_to_save_spring_tt
+			hidden_effect = {
+				country_event = {
+					id = GER_spring_coalition.18
+					days = 1
+				}
 			}
 		}
 	}
@@ -2494,7 +2320,7 @@ focus_tree = {
 		id = GER_enforce_loyalty_of_trade_unions
 		icon = GFX_goal_generic_controlled_board
 
-		x = 1
+		x = 3
 		y = 4
 
 		relative_position_id = GER_promised_and_delivered

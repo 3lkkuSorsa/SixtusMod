@@ -44,6 +44,7 @@ ideologies = {
 		types = {
 			market_liberalism_sub = {}
 			classical_liberalism = {}
+			conservative_liberalism = {}
 		}
 		color = { 255 200 0 }
 	}

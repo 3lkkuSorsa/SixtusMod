@@ -254,7 +254,7 @@ country_event = {
 
 country_event = {
 	id = GER_spring_coalition.9
-	title = "Schleicher loses confidence in the Civilian government"
+	title = "Coalition in Disarray"
 	desc = GER_spring_coalition.9.d
 
 	is_triggered_only = yes
@@ -268,13 +268,12 @@ country_event = {
 		}
 		set_temp_variable = { coalition_partner_var = token:authoritarianism }
 		add_to_coalition = yes
-		promote_character = GER_kurt_von_schleicher
 		clr_country_flag = GER_spring_coalition
 		clr_country_flag = GER_spring_coalition_2
-		set_country_flag = GER_schleicher_war_coup
+		set_country_flag = GER_dkp_in_power
 		hidden_effect = {
 			unlock_national_focus = GER_save_the_government_from_themselves
-			set_country_flag = GER_show_schleicher_war_coup
+			set_country_flag = GER_show_dkp_path
 			mark_focus_tree_layout_dirty = yes
 			clr_country_flag = GER_spring_coalition
 			clr_country_flag = GER_spring_coalition_2
@@ -353,10 +352,12 @@ country_event = {
 	fire_only_once = yes
 
 	option = {
-		name = "It seems that Spring won't be eternal..."
-		country_event = {
-			id = GER_spring_coalition.9
-			days = 20
+		name = "We won't bow to traitors!"
+		hidden_effect = {
+			country_event = {
+				id = GER_spring_coalition.9
+				days = 20
+			}
 		}
 	}
 }
@@ -461,25 +462,6 @@ country_event = {
 
 country_event = {
 	id = GER_spring_coalition.17
-	title = "Schleicher Pledges Loyalty to the Coalition"
-	desc = GER_spring_coalition.17.d
-
-	is_triggered_only = yes
-
-	option = {
-		name = "Step towards stability"
-		add_stability = 0.08
-		GER_kurt_von_schleicher = {
-			remove_trait = {
-				slot = minister
-				trait = GER_imperial_spy
-			}
-		}
-	}
-}
-
-country_event = {
-	id = GER_spring_coalition.17
 	title = "Show of Good Will towards the Left"
 	desc = GER_spring_coalition.17.d
 
@@ -515,50 +497,95 @@ country_event = {
 }
 
 country_event = {
-	id = GER_political_manoeuvres.1
-	title = "Zentrum demands chancellorship"
-	desc = GER_political_manoeuvres.1.d
+	id = GER_spring_coalition.18
+	title = "Renewed talks to save the coalition"
+	desc = GER_spring_coalition.18.d
 
 	is_triggered_only = yes
 
-	immediate = {
+	option = {
+		name = "Go the easy route: Resign!"
+		custom_effect_tooltip = GER_resign_liberals_power_tt
+		add_political_power = -50
+		add_stability = -0.08
 		hidden_effect = {
+			remove_power_balance = {
+				id = GER_spring_coalition_bop
+			}
 			country_event = {
-				id = GER_zentrum_leadership.1
-				days = 30
+				id = GER_spring_coalition.14
+				days = 15
 			}
 		}
 	}
 
 	option = {
-		name = "Agree to Stegerwald's chancellorship"
-		add_to_variable = {
-			var = GER.coalition_stability
-			value = 2
-			tooltip = GER_coalition_stability_change_tt
-		}
-		complete_national_focus = GER_political_manoeuvres
-		set_country_flag = GER_agreed_to_stegerwald
-	}
-
-	option = {
-		name = "Compromise on Brüning"
-		complete_national_focus = GER_political_manoeuvres
-		set_country_flag = GER_agreed_to_bruning
+		name = "Agree to the DkP's demands"
+		custom_effect_tooltip = GER_dkp_demands_tt
+		set_country_flag = GER_dkp_demands_accepted
 		hidden_effect = {
-			
+			remove_power_balance = {
+				id = GER_spring_coalition_bop
+			}
+			country_event = {
+				id = GER_spring_coalition.14
+				days = 15
+			}
 		}
 	}
 
 	option = {
-		name = "Leave the negotiations"
-		set_country_flag = GER_agreed_to_stegerwald
-		country_event = {
-			id = GER_political_manoeuvres.2
-			days = 2
+		name = "There will be no compromise!"
+		custom_effect_tooltip = GER_no_return_tt
+		if = {
+			limit = {
+				power_balance_value = {
+					id = GER_spring_coalition_bop
+					value < 0
+				}
+			}
+			country_event = {
+				id = GER_spring_coalition.15
+				days = 4
+			}
+			else = {
+				country_event = {
+					id = GER_spring_coalition.12
+					days = 4
+				}
+			}
 		}
-		add_political_power = -50
-		add_stability = -0.05
+	}
+}
+
+country_event = {
+	id = GER_spring_coalition.19
+	title = "Dingeldey's Chancellorship"
+	desc = GER_spring_coalition.19.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Did not see this coming..."
+		custom_effect_tooltip = GER_dingeldey_chancellorship_tt
+		hidden_effect = {
+			set_politics = {
+				ruling_party = market_liberalism
+			}
+			if = {
+				limit = { has_idea = GER_adam_stegerwald_hog_idea }
+				swap_ideas = {
+					remove_idea = GER_adam_stegerwald_hog_idea
+					add_idea = GER_eduard_dingeldey_hog_idea
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = GER_heinrich_bruning_hog_idea
+						add_idea = GER_eduard_dingeldey_hog_idea
+					}
+				}
+			}
+		}
 	}
 }
 

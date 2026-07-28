@@ -265,6 +265,32 @@ characters = {
 		}
 	}
 
+	GER_eduard_dingeldey = {
+		name = GER_eduard_dingeldey
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/GER_dingeldey.dds"
+			}
+		}
+
+		country_leader = {
+			ideology = conservative_liberalism
+		}
+
+		advisor = {
+			slot = head_of_government
+			idea_token = GER_eduard_dingeldey_hog_idea
+			can_be_fired = no
+			available = {
+				is_hired_as_advisor = yes
+			}
+
+			allowed = {
+				is_hired_as_advisor = yes
+			}
+		}
+	}
+
 	# Other Ministers
 
 	GER_wilhelm_groener = {

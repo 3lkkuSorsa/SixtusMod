@@ -30,7 +30,11 @@
  GER_schleicher_war_coup: "§gSchleicher§! took on the §Yimperial government§!"
  GER_has_done_3_reichsregierung_reforms_tt: "Atleast §Y3 Reichsregierung reforms§! completed"
  GER_prussian_integration: "Prussian chancellor is subordinate to the Reichstag"
- GER_coalition_survived: "The §YSpring§! §3coalition§! has survived"
+ GER_coalition_survived: "Negotiations to save the coalition were §Ysuccessful§!"
+ GER_enable_negotiations_to_save_spring_tt: "We will start negotiations on the future of the §YSpring§! §3coalition§! and try to save it from collapsing.\n\n"
+ GER_resign_liberals_power_tt: "Our chancellor will resign in favor a §7NLP§! chancellor."
+ GER_dkp_demands_tt: "We will §Yretain§! our chancellorship, but we will have to agree that:\n - Coalition will not include parties left to the §7NLP§!\n - §nDUVP§! will not be expelled from the coalition\n - We will halt any decision deemed §tsocialist§! by them."
+ GER_no_return_tt: "§RSaving the coalition past this point will be impossible.§!\n\n"
 
  GER_freeze_spd_tt: "The §SSPD§! campaign will be §Yfrozen§! for one turn.\n\n"
 
@@ -96,6 +100,8 @@
 
  GER_6_month_enabling_act_tt: "The new §gKabinett Schleicher§! will enact a 6-month long §YEnabling Act§! that will allow it to bypass the Reichstag and rule by decree."
  GER_continuous_campaigning_cooldown: "Atleast §Y30 days§! from last completion of this focus. (Currently [?GER_continuous_campaigning_cooldown:days|Y0])"
+ 
+ GER_dingeldey_chancellorship_tt: "§7Eduard Dingeldey§! will be appointed as chancellor, which will be a §Ycompromise§! between the §3Zentrum§! and the §aDkP§!."
 
  GER_Zentrum_wins_tt: "The §3Zentrum§! won the largest share of the vote."
  GER_SPD_wins_tt: "The §SSPD§! won the largest share of the vote."

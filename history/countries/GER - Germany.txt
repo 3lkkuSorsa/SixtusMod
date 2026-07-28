@@ -46,6 +46,7 @@ recruit_character = GER_kuno_von_westarp
 recruit_character = GER_kurt_von_schleicher
 recruit_character = GER_otto_braun
 recruit_character = GER_wilhelm_groener
+recruit_character = GER_eduard_dingeldey
 recruit_character = GER_julius_curtius
 recruit_character = GER_hjalmar_schacht_1
 recruit_character = GER_konstantin_von_neurath_1
