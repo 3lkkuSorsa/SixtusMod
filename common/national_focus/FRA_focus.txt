@@ -841,7 +841,7 @@ focus_tree = {
         }
 		
         completion_reward = {
-            
+            add_ideas = FRA_conscription_reform
         }  
 
 		cost = 5
@@ -870,7 +870,8 @@ focus_tree = {
         }
 		
         completion_reward = {
-            
+            add_political_power = 25
+            remove_idea = FRA_major_strikes
         }  
 
 		cost = 5
