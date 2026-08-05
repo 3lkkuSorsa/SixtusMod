@@ -45,10 +45,6 @@ autonomy_state = {
 	}
 
 	allowed = {
-		OR = {
-			is_subject = no
-			has_autonomy_state = autonomy_personal_union
-		}
 	}
 	
 	can_lose_level = {

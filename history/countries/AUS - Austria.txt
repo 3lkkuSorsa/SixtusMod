@@ -11,6 +11,13 @@ add_ideas = {
 	limited_conscription
 }
 
+set_autonomy = {
+	target = HUN
+	autonomy_state = autonomy_personal_union
+	end_wars = no
+	end_civil_wars = no
+}
+
 set_popularities = {
 	ultra_nationalism = 6
 	authoritarianism = 11
