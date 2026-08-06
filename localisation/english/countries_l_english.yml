@@ -2,6 +2,12 @@
  GER: "German Empire"
  GER_DEF: "The German Empire"
  GER_ADJ: "German"
+ BAT: "Baltic States"
+ BAT_DEF: "The Baltic States"
+ BAT_ADJ: "Baltic"
+ BAT_subject: "Baltic Governorates"
+ BAT_subject_DEF: "the Baltic Governorates"
+
  ENG_fascism: "British Empire"
  ENG_fascism_DEF: "the British Empire"
  ENG_democratic: "United Kingdom"

@@ -1,0 +1,26 @@
+set_capital = 808
+set_stability = 0.62
+set_war_support = 0.346
+
+add_ideas = {
+	civilian_economy
+	export_focus
+	limited_conscription
+}
+
+set_popularities = {
+	ultra_nationalism = 6
+	authoritarianism = 31
+	conservatism = 12
+	market_liberalism = 25
+	social_liberalism = 12
+	social_democracy = 12
+	communism = 2
+}
+
+set_politics = {
+	ruling_party = authoritarianism
+	last_election = "1932.08.24"
+	election_frequency = 60
+	elections_allowed = yes
+}
