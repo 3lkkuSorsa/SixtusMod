@@ -1,0 +1,18 @@
+ideas = {
+	hidden_ideas = {
+		BAT_pilchau_idea = {
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+	}
+	country = {
+		BAT_german_political_class = {
+			modifier = {
+				stability_factor = -0.15
+				political_power_factor = 0.25
+				mobilization_laws_cost_factor = 0.35
+			}
+		}
+	}
+}

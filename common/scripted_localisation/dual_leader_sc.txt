@@ -20,3 +20,23 @@ defined_text = {
         localization_key = "Kaiser"
     }
 }
+
+defined_text = {
+    name = GetDLPrefix
+    text = {
+        trigger = {
+            has_country_flag = DL_title_BAT_landespresident
+        }
+        localization_key = "His excellency,"
+    }
+}
+
+defined_text = {
+    name = GetDLTitle
+    text = {
+        trigger = {
+            has_country_flag = DL_title_BAT_landespresident
+        }
+        localization_key = "Landespräsident"
+    }
+}

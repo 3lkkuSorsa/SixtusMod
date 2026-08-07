@@ -1,0 +1,33 @@
+characters = {
+    BAT_lieven = {
+		name = "Anatol von Lieven"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BAT/BAT_lieven.dds"
+			}
+		}
+		country_leader = {
+			ideology = authoritarianism_sub
+		}
+		country_leader = {
+			ideology = conservatism_sub
+		}
+		country_leader = {
+			ideology = market_liberalism_sub
+		}
+		country_leader = {
+			ideology = social_liberalism_sub
+		}
+
+		field_marshal = {
+			traits = { politically_connected war_hero }
+			skill = 10
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+		}
+    }
+}
+
+
