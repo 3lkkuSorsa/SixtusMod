@@ -3,7 +3,12 @@
 set_research_slots = 3
 
 add_ideas = {
-	
+	SER_towards_yugoslavia
+	SER_economic_stagnation
+	SER_terrorist_organisations
+	civilian_economy
+	limited_conscription
+	limited_exports
 }
 
 set_technology = {
