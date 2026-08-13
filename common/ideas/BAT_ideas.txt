@@ -5,6 +5,11 @@ ideas = {
 				stability_factor = 0.1
 			}
 		}
+		BAT_schiemann_idea = {
+			modifier = {
+				political_power_factor = 0.15
+			}
+		}
 	}
 	country = {
 		BAT_german_political_class = {

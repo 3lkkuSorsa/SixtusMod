@@ -28,4 +28,16 @@ spriteTypes = {
 		textureFile = "gfx/advisors/BAT/BAT_pilchau.dds"
 		legacy_lazy_load = no
 	}
+
+	spriteType = {
+		name = "GFX_BAT_schiemann"
+		textureFile = "gfx/leaders/BAT/BAT_schiemann.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_advisor_BAT_schiemann"
+		textureFile = "gfx/advisors/BAT/BAT_schiemann.dds"
+		legacy_lazy_load = no
+	}
 }

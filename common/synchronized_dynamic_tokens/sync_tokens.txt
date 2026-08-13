@@ -1,2 +1,10 @@
 GER_wilhelm_ii
 BAT_pilchau
+BAT_schiemann
+ultra_nationalism
+authritarianism
+conservatism
+market_liberalism
+social_liberalism
+social_democracy
+communism

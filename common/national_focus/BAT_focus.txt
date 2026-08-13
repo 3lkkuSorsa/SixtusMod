@@ -1,0 +1,41 @@
+
+
+
+focus_tree = {
+	id = BAT_focus_tree
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = BAT
+		}
+	}
+
+	continuous_focus_position = { x = 300 y = 2000 }
+
+	default = no
+
+	focus = {
+		id = BAT_dbvp_udauk_electoral_act
+		icon = GFX_goal_generic_dissolve_parliament2
+		x = 0
+		y = 0
+
+		completion_reward = {
+			effect_tooltip = {
+				country_event = {
+					id = BAT_pre_election.2
+				}
+				custom_effect_tooltip = "         "
+				custom_effect_tooltip = BAT_electoral_act_focus_tt
+			}
+		}
+
+		available = {
+		}
+
+		cost = 30
+	}
+}
+

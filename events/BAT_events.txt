@@ -15,7 +15,7 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = BAT_pre_election.2
-				days = 3
+				days = 37
 			}
 		}
 	}
@@ -28,6 +28,12 @@ country_event = {
 
 	is_triggered_only = yes
 	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			complete_national_focus = BAT_dbvp_udauk_electoral_act
+		}
+	}
 
 	option = {
 		name = "And chaos breaks out in the landtag!"
@@ -46,6 +52,10 @@ country_event = {
 
 	option = {
 		name = "DBVP comes first, but no majority is reached!"
+		country_event = {
+			id = BAT_coalition.1
+			days = 2
+		}
 	}
 }
 
@@ -107,10 +117,28 @@ country_event = {
 
 	option = {
 		name = "DBVP offers support to a UdAuK minority government"
+		set_politics = {
+			ruling_party = market_liberalism
+		}
+		set_temp_variable = { coalition_partner_var = token:social_liberalism }
+		add_to_coalition = yes
+		set_country_flag = dual_leader_active
+		set_variable = { dual_leader = token:BAT_schiemann }
 	}
 
 	option = {
 		name = "Deutche Koalition is restored, but under reformist leadership"
+		set_politics = {
+			ruling_party = market_liberalism
+		}
+		set_temp_variable = { coalition_partner_var = token:authritarianism }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:conservatism }
+		add_to_coalition = yes		
+		set_temp_variable = { coalition_partner_var = token:social_liberalism }
+		add_to_coalition = yes
+		set_country_flag = dual_leader_active
+		set_variable = { dual_leader = token:BAT_schiemann }
 	}
 }
 
@@ -126,6 +154,10 @@ country_event = {
 		name = "After 3 years of deadlock, we finally have a president."
 		custom_effect_tooltip = BAT_august_mandate_tt
 		add_ideas = BAT_pilchau_idea
+		set_temp_variable = { coalition_partner_var = token:conservatism }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:market_liberalism }
+		add_to_coalition = yes
 		set_country_flag = dual_leader_active
 		set_variable = { dual_leader = token:BAT_pilchau }
 	}

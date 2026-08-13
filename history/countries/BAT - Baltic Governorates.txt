@@ -14,6 +14,11 @@ country_event = {
 	days = 13
 }
 
+country_event = {
+	id = BAT_pre_election.3
+	days = 235
+}
+
 set_popularities = {
 	ultra_nationalism = 6
 	authoritarianism = 31
