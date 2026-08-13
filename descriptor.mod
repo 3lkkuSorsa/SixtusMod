@@ -5,8 +5,9 @@ tags={
 	"Historical"
 }
 name="tuff mod"
-supported_version="1.17.5.0"
+supported_version="1.19.*"
 replace_path="history/states"
 replace_path="map"
 replace_path="map/strategicregions"
 replace_path="common/ideologies"
+replace_path="common/autonomous_states"

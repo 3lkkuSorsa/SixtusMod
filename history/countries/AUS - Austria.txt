@@ -1,4 +1,4 @@
-set_capital = 111
+capital = 111
 set_stability = 0.62
 set_war_support = 0.346
 
@@ -9,6 +9,13 @@ add_ideas = {
 	civilian_economy
 	export_focus
 	limited_conscription
+}
+
+set_autonomy = {
+	target = HUN
+	autonomy_state = autonomy_personal_union
+	end_wars = no
+	end_civil_wars = no
 }
 
 set_popularities = {

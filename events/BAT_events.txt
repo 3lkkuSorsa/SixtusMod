@@ -1,0 +1,132 @@
+add_namespace = BAT_pre_election
+add_namespace = BAT_coalition
+
+country_event = {
+	id = BAT_pre_election.1
+	title = "Years without working government"
+	desc = BAT_pre_election.1.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "This cannot continue!"
+		custom_effect_tooltip = BAT_electoral_act_tt
+		hidden_effect = {
+			country_event = {
+				id = BAT_pre_election.2
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = {
+	id = BAT_pre_election.2
+	title = "Electoral Act Becomes Law"
+	desc = BAT_pre_election.2.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "And chaos breaks out in the landtag!"
+		add_political_power = 150
+		add_stability = -0.12
+	}
+}
+
+country_event = {
+	id = BAT_pre_election.3
+	title = "Elections of 1936"
+	desc = BAT_pre_election.3.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "DBVP comes first, but no majority is reached!"
+	}
+}
+
+country_event = {
+	id = BAT_coalition.1
+	title = "Landtag in a new deadlock"
+	desc = BAT_coalition.1.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "DBVP and the right of UdAuK restore the Deutsche Koalition"
+		country_event = {
+			id = BAT_coalition.4
+			days = 2
+		}
+	}
+
+	option = {
+		name = "UdAuK must form a minority government"
+		custom_effect_tooltip = BAT_unlikely_udauk_tt
+		country_event = {
+			id = BAT_coalition.2
+			days = 2
+		}
+	}
+
+	option = {
+		name = "Parties must first consult the Governor-General"
+		custom_effect_tooltip = BAT_consult_governor_general_tt
+		country_event = {
+			id = BAT_coalition.3
+			days = 2
+		}
+	}
+}
+
+country_event = {
+	id = BAT_coalition.2
+	title = "Landtag scrutinies Schiemann"
+	desc = BAT_coalition.2.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "And his coalition is voted down..."
+	}
+}
+
+country_event = {
+	id = BAT_coalition.3
+	title = "Von Lieven advises the parties"
+	desc = BAT_coalition.3.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "DBVP offers support to a UdAuK minority government"
+	}
+
+	option = {
+		name = "Deutche Koalition is restored, but under reformist leadership"
+	}
+}
+
+country_event = {
+	id = BAT_coalition.4
+	title = "The August Mandate"
+	desc = BAT_coalition.4.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "After 3 years of deadlock, we finally have a president."
+		custom_effect_tooltip = BAT_august_mandate_tt
+		add_ideas = BAT_pilchau_idea
+		set_country_flag = dual_leader_active
+		set_variable = { dual_leader = token:BAT_pilchau }
+	}
+}
