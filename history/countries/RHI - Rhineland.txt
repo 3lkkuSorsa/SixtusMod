@@ -9,6 +9,10 @@ country_event = {
 
 country_event = RHI_events.13
 
+recruit_character = RHI_adenauer
+recruit_character = RHI_sollmann
+recruit_character = RHI_dietrich
+recruit_character = RHI_gilsa
 add_ideas = {
     RHI_unstable_republic
 	RHI_dependence_on_germany

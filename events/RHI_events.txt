@@ -128,6 +128,12 @@ country_event = {
 		name = "Unstable republic, without a doubt"
 		unlock_national_focus = RHI_republic_on_the_rhine
 		add_ideas = RHI_strikes
+		RHI_adenauer = {
+			remove_trait = {
+				trait = RHI_allied_with_the_workers
+				ideology = christian_democracy
+			}
+		}
 		hidden_effect = {
 			set_country_flag = RHI_industrial_workers_strike
 			country_event = {
@@ -198,9 +204,6 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			set_country_flag = RHI_provisional_government
-			set_politics = {
-				ruling_party = authoritarianism
-			}
 		}
 	}
 

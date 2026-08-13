@@ -1,0 +1,54 @@
+characters = {
+    RHI_adenauer = {
+		name = "Konrad Adenauer"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RHI/RHI_adenauer.dds"
+			}
+		}
+		country_leader = {
+			ideology = christian_democracy
+			traits = { RHI_bridge_across_the_rhine RHI_allied_with_the_workers }
+		}
+    }
+
+	RHI_sollmann = {
+		name = "Wilhelm Sollmann"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RHI/RHI_sollmann.dds"
+			}
+		}
+		country_leader = {
+			ideology = social_democracy_sub
+		}
+	}
+
+	RHI_dietrich = {
+		name = "Hermann Dietrich"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RHI/RHI_dietrich.dds"
+			}
+		}
+
+		country_leader = {
+			ideology = social_liberalism_sub
+		}
+	}
+
+	RHI_gilsa = {
+		name = "Erich von Gilsa"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/RHI/RHI_gilsa.dds"
+			}
+		}
+
+		country_leader = {
+			ideology = classical_liberalism
+			traits = { RHI_right_side_of_the_rhine }
+		}
+	}
+}
+
