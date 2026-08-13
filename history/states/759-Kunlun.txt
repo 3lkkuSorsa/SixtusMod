@@ -22,15 +22,6 @@ state={
 			infrastructure = 1
 		}
 
-		1936.1.1 = {
-			IF = {
-				limit = {
-					has_dlc = "No Compromise, No Surrender" 
-				}
-				KHM = { transfer_state = PREV }
-				add_core_of = KHM
-			}
-		}
 
 		1938.10.25 = {
 			IF = {
