@@ -1018,10 +1018,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_start_dismantling_democratic_institutions
+		id = GER_coalition_of_true_germans
 		icon = GFX_goal_ideology_social_conservative
 
-		x = 3
+		x = 1
 		y = 7
 
 		cost = 2
@@ -1038,11 +1038,111 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_second_kulturkampf
+		icon = GFX_goal_ideology_social_conservative
+
+		x = 0
+		y = 8
+
+		cost = 2
+
+		prerequisite = {
+			focus = GER_coalition_of_true_germans
+		}
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_start_dismantling_democratic_institutions
+		icon = GFX_goal_ideology_social_conservative
+
+		x = 2
+		y = 8
+
+		cost = 2
+
+		prerequisite = {
+			focus = GER_kaisers_most_loyal_cabinet
+		}
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_legacy_of_eastern_crusaders
+		icon = GFX_goal_ideology_social_conservative
+
+		x = -3
+		y = 7
+
+		cost = 2
+
+		prerequisite = {
+			focus = GER_kaisers_most_loyal_cabinet
+		}
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_spirit_of_the_teutons
+		icon = GFX_goal_ideology_social_conservative
+
+		x = -2
+		y = 8
+
+		cost = 2
+
+		prerequisite = {
+			focus = GER_legacy_of_eastern_crusaders
+		}
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_societal_mobilization
+		icon = GFX_goal_ideology_social_conservative
+
+		x = -5
+		y = 8
+
+		cost = 2
+
+		prerequisite = {
+			focus = GER_legacy_of_eastern_crusaders
+		}
+
+		available = {
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id = GER_enforce_military_oversight_in_states
 		icon = GFX_goal_ideology_social_conservative
 
-		x = 4
-		y = 8
+		x = 3
+		y = 9
 
 		cost = 2
 
@@ -1061,8 +1161,8 @@ focus_tree = {
 		id = GER_denounce_the_weimar_constitution
 		icon = GFX_goal_ideology_social_conservative
 
-		x = 2
-		y = 8
+		x = 1
+		y = 9
 
 		cost = 2
 
