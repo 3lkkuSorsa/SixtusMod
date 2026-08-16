@@ -87,9 +87,11 @@ country_event = {
 	option = {
 		name = "Parties must first consult the Governor-General"
 		custom_effect_tooltip = BAT_consult_governor_general_tt
-		country_event = {
-			id = BAT_coalition.3
-			days = 2
+		BAT_lieven = {
+			unit_leader_event = {
+				id = BAT_coalition.3
+				days = 2
+			}
 		}
 	}
 }
@@ -107,7 +109,7 @@ country_event = {
 	}
 }
 
-country_event = {
+unit_leader_event = {
 	id = BAT_coalition.3
 	title = "Von Lieven advises the parties"
 	desc = BAT_coalition.3.d
@@ -131,7 +133,7 @@ country_event = {
 		set_politics = {
 			ruling_party = market_liberalism
 		}
-		set_temp_variable = { coalition_partner_var = token:authritarianism }
+		set_temp_variable = { coalition_partner_var = token:authoritarianism }
 		add_to_coalition = yes
 		set_temp_variable = { coalition_partner_var = token:conservatism }
 		add_to_coalition = yes		
@@ -139,6 +141,7 @@ country_event = {
 		add_to_coalition = yes
 		set_country_flag = dual_leader_active
 		set_variable = { dual_leader = token:BAT_schiemann }
+		add_ideas = BAT_schiemann_idea
 	}
 }
 

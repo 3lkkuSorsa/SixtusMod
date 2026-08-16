@@ -22,6 +22,8 @@ focus_tree = {
 		x = 0
 		y = 0
 
+		cancelable = no
+
 		completion_reward = {
 			effect_tooltip = {
 				country_event = {
