@@ -124,8 +124,8 @@ unit_leader_event = {
 		}
 		set_temp_variable = { coalition_partner_var = token:social_liberalism }
 		add_to_coalition = yes
-		set_country_flag = dual_leader_active
-		set_variable = { dual_leader = token:BAT_schiemann }
+		set_temp_variable = { dl = token:BAT_schiemann }
+		appoint_second_in_command = yes
 	}
 
 	option = {
@@ -139,9 +139,8 @@ unit_leader_event = {
 		add_to_coalition = yes		
 		set_temp_variable = { coalition_partner_var = token:social_liberalism }
 		add_to_coalition = yes
-		set_country_flag = dual_leader_active
-		set_variable = { dual_leader = token:BAT_schiemann }
-		add_ideas = BAT_schiemann_idea
+		set_temp_variable = { dl = token:BAT_schiemann }
+		appoint_second_in_command = yes
 	}
 }
 
@@ -156,12 +155,11 @@ country_event = {
 	option = {
 		name = "After 3 years of deadlock, we finally have a president."
 		custom_effect_tooltip = BAT_august_mandate_tt
-		add_ideas = BAT_pilchau_idea
 		set_temp_variable = { coalition_partner_var = token:conservatism }
 		add_to_coalition = yes
 		set_temp_variable = { coalition_partner_var = token:market_liberalism }
 		add_to_coalition = yes
-		set_country_flag = dual_leader_active
-		set_variable = { dual_leader = token:BAT_pilchau }
+		set_temp_variable = { dl = token:BAT_pilchau }
+		appoint_second_in_command = yes
 	}
 }

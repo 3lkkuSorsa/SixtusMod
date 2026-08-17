@@ -1,6 +1,8 @@
 GER_wilhelm_ii
 BAT_pilchau
 BAT_schiemann
+CHI_jingwei
+
 ultra_nationalism
 authritarianism
 conservatism

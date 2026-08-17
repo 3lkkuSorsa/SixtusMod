@@ -1,0 +1,14 @@
+has_dual_leader = {
+    custom_trigger_tooltip = {
+        tooltip = has_second_in_command
+        has_country_flag = dual_leader_active
+    }
+}
+
+has_specific_dual_leader = {
+    custom_trigger_tooltip = {
+        tooltip = has_specific_second_in_command
+        has_country_flag = dual_leader_active
+        check_variable = { dual_leader = dl }
+    }
+}

@@ -4,6 +4,13 @@
  dual_leader_dot_tooltip: "§g[GetDLPrefix]§!\n[GetDLTitle] §Y[?dual_leader.GetTokenLocalizedKey]§!\n \n \n \n \n \n \n \n£[?dual_leader.GetTokenKey] \n \n \n \n \n \n \n \n[!idea_grapper]"
  dual_leader_dot_tooltip_delayed: "§L[!desc_grapper]§!"
 
+ add_as_second_in_command: "§Y[?dl.GetTokenLocalizedKey]§! is appointed as §Y[GetDLTitle]§!."
+ remove_second_in_command: "§Y[?dl.GetTokenLocalizedKey]§! is removed as §Y[GetDLTitle]§!."
+ replace_second_in_command: "§Y[?dual_leader.GetTokenLocalizedKey]§! is replaced by §Y[?dl.GetTokenLocalizedKey]§!."
+
+ has_second_in_command: "Has a §Y[GetDLTitle]§!."
+ has_specific_second_in_command: "§Y[?dl.GetTokenLocalizedKey]§! is the §Y[GetDLTitle]§!."
+
  add_to_coalition: "The §[GetCoalitionTooltipColour][?coalition_partner_var.GetTokenLocalizedKey]s§! will join the coalition."
  remove_from_coalition: "The §[GetCoalitionTooltipColour][?coalition_partner_var.GetTokenLocalizedKey]s§! will leave the coalition."
  end_coalition_tt: "The §YCoalition§! will end entirely."

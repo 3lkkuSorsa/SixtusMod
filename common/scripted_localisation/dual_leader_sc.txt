@@ -7,31 +7,35 @@ defined_text = {
 		localization_key = "His imperial and royal majesty,"
 	}
 
-    text = {
-        trigger = {
-            has_country_flag = DL_title_BAT_landespresident
-        }
-        localization_key = "His excellency,"
-    }
+	text = {
+		trigger = {
+			has_country_flag = DL_title_BAT_landespresident
+		}
+		localization_key = "His excellency,"
+	}
 
-    text = {
-        localization_key = "The honorable"
-    }
+	text = {
+		localization_key = "The honorable"
+	}
 }
 
 defined_text = {
-    name = GetDLTitle
-    text = {
-        trigger = {
-            has_country_flag = DL_title_GER_kaiser
-        }
-        localization_key = "Kaiser"
-    }
+	name = GetDLTitle
+	text = {
+		trigger = {
+			has_country_flag = DL_title_GER_kaiser
+		}
+		localization_key = "Kaiser"
+	}
 
-    text = {
-        trigger = {
-            has_country_flag = DL_title_BAT_landespresident
-        }
-        localization_key = "Landespräsident"
-    }
+	text = {
+		trigger = {
+			has_country_flag = DL_title_BAT_landespresident
+		}
+		localization_key = "Landespräsident"
+	}
+
+	text = {
+		localization_key = "Prime Minister"
+	}
 }
