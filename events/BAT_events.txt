@@ -1,5 +1,6 @@
 add_namespace = BAT_pre_election
 add_namespace = BAT_coalition
+add_namespace = BAT_lieven
 
 country_event = {
 	id = BAT_pre_election.1
@@ -161,5 +162,23 @@ country_event = {
 		add_to_coalition = yes
 		set_temp_variable = { dl = token:BAT_pilchau }
 		appoint_second_in_command = yes
+	}
+}
+
+unit_leader_event = {
+	id = BAT_lieven.1
+	title = "Chasing the Sunset"
+	desc = BAT_lieven.1.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Goodbye, Governor-General."
+		add_stability = 0.15
+		set_nationality = {
+			character = BAT_lieven
+			target = SOV
+		}
 	}
 }
