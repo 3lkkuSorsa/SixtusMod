@@ -40,4 +40,16 @@ spriteTypes = {
 		textureFile = "gfx/advisors/BAT/BAT_schiemann.dds"
 		legacy_lazy_load = no
 	}
+
+	spriteType = {
+		name = "GFX_CHI_jingwei"
+		textureFile = "gfx/leaders/CHI/CHI_jingwei.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_advisor_CHI_jingwei"
+		textureFile = "gfx/advisors/CHI/CHI_jingwei.dds"
+		legacy_lazy_load = no
+	}
 }

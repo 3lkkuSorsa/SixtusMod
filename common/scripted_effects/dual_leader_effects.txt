@@ -1,0 +1,60 @@
+appoint_second_in_command = {
+	custom_effect_tooltip = add_as_second_in_command
+	set_country_flag = dual_leader_active
+	set_variable = { dual_leader = dl }
+
+	meta_effect = {
+		text = {
+			add_ideas = [DUAL_LEADER_IDEA]
+		}
+		DUAL_LEADER_IDEA = "[?dual_leader.GetTokenKey]_idea"
+	}
+}
+
+remove_second_in_command = {
+	if = {
+		limit = {
+			has_country_flag = dual_leader_active
+		}
+		custom_effect_tooltip = remove_second_in_command
+
+		clr_country_flag = dual_leader_active
+		clear_variable = dual_leader
+
+		meta_effect = {
+			text = {
+				if = {
+					limit = {
+						has_idea = [DUAL_LEADER_IDEA]
+					}
+					remove_ideas = [DUAL_LEADER_IDEA]
+				}
+			}
+			DUAL_LEADER_IDEA = "[?dual_leader.GetTokenKey]_idea"
+		}
+	}
+}
+
+replace_second_in_command = {
+	custom_effect_tooltip = replace_second_in_command
+	set_variable = { dual_leader = dl }
+
+	meta_effect = {
+		text = {
+			if = {
+				limit = {
+					has_idea = [DUAL_LEADER_IDEA]
+				}
+				remove_ideas = [DUAL_LEADER_IDEA]
+			}
+			if = {
+				limit = {
+					has_idea = [NEW_DUAL_LEADER_IDEA]
+				}
+				add_ideas = [NEW_DUAL_LEADER_IDEA]
+			}
+		}
+		DUAL_LEADER_IDEA = "[?dual_leader.GetTokenKey]_idea"
+		NEW_DUAL_LEADER_IDEA = "[?dl.GetTokenKey]_idea"
+	}
+}

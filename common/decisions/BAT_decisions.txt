@@ -1,0 +1,30 @@
+BAT_lieven_future = {
+	BAT_lieven_leaves = {
+		allowed = {
+			original_tag = BAT
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = "Unless something that requires his immediate attention, Von Lieven's time in the governorates is over."
+				always = no
+			}
+		}
+
+		activation = {
+			always = no
+		}
+
+		days_mission_timeout = 610
+
+		priority = 10
+
+		timeout_effect = {
+			BAT_lieven = {
+				unit_leader_event = {
+					id = BAT_lieven.1
+				}
+			}
+		}
+	}
+}
