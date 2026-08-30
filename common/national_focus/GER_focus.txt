@@ -1542,7 +1542,10 @@ focus_tree = {
 		cost = 6
 
 		available = {
-			has_country_flag = GER_toleration_with_spd
+			OR = {
+				has_country_flag = GER_toleration_with_spd
+				has_country_flag = GER_volksblock
+			}
 		}
 
 		bypass = {
@@ -3201,6 +3204,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_stability = 0.15
+			country_event = {
+				id = GER_liberalism.3
+			}
 		}
 	}
 
@@ -3241,6 +3248,9 @@ focus_tree = {
 
 		available = {
 			has_country_flag = GER_volksblock
+			NOT = {
+				has_country_flag = GER_bundesrat_veto
+			}
 		}
 
 		prerequisite = {
@@ -3251,7 +3261,27 @@ focus_tree = {
 			focus = GER_investments_of_free_enterprise
 		}
 
+		select_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = GER_bundesrat_vetoed_start } }
+				country_event = {
+					id = GER_volksblock.1
+					days = 12
+				}
+				set_country_flag = GER_bundesrat_vetoed_start
+			}
+		}
+
+		cancel = {
+			has_country_flag = GER_bundesrat_veto
+		}
+
 		completion_reward = {
+			country_event = {
+				id = GER_liberalism.1
+				days = 5
+			}
+			custom_effect_tooltip = "         "
 			custom_effect_tooltip = {
 				localization_key = GER_modify_dyn_mod
 				IDEA = "Gessler Program"
@@ -3524,13 +3554,25 @@ focus_tree = {
 		available = {
 			has_country_flag = GER_volksblock
 			has_country_flag = GER_bundesrat_veto
+			NOT = {
+				has_country_flag = GER_prussian_elections_coming_up
+			}
 		}
 
 		prerequisite = {
 			focus = GER_push_back_against_prussia
 		}
 
+		bypass = {
+			has_idea = GER_prussian_grand_coalition
+		}
+
 		completion_reward = {
+			add_stability = -0.07
+			country_event = {
+				id = GER_liberalism.2
+				days = 5
+			}
 		}
 	}
 

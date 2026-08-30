@@ -128,6 +128,33 @@ fire_ministers_no_hog = {
 	}
 }
 
+fire_hog = {
+	hidden_effect = {
+		every_character = {
+			limit = {
+				is_character_slot = head_of_government
+				is_hired_as_advisor = yes
+			}
+			remove_advisor_role = {
+				slot = head_of_government
+			}
+			add_advisor_role = {
+				advisor = {
+					slot = head_of_government
+					can_be_fired = no
+					available = {
+						is_hired_as_advisor = yes
+					}
+
+					allowed = {
+						is_hired_as_advisor = yes
+					}
+				}
+			}
+		}
+	}
+}
+
 GER_appoint_volksblock_coalition = {
 	custom_effect_tooltip = GER_appoint_democratic_government_tt
 	set_country_flag = GER_coalition_finalized

@@ -7,6 +7,7 @@ add_namespace = GER_zentrum_leadership
 add_namespace = GER_elections_36
 add_namespace = GER_scleicher
 add_namespace = GER_staatssicherheitsburo_events
+add_namespace = GER_liberalism
 
 country_event = {
 	id = GER_spring_coalition.0
@@ -1117,5 +1118,81 @@ country_event = {
 	option = {
 		name = "Truth sees the light!"
 		set_country_flag = GER_investigation_on_socialism_success
+	}
+}
+
+country_event = {
+	id = GER_liberalism.1
+	title = "Liberale Volkspartei"
+	desc = GER_liberalism.1.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Dream of decades realized!"
+		custom_effect_tooltip = "Negotiations for a united liberal party will be restored."
+	}
+
+	option = {
+		name = "I just can't see FVP-NLP unification happening..."
+	}
+}
+
+country_event = {
+	id = GER_liberalism.2
+	title = "Reichsexekution in Prussia"
+	desc = GER_liberalism.2.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Democrats killing democracy?"
+		custom_effect_tooltip = "There will be no Prussian elections in the foreseeable future."
+		custom_effect_tooltip = GER_remove_prussia_ideas
+		hidden_effect = {
+			remove_ideas = {
+				GER_papen_in_prussia
+				GER_schleicher_in_prussia
+				GER_prussian_grand_coalition
+				GER_conservative_prussian_government
+				GER_minority_prussian_government
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_liberalism.3
+	title = "Social Democrats' Turn?"
+	desc = GER_liberalism.3.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "I guess... but only Braun"
+		promote_character = {
+			character = GER_otto_braun
+		}
+		set_politics = {
+			ruling_party = social_democracy
+		}
+		hidden_effect = {
+			set_temp_variable = { coalition_partner_var = token:social_democracy }
+			remove_from_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:social_liberalism }
+			add_to_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:conservatism }
+			add_to_coalition = yes
+			fire_hog = yes
+			add_ideas = GER_otto_braun_idea
+		}
+	}
+
+	option = {
+		name = "No!"
+		add_stability = -0.05
 	}
 }
