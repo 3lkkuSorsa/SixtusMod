@@ -1,0 +1,12 @@
+BAT_lieven_future = {
+	allowed = {
+		original_tag = BAT
+	}
+
+	visible = {
+		has_country_leader = {
+			character = BAT_lieven
+			ruling_only = yes
+		}
+	}
+}

@@ -1,0 +1,248 @@
+focus_tree = {
+    id = SER_focus_tree
+    country = {
+        factor = 0
+
+        modifier = {
+            add = 10
+            tag = SER
+        }
+    }
+
+    continuous_focus_position = { x = 100 y = 1500 }
+
+    default = no
+
+    focus = {
+        id = SER_economic_problems
+        icon = GFX_goal_generic_price_controls
+        x = 5
+        y = 0
+
+        available = {
+            always = no
+        }
+
+        mutually_exclusive = {
+
+        }
+		
+        completion_reward = {
+            custom_effect_tooltip = ser_economy_tooltip
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = SER_bailout_major_industries
+        icon = GFX_goal_generic_banking_legislation
+        x = 4
+        y = 1
+
+        prerequisite = {
+            focus = SER_economic_problems
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            focus = SER_creative_destruction
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = SER_creative_destruction
+        icon = GFX_goal_generic_privatization
+        x = 6
+        y = 1
+
+        prerequisite = {
+            focus = SER_economic_problems
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            focus = SER_bailout_major_industries
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = SER_restore_consumer_confidence
+        icon = GFX_goal_generic_debt_negotiations
+        x = 9
+        y = 2
+
+        prerequisite = {
+            focus = SER_bailout_major_industries
+            focus = SER_creative_destruction
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = SER_arms_industry_buildup
+        icon = GFX_goal_munitions_factories
+        x = 7
+        y = 2
+
+        prerequisite = {
+            focus = SER_bailout_major_industries
+            focus = SER_creative_destruction
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = SER_negotiate_russian_investment
+        icon = GFX_focus_russian_cooperation
+        x = 5
+        y = 2
+
+        prerequisite = {
+            focus = SER_bailout_major_industries
+            focus = SER_creative_destruction
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = SER_roadworks
+        icon = GFX_goal_generic_road_construction
+        x = 3
+        y = 2
+
+        prerequisite = {
+            focus = SER_bailout_major_industries
+            focus = SER_creative_destruction
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = SER_help_farmers
+        icon = GFX_goal_agrarian_reform
+        x = 1
+        y = 2
+
+        prerequisite = {
+            focus = SER_bailout_major_industries
+            focus = SER_creative_destruction
+        }
+
+        available = {
+            
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = {
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+}

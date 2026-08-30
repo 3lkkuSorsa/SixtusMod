@@ -811,6 +811,97 @@ focus_tree = {
     }
 
     focus = {
+        id = AUS_national_mobilization_act
+        icon = GFX_goal_Focus_Military_Mobilisation
+        x = 20
+        y = 3
+
+        prerequisite = {
+            focus = AUS_imperial_restoration
+        }
+
+        available = {
+            has_government = authoritarianism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_finish_off_liberalism
+        icon = GFX_focus_generic_authoritarian_government
+        x = 23
+        y = 3
+
+        prerequisite = {
+            focus = AUS_imperial_restoration
+        }
+
+        available = {
+            has_government = authoritarianism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_assume_industrial_control
+        icon = GFX_focus_DEN_heavy_regulations
+        x = 22
+        y = 4
+
+        prerequisite = {
+            focus = AUS_finish_off_liberalism
+        }
+
+        prerequisite = {
+            focus = AUS_national_mobilization_act
+        }
+
+        available = {
+            has_government = authoritarianism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
         id = AUS_unitary_empire
         icon = GFX_focus_AUS_proclaim_austrian_empire
         x = 25
@@ -826,6 +917,370 @@ focus_tree = {
 
         mutually_exclusive = {
             
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_adress_bohemian_issues
+        icon = GFX_goal_CZE_kingdom
+        x = 24
+        y = 4
+
+        prerequisite = {
+            focus = AUS_unitary_empire
+        }
+
+        available = {
+            has_government = authoritarianism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_integrate_slovakia
+        icon = GFX_focus_generic_befriend_slovakia
+        x = 23
+        y = 5
+
+        prerequisite = {
+            focus = AUS_adress_bohemian_issues
+        }
+
+        available = {
+            has_government = authoritarianism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_develop_czech_infra
+        icon = GFX_goal_generic_road_construction
+        x = 25
+        y = 5
+
+        prerequisite = {
+            focus = AUS_adress_bohemian_issues
+        }
+
+        available = {
+            has_government = authoritarianism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_assimilation_of_bohemia
+        icon = GFX_goal_skull_treaty
+        x = 24
+        y = 6
+
+        prerequisite = {
+            focus = AUS_adress_bohemian_issues
+        }
+
+        available = {
+            has_government = authoritarianism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_reeling_in_galicia
+        icon = GFX_goal_GAL_divide_nation
+        x = 26
+        y = 4
+
+        prerequisite = {
+            focus = AUS_unitary_empire
+        }
+
+        available = {
+            has_government = authoritarianism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_reduce_polish_poverty
+        icon = GFX_focus_DEN_no_regulations
+        x = 27
+        y = 5
+
+        prerequisite = {
+            focus = AUS_reeling_in_galicia
+        }
+
+        available = {
+            has_government = authoritarianism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_integrate_galicia
+        icon = GFX_goal_GAL_ChNSR
+        x = 26
+        y = 6
+
+        prerequisite = {
+            focus = AUS_reduce_polish_poverty
+        }
+
+        available = {
+            has_government = authoritarianism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_grip_on_illyria
+        icon = GFX_goal_CRO_authoritarian
+        x = 28
+        y = 4
+
+        prerequisite = {
+            focus = AUS_unitary_empire
+        }
+
+        available = {
+            has_government = authoritarianism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_destroy_terrorist_organisations
+        icon = GFX_goal_secret_agents
+        x = 30
+        y = 5
+
+        prerequisite = {
+            focus = AUS_grip_on_illyria
+        }
+
+        available = {
+            has_government = authoritarianism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_crush_croat_resistance
+        icon = GFX_focus_YUG_banovina_of_croatia
+        x = 29
+        y = 6
+
+        prerequisite = {
+            focus = AUS_grip_on_illyria
+        }
+
+        available = {
+            has_government = authoritarianism
+        }
+
+        mutually_exclusive = {
+            
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_respect_the_dual_monarchy
+        icon = GFX_focus_generic_befriend_hungary
+        x = 25
+        y = 7
+
+        prerequisite = {
+            focus = AUS_crush_croat_resistance
+        }
+
+        prerequisite = {
+            focus = AUS_assimilation_of_bohemia
+        }
+
+        prerequisite = {
+            focus = AUS_integrate_galicia
+        }
+
+        available = {
+            has_government = authoritarianism
+        }
+
+        mutually_exclusive = {
+            focus = AUS_bring_hungary_to_the_empire
+        }
+		
+        completion_reward = { 
+            
+        }  
+
+		cost = 5
+
+        search_filters = { 
+        
+        }
+    }
+
+    focus = {
+        id = AUS_bring_hungary_to_the_empire
+        icon = GFX_focus_generic_attack_hungary
+        x = 28
+        y = 7
+
+        prerequisite = {
+            focus = AUS_crush_croat_resistance
+        }
+
+        prerequisite = {
+            focus = AUS_assimilation_of_bohemia
+        }
+
+        prerequisite = {
+            focus = AUS_integrate_galicia
+        }
+
+        available = {
+            has_government = authoritarianism
+        }
+
+        mutually_exclusive = {
+            focus = AUS_respect_the_dual_monarchy
         }
 		
         completion_reward = { 
