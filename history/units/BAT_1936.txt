@@ -1,0 +1,4 @@
+focus = {
+	current = "BAT_dbvp_udauk_electoral_act"
+	progress = 1
+}

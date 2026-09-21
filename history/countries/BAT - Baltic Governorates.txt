@@ -1,6 +1,7 @@
 capital = 808
 set_stability = 0.62
 set_war_support = 0.346
+oob = "BAT_1936"
 
 add_ideas = {
 	civilian_economy
@@ -37,5 +38,8 @@ set_politics = {
 }
 
 recruit_character = BAT_lieven
+recruit_character = BAT_landtag
+
+activate_mission = BAT_lieven_leaves
 
 set_country_flag = DL_title_BAT_landespresident

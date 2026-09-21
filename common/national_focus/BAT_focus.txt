@@ -35,9 +35,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_dual_leader = yes
-			set_temp_variable = { dl = token:BAT_pilchau }
-			has_specific_dual_leader = yes
 		}
 
 		cost = 30

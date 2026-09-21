@@ -1,6 +1,7 @@
 add_namespace = BAT_pre_election
 add_namespace = BAT_coalition
 add_namespace = BAT_lieven
+add_namespace = BAT_radicalism
 
 country_event = {
 	id = BAT_pre_election.1
@@ -178,7 +179,44 @@ unit_leader_event = {
 		add_stability = 0.15
 		set_nationality = {
 			character = BAT_lieven
-			target = SOV
+			target_country = SOV
+		}
+	}
+}
+
+country_event = {
+	id = BAT_radicalism.1
+	title = "Chaos in the Governorates"
+	desc = BAT_radicalism.1.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "The Landtag asserts its authority"
+		add_stability = -0.15
+		promote_character = BAT_landtag
+		BAT_lieven = {
+			unit_leader_event = {
+				id = BAT_radicalism.2
+			}
+		}
+	}
+}
+
+unit_leader_event = {
+	id = BAT_radicalism.2
+	title = "Von Lieven Relinquishes the Governor-Generalship"
+	desc = BAT_radicalism.2.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Who is in control?"
+		set_nationality = {
+			character = BAT_lieven
+			target_country = SOV
 		}
 	}
 }

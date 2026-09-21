@@ -28,6 +28,27 @@ characters = {
 			logistics_skill = 3
 		}
     }
+
+	BAT_landtag = {
+		name = "Landtag"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BAT/BAT_landtag.dds"
+			}
+		}
+		country_leader = {
+			ideology = authoritarianism_sub
+		}
+		country_leader = {
+			ideology = conservatism_sub
+		}
+		country_leader = {
+			ideology = market_liberalism_sub
+		}
+		country_leader = {
+			ideology = social_liberalism_sub
+		}
+	}
 }
 
 

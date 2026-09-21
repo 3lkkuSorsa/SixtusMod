@@ -26,5 +26,21 @@ BAT_lieven_future = {
 				}
 			}
 		}
+
+		complete_effect = {
+			country_event = {
+				id = BAT_radicalism.1
+				days = 3
+			}
+		}
+
+		cancel_trigger = {
+			NOT = {
+				has_country_leader = {
+					character = BAT_lieven
+					ruling_only = yes
+				}
+			}
+		}
 	}
 }
