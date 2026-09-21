@@ -212,11 +212,76 @@ unit_leader_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
+	immediate = {
+		hidden_effect = {
+			set_nationality = {
+				character = BAT_lieven
+				target_country = SOV
+			}
+		}
+	}
+
 	option = {
-		name = "Who is in control?"
-		set_nationality = {
-			character = BAT_lieven
-			target_country = SOV
+		name = "The landtag must suppress the revolt!"
+		country_event = {
+			id = BAT_radicalism.4
+			days = 8
+		}
+	}
+
+	option = {
+		name = "Riga must be fortified!"
+		hidden_effect = {
+			country_event = {
+				id = BAT_radicalism.3
+				days = 13
+			}
+		}
+	}
+}
+
+country_event = {
+	id = BAT_radicalism.3
+	title = "City bustling with light"
+	desc = BAT_radicalism.3.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "The landtag has betrayed the nation!"
+		add_stability = 0.08
+		RIG = {
+			hidden_effect = {
+				inherit_technology = BAT
+			}
+		}
+	}
+
+	option = {
+		name = "The trade must be protected!"
+		RIG = {
+			change_tag_from = BAT
+			hidden_effect = {
+				inherit_technology = BAT
+			}
+		}
+	}
+}
+
+country_event = {
+	id = BAT_radicalism.4
+	title = "A Nation Restored"
+	desc = BAT_radicalism.4.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "It seems that the Governorates are no more..."
+		add_stability = 0.15
+		SOV = {
+			end_puppet = BAT
 		}
 	}
 }

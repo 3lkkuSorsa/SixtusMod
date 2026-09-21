@@ -7,7 +7,7 @@ BAT_lieven_future = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = "Unless something that requires his immediate attention, Von Lieven's time in the governorates is over."
-				always = no
+				has_country_flag = BAT_lieven_urgent_crisis
 			}
 		}
 
